@@ -1,32 +1,35 @@
 import React, { useState, useEffect, useRef } from 'react';
-import MapView from './components/MapView'; // Import MapView
-import TimelineView from './components/TimelineView'; // Import TimelineView
-import UIControls from './components/UIControls'; // Import UIControls
-import DetailModal from './components/DetailModal'; // Import DetailModal
-import EntityListView from './components/EntityListView'; // Import EntityListView
-import * as DataManager from './dataManager'; // Import DataManager
-import { MAPBOX_ACCESS_TOKEN } from './config'; // Import Mapbox token
+import MapView from './components/MapView';
+import TimelineView from './components/TimelineView';
+import UIControls from './components/UIControls';
+import DetailModal from './components/DetailModal';
+import EntityListView from './components/EntityListView';
+import * as DataManager from './dataManager';
+import { MAPBOX_ACCESS_TOKEN } from './config';
 
 function App() {
-  const [allLoadedEvents, setAllLoadedEvents] = useState([]); // Store all events from DataManager
+  // Define minEventYear and maxEventYear at the top
+  const [minEventYear, setMinEventYear] = useState(1400); // Default fallback
+  const [maxEventYear, setMaxEventYear] = useState(new Date().getFullYear()); // Default fallback
+
+  const [allLoadedEvents, setAllLoadedEvents] = useState([]);
   const [themes, setThemes] = useState([]);
-  const [allSources, setAllSources] = useState([]); // Store all source_info objects
+  const [allSources, setAllSources] = useState([]);
   const [allCharacters, setAllCharacters] = useState([]);
   const [allPlaces, setAllPlaces] = useState([]);
-  const [activeSourceIds, setActiveSourceIds] = useState(new Set()); // Store IDs of active sources
+  const [activeSourceIds, setActiveSourceIds] = useState(new Set());
 
   const [referenceDate, setReferenceDate] = useState(() => {
     const today = new Date();
-    return today.toISOString().split('T')[0]; // Default to today in YYYY-MM-DD format
+    return today.toISOString().split('T')[0];
   });
-  const [timeWindowYears, setTimeWindowYears] = useState(10); // Default time window in years
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+  const [timeWindowYears, setTimeWindowYears] = useState(10);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEntityData, setSelectedEntityData] = useState(null);
   const [selectedEntityType, setSelectedEntityType] = useState('');
-  const [isLoading, setIsLoading] = useState(false); // Loading state
-  const timelineViewRef = useRef(null); // Ref for TimelineView component
+  const [isLoading, setIsLoading] = useState(false);
+  const timelineViewRef = useRef(null);
 
-  // Effect to load initial example data
   useEffect(() => {
     async function loadInitialData() {
       setIsLoading(true);
@@ -39,14 +42,25 @@ function App() {
         const success = DataManager.loadSourceDataFromString(JSON.stringify(jsonData), 'example_source_data.json');
         if (success) {
           const sources = DataManager.getSourcesInfo();
-          setAllLoadedEvents(DataManager.getAllEvents());
+          const events = DataManager.getAllEvents();
+          setAllLoadedEvents(events);
           setThemes(DataManager.getAllThemes());
           setAllSources(sources);
           setAllCharacters(DataManager.getAllCharacters());
           setAllPlaces(DataManager.getAllPlaces());
           setActiveSourceIds(new Set(sources.map(s => s.id)));
+          
+          if (events.length > 0) {
+            const years = events.map(e => new Date(e.start_date).getFullYear());
+            setMinEventYear(Math.min(...years));
+            setMaxEventYear(Math.max(...years));
+          } else {
+            setMinEventYear(1400);
+            setMaxEventYear(new Date().getFullYear());
+          }
+
           console.log(
-            "Example data loaded. Events:", DataManager.getAllEvents().length,
+            "Example data loaded. Events:", events.length,
             "Sources:", sources.length,
             "Characters:", DataManager.getAllCharacters().length,
             "Places:", DataManager.getAllPlaces().length
@@ -74,9 +88,7 @@ function App() {
   };
 
   const handleLoadSourceDataFiles = async (files) => {
-    setIsLoading(true); // Set loading to true at the start
-    // DataManager.clearAllData(); // REMOVE this line to make loading additive
-
+    setIsLoading(true);
     let allFilesProcessedSuccessfully = true;
     for (const file of files) {
       try {
@@ -99,32 +111,38 @@ function App() {
       console.warn("Some source data files could not be processed completely.");
     }
 
-    // Update App state with newly loaded data
     const sources = DataManager.getSourcesInfo();
-    setAllLoadedEvents(DataManager.getAllEvents());
+    const currentLoadedEvents = DataManager.getAllEvents();
+    setAllLoadedEvents(currentLoadedEvents);
     setThemes(DataManager.getAllThemes());
     setAllSources(sources);
     setAllCharacters(DataManager.getAllCharacters());
     setAllPlaces(DataManager.getAllPlaces());
-    // Set all newly loaded sources as active by default,
-    // or merge with existing active IDs if you want to preserve selections across loads.
-    // For now, let's re-activate all sources from the newly loaded set.
+
+    if (currentLoadedEvents.length > 0) {
+      const years = currentLoadedEvents.map(e => new Date(e.start_date).getFullYear());
+      setMinEventYear(Math.min(...years));
+      setMaxEventYear(Math.max(...years));
+    } else {
+      setMinEventYear(1400);
+      setMaxEventYear(new Date().getFullYear());
+    }
+
     const currentActiveSources = DataManager.getSourcesInfo().map(s => s.id);
     setActiveSourceIds(new Set(currentActiveSources));
-    
-    setIsLoading(false); // Set loading to false at the end
+    setIsLoading(false);
   };
 
   const handleSaveProfile = () => {
     const profileName = prompt("Enter a name for this profile:", "SAEH_Profile");
-    if (!profileName) return; // User cancelled
+    if (!profileName) return;
 
-    // Basic UI settings for now
     const uiSettings = {
       referenceDate: referenceDate,
       timeWindowYears: timeWindowYears,
-      activeSourceIds: Array.from(activeSourceIds), // Convert Set to Array for JSON
-      // Future: Add map_center, map_zoom from MapView if accessible
+      activeSourceIds: Array.from(activeSourceIds),
+      minEventYear: minEventYear,
+      maxEventYear: maxEventYear,
     };
 
     const profileData = DataManager.constructProfileData(profileName, uiSettings);
@@ -133,7 +151,7 @@ function App() {
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = href;
-    link.download = `${profileName.replace(/\s+/g, '_') || 'SAEH_Profile'}.json`; // Sanitize filename
+    link.download = `${profileName.replace(/\s+/g, '_') || 'SAEH_Profile'}.json`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -154,22 +172,25 @@ function App() {
       if (processedProfile && processedProfile.loaded_source_data_files && processedProfile.loaded_source_data_files.length > 0) {
         alert(`Profile "${processedProfile.profile_name}" loaded.\n\nPlease now use the "Load Source Data (JSON)" input to select the following required data files one by one (or all at once if your browser supports it for the same input):\n\n${processedProfile.loaded_source_data_files.join('\n')}\n\nData will be cleared first.`);
       } else {
-         DataManager.clearAllData(); 
+         DataManager.clearAllData();
           setAllLoadedEvents([]);
           setThemes([]);
           setAllSources([]);
           setAllCharacters([]);
           setAllPlaces([]);
           setActiveSourceIds(new Set());
+          setMinEventYear(1400);
+          setMaxEventYear(new Date().getFullYear());
       }
 
       if (processedProfile && processedProfile.ui_settings) {
-        const { referenceDate: refDate, timeWindowYears: twYears, activeSourceIds: activeIds } = processedProfile.ui_settings;
+        const { referenceDate: refDate, timeWindowYears: twYears, activeSourceIds: storedActiveIds, minEventYear: profMinYear, maxEventYear: profMaxYear } = processedProfile.ui_settings;
         if (refDate) setReferenceDate(refDate);
         if (twYears !== undefined) setTimeWindowYears(twYears);
-        if (activeIds) {
-            console.log("Profile UI settings suggest active sources (user will need to re-select data files and then filters if needed):", activeIds);
-        }
+        // activeSourceIds will be set after user re-loads data files and handleLoadSourceDataFiles runs.
+        if (profMinYear !== undefined) setMinEventYear(profMinYear);
+        if (profMaxYear !== undefined) setMaxEventYear(profMaxYear);
+        console.log("Profile UI settings suggest active sources (user will need to re-select data files and then filters if needed):", storedActiveIds);
       }
       console.log("Profile processed. Please re-select source data files as instructed.");
 
@@ -177,7 +198,7 @@ function App() {
       console.error("Error loading or parsing profile file:", error);
       alert(`Failed to load or parse the profile file. Please ensure it's a valid SAEH profile JSON. \nDetails: ${error.message}`);
     } finally {
-      setIsLoading(false); 
+      setIsLoading(false);
     }
   };
 
@@ -212,10 +233,10 @@ function App() {
         data = DataManager.getPlaceById(entityId);
         break;
       case 'theme':
-        data = DataManager.getThemeById(entityId); 
+        data = DataManager.getThemeById(entityId);
         break;
       case 'source':
-        data = DataManager.getSourceInfoById(entityId); 
+        data = DataManager.getSourceInfoById(entityId);
         break;
       default:
         console.error("Unknown entity type for modal:", entityType);
@@ -247,7 +268,7 @@ function App() {
       )}
       <div id="map-container">
         <MapView
-          events={filteredEvents} 
+          events={filteredEvents}
           themes={themes}
           referenceDate={referenceDate}
           timeWindowYears={timeWindowYears}
@@ -257,8 +278,8 @@ function App() {
 
       <div id="timeline-overlay-container" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '200px', background: 'rgba(255,255,255,0.8)', zIndex: 10, borderTop: '1px solid #ccc' }}>
         <TimelineView
-          ref={timelineViewRef} 
-          events={filteredEvents} 
+          ref={timelineViewRef}
+          events={filteredEvents}
           themes={themes}
           referenceDate={referenceDate}
           onEventClick={(eventId) => handleOpenModal('event', eventId)}
@@ -283,12 +304,14 @@ function App() {
           onTimelinePanRight={handleTimelinePanRight}
           onTimelineResetZoom={handleTimelineResetZoom}
           onTimelinePeriodJump={handleTimelinePeriodJump}
+          minEventYear={minEventYear}
+          maxEventYear={maxEventYear}
         />
         <EntityListView
           characters={allCharacters.filter(c => activeSourceIds.has(c.sourceId))}
           places={allPlaces.filter(p => activeSourceIds.has(p.sourceId))}
-          themes={themes} 
-          sources={allSources} 
+          themes={themes}
+          sources={allSources}
           onEntityClick={handleOpenModal}
         />
         <button style={{ marginTop: '10px' }} onClick={() => console.log("Filtered Events:", filteredEvents)}>Log Filtered Events</button>
@@ -297,7 +320,7 @@ function App() {
       <div
         id="modal-overlay-container"
         style={{
-          display: isModalOpen ? 'flex' : 'none', 
+          display: isModalOpen ? 'flex' : 'none',
           position: 'fixed',
           top: 0,
           left: 0,
