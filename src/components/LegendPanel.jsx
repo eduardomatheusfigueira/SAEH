@@ -21,9 +21,10 @@ const LegendSection = ({ title, items, initiallyOpen = true }) => {
 
   return (
     <div style={{ marginBottom: '10px' }}>
-      <div 
-        onClick={() => setIsOpen(!isOpen)} 
-        style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', borderBottom: '1px solid #eee', paddingBottom: '5px', marginBottom: '5px' }}
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className="legend-section-title" // Added class
+        style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', paddingBottom: '5px', marginBottom: '5px' }} // Removed borderBottom
       >
         <h5 style={{ margin: 0, marginRight: '5px', fontWeight: 'bold' }}>
           {isOpen ? '▾' : '▸'} {title || 'Legenda'}
@@ -52,18 +53,10 @@ const LegendPanel = ({ legendSections }) => {
     return null;
   }
 
-  const panelStyle = {
-    padding: '10px',
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-    border: '1px solid #ccc',
-    borderRadius: '5px',
-    marginTop: '10px',
-    maxHeight: '340px', // Increased again
-    overflowY: 'auto',
-  };
+  // panelStyle removed, will be handled by CSS class "legend-panel"
 
   return (
-    <div style={panelStyle}>
+    <div className="legend-panel"> {/* Changed to className */}
       {legendSections.map((section) => (
         <LegendSection
           key={section.id || section.title} // Prefer unique ID if available

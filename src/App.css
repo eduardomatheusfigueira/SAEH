@@ -1,4 +1,13 @@
 /* src/App.css */
+:root {
+  --panel-background: rgba(255, 255, 255, 0.95);
+  --text-color: #333333;
+  --border-color: #cccccc;
+  --button-primary-bg: #007bff;
+  --button-primary-text: #ffffff;
+  /* Add other theme-related variables here if needed */
+}
+
 html, body, #root, #app-container {
   margin: 0;
   padding: 0;
@@ -6,10 +15,44 @@ html, body, #root, #app-container {
   height: 100%;
   overflow: hidden; /* Prevent scrollbars on the body due to absolute positioning */
   font-family: sans-serif;
+  color: var(--text-color); /* Apply base text color */
 }
 
 #app-container {
   position: relative; /* For positioning overlays */
+  background-color: var(--app-background, #777); /* Optional: if map doesn't cover all */
+}
+
+.loading-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--panel-background);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 200;
+  border: 1px solid var(--border-color);
+}
+
+.controls-toggle-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 110;
+  background: var(--panel-background);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 #map-container {
@@ -32,10 +75,10 @@ html, body, #root, #app-container {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200px; /* Example height */
-  background: rgba(240, 240, 240, 0.9); /* Light background with some transparency */
-  z-index: 10;
-  border-top: 1px solid #ccc;
+  /* height is dynamic via inline style */
+  background: var(--panel-background);
+  z-index: 5; /* Adjusted z-index from plan */
+  border-top: 1px solid var(--border-color);
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   display: flex; /* For centering canvas or adding other elements */
   align-items: center;
@@ -52,14 +95,16 @@ html, body, #root, #app-container {
 
 #controls-overlay-panel {
   position: absolute;
-  top: 10px;
+  top: 55px; /* Adjusted to be below toggle button */
   left: 10px;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--panel-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
   padding: 15px;
   border-radius: 8px;
-  z-index: 10;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  max-height: calc(100vh - 220px); /* Avoid overlapping timeline and header */
+  z-index: 100; /* Adjusted z-index from plan */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-height: calc(100vh - 70px - 200px - 20px); /* Original calculation */
   overflow-y: auto;
   font-size: 0.9em;
 }
@@ -89,47 +134,89 @@ html, body, #root, #app-container {
 
 #controls-overlay-panel button {
   padding: 6px 12px;
-  background-color: #007bff;
-  color: white;
-  border: none;
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border: 1px solid var(--border-color); /* Or a specific button border variable */
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9em;
 }
 
 #controls-overlay-panel button:hover {
-  background-color: #0056b3;
+  /* Consider a hover variable or a calculated darker shade */
+  filter: brightness(90%);
 }
 
-/* Styles for EntityListView tabs */
+.log-button-custom { /* For the Log Eventos button */
+  margin-top: 15px;
+  padding: 8px 12px;
+  background: #6c757d; /* Keeping this specific for now, can be themed */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.log-button-custom:hover {
+  background: #5a6268;
+}
+
+
+/* Styles for EntityListView */
+.entity-list-view {
+  /* background-color: var(--panel-background); /* Optional: if the whole view needs a themed background */
+  /* border: 1px solid var(--border-color); /* Optional */
+  /* border-radius: 5px; /* Optional */
+  /* padding: 5px; /* Optional */
+  color: var(--text-color);
+}
+
+.entity-list-view h4 {
+  color: var(--text-color); /* Ensure heading uses theme color */
+}
+
 .tabs button {
-  background-color: #f0f0f0;
-  color: #333;
-  border: 1px solid #ccc;
+  background-color: var(--panel-background); /* Lighter shade for inactive tabs */
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
   padding: 5px 10px;
   cursor: pointer;
-  border-bottom: none; /* For active tab effect */
+  border-bottom-color: var(--border-color); /* Ensure bottom border is themed before being "removed" by active tab */
 }
 
-.tabs button:disabled { /* Style for active tab */
-  background-color: #fff;
-  border-bottom: 1px solid #fff; /* Make it look connected to content */
+.tabs button.active-tab-button { /* New class for active tab button styling */
+  background-color: var(--panel-background); /* Or a slightly different active tab background */
+  border-bottom-color: var(--panel-background); /* To make it look connected */
   font-weight: bold;
+  /* filter: brightness(95%); /* Slightly darker if panel-background is light, or lighter if dark */
 }
 
-.tabs button:not(:disabled):hover {
-  background-color: #e0e0e0;
+.tabs button:not(.active-tab-button):hover {
+  filter: brightness(95%); /* Adjust brightness on hover for non-active tabs */
 }
 
-.entity-list-view ul {
-  border: 1px solid #ddd;
+.entity-list { /* Was .entity-list-view ul */
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-background); /* Ensure list background is themed */
   padding: 10px;
-  border-radius: 0 4px 4px 4px; /* Match tab style */
+  list-style-type: none; /* Moved from inline */
+  padding-left: 0; /* Moved from inline */
+  max-height: 200px; /* Kept from inline */
+  overflow-y: auto; /* Kept from inline */
+  border-radius: 0 0 4px 4px; /* Rounded bottom corners */
   margin-top: -1px; /* Overlap with tab border */
 }
 
-.entity-list-view li:hover {
-  background-color: #f0f0f0;
+.entity-list-item { /* Was .entity-list-view li */
+  border-bottom: 1px solid var(--border-color); /* Themed border */
+  color: var(--text-color);
+}
+
+.entity-list-item:last-child {
+  border-bottom: none;
+}
+
+.entity-list-item:hover {
+  background-color: rgba(0,0,0,0.05); /* Subtle hover, works on light/dark themes */
 }
 
 
@@ -148,8 +235,10 @@ html, body, #root, #app-container {
 }
 
 /* Example style for the modal content itself */
-.modal-content-placeholder {
-  background: white;
+.modal-content-placeholder { /* This class is on DetailModal's root */
+  background: var(--panel-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
   padding: 25px;
   border-radius: 8px;
   min-width: 300px;
@@ -157,4 +246,138 @@ html, body, #root, #app-container {
   max-height: 80vh;
   overflow-y: auto;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Styles for LegendPanel */
+.legend-panel {
+  padding: 10px;
+  background-color: var(--panel-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-top: 10px; /* This was part of inline style, kept it here */
+  max-height: 340px; /* This was part of inline style, kept it here */
+  overflow-y: auto;
+}
+
+.legend-section-title {
+  border-bottom: 1px solid var(--border-color);
+  /* other styles like cursor, display, alignItems are still inline in LegendPanel.jsx for the onClick div */
+}
+
+/* Styles for DateControls */
+.date-controls-container {
+  padding: 10px;
+  /* background-color: var(--panel-background); /* Optional: if DateControls should also have themed background */
+  /* border: 1px solid var(--border-color); /* Optional */
+  /* border-radius: 5px; /* Optional */
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* This was an inline style, preserved here */
+}
+
+.date-controls-container label { /* Targets labels within DateControls specifically */
+  margin-bottom: 3px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: var(--text-color); /* Ensure labels also use theme color */
+}
+
+.themed-input {
+  border: 1px solid var(--border-color);
+  background-color: var(--panel-background); /* Or a specific input background variable */
+  color: var(--text-color);
+  /* padding, borderRadius, fontSize are from inputBaseStyle in DateControls.jsx */
+}
+
+.year-display-span {
+  font-size: 0.8em;
+  text-align: center;
+  color: var(--text-color); /* Use themed text color, maybe a lighter variant if needed */
+  opacity: 0.8; /* Slightly muted */
+  margin-top: 2px;
+}
+
+/* Styling for the range input in DateControls */
+#ref-date-slider-top {
+  -webkit-appearance: none; /* Override default CSS for WebKit browsers */
+  appearance: none;
+  width: 100%; /* Full width of its container */
+  height: 8px; /* Slider track height */
+  background: var(--border-color); /* Track background */
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 4px;
+}
+
+#ref-date-slider-top:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+
+#ref-date-slider-top::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px; /* Thumb width */
+  height: 18px; /* Thumb height */
+  background: var(--button-primary-bg); /* Thumb color from CSS variable */
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid var(--border-color); /* Optional: border for the thumb */
+}
+
+#ref-date-slider-top::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: var(--button-primary-bg);
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+}
+
+#ref-date-slider-top::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  background: var(--button-primary-bg);
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+}
+
+/* Optional: Styling for the track itself, if needed beyond the default background */
+#ref-date-slider-top::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+#ref-date-slider-top::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+#ref-date-slider-top::-ms-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent; /* IE/Edge track needs to be transparent */
+  border-color: transparent;
+  color: transparent;
+}
+
+#ref-date-slider-top::-ms-fill-lower {
+  background: var(--button-primary-bg); /* Color of the track to the left of the thumb */
+  border-radius: 4px;
+}
+
+#ref-date-slider-top::-ms-fill-upper {
+  background: var(--border-color); /* Color of the track to the right of the thumb */
+  border-radius: 4px;
 }

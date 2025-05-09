@@ -28,21 +28,7 @@ const DateControls = ({
     onReferenceDateChange(newDate);
   };
 
-  const containerStyle = {
-    // position: 'absolute', // Removed
-    // top: '10px', // Removed
-    // right: '10px', // Removed
-    // zIndex: 10, // Will be controlled by parent
-    padding: '10px', // Keep padding for internal spacing if desired, or remove if parent handles all
-    // No background color by default
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '10px',
-    // Add a border or subtle background if needed for visual separation without a full panel
-    // border: '1px solid #ddd',
-    // borderRadius: '5px',
-    // backgroundColor: 'rgba(255, 255, 255, 0.7)', // Optional subtle background
-  };
+  // containerStyle removed, will be handled by CSS class "date-controls-container"
 
   const controlGroupStyle = {
     display: 'flex',
@@ -53,35 +39,37 @@ const DateControls = ({
     marginBottom: '3px',
     fontSize: '0.9em',
     fontWeight: 'bold',
-    color: '#333', // Darker text for better readability without background
+    // color: '#333', // Will inherit from parent or global CSS
   };
 
-  const inputStyle = {
+  const inputBaseStyle = { // Renamed to avoid conflict if a global .inputStyle exists
     padding: '5px',
-    border: '1px solid #ccc',
+    // border: '1px solid #ccc', // Will be handled by CSS
     borderRadius: '4px',
     fontSize: '0.9em',
   };
 
 
   return (
-    <div style={containerStyle}>
+    <div className="date-controls-container"> {/* Changed to className */}
       <div style={controlGroupStyle}>
         <label htmlFor="ref-date-input-top" style={labelStyle}>Data de Referência:</label>
         <input
           type="date"
           id="ref-date-input-top"
+          className="themed-input" // Added class for styling
           value={referenceDate}
           onChange={(e) => onReferenceDateChange(e.target.value)}
-          style={inputStyle}
+          style={inputBaseStyle} // Kept base style, border/color from class
         />
         <div style={{ display: 'flex', alignItems: 'center', marginTop: '5px', gap: '5px' }}>
           <input
             type="number"
             aria-label="Ano mínimo do slider"
+            className="themed-input" // Added class
             value={minEventYear}
             onChange={(e) => onMinEventYearChange(parseInt(e.target.value, 10))}
-            style={{ ...inputStyle, width: '60px', textAlign: 'center' }}
+            style={{ ...inputBaseStyle, width: '60px', textAlign: 'center' }}
           />
           <input
             type="range"
@@ -90,18 +78,19 @@ const DateControls = ({
             max={maxEventYear || new Date().getFullYear()}
             value={currentReferenceYear}
             onChange={handleReferenceDateSliderChange}
-            style={{ flexGrow: 1, margin: '0 5px' }}
+            style={{ flexGrow: 1, margin: '0 5px' }} // Range slider might need specific styling
             title={`Ano: ${currentReferenceYear}`}
           />
           <input
             type="number"
             aria-label="Ano máximo do slider"
+            className="themed-input" // Added class
             value={maxEventYear}
             onChange={(e) => onMaxEventYearChange(parseInt(e.target.value, 10))}
-            style={{ ...inputStyle, width: '60px', textAlign: 'center' }}
+            style={{ ...inputBaseStyle, width: '60px', textAlign: 'center' }}
           />
         </div>
-        <span style={{ fontSize: '0.8em', textAlign: 'center', color: '#555', marginTop: '2px' }}>Ano Selecionado: {currentReferenceYear}</span>
+        <span className="year-display-span">Ano Selecionado: {currentReferenceYear}</span> {/* Added class */}
       </div>
       
       <div style={controlGroupStyle}>
@@ -109,10 +98,11 @@ const DateControls = ({
         <input
           type="number"
           id="time-window-input-top"
+          className="themed-input" // Added class
           value={timeWindowYears}
           onChange={(e) => onTimeWindowYearsChange(parseInt(e.target.value, 10))}
           min="0"
-          style={{ ...inputStyle, width: '70px' }}
+          style={{ ...inputBaseStyle, width: '70px' }}
         />
       </div>
     </div>

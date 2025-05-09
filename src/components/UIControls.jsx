@@ -17,6 +17,9 @@ const UIControls = ({
   onToggleTimelineExpanded,
   onJumpToYear,
   onSetTimelineZoomLevel,
+  availableMapStyles,
+  currentMapStyleUrl,
+  onMapStyleChange,
 }) => {
 
   // Placeholder for jump to year input
@@ -60,13 +63,31 @@ const UIControls = ({
             onChange={handleProfileFileChange}
           />
         </div>
-        <button onClick={onSaveProfile} style={{ marginTop: '5px' }}>Salvar Perfil</button>
+        <button onClick={onSaveProfile}>Salvar Perfil</button> {/* Removed inline style */}
       </div>
+
+      <div style={{ marginTop: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
+        <h4>Estilo do Mapa</h4>
+        <label htmlFor="map-style-select">Escolha um estilo: </label>
+        <select
+          id="map-style-select"
+          value={currentMapStyleUrl}
+          onChange={(e) => onMapStyleChange(e.target.value)}
+          style={{ width: '100%', padding: '5px', marginBottom: '10px', border: '1px solid var(--border-color)', borderRadius: '4px' }}
+        >
+          {availableMapStyles && availableMapStyles.map(style => (
+            <option key={style.url} value={style.url}>
+              {style.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
       {/* Date and Time Window controls have been moved to DateControls.jsx */}
 
       <div style={{ marginTop: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
         <h4>Controles da Linha do Tempo</h4>
-        <button onClick={onToggleTimelineExpanded} style={{ marginBottom: '10px' }}>
+        <button onClick={onToggleTimelineExpanded}> {/* Removed inline style */}
           {isTimelineExpanded ? 'Recolher Linha do Tempo' : 'Expandir Linha do Tempo'}
         </button>
         {isTimelineExpanded && (
@@ -84,7 +105,7 @@ const UIControls = ({
               <button onClick={() => onJumpToYear(jumpYear)}>Ir</button>
             </div>
             <div style={{marginTop: '5px'}}>
-              <button onClick={() => onSetTimelineZoomLevel('decade')} style={{marginRight: '5px'}}>Visão Década</button>
+              <button onClick={() => onSetTimelineZoomLevel('decade')} style={{marginRight: '5px'}}>Visão Década</button> {/* Kept marginRight for layout */}
               <button onClick={() => onSetTimelineZoomLevel('century')}>Visão Século</button>
             </div>
           </div>

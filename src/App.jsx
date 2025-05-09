@@ -8,9 +8,10 @@ import EntityListView from './components/EntityListView';
 import LegendPanel from './components/LegendPanel'; // Import new component
 import DateControls from './components/DateControls';
 import * as DataManager from './dataManager';
-import { MAPBOX_ACCESS_TOKEN } from './config';
+import { MAPBOX_ACCESS_TOKEN, DEFAULT_MAP_STYLE, AVAILABLE_MAP_STYLES } from './config'; // Added imports
 
 function App() {
+  const [currentMapStyleUrl, setCurrentMapStyleUrl] = useState(DEFAULT_MAP_STYLE); // New state
   const [minEventYear, setMinEventYear] = useState(1400);
   const [maxEventYear, setMaxEventYear] = useState(new Date().getFullYear());
   const [allLoadedEvents, setAllLoadedEvents] = useState([]);
@@ -41,6 +42,15 @@ function App() {
       return newExpandedState;
     });
   };
+
+  useEffect(() => { // Effect to apply UI theme
+    const selectedStyleConfig = AVAILABLE_MAP_STYLES.find(s => s.url === currentMapStyleUrl);
+    if (selectedStyleConfig && selectedStyleConfig.uiTheme) {
+      for (const [key, value] of Object.entries(selectedStyleConfig.uiTheme)) {
+        document.documentElement.style.setProperty(key, value);
+      }
+    }
+  }, [currentMapStyleUrl]);
 
   useEffect(() => {
     async function loadInitialData() {
@@ -100,7 +110,8 @@ function App() {
     if (!profileName) return;
     const uiSettings = {
       referenceDate, timeWindowYears, activeSourceIds: Array.from(activeSourceIds),
-      minEventYear, maxEventYear, isTimelineLockedToCenter
+      minEventYear, maxEventYear, isTimelineLockedToCenter,
+      currentMapStyleUrl // Added to profile
     };
     const profileData = DataManager.constructProfileData(profileName, uiSettings);
     const jsonString = JSON.stringify(profileData, null, 2);
@@ -140,17 +151,20 @@ function App() {
       if (processedProfile?.ui_settings) {
         const { 
           referenceDate: refDate, 
-          timeWindowYears: twYears, 
-          minEventYear: profMin, 
-          maxEventYear: profMax, 
-          isTimelineLocked: profLocked 
+          timeWindowYears: twYears,
+          minEventYear: profMin,
+          maxEventYear: profMax,
+          isTimelineLocked: profLocked,
+          currentMapStyleUrl: loadedMapStyle // Added to destructuring
         } = processedProfile.ui_settings;
         if (refDate) setReferenceDate(refDate);
         if (twYears !== undefined) setTimeWindowYears(twYears);
         if (profMin !== undefined) setMinEventYear(profMin);
         if (profMax !== undefined) setMaxEventYear(profMax);
         if (profLocked !== undefined) setIsTimelineLockedToCenter(profLocked);
-      } else { 
+        if (loadedMapStyle) setCurrentMapStyleUrl(loadedMapStyle); else setCurrentMapStyleUrl(DEFAULT_MAP_STYLE);
+      } else {
+        setCurrentMapStyleUrl(DEFAULT_MAP_STYLE); // Default if not in profile
         if (events.length > 0) {
             const years = events.map(e => new Date(e.start_date).getFullYear());
             setMinEventYear(Math.min(...years));
@@ -293,34 +307,28 @@ function App() {
   return (
     <div id="app-container">
       {isLoading && (
-        <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background: 'rgba(0,0,0,0.7)', color: 'white', padding: '20px', borderRadius: '8px', zIndex: 200 }}>
+        <div className="loading-indicator"> {/* Changed to class */}
           Carregando dados...
         </div>
       )}
-      <button 
+      <button
         onClick={toggleControlsPanel}
-        style={{
-          position: 'absolute', top: '10px', left: '10px', zIndex: 110, 
-          background: '#f8f9fa', border: '1px solid #ced4da', borderRadius: '50%',
-          width: '36px', height: '36px', fontSize: '18px', cursor: 'pointer',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.15)', color: '#495057'
-        }}
+        className="controls-toggle-button" // Changed to class
         title={isControlsPanelVisible ? "Fechar Painel de Controles" : "Abrir Painel de Controles"}
       >
         {isControlsPanelVisible ? '✕' : '☰'}
       </button>
 
-      <div 
-        id="top-right-container"
+      <div
+        id="top-right-container" // Inline styles remain for positioning, gap already adjusted
         style={{
           position: 'absolute',
           top: '10px',
           right: '10px',
-          zIndex: 105, 
+          zIndex: 105,
           display: 'flex',
           flexDirection: 'column',
-          gap: '0px', // Further reduced gap
+          gap: '0px',
           maxWidth: '320px',
         }}
       >
@@ -334,22 +342,21 @@ function App() {
           onMinEventYearChange={handleMinEventYearChange}
           onMaxEventYearChange={handleMaxEventYearChange}
         />
-        <div 
-          id="right-side-lists-container"
+        <div
+          id="right-side-lists-container" // Inline styles remain for positioning, gap already adjusted
           style={{
             width: '100%',
-            // Adjusted maxHeight to account for typical DateControls height (e.g. ~150px) + timeline (200px) + reduced margins
-            maxHeight: 'calc(100vh - 150px - 200px - 30px)', // Adjusted for reduced gap and potentially more legend height
+            maxHeight: 'calc(100vh - 150px - 200px - 30px)',
             overflowY: 'auto',
             display: 'flex',
             flexDirection: 'column',
-            gap: '0px' // Further reduced gap
+            gap: '0px'
           }}
         >
           <EntityListView
             characters={charactersForList}
             places={placesForList}
-            themes={themes} 
+            themes={themes}
             sources={allSources}
             onEntityClick={handleOpenModal}
           />
@@ -358,14 +365,16 @@ function App() {
       </div>
 
       {isControlsPanelVisible && (
-        <div 
-          id="controls-overlay-panel" 
-          style={{ 
-            position: 'absolute', top: '55px', left: '10px', 
-            background: 'rgba(255,255,255,0.95)', padding: '15px', borderRadius: '8px', 
-            zIndex: 100, boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-            width: '320px', maxHeight: 'calc(100vh - 70px - 200px - 20px)', 
-            overflowY: 'auto' 
+        <div
+          id="controls-overlay-panel" // Will be styled by App.css using variables
+          // Removed inline styles for background, padding, borderRadius, zIndex, boxShadow
+          // Kept positioning and sizing inline styles as they are layout specific
+          style={{
+            position: 'absolute', top: '55px', left: '10px',
+            width: '320px', maxHeight: 'calc(100vh - 70px - 200px - 20px)',
+            overflowY: 'auto',
+            padding: '15px', borderRadius: '8px', // Kept these as they are specific to this panel
+            zIndex: 100, boxShadow: '0 4px 12px rgba(0,0,0,0.2)' // Kept these
           }}>
           <UIControls
             sources={allSources}
@@ -380,9 +389,12 @@ function App() {
             onToggleTimelineExpanded={toggleTimelineExpanded}
             onJumpToYear={handleJumpToYear}
             onSetTimelineZoomLevel={handleSetTimelineZoomLevel}
+            availableMapStyles={AVAILABLE_MAP_STYLES} // Pass new prop
+            currentMapStyleUrl={currentMapStyleUrl} // Pass new prop
+            onMapStyleChange={setCurrentMapStyleUrl} // Pass new prop
           />
           <button
-            style={{ marginTop: '15px', padding: '8px 12px', background: '#6c757d', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }} 
+            className="log-button-custom" // Changed to class
             onClick={() => console.log("Events in current source filters:", eventsInCurrentSourceFilters)}
           >
             Log Eventos (Filtro Fonte)
@@ -397,21 +409,22 @@ function App() {
           referenceDate={referenceDate}
           timeWindowYears={timeWindowYears}
           onEventClick={(eventId) => handleOpenModal('event', eventId)}
+          mapStyleUrl={currentMapStyleUrl} // Pass new prop
         />
       </div>
 
       <div
-        id="timeline-overlay-container"
+        id="timeline-overlay-container" // Will be styled by App.css using variables
+        // Removed inline styles for background, borderTop
+        // Kept positioning and sizing inline styles
         style={{
           position: 'absolute',
           bottom: 0,
           left: 0,
           width: '100%',
           height: isTimelineExpanded ? '70vh' : '200px',
-          background: 'rgba(255,255,255,0.85)',
           zIndex: 5 ,
-          borderTop: '1px solid #ccc',
-          transition: 'height 0.3s ease-in-out' // Added transition
+          transition: 'height 0.3s ease-in-out'
         }}
       >
         <TimelineView
@@ -421,11 +434,11 @@ function App() {
           referenceDate={referenceDate}
           onEventClick={(eventId) => handleOpenModal('event', eventId)}
           isTimelineLocked={isTimelineLockedToCenter}
-          isTimelineExpanded={isTimelineExpanded} // Pass new prop
+          isTimelineExpanded={isTimelineExpanded}
         />
       </div>
 
-      <div
+      <div // This is the modal backdrop, not the content panel itself
         id="modal-overlay-container"
         style={{
           display: isModalOpen ? 'flex' : 'none',
@@ -435,7 +448,7 @@ function App() {
         }}
       >
         {isModalOpen && (
-          <DetailModal
+          <DetailModal // DetailModal itself will get a class for theming its content box
             entityData={selectedEntityData}
             entityType={selectedEntityType}
             onClose={handleCloseModal}

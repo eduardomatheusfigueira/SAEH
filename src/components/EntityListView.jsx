@@ -23,12 +23,13 @@ const EntityListView = ({ characters, places, themes, sources, onEntityClick }) 
       return <p><em>Nenhum(a) {entityTypePortuguese} carregado(a).</em></p>;
     }
     return (
-      <ul style={{ listStyleType: 'none', paddingLeft: 0, maxHeight: '200px', overflowY: 'auto' }}>
+      <ul className="entity-list"> {/* Added class, removed inline paddingLeft */}
         {items.map(item => (
           <li
             key={item.globalId || item.id} // Themes and Sources use item.id
+            className="entity-list-item" // Added class
             onClick={() => onEntityClick(entityType, item.globalId || item.id)}
-            style={{ cursor: 'pointer', padding: '5px 0', borderBottom: '1px solid #eee' }}
+            style={{ cursor: 'pointer', padding: '5px 0' }} // Kept cursor and padding, borderBottom to class
             title={item.description_short || item.name}
           >
             {item.name}
@@ -48,16 +49,31 @@ const EntityListView = ({ characters, places, themes, sources, onEntityClick }) 
     <div className="entity-list-view"> {/* Removed marginTop: '15px' */}
       <h4 style={{ marginTop: '5px', marginBottom: '5px' }}>Explorar Entidades</h4>
       <div className="tabs" style={{ marginBottom: '10px' }}>
-        <button onClick={() => handleTabClick('characters')} >
+        <button
+          onClick={() => handleTabClick('characters')}
+          className={activeTab === 'characters' ? 'active-tab-button' : ''}
+        >
           {activeTab === 'characters' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Personagens
         </button>
-        <button onClick={() => handleTabClick('places')} style={{ marginLeft: '5px' }}>
+        <button
+          onClick={() => handleTabClick('places')}
+          className={activeTab === 'places' ? 'active-tab-button' : ''}
+          style={{ marginLeft: '5px' }}
+        >
           {activeTab === 'places' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Lugares
         </button>
-        <button onClick={() => handleTabClick('themes')} style={{ marginLeft: '5px' }}>
+        <button
+          onClick={() => handleTabClick('themes')}
+          className={activeTab === 'themes' ? 'active-tab-button' : ''}
+          style={{ marginLeft: '5px' }}
+        >
           {activeTab === 'themes' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Temas
         </button>
-        <button onClick={() => handleTabClick('sources')} style={{ marginLeft: '5px' }}>
+        <button
+          onClick={() => handleTabClick('sources')}
+          className={activeTab === 'sources' ? 'active-tab-button' : ''}
+          style={{ marginLeft: '5px' }}
+        >
           {activeTab === 'sources' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Fontes (Info)
         </button>
       </div>

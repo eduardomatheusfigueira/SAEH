@@ -4,7 +4,7 @@ import { MAPBOX_ACCESS_TOKEN, INITIAL_MAP_CENTER, INITIAL_MAP_ZOOM, DEFAULT_MAP_
 
 mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
 
-const MapView = ({ events, themes, referenceDate, timeWindowYears, onEventClick }) => {
+const MapView = ({ events, themes, referenceDate, timeWindowYears, onEventClick, mapStyleUrl }) => { // Added mapStyleUrl prop
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
   const [isMapLoaded, setIsMapLoaded] = useState(false);
@@ -15,27 +15,46 @@ const MapView = ({ events, themes, referenceDate, timeWindowYears, onEventClick 
 
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: DEFAULT_MAP_STYLE,
+      style: mapStyleUrl || DEFAULT_MAP_STYLE, // Use prop or fallback to default from config
       center: INITIAL_MAP_CENTER,
       zoom: INITIAL_MAP_ZOOM
     });
 
-    mapRef.current.on('load', () => {
+    const onLoadHandler = () => {
       setIsMapLoaded(true);
-      console.log('Mapbox map loaded.');
-    });
+      console.log('Mapbox map loaded with style:', mapRef.current.getStyle().url);
+    };
+
+    mapRef.current.on('load', onLoadHandler);
 
     return () => {
       if (mapRef.current) {
+        mapRef.current.off('load', onLoadHandler); // Clean up listener
         mapRef.current.remove();
         mapRef.current = null;
         setIsMapLoaded(false);
       }
     };
-  }, []);
+  }, []); // Initial map setup runs once
+
+  useEffect(() => { // Effect to change style
+    if (mapRef.current && isMapLoaded && mapStyleUrl && mapRef.current.getStyle().url !== mapStyleUrl) {
+      console.log('MapView: Setting new map style:', mapStyleUrl);
+      // Setting isMapLoaded to false before changing style can help manage marker re-rendering logic
+      // if it strictly depends on isMapLoaded being true only after the *new* style is fully loaded.
+      // setIsMapLoaded(false); // Optional: uncomment if marker logic needs explicit reload trigger
+      mapRef.current.setStyle(mapStyleUrl);
+      // The 'load' event will be re-triggered by setStyle, and onLoadHandler will set isMapLoaded(true)
+    }
+  }, [mapStyleUrl, isMapLoaded]); // Removed mapRef.current from deps as it's stable after init
 
   useEffect(() => {
+    // This effect handles marker updates. It depends on isMapLoaded.
+    // When setStyle completes, 'load' fires, isMapLoaded becomes true, and this effect runs.
     if (!isMapLoaded || !mapRef.current || !events || !themes) {
+      // Clear existing markers if map is not ready or no data, to prevent stale markers on style change
+      markers.forEach(marker => marker.remove());
+      setMarkers([]);
       return;
     }
 
