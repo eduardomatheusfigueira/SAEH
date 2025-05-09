@@ -58,21 +58,21 @@ const EntityListView = ({ characters, places, themes, sources, onEntityClick }) 
         <button
           onClick={() => handleTabClick('places')}
           className={activeTab === 'places' ? 'active-tab-button' : ''}
-          style={{ marginLeft: '5px' }}
+          /* style={{ marginLeft: '5px' }} */ // Removed for CSS gap
         >
           {activeTab === 'places' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Lugares
         </button>
         <button
           onClick={() => handleTabClick('themes')}
           className={activeTab === 'themes' ? 'active-tab-button' : ''}
-          style={{ marginLeft: '5px' }}
+          /* style={{ marginLeft: '5px' }} */ // Removed for CSS gap
         >
           {activeTab === 'themes' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Temas
         </button>
         <button
           onClick={() => handleTabClick('sources')}
           className={activeTab === 'sources' ? 'active-tab-button' : ''}
-          style={{ marginLeft: '5px' }}
+          /* style={{ marginLeft: '5px' }} */ // Removed for CSS gap
         >
           {activeTab === 'sources' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Fontes (Info)
         </button>

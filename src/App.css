@@ -8,6 +8,7 @@
   --date-control-label-color: var(--text-color); /* Default to general text color */
   --entity-list-title-color: var(--text-color); /* Default to general text color */
   --text-shadow-for-satellite: none; /* Default to no shadow */
+  --toggle-button-bg-rgb: 248, 249, 250; /* Default light grey for toggle button background */
 }
 
 html, body, #root, #app-container {
@@ -43,18 +44,19 @@ html, body, #root, #app-container {
   top: 10px;
   left: 10px;
   z-index: 110;
-  background: var(--panel-background);
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 18px;
+  background-color: transparent; /* Removed background circle */
+  border: none; /* Removed border */
+  color: var(--text-color); /* Icon color remains fully opaque */
+  /* border-radius: 50%; /* No longer needed */
+  /* width: 36px; /* No longer needed or adjust with padding */
+  /* height: 36px; /* No longer needed or adjust with padding */
+  padding: 8px; /* Add some padding for clickability if width/height are removed */
+  font-size: 24px; /* Increased icon size for better visibility without background */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  box-shadow: none; /* Removed box-shadow */
 }
 
 #map-container {
@@ -168,7 +170,8 @@ html, body, #root, #app-container {
   /* background-color: var(--panel-background); /* Optional: if the whole view needs a themed background */
   /* border: 1px solid var(--border-color); /* Optional */
   /* border-radius: 5px; /* Optional */
-  /* padding: 5px; /* Optional */
+  padding: 10px; /* Added padding for alignment */
+  box-sizing: border-box; /* Include padding in width/height */
   color: var(--text-color);
 }
 
@@ -177,13 +180,21 @@ html, body, #root, #app-container {
   text-shadow: var(--text-shadow-for-satellite); /* Apply shadow */
 }
 
+.tabs { /* Target the container div */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Adjust gap as needed */
+  margin-bottom: 10px; /* This was on the div inline, kept it here */
+}
+
 .tabs button {
-  background-color: var(--panel-background); /* Lighter shade for inactive tabs */
+  background-color: var(--panel-background);
   color: var(--text-color);
   border: 1px solid var(--border-color);
   padding: 5px 10px;
   cursor: pointer;
-  border-bottom-color: var(--border-color); /* Ensure bottom border is themed before being "removed" by active tab */
+  border-bottom-color: var(--border-color);
+  margin-left: 0 !important; /* Override any inline marginLeft from JSX */
 }
 
 .tabs button.active-tab-button { /* New class for active tab button styling */
@@ -258,7 +269,7 @@ html, body, #root, #app-container {
   color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: 5px;
-  margin-top: 10px; /* This was part of inline style, kept it here */
+  /* margin-top: 10px; */ /* Removed as parent gap is 0, padding handles internal space */
   max-height: 340px; /* This was part of inline style, kept it here */
   overflow-y: auto;
 }
