@@ -46,11 +46,8 @@ function App() {
           setAllCharacters(DataManager.getAllCharacters());
           setAllPlaces(DataManager.getAllPlaces());
           setActiveSourceIds(new Set(sources.map(s => s.id)));
-          if (events.length > 0) {
-            const years = events.map(e => new Date(e.start_date).getFullYear());
-            setMinEventYear(Math.min(...years));
-            setMaxEventYear(Math.max(...years));
-          }
+          // No longer automatically setting min/max event year from data here
+          // User will control this via DateControls inputs
         }
       } catch (error) { console.error("Could not load initial example data:", error); }
       finally { setIsLoading(false); }
@@ -85,13 +82,11 @@ function App() {
     setAllSources(sources);
     setAllCharacters(DataManager.getAllCharacters());
     setAllPlaces(DataManager.getAllPlaces());
-    if (currentLoadedEvents.length > 0) {
-      const years = currentLoadedEvents.map(e => new Date(e.start_date).getFullYear());
-      setMinEventYear(Math.min(...years));
-      setMaxEventYear(Math.max(...years));
-    } else {
-      setMinEventYear(1400); setMaxEventYear(new Date().getFullYear());
-    }
+    // No longer automatically setting min/max event year from data here
+    // User will control this via DateControls inputs
+    // We could potentially update a *separate* state here for actual data range
+    // if we want to provide feedback to the user, but the slider itself will use
+    // the user-defined minEventYear/maxEventYear.
     setActiveSourceIds(new Set(sources.map(s => s.id)));
     setIsLoading(false);
   };
@@ -129,20 +124,48 @@ function App() {
         DataManager.clearAllData();
         setAllLoadedEvents([]); setThemes([]); setAllSources([]);
         setAllCharacters([]); setAllPlaces([]); setActiveSourceIds(new Set());
-        setMinEventYear(1400); setMaxEventYear(new Date().getFullYear());
+        // When clearing data due to profile load without files, reset slider range to defaults
+        // or to what's in profile if available and makes sense.
+        // For now, let's keep the user-defined or default min/max year.
+        // setMinEventYear(1400); setMaxEventYear(new Date().getFullYear()); // This would override user's slider range settings
       }
       if (processedProfile?.ui_settings) {
+        // When loading a profile, we DO want to load the min/max year for the slider if saved
         const { referenceDate: refDate, timeWindowYears: twYears, minEventYear: profMin, maxEventYear: profMax, isTimelineLocked: profLocked } = processedProfile.ui_settings;
         if (refDate) setReferenceDate(refDate);
         if (twYears !== undefined) setTimeWindowYears(twYears);
-        if (profMin !== undefined) setMinEventYear(profMin);
-        if (profMax !== undefined) setMaxEventYear(profMax);
+        if (profMin !== undefined) setMinEventYear(profMin); // Load saved slider range
+        if (profMax !== undefined) setMaxEventYear(profMax); // Load saved slider range
         if (profLocked !== undefined) setIsTimelineLockedToCenter(profLocked);
       }
     } catch (error) {
       alert(`Falha ao carregar ou analisar o arquivo de perfil. \nDetalhes: ${error.message}`);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleMinEventYearChange = (year) => {
+    const newMinYear = parseInt(year, 10);
+    if (!isNaN(newMinYear) && newMinYear <= maxEventYear) {
+      setMinEventYear(newMinYear);
+      const currentRefYear = new Date(referenceDate).getFullYear();
+      if (currentRefYear < newMinYear) {
+        // Adjust referenceDate if it's now below the new min
+        handleReferenceDateChangeAndUpdateTimeline(`${newMinYear}-${referenceDate.substring(5)}`);
+      }
+    }
+  };
+
+  const handleMaxEventYearChange = (year) => {
+    const newMaxYear = parseInt(year, 10);
+    if (!isNaN(newMaxYear) && newMaxYear >= minEventYear) {
+      setMaxEventYear(newMaxYear);
+      const currentRefYear = new Date(referenceDate).getFullYear();
+      if (currentRefYear > newMaxYear) {
+        // Adjust referenceDate if it's now above the new max
+        handleReferenceDateChangeAndUpdateTimeline(`${newMaxYear}-${referenceDate.substring(5)}`);
+      }
     }
   };
   

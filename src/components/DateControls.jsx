@@ -7,6 +7,8 @@ const DateControls = ({
   onTimeWindowYearsChange,
   minEventYear,
   maxEventYear,
+  onMinEventYearChange, // New prop
+  onMaxEventYearChange, // New prop
 }) => {
   const currentReferenceYear = referenceDate ? new Date(referenceDate).getFullYear() : new Date().getFullYear();
 
@@ -73,18 +75,35 @@ const DateControls = ({
           onChange={(e) => onReferenceDateChange(e.target.value)}
           style={inputStyle}
         />
-        <input
-          type="range"
-          id="ref-date-slider-top"
-          min={minEventYear || 1400}
-          max={maxEventYear || new Date().getFullYear()}
-          value={currentReferenceYear}
-          onChange={handleReferenceDateSliderChange}
-          style={{ width: '150px', marginTop: '5px' }} // Adjust width as needed
-          title={`Ano: ${currentReferenceYear}`}
-        />
-        <span style={{ fontSize: '0.8em', textAlign: 'center', color: '#555' }}>Ano: {currentReferenceYear}</span>
+        <div style={{ display: 'flex', alignItems: 'center', marginTop: '5px', gap: '5px' }}>
+          <input
+            type="number"
+            aria-label="Ano mínimo do slider"
+            value={minEventYear}
+            onChange={(e) => onMinEventYearChange(parseInt(e.target.value, 10))}
+            style={{ ...inputStyle, width: '60px', textAlign: 'center' }}
+          />
+          <input
+            type="range"
+            id="ref-date-slider-top"
+            min={minEventYear || 1400}
+            max={maxEventYear || new Date().getFullYear()}
+            value={currentReferenceYear}
+            onChange={handleReferenceDateSliderChange}
+            style={{ flexGrow: 1, margin: '0 5px' }}
+            title={`Ano: ${currentReferenceYear}`}
+          />
+          <input
+            type="number"
+            aria-label="Ano máximo do slider"
+            value={maxEventYear}
+            onChange={(e) => onMaxEventYearChange(parseInt(e.target.value, 10))}
+            style={{ ...inputStyle, width: '60px', textAlign: 'center' }}
+          />
+        </div>
+        <span style={{ fontSize: '0.8em', textAlign: 'center', color: '#555', marginTop: '2px' }}>Ano Selecionado: {currentReferenceYear}</span>
       </div>
+      
       <div style={controlGroupStyle}>
         <label htmlFor="time-window-input-top" style={labelStyle}>Janela de Tempo (Anos):</label>
         <input
@@ -93,7 +112,7 @@ const DateControls = ({
           value={timeWindowYears}
           onChange={(e) => onTimeWindowYearsChange(parseInt(e.target.value, 10))}
           min="0"
-          style={{ ...inputStyle, width: '70px' }} // Adjust width
+          style={{ ...inputStyle, width: '70px' }}
         />
       </div>
     </div>
