@@ -1,0 +1,54 @@
+{
+  "source_info": {
+    "id": "unique_source_id",
+    "name": "Nome da Fonte (e.g., Pero Vaz de Caminha)",
+    "color": "#33CFFF",
+    "description_short": "Breve descrição da fonte.",
+    "article_full": {
+      "current": "Texto completo sobre a fonte...",
+      "previous": null
+    }
+  },
+  "events": [
+    {
+      "id": "unique_event_id_within_source_file",
+      "title": "Chegada de Cabral ao Brasil",
+      "date_type": "single",
+      "start_date": "YYYY-MM-DD",
+      "end_date": "YYYY-MM-DD",
+      "characters_ids": ["char_id_1_within_source", "char_id_2_within_source"],
+      "place_id": "place_id_1_within_source",
+      "longitude": -49.25,
+      "latitude": -16.6667,
+      "main_theme_id": "theme_id_1_within_source",
+      "secondary_tags_ids": ["theme_id_2_within_source"],
+      "description_short": "Breve descrição do evento.",
+      "article_full": { "current": "...", "previous": null }
+    }
+  ],
+  "characters": [
+    {
+      "id": "unique_char_id_within_source_file",
+      "name": "Pedro Álvares Cabral",
+      "description_short": "Navegador português.",
+      "article_full": { "current": "...", "previous": null }
+    }
+  ],
+  "places": [
+    {
+      "id": "unique_place_id_within_source_file",
+      "name": "Porto Seguro, Bahia, Brasil",
+      "description_short": "Local de desembarque.",
+      "article_full": { "current": "...", "previous": null }
+    }
+  ],
+  "themes": [
+    {
+      "id": "unique_theme_id_within_source_file",
+      "name": "Descobrimentos",
+      "color": "#FF5733",
+      "description_short": "Explorações marítimas...",
+      "article_full": { "current": "...", "previous": null }
+    }
+  ]
+}

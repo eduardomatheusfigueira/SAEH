@@ -1,0 +1,10 @@
+{
+  "profile_name": "Estudo Brasil Colonial",
+  "loaded_source_data_files": ["data/sources_data/caminha.json", "data/sources_data/staden.json"],
+  "ui_settings": {
+    "reference_date": "1500-04-22",
+    "map_time_window_days": 3650,
+    "map_center": [-54.57, -25.53],
+    "map_zoom": 4
+  }
+}

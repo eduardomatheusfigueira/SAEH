@@ -1,0 +1,131 @@
+{
+  "source_info": {
+    "id": "caminha_1500",
+    "name": "Carta de Pero Vaz de Caminha",
+    "color": "#4A90E2",
+    "description_short": "Relato da descoberta do Brasil ao Rei de Portugal.",
+    "article_full": {
+      "current": "A Carta de Pero Vaz de Caminha é o documento em que Pero Vaz de Caminha, escrivão da frota de Pedro Álvares Cabral, registrou as suas impressões sobre as terras que viriam a ser o Brasil. É o primeiro documento escrito da história do Brasil.",
+      "previous": null
+    }
+  },
+  "events": [
+    {
+      "id": "evt_achamento_brasil",
+      "title": "Achamento do Brasil",
+      "date_type": "single",
+      "start_date": "1500-04-22",
+      "end_date": null,
+      "characters_ids": ["char_cabral", "char_caminha"],
+      "place_id": "plc_porto_seguro",
+      "longitude": -39.0644,
+      "latitude": -16.4439,
+      "main_theme_id": "thm_descobrimentos",
+      "secondary_tags_ids": ["thm_navegacao_portuguesa"],
+      "description_short": "Chegada da frota de Pedro Álvares Cabral à costa brasileira.",
+      "article_full": {
+        "current": "Em 22 de abril de 1500, a frota comandada por Pedro Álvares Cabral avistou terras, marcando o descobrimento oficial do Brasil pelos portugueses. Este evento é um marco fundamental na história do país e das grandes navegações.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_primeira_missa",
+      "title": "Primeira Missa no Brasil",
+      "date_type": "single",
+      "start_date": "1500-04-26",
+      "end_date": null,
+      "characters_ids": ["char_frei_henrique", "char_cabral"],
+      "place_id": "plc_coroa_vermelha",
+      "longitude": -39.0597,
+      "latitude": -16.4000,
+      "main_theme_id": "thm_religiao_colonial",
+      "secondary_tags_ids": ["thm_descobrimentos"],
+      "description_short": "Realização da primeira missa em solo brasileiro.",
+      "article_full": {
+        "current": "A primeira missa foi celebrada por Frei Henrique de Coimbra no domingo de Páscoa, em 26 de abril de 1500, na praia da Coroa Vermelha, em Santa Cruz Cabrália.",
+        "previous": null
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "char_cabral",
+      "name": "Pedro Álvares Cabral",
+      "description_short": "Navegador português, comandante da frota que chegou ao Brasil.",
+      "article_full": {
+        "current": "Pedro Álvares Cabral (Belmonte, c. 1467 ou 1468 – Santarém, c. 1520) foi um fidalgo, comandante militar, navegador e explorador português, creditado como o descubridor do Brasil.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_caminha",
+      "name": "Pero Vaz de Caminha",
+      "description_short": "Escrivão da frota de Cabral, autor da 'Carta'.",
+      "article_full": {
+        "current": "Pero Vaz de Caminha (Porto, 1450 – Calecute, 1500) foi um fidalgo português que participou da expedição de Pedro Álvares Cabral às Índias como escrivão da feitoria a ser instalada em Calecute.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_frei_henrique",
+      "name": "Frei Henrique de Coimbra",
+      "description_short": "Franciscano que celebrou a primeira missa no Brasil.",
+      "article_full": {
+        "current": "Frei Henrique de Coimbra O.F.M. (Coimbra, ? — Olivença, 14 de setembro de 1532) foi um frade franciscano português. Foi o celebrante da primeira missa no Brasil.",
+        "previous": null
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "plc_porto_seguro",
+      "name": "Porto Seguro (local aproximado do avistamento)",
+      "description_short": "Região onde a frota de Cabral avistou terra pela primeira vez.",
+      "article_full": {
+        "current": "Porto Seguro é um município situado no sul do estado da Bahia, no Brasil. É o local tradicionalmente considerado como o primeiro ponto de desembarque dos portugueses no Brasil em 1500.",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_coroa_vermelha",
+      "name": "Praia da Coroa Vermelha, Santa Cruz Cabrália",
+      "description_short": "Local da primeira missa no Brasil.",
+      "article_full": {
+        "current": "A Praia da Coroa Vermelha é historicamente significativa por ter sido o local da primeira missa rezada no Brasil, em 26 de abril de 1500.",
+        "previous": null
+      }
+    }
+  ],
+  "themes": [
+    {
+      "id": "thm_descobrimentos",
+      "name": "Descobrimentos Portugueses",
+      "color": "#007ACC",
+      "description_short": "Período das grandes navegações e explorações portuguesas.",
+      "article_full": {
+        "current": "Os descobrimentos portugueses foram o conjunto de conquistas realizadas pelos portugueses em viagens e explorações marítimas entre 1415 e 1543 que começaram com a conquista de Ceuta em África.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_navegacao_portuguesa",
+      "name": "Navegação Portuguesa Século XV-XVI",
+      "color": "#4CAF50",
+      "description_short": "Técnicas e expedições marítimas de Portugal.",
+      "article_full": {
+        "current": "A navegação portuguesa nos séculos XV e XVI foi pioneira no desenvolvimento de técnicas e na exploração de novas rotas marítimas, culminando na chegada às Américas e ao Oriente.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_religiao_colonial",
+      "name": "Religião no Período Colonial",
+      "color": "#FFC107",
+      "description_short": "Aspectos religiosos da colonização.",
+      "article_full": {
+        "current": "A religião católica desempenhou um papel central na colonização portuguesa do Brasil, com a catequização dos indígenas e a instalação de ordens religiosas.",
+        "previous": null
+      }
+    }
+  ]
+}

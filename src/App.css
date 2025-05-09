@@ -1,0 +1,160 @@
+/* src/App.css */
+html, body, #root, #app-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars on the body due to absolute positioning */
+  font-family: sans-serif;
+}
+
+#app-container {
+  position: relative; /* For positioning overlays */
+}
+
+#map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Use viewport units for full screen */
+  height: 100vh;
+  z-index: 0; /* Ensure map is in the background */
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Placeholder styles for overlays - these will be refined */
+#timeline-overlay-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* Example height */
+  background: rgba(240, 240, 240, 0.9); /* Light background with some transparency */
+  z-index: 10;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  display: flex; /* For centering canvas or adding other elements */
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#timeline-chart {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+#controls-overlay-panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-height: calc(100vh - 220px); /* Avoid overlapping timeline and header */
+  overflow-y: auto;
+  font-size: 0.9em;
+}
+
+#controls-overlay-panel h3,
+#controls-overlay-panel h4 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+#controls-overlay-panel label {
+  display: block;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+}
+
+#controls-overlay-panel input[type="date"],
+#controls-overlay-panel input[type="number"],
+#controls-overlay-panel input[type="file"] {
+  width: calc(100% - 10px); /* Adjust for padding/border */
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#controls-overlay-panel button {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+#controls-overlay-panel button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for EntityListView tabs */
+.tabs button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-bottom: none; /* For active tab effect */
+}
+
+.tabs button:disabled { /* Style for active tab */
+  background-color: #fff;
+  border-bottom: 1px solid #fff; /* Make it look connected to content */
+  font-weight: bold;
+}
+
+.tabs button:not(:disabled):hover {
+  background-color: #e0e0e0;
+}
+
+.entity-list-view ul {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 0 4px 4px 4px; /* Match tab style */
+  margin-top: -1px; /* Overlap with tab border */
+}
+
+.entity-list-view li:hover {
+  background-color: #f0f0f0;
+}
+
+
+#modal-overlay-container {
+  /* display: none; */ /* Controlled by JS */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Example style for the modal content itself */
+.modal-content-placeholder {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  min-width: 300px;
+  max-width: 80%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}

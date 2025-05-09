@@ -1,0 +1,506 @@
+{
+  "source_info": {
+    "id": "boris_fausto_hist_br",
+    "name": "História do Brasil por Boris Fausto",
+    "color": "#4A90E2",
+    "description_short": "Eventos da História do Brasil baseados na obra de Boris Fausto.",
+    "article_full": {
+      "current": "Esta fonte de dados compila eventos chave da História do Brasil, conforme interpretados e apresentados na obra do historiador Boris Fausto, uma referência nos estudos brasileiros. A obra de Fausto é conhecida por sua análise abrangente dos processos sociais, econômicos e políticos que moldaram o país.",
+      "previous": null
+    }
+  },
+  "events": [
+    {
+      "id": "evt_expansao_inicio_bf",
+      "title": "Início da Expansão Marítima Portuguesa (Séc. XVI)",
+      "date_type": "period",
+      "start_date": "1500-01-01",
+      "end_date": "1530-12-31",
+      "characters_ids": ["char_manuel_i_bf"],
+      "place_id": "plc_lisboa_pt_bf",
+      "longitude": -9.1393,
+      "latitude": 38.7223,
+      "main_theme_id": "thm_expansao_maritima_pt_bf",
+      "secondary_tags_ids": ["thm_mercantilismo_bf"],
+      "description_short": "Portugal intensifica sua expansão marítima no início do século XVI, motivada pelo mercantilismo.",
+      "article_full": {
+        "current": "No começo do século XVI, Portugal, sob o reinado de D. Manuel I, consolidou sua posição como uma potência marítima líder. Impulsionada pelos princípios mercantilistas, a Coroa Portuguesa buscava acumular riqueza através do comércio e da exploração de novos territórios. Este período viu o auge das navegações portuguesas, com foco na rota para as Índias e na exploração das costas africana e, eventualmente, americana, incluindo a chegada ao Brasil em 1500.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_conquista_ceuta_bf",
+      "title": "Conquista de Ceuta pelos Portugueses",
+      "date_type": "single",
+      "start_date": "1415-08-21",
+      "end_date": null,
+      "characters_ids": ["char_joao_i_bf", "char_henrique_navegador_bf"],
+      "place_id": "plc_ceuta_marrocos_bf",
+      "longitude": -5.3138,
+      "latitude": 35.8883,
+      "main_theme_id": "thm_expansao_maritima_pt_bf",
+      "secondary_tags_ids": ["thm_relacoes_internacionais_bf"],
+      "description_short": "Forças portuguesas conquistam Ceuta no Norte da África, um marco inicial da expansão ultramarina.",
+      "article_full": {
+        "current": "A conquista de Ceuta em 21 de agosto de 1415, liderada pelo Rei D. João I e com participação de seus filhos, incluindo o Infante D. Henrique (futuro 'Navegador'), é considerada um dos primeiros passos da expansão portuguesa. A cidade portuária marroquina, localizada estrategicamente no Estreito de Gibraltar, era um importante centro comercial e sua captura abriu novas possibilidades para Portugal no Atlântico e na costa africana, além de ser vista como uma continuação da Reconquista Cristã.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_foco_ouro_especiarias_bf",
+      "title": "Foco em Ouro e Especiarias na Expansão Portuguesa (Séc. XV-XVII)",
+      "date_type": "period",
+      "start_date": "1401-01-01",
+      "end_date": "1700-12-31",
+      "characters_ids": [],
+      "place_id": null,
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_economia_colonial_bf",
+      "secondary_tags_ids": ["thm_expansao_maritima_pt_bf", "thm_mercantilismo_bf"],
+      "description_short": "Entre os séculos XV e XVII, a busca por ouro e especiarias foi um dos principais motores da expansão de Portugal.",
+      "article_full": {
+        "current": "Durante um longo período, abrangendo os séculos XV a XVII, a Coroa Portuguesa e seus mercadores concentraram esforços na obtenção de ouro, principalmente da costa ocidental da África, e especiarias valiosas do Oriente (como pimenta, cravo e canela). Essas commodities eram altamente lucrativas no mercado europeu e financiaram muitas das dispendiosas expedições navais, bem como o estabelecimento de feitorias e rotas comerciais.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_casas_mina_guine_bf",
+      "title": "Estabelecimento da Casa da Mina e Casa da Guiné",
+      "date_type": "single",
+      "start_date": "1481-01-01",
+      "end_date": null,
+      "characters_ids": ["char_joao_ii_bf"],
+      "place_id": "plc_lisboa_pt_bf",
+      "longitude": -9.1393,
+      "latitude": 38.7223,
+      "main_theme_id": "thm_admin_colonial_bf",
+      "secondary_tags_ids": ["thm_economia_colonial_bf", "thm_expansao_maritima_pt_bf"],
+      "description_short": "Criação das Casas da Mina e da Guiné em Lisboa para gerenciar o comércio com a África Ocidental.",
+      "article_full": {
+        "current": "Em 1481, sob o reinado de D. João II, foram estabelecidas em Lisboa a Casa da Mina e a Casa da Guiné. Estas instituições centralizavam a administração do crescente comércio português com a costa da África Ocidental, incluindo o valioso comércio de ouro da Mina (atual Gana) e outros produtos da Guiné. Funcionavam como entrepostos comerciais, alfândegas e órgãos de controle da Coroa sobre as atividades ultramarinas, sendo precursoras da Casa da Índia.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_cabo_boa_esperanca_bf",
+      "title": "Bartolomeu Dias dobra o Cabo da Boa Esperança",
+      "date_type": "single",
+      "start_date": "1488-02-03",
+      "end_date": null,
+      "characters_ids": ["char_bartolomeu_dias_bf", "char_joao_ii_bf"],
+      "place_id": "plc_cabo_boa_esperanca_af_bf",
+      "longitude": 18.4739,
+      "latitude": -34.3580,
+      "main_theme_id": "thm_expansao_maritima_pt_bf",
+      "secondary_tags_ids": ["thm_exploracao_geografica_bf"],
+      "description_short": "Bartolomeu Dias e sua frota contornam o Cabo da Boa Esperança, abrindo a rota marítima para o Oceano Índico.",
+      "article_full": {
+        "current": "Em 1488, a expedição comandada por Bartolomeu Dias logrou um feito crucial para a exploração marítima: o contorno do extremo sul da África, nomeado Cabo da Boa Esperança (anteriormente Cabo das Tormentas). Esta passagem abriu a rota marítima direta da Europa para o Oceano Índico e, consequentemente, para as Índias, objetivo principal das navegações portuguesas da época. A expedição partiu sob ordens de D. João II.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_tordesilhas_bf",
+      "title": "Tratado de Tordesilhas",
+      "date_type": "single",
+      "start_date": "1494-06-07",
+      "end_date": null,
+      "characters_ids": ["char_joao_ii_bf", "char_reis_catolicos_es_bf"],
+      "place_id": "plc_tordesilhas_es_bf",
+      "longitude": -4.9942,
+      "latitude": 41.4985,
+      "main_theme_id": "thm_relacoes_internacionais_bf",
+      "secondary_tags_ids": ["thm_expansao_maritima_pt_bf", "thm_expansao_espanhola_bf"],
+      "description_short": "Acordo entre Portugal e Espanha dividindo as terras recém-descobertas e por descobrir no Novo Mundo.",
+      "article_full": {
+        "current": "O Tratado de Tordesilhas, assinado em 7 de junho de 1494 na cidade espanhola de Tordesilhas, foi um acordo diplomático entre o Reino de Portugal, representado por D. João II, e os Reis Católicos da Espanha (Isabel I de Castela e Fernando II de Aragão). O tratado estabeleceu uma linha de demarcação (um meridiano a 370 léguas a oeste das ilhas de Cabo Verde) que dividia as terras 'descobertas e por descobrir' por ambas as Coroas fora da Europa. As terras a leste desta linha pertenceriam a Portugal, e as terras a oeste, à Espanha. Este acordo foi fundamental para definir as futuras áreas de colonização das duas potências ibéricas nas Américas.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_descobrimento_brasil_bf",
+      "title": "Pedro Álvares Cabral descobre o Brasil",
+      "date_type": "single",
+      "start_date": "1500-04-22",
+      "end_date": null,
+      "characters_ids": ["char_pedro_alvares_cabral_bf", "char_manuel_i_bf"],
+      "place_id": "plc_porto_seguro_br_bf",
+      "longitude": -39.0644,
+      "latitude": -16.4439,
+      "main_theme_id": "thm_expansao_maritima_pt_bf",
+      "secondary_tags_ids": ["thm_exploracao_geografica_bf", "thm_colonizacao_inicio_bf"],
+      "description_short": "A frota de Pedro Álvares Cabral chega à costa do Brasil, marcando o descobrimento oficial pelos portugueses.",
+      "article_full": {
+        "current": "Em 22 de abril de 1500, a expedição portuguesa comandada por Pedro Álvares Cabral, a caminho das Índias, avistou terras no litoral do que viria a ser o Brasil, na região da atual Porto Seguro, Bahia. Este evento é considerado o descobrimento oficial do Brasil por Portugal, abrindo caminho para a futura colonização do território. A expedição foi realizada sob o reinado de D. Manuel I.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_exploracao_litoranea_inicio_bf",
+      "title": "Exploração Litorânea Inicial do Brasil (1501-1550)",
+      "date_type": "period",
+      "start_date": "1501-01-01",
+      "end_date": "1550-12-31",
+      "characters_ids": [],
+      "place_id": "plc_litoral_brasil_bf",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_exploracao_geografica_bf",
+      "secondary_tags_ids": ["thm_colonizacao_inicio_bf", "thm_economia_colonial_bf"],
+      "description_short": "Portugal inicia exploração da costa brasileira, focada no pau-brasil, com pouco interesse inicial na colonização efetiva.",
+      "article_full": {
+        "current": "Na primeira metade do século XVI, após o descobrimento, Portugal realizou diversas expedições de reconhecimento e exploração do litoral brasileiro. O principal interesse econômico inicial era o pau-brasil, uma madeira valiosa para tinturaria. A Coroa concedeu arrendamentos para a exploração, mas demonstrou pouco interesse em uma colonização sistemática, pois o foco principal ainda era o lucrativo comércio com as Índias.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_exp_noronha_bf",
+      "title": "Expedição Exploradora de Fernão de Noronha (1501-1505)",
+      "date_type": "period",
+      "start_date": "1501-01-01",
+      "end_date": "1505-12-31",
+      "characters_ids": ["char_fernao_noronha_bf"],
+      "place_id": "plc_litoral_brasil_bf",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_exploracao_geografica_bf",
+      "secondary_tags_ids": ["thm_pau_brasil_bf"],
+      "description_short": "Fernão de Noronha lidera uma das primeiras expedições para explorar a costa brasileira e o pau-brasil.",
+      "article_full": {
+        "current": "Entre 1501 e 1505, Fernão de Noronha (ou Loronha), um rico comerciante e cristão-novo, obteve da Coroa Portuguesa o primeiro contrato de arrendamento para explorar o pau-brasil no litoral brasileiro. Suas expedições foram cruciais para o reconhecimento da costa e o início da exploração comercial da madeira, estabelecendo feitorias.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_exp_martim_afonso_bf",
+      "title": "Expedição de Martim Afonso de Sousa e Fundação de São Vicente",
+      "date_type": "period",
+      "start_date": "1530-01-01",
+      "end_date": "1532-12-31",
+      "characters_ids": ["char_martim_afonso_sousa_bf", "char_joao_iii_bf"],
+      "place_id": "plc_sao_vicente_br_bf",
+      "longitude": -46.3839,
+      "latitude": -23.9639,
+      "main_theme_id": "thm_colonizacao_inicio_bf",
+      "secondary_tags_ids": ["thm_exploracao_geografica_bf", "thm_admin_colonial_bf"],
+      "description_short": "Martim Afonso de Sousa lidera expedição que inicia a colonização efetiva e funda São Vicente, primeira vila do Brasil.",
+      "article_full": {
+        "current": "Enviada por D. João III em 1530, a expedição de Martim Afonso de Sousa tinha múltiplos objetivos: combater corsários franceses, explorar o território e, crucialmente, iniciar a colonização sistemática do Brasil. Em 1532, Martim Afonso fundou a vila de São Vicente, no litoral do atual estado de São Paulo, considerada a primeira vila permanente estabelecida pelos portugueses no Brasil, marcando uma mudança na política colonial em relação à nova terra.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_capitanias_hereditarias_bf",
+      "title": "Implementação das Capitanias Hereditárias",
+      "date_type": "period",
+      "start_date": "1534-01-01",
+      "end_date": "1536-12-31",
+      "characters_ids": ["char_joao_iii_bf"],
+      "place_id": "plc_brasil_colonial_bf",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_admin_colonial_bf",
+      "secondary_tags_ids": ["thm_colonizacao_inicio_bf"],
+      "description_short": "A Coroa Portuguesa divide o Brasil em faixas de terra (capitanias) doadas a donatários para promover a colonização.",
+      "article_full": {
+        "current": "Para promover a ocupação e exploração do vasto território brasileiro com recursos limitados, D. João III implementou o sistema de Capitanias Hereditárias a partir de 1534. O litoral foi dividido em quinze grandes lotes de terra, que foram doados a nobres e comerciantes (donatários). Estes tinham a responsabilidade de povoar, defender e desenvolver economicamente suas capitanias, pagando impostos à Coroa. Apesar de muitas fracassarem, algumas, como Pernambuco e São Vicente, prosperaram, principalmente com a cana-de-açúcar.",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_governo_geral_bf",
+      "title": "Criação do Governo Geral do Brasil",
+      "date_type": "single",
+      "start_date": "1548-12-17",
+      "end_date": null,
+      "characters_ids": ["char_joao_iii_bf", "char_tome_sousa_bf"],
+      "place_id": "plc_salvador_ba_br_bf",
+      "longitude": -38.5016,
+      "latitude": -12.9777,
+      "main_theme_id": "thm_admin_colonial_bf",
+      "secondary_tags_ids": ["thm_colonizacao_inicio_bf"],
+      "description_short": "Portugal estabelece o Governo Geral para centralizar a administração da colônia, nomeando Tomé de Sousa.",
+      "article_full": {
+        "current": "Diante do fracasso da maioria das Capitanias Hereditárias e da necessidade de maior controle e defesa da colônia, D. João III criou o Governo Geral do Brasil em 1548. Este sistema visava centralizar a administração, coordenar a defesa, promover a justiça e incentivar a catequese. Tomé de Sousa foi nomeado o primeiro Governador-Geral, chegando à Bahia em 1549 para estabelecer a primeira capital, Salvador.",
+        "previous": null
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "char_manuel_i_bf",
+      "name": "D. Manuel I de Portugal",
+      "description_short": "Rei de Portugal durante um período crucial da expansão marítima.",
+      "article_full": {
+        "current": "D. Manuel I, conhecido como 'O Venturoso', reinou em Portugal de 1495 a 1521. Seu reinado coincidiu com o auge dos descobrimentos portugueses, incluindo a chegada de Vasco da Gama à Índia e de Pedro Álvares Cabral ao Brasil. Promoveu ativamente as explorações e o comércio ultramarino.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_joao_i_bf",
+      "name": "D. João I de Portugal",
+      "description_short": "Rei de Portugal que liderou a conquista de Ceuta.",
+      "article_full": {
+        "current": "D. João I, Mestre de Avis, foi Rei de Portugal de 1385 a 1433. Seu reinado marcou o fim da crise de 1383-1385 e o início da Dinastia de Avis. Foi sob sua liderança que Portugal iniciou sua expansão ultramarina com a conquista de Ceuta em 1415.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_henrique_navegador_bf",
+      "name": "Infante D. Henrique, o Navegador",
+      "description_short": "Príncipe português, grande incentivador das explorações marítimas.",
+      "article_full": {
+        "current": "O Infante D. Henrique (1394-1460), Duque de Viseu, foi uma figura central no início da Era dos Descobrimentos. Embora não tenha navegado extensivamente, foi o principal patrono e organizador das primeiras expedições portuguesas pela costa africana, buscando novas rotas comerciais e conhecimento geográfico.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_joao_ii_bf",
+      "name": "D. João II de Portugal",
+      "description_short": "Rei de Portugal, conhecido como 'O Príncipe Perfeito', impulsionador da exploração africana.",
+      "article_full": {
+        "current": "D. João II (1455-1495), cognominado 'O Príncipe Perfeito', foi o décimo terceiro rei de Portugal. Seu reinado foi marcado pela centralização do poder real e por um forte impulso às navegações e explorações na costa africana, visando o controle de rotas comerciais e o acesso direto às fontes de ouro e especiarias. Foi durante seu governo que se estabeleceram importantes feitorias e se avançou significativamente no contorno da África.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_bartolomeu_dias_bf",
+      "name": "Bartolomeu Dias",
+      "description_short": "Navegador português que dobrou o Cabo da Boa Esperança.",
+      "article_full": {
+        "current": "Bartolomeu Dias (c. 1450 – 29 de maio de 1500) foi um navegador e explorador português que se notabilizou por ter sido o primeiro europeu a contornar o extremo sul da África em 1488, abrindo o caminho para a rota marítima para a Índia.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_reis_catolicos_es_bf",
+      "name": "Reis Católicos da Espanha (Isabel I e Fernando II)",
+      "description_short": "Monarcas espanhóis que unificaram a Espanha e patrocinaram a viagem de Colombo.",
+      "article_full": {
+        "current": "Os Reis Católicos, Isabel I de Castela (1451-1504) e Fernando II de Aragão (1452-1516), foram os monarcas cujo casamento unificou dinasticamente os principais reinos da Espanha. Concluíram a Reconquista com a tomada de Granada em 1492 e patrocinaram a primeira viagem de Cristóvão Colombo ao Novo Mundo, iniciando a colonização espanhola das Américas. Foram signatários do Tratado de Tordesilhas com Portugal.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_pedro_alvares_cabral_bf",
+      "name": "Pedro Álvares Cabral",
+      "description_short": "Navegador português, comandante da frota que descobriu o Brasil.",
+      "article_full": {
+        "current": "Pedro Álvares Cabral (c. 1467/1468 – c. 1520) foi um fidalgo e navegador português, comandante da segunda expedição portuguesa à Índia, durante a qual, em 1500, sua frota realizou o descobrimento oficial do Brasil.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_fernao_noronha_bf",
+      "name": "Fernão de Noronha",
+      "description_short": "Comerciante e explorador português, arrendatário da exploração do pau-brasil.",
+      "article_full": {
+        "current": "Fernão de Noronha, também conhecido como Fernão de Loronha, foi um proeminente comerciante e explorador português do início do século XVI, de origem judaica (cristão-novo). Recebeu da Coroa Portuguesa o primeiro contrato de arrendamento para a exploração comercial do pau-brasil no litoral brasileiro, entre 1501 e 1505. Suas expedições foram fundamentais para o reconhecimento inicial da costa e o estabelecimento das primeiras feitorias.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_martim_afonso_sousa_bf",
+      "name": "Martim Afonso de Sousa",
+      "description_short": "Nobre e militar português, líder da expedição colonizadora de 1530 e fundador de São Vicente.",
+      "article_full": {
+        "current": "Martim Afonso de Sousa (c. 1500 – 1564) foi um nobre, militar e administrador colonial português. Liderou a importante expedição enviada ao Brasil em 1530 por D. João III, com o objetivo de combater corsários, explorar o território e iniciar a colonização efetiva. Fundou a vila de São Vicente em 1532, a primeira do Brasil, e mais tarde foi donatário da Capitania de São Vicente.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_joao_iii_bf",
+      "name": "D. João III de Portugal",
+      "description_short": "Rei de Portugal que impulsionou a colonização efetiva do Brasil, instituindo as Capitanias Hereditárias e o Governo Geral.",
+      "article_full": {
+        "current": "D. João III (1502-1557), cognominado 'O Piedoso', foi Rei de Portugal e Algarves de 1521 a 1557. Seu reinado foi marcado por uma mudança significativa na política colonial em relação ao Brasil, passando de um interesse predominantemente extrativista para um esforço de colonização efetiva. Instituiu o sistema de Capitanias Hereditárias (1534) e, posteriormente, o Governo Geral (1548) para centralizar a administração e promover o povoamento e a defesa da colônia.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_tome_sousa_bf",
+      "name": "Tomé de Sousa",
+      "description_short": "Nobre e militar português, primeiro Governador-Geral do Brasil.",
+      "article_full": {
+        "current": "Tomé de Sousa (1503-1579) foi um nobre e militar português, escolhido por D. João III para ser o primeiro Governador-Geral do Brasil. Chegou à Bahia em 1549 com a missão de centralizar a administração colonial, fundar a cidade de Salvador (primeira capital), organizar a defesa, promover a justiça e apoiar a catequese dos indígenas. Sua chegada marca um ponto de inflexão na história da colonização do Brasil.",
+        "previous": null
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "plc_lisboa_pt_bf",
+      "name": "Lisboa, Portugal",
+      "description_short": "Capital de Portugal e principal porto da expansão marítima.",
+      "article_full": {
+        "current": "Lisboa, a capital de Portugal, foi o epicentro da expansão marítima portuguesa. De seu porto partiram inúmeras frotas exploratórias e comerciais que estabeleceram o vasto império colonial português.",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_ceuta_marrocos_bf",
+      "name": "Ceuta, Norte da África (Marrocos)",
+      "description_short": "Cidade portuária conquistada por Portugal em 1415.",
+      "article_full": {
+        "current": "Ceuta é uma cidade autônoma espanhola localizada na costa norte da África, fronteira com Marrocos. Em 1415, foi conquistada por Portugal, tornando-se um importante posto avançado para a exploração da costa africana e para o comércio.",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_cabo_boa_esperanca_af_bf",
+      "name": "Cabo da Boa Esperança, África do Sul",
+      "description_short": "Extremo sul da África, contornado por Bartolomeu Dias.",
+      "article_full": {
+        "current": "O Cabo da Boa Esperança é um promontório rochoso situado no extremo sul da Península do Cabo, na África do Sul. Sua passagem em 1488 por Bartolomeu Dias foi um marco na exploração marítima, provando que o Oceano Atlântico se conectava ao Índico.",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_tordesilhas_es_bf",
+      "name": "Tordesilhas, Espanha",
+      "description_short": "Cidade espanhola onde foi assinado o Tratado de Tordesilhas.",
+      "article_full": {
+        "current": "Tordesilhas é uma cidade e município na província de Valladolid, comunidade autônoma de Castela e Leão, Espanha. É historicamente famosa por ser o local onde, em 1494, Portugal e Espanha assinaram o Tratado de Tordesilhas, que dividiu o mundo recém-descoberto entre as duas potências.",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_porto_seguro_br_bf",
+      "name": "Porto Seguro, Bahia, Brasil",
+      "description_short": "Local tradicional do desembarque de Cabral e descobrimento do Brasil.",
+      "article_full": {
+        "current": "Porto Seguro, localizado no litoral sul da Bahia, é historicamente reconhecido como o ponto de chegada da esquadra de Pedro Álvares Cabral em 22 de abril de 1500, data que marca o descobrimento do Brasil pelos portugueses.",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_litoral_brasil_bf",
+      "name": "Litoral do Brasil (Costa Atlântica)",
+      "description_short": "A extensa costa brasileira explorada pelos portugueses no início do século XVI, rica em pau-brasil.",
+      "article_full": {
+        "current": "O litoral brasileiro, com sua vasta extensão ao longo do Oceano Atlântico, foi o primeiro contato dos exploradores portugueses com a nova terra. Inicialmente, a exploração concentrou-se na extração de pau-brasil e no reconhecimento geográfico, com o estabelecimento de feitorias em pontos estratégicos da costa.",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_sao_vicente_br_bf",
+      "name": "São Vicente, São Paulo, Brasil",
+      "description_short": "Primeira vila fundada pelos portugueses no Brasil (1532) por Martim Afonso de Sousa.",
+      "article_full": {
+        "current": "São Vicente, localizada no litoral do atual estado de São Paulo, é considerada a primeira vila permanente fundada pelos portugueses no Brasil. Estabelecida por Martim Afonso de Sousa em 1532, marcou o início de uma política de colonização mais efetiva do território, servindo como base para futuras explorações e para a administração da Capitania de São Vicente.",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_brasil_colonial_bf",
+      "name": "Brasil Colonial (Território das Capitanias)",
+      "description_short": "O território brasileiro durante o período colonial, inicialmente dividido em Capitanias Hereditárias.",
+      "article_full": {
+        "current": "O Brasil Colonial refere-se ao período da história do Brasil que vai de 1500 (descobrimento) a 1822 (independência). Inicialmente, a Coroa Portuguesa tentou administrar e colonizar o vasto território através do sistema de Capitanias Hereditárias, dividindo a costa em grandes lotes de terra concedidos a donatários.",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_salvador_ba_br_bf",
+      "name": "Salvador, Bahia, Brasil",
+      "description_short": "Primeira capital do Brasil e sede do Governo Geral, fundada por Tomé de Sousa.",
+      "article_full": {
+        "current": "Salvador, fundada por Tomé de Sousa em 1549 na Baía de Todos os Santos, foi a primeira capital do Brasil e sede do Governo Geral até 1763. Sua localização estratégica e seu porto natural a tornaram um importante centro administrativo, econômico e religioso da colônia por mais de dois séculos.",
+        "previous": null
+      }
+    }
+  ],
+  "themes": [
+    {
+      "id": "thm_expansao_maritima_pt_bf",
+      "name": "Expansão Marítima Portuguesa",
+      "color": "#005c99",
+      "description_short": "Período de exploração global liderado por Portugal.",
+      "article_full": {
+        "current": "A Expansão Marítima Portuguesa, iniciada no século XV, foi um período de intensas explorações oceânicas que levaram à descoberta de novas rotas e territórios, estabelecendo um vasto império colonial e transformando o comércio mundial.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_mercantilismo_bf",
+      "name": "Mercantilismo",
+      "color": "#8B4513",
+      "description_short": "Doutrina econômica que impulsionou a expansão colonial.",
+      "article_full": {
+        "current": "O mercantilismo foi um conjunto de práticas econômicas predominantes na Europa entre os séculos XV e XVIII, caracterizado pela intervenção estatal na economia, busca por balança comercial favorável, metalismo (acúmulo de metais preciosos) e colonialismo como forma de obter recursos e mercados.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_relacoes_internacionais_bf",
+      "name": "Relações Internacionais e Tratados",
+      "color": "#B22222",
+      "description_short": "Interações diplomáticas, conflitos e acordos entre nações.",
+      "article_full": {
+        "current": "Este tema abrange as complexas interações entre diferentes estados e potências, incluindo alianças, guerras, negociações diplomáticas e a formulação de tratados que definiram fronteiras e esferas de influência ao longo da história.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_economia_colonial_bf",
+      "name": "Economia Colonial",
+      "color": "#228B22",
+      "description_short": "Sistemas econômicos implementados nas colônias.",
+      "article_full": {
+        "current": "A economia colonial refere-se aos sistemas de produção, comércio e exploração de recursos implementados pelas potências europeias em seus territórios coloniais, frequentemente baseados em monocultura, trabalho compulsório e exportação para a metrópole.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_admin_colonial_bf",
+      "name": "Administração Colonial Portuguesa",
+      "color": "#FF8C00",
+      "description_short": "Estruturas e políticas administrativas de Portugal em seus territórios ultramarinos.",
+      "article_full": {
+        "current": "A administração colonial portuguesa envolvia a criação de instituições metropolitanas, como a Casa da Guiné e da Mina e, posteriormente, a Casa da Índia, para regular o comércio, a navegação e a arrecadação de impostos. Nas colônias, estabeleciam-se governadores, capitanias e outras estruturas para garantir o controle da Coroa e a exploração econômica.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_exploracao_geografica_bf",
+      "name": "Exploração Geográfica",
+      "color": "#FFD700",
+      "description_short": "Descobrimento e mapeamento de novas terras e rotas.",
+      "article_full": {
+        "current": "A exploração geográfica envolve o descobrimento, o estudo e o mapeamento de regiões desconhecidas da Terra. Durante a Era dos Descobrimentos, foi impulsionada por interesses comerciais, científicos e religiosos, levando a um vasto aumento do conhecimento geográfico mundial.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_expansao_espanhola_bf",
+      "name": "Expansão Marítima Espanhola",
+      "color": "#FF4500",
+      "description_short": "Período de exploração e colonização liderado pela Espanha, principalmente nas Américas.",
+      "article_full": {
+        "current": "A Expansão Marítima Espanhola, impulsionada após as viagens de Cristóvão Colombo a partir de 1492, resultou na conquista e colonização de vastos territórios nas Américas, além de explorações no Pacífico. Foi contemporânea e, por vezes, rival da expansão portuguesa.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_colonizacao_inicio_bf",
+      "name": "Início da Colonização (Brasil)",
+      "color": "#32CD32",
+      "description_short": "Primeiras fases da ocupação e estabelecimento português no Brasil.",
+      "article_full": {
+        "current": "O início da colonização do Brasil por Portugal foi um processo gradual que se seguiu ao descobrimento em 1500. Inicialmente focado na exploração do pau-brasil, evoluiu para o estabelecimento de feitorias, a introdução da cana-de-açúcar e, posteriormente, a implementação de sistemas administrativos como as Capitanias Hereditárias e o Governo Geral.",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_pau_brasil_bf",
+      "name": "Ciclo do Pau-Brasil",
+      "color": "#A0522D",
+      "description_short": "Primeiro ciclo econômico do Brasil colonial, focado na extração do pau-brasil para tinturaria.",
+      "article_full": {
+        "current": "O Ciclo do Pau-Brasil representa a primeira atividade econômica de relevo no Brasil Colônia, estendendo-se aproximadamente de 1500 a 1530. A madeira da árvore, Caesalpinia echinata, era valiosa na Europa para a produção de um corante vermelho intenso. A exploração era feita principalmente através de escambo com os indígenas e organizada por meio de feitorias costeiras.",
+        "previous": null
+      }
+    }
+  ]
+}
