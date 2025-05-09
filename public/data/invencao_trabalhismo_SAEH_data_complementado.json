@@ -1,0 +1,778 @@
+{
+  "source_info": {
+    "id": "gomes_invencao_trabalhismo_2005",
+    "name": "A Invenção do Trabalhismo por Angela de Castro Gomes (2005)",
+    "color": "#A0522D",
+    "description_short": "Eventos e análises da história do trabalhismo no Brasil baseados na obra 'A Invenção do Trabalhismo' de Angela de Castro Gomes, 3ª edição de 2005.",
+    "article_full": {
+      "current": "Esta fonte de dados compila eventos chave, personagens, locais e temas relacionados à emergência e consolidação do trabalhismo no Brasil, conforme interpretados e apresentados na obra 'A Invenção do Trabalhismo' da historiadora Angela de Castro Gomes (3ª edição, Rio de Janeiro: Editora FGV, 2005). A obra é uma referência fundamental para os estudos sobre o período, abordando as dimensões políticas, sociais e ideológicas que moldaram o trabalhismo brasileiro.\n\nReferência Principal:\nGOMES, Angela de Castro. *A invenção do trabalhismo*. 3. ed. Rio de Janeiro: Editora FGV, 2005.",
+      "previous": null
+    }
+  },
+  "events": [
+    {
+      "id": "evt_surgimento_partidos_operarios_virada_seculo_acg_it",
+      "title": "Surgimento dos Partidos Operários na Virada do Século XIX-XX",
+      "date_type": "circa",
+      "start_date": "1890-02-01",
+      "end_date": "1890-12-31",
+      "characters_ids": ["char_tenente_vinhaes_acg_it", "char_franca_e_silva_acg_it", "char_gustavo_lacerda_acg_it"],
+      "place_id": "plc_rio_de_janeiro_acg_it",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_movimento_operario_primordios_acg_it",
+      "secondary_tags_ids": ["thm_socialismo_brasil_acg_it", "thm_primeira_republica_acg_it"],
+      "description_short": "Tentativas iniciais de organização de partidos operários no Rio de Janeiro, com inspiração socialista, no contexto da recém-proclamada República e da abolição da escravatura.",
+      "article_full": {
+        "current": "No início de fevereiro de 1890, um mês após a fundação do jornal 'A Voz do Povo', disputas entre seus dirigentes levaram à formação de duas facções que competiriam pela organização dos trabalhadores em torno de um partido operário. Uma, liderada pelo tenente Vinhaes, e a outra, por França e Silva e Gustavo de Lacerda. Ambas as correntes se dedicaram à organização de seu partido operário, objetivo em torno do qual se articulava todo o conjunto de reivindicações a ser defendido. A escolha do partido como instrumento de mobilização decorreu de uma análise política que detectava uma certa congruência entre as questões do trabalho e as da República. (GOMES, 2005, p. 47-48). O jornal Echo Popular, ligado a França e Silva, avaliava o momento político como 'o mais propício para que as classes operárias façam valer seus direitos'. (GOMES, 2005, p. 48, citando Echo Popular).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_palestras_marcondes_filho_hora_brasil_acg_it",
+      "title": "Palestras de Alexandre Marcondes Filho na 'Hora do Brasil'",
+      "date_type": "period",
+      "start_date": "1942-01-01",
+      "end_date": "1945-07-31",
+      "characters_ids": ["char_alexandre_marcondes_filho_acg_it", "char_getulio_vargas_acg_it"],
+      "place_id": "plc_brasil_geral_acg_it",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_trabalhismo_propaganda_acg_it",
+      "secondary_tags_ids": ["thm_estado_novo_acg_it", "thm_legislacao_social_acg_it"],
+      "description_short": "O Ministro do Trabalho, Alexandre Marcondes Filho, utiliza o programa de rádio 'Hora do Brasil' para divulgar sistematicamente a legislação social e a ideologia trabalhista durante o Estado Novo.",
+      "article_full": {
+        "current": "Logo após tomar posse no Ministério do Trabalho, Indústria e Comércio, Alexandre Marcondes Filho iniciou uma de suas políticas mais significativas. Em janeiro de 1942, o novo ministro passou a ocupar, todas as quintas-feiras, durante dez minutos, os microfones do programa 'Hora do Brasil', produzido pelo Departamento de Imprensa e Propaganda (DIP) e irradiado pela Rádio Nacional. Durante praticamente todo o seu período ministerial – de janeiro de 1942 a julho de 1945 – Marcondes falou semanalmente pelo rádio, realizando mais de duzentas palestras. O conteúdo das palestras abarcava predominantemente o novo direito social, diagnosticado como uma matéria ainda desconhecida pelo próprio trabalhador, seu beneficiário. (GOMES, 2005, p. 228-229). O programa 'Falando aos Trabalhadores Brasileiros' resume em seu título a intenção do ministro. (GOMES, 2005, p. 229).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_nascimento_ptb_acg_it",
+      "title": "Nascimento do Partido Trabalhista Brasileiro (PTB)",
+      "date_type": "circa",
+      "start_date": "1945-05-15",
+      "end_date": "1945-09-14",
+      "characters_ids": ["char_getulio_vargas_acg_it", "char_alexandre_marcondes_filho_acg_it", "char_lideres_sindicais_generico_acg_it", "char_jose_segadas_vianna_acg_it"],
+      "place_id": "plc_brasil_geral_acg_it",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_trabalhismo_partidarismo_acg_it",
+      "secondary_tags_ids": ["thm_redemocratizacao_1945_acg_it", "thm_estado_novo_fim_acg_it"],
+      "description_short": "Articulação e fundação do Partido Trabalhista Brasileiro (PTB) no contexto do final do Estado Novo e das eleições de 1945, com base na estrutura sindical e na figura de Getúlio Vargas.",
+      "article_full": {
+        "current": "A formação de uma Comissão Executiva Nacional para dar organização ao PTB data de 15 de maio de 1945, portanto cerca de um mês após o anúncio oficial da criação da UDN e do PSD. O provável modelo inspirador do PTB foi o Partido Trabalhista Inglês, e suas bases foram efetivamente montadas a partir da estrutura do Ministério do Trabalho, ou seja, com a utilização das lideranças sindicais e dos organismos previdenciários. (GOMES, 2005, p. 307-308). O PTB nascia sob chancela governamental, mas sua relação com Vargas e o PSD era complexa, especialmente no contexto do movimento queremista. (GOMES, 2005, p. 308-309).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_campanha_sindicalizacao_marcondes_acg_it",
+      "title": "Campanha de Sindicalização do Ministério do Trabalho (Pós-1942)",
+      "date_type": "period",
+      "start_date": "1943-01-01",
+      "end_date": "1945-12-31",
+      "characters_ids": ["char_alexandre_marcondes_filho_acg_it", "char_getulio_vargas_acg_it", "char_jose_segadas_vianna_acg_it"],
+      "place_id": "plc_brasil_geral_acg_it",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_sindicalismo_corporativista_acg_it",
+      "secondary_tags_ids": ["thm_estado_novo_acg_it", "thm_trabalhismo_propaganda_acg_it"],
+      "description_short": "Intensificação dos esforços do Ministério do Trabalho, sob Alexandre Marcondes Filho, para aumentar a sindicalização e fortalecer a estrutura sindical corporativista, visando maior controle e mobilização dos trabalhadores.",
+      "article_full": {
+        "current": "A partir de 1942/43, o Estado Novo engajou-se em um importante esforço político de fortalecimento de sua estrutura sindical-corporativista. Em sua primeira palestra no ano de 1943, o ministro Marcondes Filho apontou o problema que deveria exigir as atenções de todos: uma campanha de sindicalização que objetivava revivificar o perfil da vida sindical. (GOMES, 2005, p. 267-268). Foi criada a Comissão Técnica de Orientação Sindical (CTOS), presidida por Segadas Vianna, para promover o espírito sindical, divulgar a orientação governamental e organizar cursos para dirigentes. (GOMES, 2005, p. 271-272). A promulgação da Consolidação das Leis do Trabalho (CLT) em 1º de maio de 1943 também foi um marco desta campanha. (GOMES, 2005, p. 273).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_congresso_operario_1906_acg_it",
+      "title": "I Congresso Operário Brasileiro de 1906",
+      "date_type": "single",
+      "start_date": "1906-04-01",
+      "end_date": "1906-04-30",
+      "characters_ids": ["char_anarquistas_coletivo_acg_it", "char_socialistas_coletivo_acg_it"],
+      "place_id": "plc_rio_de_janeiro_acg_it",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_anarquismo_brasil_acg_it",
+      "secondary_tags_ids": ["thm_movimento_operario_primordios_acg_it", "thm_debate_doutrinario_acg_it"],
+      "description_short": "Congresso no Rio de Janeiro considerado um marco da ascensão do anarquismo no movimento operário brasileiro, onde delegados libertários afirmaram sua orientação doutrinária.",
+      "article_full": {
+        "current": "A literatura que trata do movimento operário no Brasil [...] é unânime em consagrar o I Congresso Operário realizado no Rio de Janeiro em abril de 1906 como um marco da ascensão do anarquismo entre os trabalhadores. Neste encontro, os delegados libertários, mesmo em minoria, conseguiram afirmar sua orientação doutrinária em face de outras tendências, em especial a socialista. (GOMES, 2005, p. 81). As resoluções do Congresso de 1906, rejeitando a formação de um partido político e condenando forças de organização tais como cooperativas, caixas beneficentes e bolsas de trabalho, iriam esbarrar na insistência dos socialistas e na tradição associativa dos próprios trabalhadores. (GOMES, 2005, p. 118-119).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_greves_1917_levante_1918_acg_it",
+      "title": "Greves de 1917 e Levante Carioca de 1918",
+      "date_type": "period",
+      "start_date": "1917-01-01",
+      "end_date": "1918-12-31",
+      "characters_ids": ["char_anarquistas_coletivo_acg_it", "char_trabalhadores_generico_acg_it", "char_forcas_policiais_generico_acg_it", "char_jose_oiticica_acg_it", "char_agripino_nazareth_acg_it"],
+      "place_id": "plc_rio_de_janeiro_acg_it",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_anarquismo_brasil_acg_it",
+      "secondary_tags_ids": ["thm_repressao_mov_operario_acg_it", "thm_primeira_republica_acg_it", "thm_movimento_operario_primordios_acg_it"],
+      "description_short": "Período de intensa agitação operária, incluindo greves significativas em 1917 e a chamada 'insurreição anarquista' no Rio em novembro de 1918, seguida de forte repressão.",
+      "article_full": {
+        "current": "No período do pós-Primeira Guerra, com o cenário internacional conturbado pela Revolução Russa e com o cenário nacional agitado pelas greves de 1917 e pelo levante carioca de 1918, fica claro que um grande esforço foi desencadeado pelo governo [...] e também pelo patronato e a imprensa, tendo em vista apontar o anarquismo como seu 'inimigo objetivo'. (GOMES, 2005, p. 88-89). A revolta de novembro de 1918 é um ponto de inflexão na história do movimento operário carioca, pois [...] redimensionou a repressão policial. [...] Inúmeros operários foram detidos, e José Oiticica e Agripino Nazareth foram pronunciados como os chefes do criminoso movimento maximalista. (GOMES, 2005, p. 133).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_fundacao_pcb_1922_acg_it",
+      "title": "Fundação do Partido Comunista do Brasil (PCB)",
+      "date_type": "single",
+      "start_date": "1922-03-25",
+      "end_date": "1922-03-27",
+      "characters_ids": ["char_astrogildo_pereira_acg_it", "char_otavio_brandao_acg_it", "char_comunistas_coletivo_acg_it"],
+      "place_id": "plc_niteroi_rj_acg_it",
+      "longitude": -43.1048,
+      "latitude": -22.8833,
+      "main_theme_id": "thm_comunismo_brasil_acg_it",
+      "secondary_tags_ids": ["thm_debate_doutrinario_acg_it", "thm_movimento_operario_anos20_acg_it"],
+      "description_short": "Criação do Partido Comunista do Brasil em março de 1922, por dissidentes do anarquismo e outras lideranças, introduzindo a ideologia marxista-leninista no cenário político e operário brasileiro.",
+      "article_full": {
+        "current": "Embora os primeiros núcleos comunistas datem formalmente de fins do ano de 1921 e o próprio Partido Comunista tenha sido fundado em março de 1922, os acontecimentos que desencadearam o declínio do anarquismo não se prendem à competição ou mesmo ao debate crítico com os comunistas [naquele momento inicial]. (GOMES, 2005, p. 138-139). A versão clássica de Astrogildo Pereira de que o Partido Comunista nasceu 'de um processo espontâneo e a bem dizer instintivo de autocrítica' no interior do movimento anarquista [...] é cada vez mais discutida. (GOMES, 2005, p. 139). O partido foi fundado em Niterói. [LOCALIZAÇÃO E DATA PRECISA FORA DO ESCOPO IMEDIATO DO TEXTO DE GOMES, MAS CONHECIMENTO GERAL]",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_debate_anarquistas_comunistas_anos20_acg_it",
+      "title": "Debate Anarquistas vs. Comunistas nos Anos 20",
+      "date_type": "period",
+      "start_date": "1922-01-01",
+      "end_date": "1929-12-31",
+      "characters_ids": ["char_anarquistas_coletivo_acg_it", "char_jose_oiticica_acg_it", "char_marques_da_costa_acg_it", "char_comunistas_coletivo_acg_it", "char_astrogildo_pereira_acg_it", "char_otavio_brandao_acg_it"],
+      "place_id": "plc_rio_de_janeiro_acg_it",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_debate_doutrinario_acg_it",
+      "secondary_tags_ids": ["thm_anarquismo_brasil_acg_it", "thm_comunismo_brasil_acg_it", "thm_movimento_operario_anos20_acg_it"],
+      "description_short": "Intensa disputa ideológica e pela hegemonia nos sindicatos entre anarquistas e os recém-organizados comunistas, especialmente a partir de 1922-1923 no Rio de Janeiro e São Paulo.",
+      "article_full": {
+        "current": "Em março de 1922 fundou-se o Partido Comunista do Brasil, mas desde janeiro começou a circular a primeira publicação que defendia as ideias da nova corrente: a revista mensal Movimento Comunista. Foi praticamente a partir desta ocasião que o debate entre anarquistas e comunistas se explicitou, ganhando claros contornos no tocante à questão dos princípios doutrinários e da disputa de influências no movimento sindical. (GOMES, 2005, p. 154-155). No Rio de Janeiro este debate aflorou um pouco mais tarde, em 1923, quando a conjuntura política era ainda mais difícil. Jornais como A Pátria (seção trabalhista orientada por Marques da Costa) e O Paiz (seção operária orientada por Sarandy Raposo, mas com colaboração comunista) foram palcos dessa polêmica. (GOMES, 2005, p. 156-157).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_criacao_cscb_1921_acg_it",
+      "title": "Criação da Confederação Sindicalista Cooperativista Brasileira (CSCB)",
+      "date_type": "single",
+      "start_date": "1921-03-01",
+      "end_date": "1921-03-31",
+      "characters_ids": ["char_sarandy_raposo_acg_it"],
+      "place_id": "plc_rio_de_janeiro_acg_it",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_sindicalismo_cooperativista_acg_it",
+      "secondary_tags_ids": ["thm_movimento_operario_anos20_acg_it"],
+      "description_short": "Fundação da CSCB por Sarandy Raposo, propondo um modelo de sindicalismo baseado na cooperação entre capital e trabalho, com apoio estatal.",
+      "article_full": {
+        "current": "Mobilizando-se rapidamente, já em março de 1921 Sarandy Raposo fundou – em reunião solene na Associação Geral de Auxílios Mútuos da Estrada de Ferro Central do Brasil – a Confederação Sindicalista Cooperativista Brasileira. (GOMES, 2005, p. 160). A CSCB apresentava-se publicamente como portadora de um programa não apenas legal mas oficial, [...] seu programa era a defesa de uma transformação social lenta e segura – evolutiva, portanto segura – dentro dos postulados da ordem política e do progresso econômico. (GOMES, 2005, p. 161).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_conferencia_policial_buenos_aires_1920_acg_it",
+      "title": "Conferência Policial Sul-Americana de Buenos Aires (1920)",
+      "date_type": "single",
+      "start_date": "1920-02-20",
+      "end_date": "1920-02-29",
+      "characters_ids": ["char_nascimento_silva_acg_it", "char_representantes_policiais_sulamericanos_generico_acg_it"],
+      "place_id": "plc_buenos_aires_ar_acg_it",
+      "longitude": -58.3816,
+      "latitude": -34.6037,
+      "main_theme_id": "thm_repressao_mov_operario_acg_it",
+      "secondary_tags_ids": ["thm_anarquismo_brasil_acg_it", "thm_nacionalismo_xenofobia_anos20_acg_it"],
+      "description_short": "Reunião de polícias sul-americanas para discutir a 'defesa social', com foco no combate ao anarquismo e outras ideologias consideradas subversivas.",
+      "article_full": {
+        "current": "A década de 20 inaugurou-se sob o signo da reação ao maximalismo, combinando medidas altamente repressivas com políticas que se queriam preventivas deste mal. Um acontecimento ilustra bem a tônica [...] trata-se de uma Conferência Policial realizada em Buenos Aires em 1920, reunindo representantes das polícias da Argentina, Bolívia, Brasil, Chile, Paraguai e Uruguai para discutir questões da defesa social da América do Sul. [...] o que os discursos dos delegados dos diferentes países demonstram é que a questão palpitante por excelência era a do combate aos delitos contra a propriedade, que assumiam formas intelectuais elaboradas e sutis [...]. (GOMES, 2005, p. 117). O delegado brasileiro foi Nascimento Silva. (GOMES, 2005, p. 145).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_ideologia_outorga_estado_novo_acg_it",
+      "title": "Construção da 'Ideologia da Outorga' pelo Estado Novo",
+      "date_type": "period",
+      "start_date": "1940-01-01",
+      "end_date": "1945-10-29",
+      "characters_ids": ["char_getulio_vargas_acg_it", "char_alexandre_marcondes_filho_acg_it", "char_intelectuais_estado_novo_generico_acg_it"],
+      "place_id": "plc_brasil_geral_acg_it",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_trabalhismo_ideologia_outorga_acg_it",
+      "secondary_tags_ids": ["thm_estado_novo_acg_it", "thm_trabalhismo_propaganda_acg_it", "thm_legislacao_social_acg_it"],
+      "description_short": "O Estado Novo apresenta os benefícios sociais e trabalhistas como 'outorgas' ou 'dádivas' do Estado e de Vargas, e não como conquistas dos trabalhadores, obscurecendo a memória das lutas operárias anteriores.",
+      "article_full": {
+        "current": "A 'ideologia da outorga' é um conceito central para entender o pacto trabalhista. Os benefícios sociais teriam sido apresentados à classe trabalhadora no pós-40 como um presente outorgado pelo Estado. (GOMES, 2005, p. 194). Esta lógica simbólica, que representava os benefícios como doações e se beneficiava da experiência de luta dos próprios trabalhadores (embora apagando essa memória), foi crucial para o sucesso do projeto trabalhista. (GOMES, 2005, p. 25). Marcondes Filho, em suas palestras, reforçava essa ideia, afirmando que no Brasil o trabalhador obteve por outorga do poder público, sem lutas, os benefícios que tanto custaram a outros povos. (GOMES, 2005, p. 240).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_cultura_politica_estado_novo_acg_it",
+      "title": "Disseminação da 'Cultura Política' do Estado Novo",
+      "date_type": "period",
+      "start_date": "1941-03-01",
+      "end_date": "1945-10-01",
+      "characters_ids": ["char_getulio_vargas_acg_it", "char_almir_de_andrade_acg_it", "char_azevedo_amaral_acg_it", "char_intelectuais_estado_novo_generico_acg_it"],
+      "place_id": "plc_brasil_geral_acg_it",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_trabalhismo_propaganda_acg_it",
+      "secondary_tags_ids": ["thm_estado_novo_acg_it", "thm_ideologia_estado_novo_acg_it", "thm_critica_liberalismo_acg_it"],
+      "description_short": "Esforço do Estado Novo, através de órgãos como o DIP e publicações como a revista 'Cultura Política', para construir e divulgar uma nova concepção de Estado, democracia social e identidade nacional.",
+      "article_full": {
+        "current": "A revista 'Cultura Política', publicada pelo DIP de março de 1941 a outubro de 1945, foi um dos principais veículos para a elaboração e divulgação da 'cultura política' do Estado Novo. Intelectuais como Almir de Andrade e Azevedo Amaral contribuíram para reinterpretar a história do Brasil, criticar o liberalismo e justificar o novo regime como uma 'democracia social'. (GOMES, 2005, p. 203-205). A Revolução de 1930 era vista como o marco inicial de um processo que culminaria no Estado Novo, enfrentando a 'questão social' e promovendo a 'verdadeira' democracia. (GOMES, 2005, p. 205-208, 211-213).",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_movimento_queremista_1945_acg_it",
+      "title": "Movimento Queremista ('Queremos Getúlio')",
+      "date_type": "single",
+      "start_date": "1945-05-01",
+      "end_date": "1945-10-29",
+      "characters_ids": ["char_getulio_vargas_acg_it", "char_trabalhadores_generico_acg_it", "char_lideres_sindicais_generico_acg_it", "char_comunistas_coletivo_acg_it"],
+      "place_id": "plc_brasil_geral_acg_it",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_queremismo_acg_it",
+      "secondary_tags_ids": ["thm_redemocratizacao_1945_acg_it", "thm_estado_novo_fim_acg_it", "thm_trabalhismo_partidarismo_acg_it"],
+      "description_short": "Movimento popular surgido em meados de 1945 que defendia a permanência de Getúlio Vargas no poder e a convocação de uma Assembleia Nacional Constituinte com sua liderança.",
+      "article_full": {
+        "current": "O movimento queremista, com o lema 'Constituinte com Getúlio', ganhou força em meados de 1945, refletindo o apoio popular a Vargas e a influência da ideologia trabalhista. Embora o PTB e o queremismo compartilhassem a mesma base ideológica, suas relações organizacionais eram complexas. (GOMES, 2005, p. 308-309). O movimento realizou grandes manifestações populares, especialmente no Rio de Janeiro, e contou com a simpatia ou aliança tática de setores como o PCB. (GOMES, 2005, p. 309-311). O queremismo representava uma pressão pela continuidade de Vargas, mesmo no contexto da transição democrática. (GOMES, 2005, p. 311-313).",
+        "previous": null
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "char_getulio_vargas_acg_it",
+      "name": "Getúlio Vargas",
+      "description_short": "Presidente do Brasil durante o Estado Novo, figura central na 'invenção do trabalhismo', apresentado como 'pai dos pobres' e protetor dos trabalhadores.",
+      "article_full": {
+        "current": "A figura de Getúlio Vargas é central na obra de Angela de Castro Gomes. Ele é retratado como o artífice da legislação social e da ideologia trabalhista. Nas palestras de Alexandre Marcondes Filho, Vargas era constantemente citado como o 'chefe/guia' e 'amigo/pai' dos trabalhadores, dotado de clarividência e sensibilidade para com as necessidades populares. (GOMES, 2005, p. 237-239). A construção do 'mito Vargas' foi um esforço deliberado do Estado Novo, especialmente a partir de 1938, utilizando o DIP e diversos meios de propaganda. (GOMES, 2005, p. 237). Sua imagem era associada à outorga de direitos e à proteção social, fundamentando o pacto trabalhista. Foi também figura central no movimento queremista e na criação do PTB. (GOMES, 2005, p. 308-313).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_alexandre_marcondes_filho_acg_it",
+      "name": "Alexandre Marcondes Filho",
+      "description_short": "Ministro do Trabalho, Indústria e Comércio (1941-1945) e da Justiça (1942-1945) durante o Estado Novo. Peça chave na difusão do trabalhismo e na articulação política do período.",
+      "article_full": {
+        "current": "Alexandre Marcondes Filho assumiu o Ministério do Trabalho em dezembro de 1941. Advogado paulista com ligações com o empresariado, sua nomeação visava garantir aliança com este setor. Acumulou a pasta da Justiça a partir de julho de 1942 (efetivado em abril de 1943), tornando-se uma figura central na condução política do Estado Novo. (GOMES, 2005, p. 198). Foi o principal proponente da campanha de sindicalização e do discurso trabalhista através do programa 'Falando aos Trabalhadores Brasileiros'. (GOMES, 2005, p. 228). Teve papel importante nas articulações para a transição do regime e na formação inicial do PTB. (GOMES, 2005, p. 287-292, 307).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_tenente_vinhaes_acg_it",
+      "name": "Tenente José Augusto Vinhaes",
+      "description_short": "Líder de um dos primeiros partidos operários de inspiração socialista no Rio de Janeiro, por volta de 1890.",
+      "article_full": {
+        "current": "O tenente José Augusto Vinhaes foi um dos líderes importantes do movimento operário na virada do século XIX para o XX no Rio de Janeiro. Aluno da Escola da Marinha, participou das campanhas abolicionista e republicana. Ligou-se à criação do jornal republicano 'O Paiz' e foi nomeado por Deodoro diretor interino da Repartição Geral dos Telégrafos, onde implementou reformas trabalhistas. Liderou uma das facções na tentativa de organizar um partido operário em 1890, que conseguiu maior contingente de adesões e se expressava nas páginas de 'O Paiz'. Seu grupo fundou o Centro do Partido Operário (CPO). (GOMES, 2005, p. 39, 47-48, 53-54).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_franca_e_silva_acg_it",
+      "name": "Luís da França e Silva",
+      "description_short": "Operário tipógrafo negro, líder de uma das facções socialistas que tentou organizar um partido operário no Rio de Janeiro em 1890, fundador do jornal 'Echo Popular'.",
+      "article_full": {
+        "current": "Luís da França e Silva, um operário tipógrafo negro, foi uma figura proeminente no início do movimento socialista no Rio de Janeiro. Inicialmente ligado ao jornal 'A Voz do Povo', após uma cisão, liderou um grupo que fundou o jornal 'Echo Popular' em março de 1890 e organizou um segundo partido operário. Criticava a liderança de Vinhaes pela vinculação deste ao Partido Republicano. (GOMES, 2005, p. 39, 48, 52-53).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_gustavo_lacerda_acg_it",
+      "name": "Gustavo de Lacerda",
+      "description_short": "Jornalista e propagandista socialista, figura importante na fundação do jornal 'A Voz do Povo' em 1890.",
+      "article_full": {
+        "current": "Gustavo de Lacerda, considerado um importante propagandista socialista, foi uma das principais forças políticas do jornal 'A Voz do Povo', fundado em janeiro de 1890. Tinha experiência anterior e capacidade como propagandista. Após a cisão no grupo original, permaneceu com França e Silva. (GOMES, 2005, p. 39, 47, 68).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_lideres_sindicais_generico_acg_it",
+      "name": "Lideranças Sindicais (Genérico)",
+      "description_short": "Representantes dos trabalhadores que emergiram e atuaram no contexto da política trabalhista do Estado Novo e na formação do PTB.",
+      "article_full": {
+        "current": "O livro de Angela de Castro Gomes discute extensivamente o papel das lideranças sindicais, tanto aquelas que surgiram de forma independente na Primeira República, quanto aquelas fomentadas ou cooptadas durante o Estado Novo. A política de Marcondes Filho visava 'reeducar' e ampliar o contingente de líderes sindicais alinhados com o projeto trabalhista e corporativista. (GOMES, 2005, p. 270-271). Essas lideranças foram cruciais para a formação do PTB. (GOMES, 2005, p. 307-308).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_jose_segadas_vianna_acg_it",
+      "name": "José de Segadas Vianna",
+      "description_short": "Assessor técnico de Alexandre Marcondes Filho no Ministério do Trabalho, envolvido na campanha de sindicalização e na formação da CTOS. Um dos fundadores do PTB.",
+      "article_full": {
+        "current": "José de Segadas Vianna foi um importante colaborador de Alexandre Marcondes Filho. Assumiu a direção do Departamento Nacional do Trabalho (DNT) em 1943, em substituição a Luiz Augusto do Rêgo Monteiro. Presidiu a Comissão Técnica de Orientação Sindical (CTOS), criada para dinamizar a vida sindical e promover a sindicalização. (GOMES, 2005, p. 270-271). Segundo seu depoimento, esteve envolvido na elaboração de propostas para a transição do Estado Novo e na organização dos Centros de Estudos Políticos Econômicos e Sociais, que podem ter sido precursores do PTB, do qual foi um dos fundadores. (GOMES, 2005, p. 294-295, 308).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_anarquistas_coletivo_acg_it",
+      "name": "Anarquistas (Ator Coletivo)",
+      "description_short": "Principal corrente ideológica e organizacional do movimento operário brasileiro entre 1906 e 1919/20, defendendo o sindicalismo revolucionário e a ação direta.",
+      "article_full": {
+        "current": "De 1906 a 1919/20 foram os anarquistas os maiores responsáveis pelo novo tom que caracterizou o perfil e a atuação dos setores organizados do movimento operário. (GOMES, 2005, p. 81). A proposta anarquista recusava a definição de política como disputa eleitoral e como prática partidária e parlamentar, afastando-se radicalmente do modelo liberal. Os anarquistas defendiam outra estratégia de luta para a conquista de uma nova identidade para os trabalhadores na sociedade, com forte ênfase na educação e na cultura operária. (GOMES, 2005, p. 86-87, 91-92).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_socialistas_coletivo_acg_it",
+      "name": "Socialistas (Ator Coletivo)",
+      "description_short": "Corrente política presente no movimento operário brasileiro desde a virada do século XIX-XX, defendendo a organização partidária e a participação eleitoral para conquistar direitos para os trabalhadores.",
+      "article_full": {
+        "current": "No início do século XX, aqueles que se autodesignavam socialistas propunham a participação política dos trabalhadores através da formação de partidos operários. Esta experiência, embora efêmera e fragmentada, marcou o esforço de construção de uma identidade social para o operário. (GOMES, 2005, p. 29). Os socialistas foram confrontados pelos anarquistas, especialmente em relação à tática organizacional. (GOMES, 2005, p. 81, 118-119).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_jose_oiticica_acg_it",
+      "name": "José Oiticica",
+      "description_short": "Intelectual, professor, escritor e proeminente militante anarquista no Rio de Janeiro, ativo nas primeiras décadas do século XX.",
+      "article_full": {
+        "current": "José Oiticica é citado como um dos nomes que participaram do debate sobre o método anarquista e a ação direta. (GOMES, 2005, p. 94-95). Em 1918, foi pronunciado como um dos chefes do movimento maximalista após a revolta de novembro. (GOMES, 2005, p. 133). Oiticica também participou dos debates sobre a relação entre anarquismo e sindicalismo e da polêmica com os comunistas nos anos 20. (GOMES, 2005, p. 101, 154, 166-167).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_astrogildo_pereira_acg_it",
+      "name": "Astrogildo Pereira",
+      "description_short": "Militante histórico do movimento operário brasileiro, inicialmente ligado ao anarquismo e posteriormente uma das figuras centrais na fundação e liderança do Partido Comunista do Brasil (PCB).",
+      "article_full": {
+        "current": "Astrogildo Pereira é uma figura central na transição de setores do anarquismo para o comunismo no Brasil. Sua versão sobre o nascimento do PCB como uma 'autocrítica' do anarquismo é discutida por Gomes. (GOMES, 2005, p. 139). Foi um dos principais articuladores do PCB e participou ativamente dos debates com os anarquistas e cooperativistas nos anos 20, escrevendo em publicações como Movimento Comunista e, sob pseudônimo, em O Paiz. (GOMES, 2005, p. 154-155, 157-158).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_otavio_brandao_acg_it",
+      "name": "Otávio Brandão",
+      "description_short": "Militante operário, inicialmente anarquista, que aderiu ao comunismo, tornando-se uma liderança importante do PCB.",
+      "article_full": {
+        "current": "Otávio Brandão, em depoimento, relata o dilema no início do movimento operário: 'Ou vai ajudar a polícia, ajudar o governo e trair a classe operária, ou adere ao anarquismo.' (GOMES, 2005, p. 85, citando Brandão). Posteriormente, tornou-se uma figura de proa no PCB, participando dos debates e da organização do partido nos anos 20. (GOMES, 2005, p. 141, 150, 152, 157-158, 165, 168, 170, 173, 175).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_sarandy_raposo_acg_it",
+      "name": "Custódio Alfredo de Sarandy Raposo",
+      "description_short": "Funcionário público e idealizador do sindicalismo cooperativista no Brasil, fundador da Confederação Sindicalista Cooperativista Brasileira (CSCB) em 1921.",
+      "article_full": {
+        "current": "Custódio Alfredo de Sarandy Raposo, funcionário do Ministério da Agricultura, desde 1907 militava em defesa de um projeto de sindicalismo cooperativista. Suas ideias ganharam maior divulgação a partir de 1917 e, especialmente, após a repressão aos anarquistas no início dos anos 20. (GOMES, 2005, p. 124). Fundou a CSCB em março de 1921 e orientou a 'Seção Operária' do jornal O Paiz a partir de 1923, onde debateu com comunistas e anarquistas. (GOMES, 2005, p. 157, 160-164).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_marques_da_costa_acg_it",
+      "name": "Marques da Costa",
+      "description_short": "Líder anarquista, membro da União dos Operários da Construção Civil, orientou a seção trabalhista do jornal A Pátria nos anos 20.",
+      "article_full": {
+        "current": "Marques da Costa, líder anarquista membro da União dos Operários da Construção Civil, [...] orientou a 'Seção Trabalhista' do jornal A Pátria a partir de 1923. Esta seção tornou-se um importante veículo para a polêmica com os comunistas e cooperativistas. (GOMES, 2005, p. 156). Foi deportado durante a repressão do governo Bernardes. (GOMES, 2005, p. 168).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_nascimento_silva_acg_it",
+      "name": "Nascimento Silva (Delegado)",
+      "description_short": "Delegado brasileiro na Conferência Policial Sul-Americana de Buenos Aires em 1920, envolvido na repressão ao movimento operário.",
+      "article_full": {
+        "current": "Nascimento Silva foi o delegado do Brasil na Conferência Policial da Argentina que se realizou em fevereiro de 1920, focada no combate ao anarquismo e outros movimentos sociais. (GOMES, 2005, p. 117, 145). Foi também terceiro delegado auxiliar no Rio de Janeiro, sob Epitácio Pessoa, intensificando a luta contra o anarquismo. (GOMES, 2005, p. 145).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_aurelino_leal_acg_it",
+      "name": "Aurelino Leal",
+      "description_short": "Chefe de polícia do Rio de Janeiro durante o período de intensa repressão ao movimento anarquista, especialmente após a revolta de 1918.",
+      "article_full": {
+        "current": "Aurelino Leal, chefe de polícia do Rio de Janeiro, foi uma figura central na repressão ao movimento anarquista. Após a revolta de novembro de 1918, diversos sindicatos foram fechados por suas ordens. (GOMES, 2005, p. 133). Em 1919, sua circular afirmava a presença do anarquista como elemento de subversão. (GOMES, 2005, p. 112).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_agripino_nazareth_acg_it",
+      "name": "Agripino Nazareth",
+      "description_short": "Militante com trajetória que passou pelo anarcossindicalismo e socialismo, posteriormente envolvido com o Ministério do Trabalho no pós-30.",
+      "article_full": {
+        "current": "Agripino Nazareth foi pronunciado, junto com José Oiticica, como um dos chefes do movimento maximalista após a revolta de 1918. (GOMES, 2005, p. 133). Posteriormente, integrou a equipe do Ministério do Trabalho sob Lindolfo Collor e Salgado Filho, sendo descrito por Jacy Magalhães como vindo 'das lutas anarcossindicalistas e socialistas'. (GOMES, 2005, p. 178). Participou da fundação do Partido Socialista Brasileiro em 1925. (GOMES, 2005, p. 168).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_trabalhadores_generico_acg_it",
+      "name": "Trabalhadores Brasileiros (Genérico)",
+      "description_short": "A classe trabalhadora brasileira, objeto e sujeito do processo de 'invenção do trabalhismo', alvo das políticas de sindicalização e da propaganda estatal.",
+      "article_full": {
+        "current": "Os trabalhadores brasileiros são o foco da análise de Angela de Castro Gomes. Desde as lutas da Primeira República pela construção de uma 'palavra operária' (GOMES, 2005, p. 18, 25-26), passando pela sua incorporação (e controle) pelo Estado Novo através da legislação social e do sindicalismo corporativista (GOMES, 2005, p. 191-195, 267-276), até sua mobilização no contexto da redemocratização de 1945 e da formação do PTB (GOMES, 2005, p. 308-319).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_forcas_policiais_generico_acg_it",
+      "name": "Forças Policiais (Genérico)",
+      "description_short": "Aparato repressivo do Estado utilizado para controlar e reprimir o movimento operário e suas lideranças ao longo da Primeira República e do Estado Novo.",
+      "article_full": {
+        "current": "A repressão policial é uma constante na história do movimento operário descrita por Gomes. Desde a Primeira República, manifestações eram cerceadas (GOMES, 2005, p. 234). Durante o Estado Novo, a polícia, em articulação com o Ministério do Trabalho, atuou na intervenção em sindicatos e na perseguição a lideranças independentes (GOMES, 2005, p. 188-189). A polícia do Rio, sob chefes como Aurelino Leal e, posteriormente, Filinto Müller (Polícia Especial), foi particularmente ativa. (GOMES, 2005, p. 133, 189).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_comunistas_coletivo_acg_it",
+      "name": "Comunistas (Ator Coletivo)",
+      "description_short": "Corrente política que surge no Brasil no início dos anos 20 com a fundação do PCB, disputando a hegemonia do movimento operário com anarquistas e outras tendências.",
+      "article_full": {
+        "current": "Os comunistas, organizados no PCB a partir de 1922, representaram uma nova força no movimento operário. Engajaram-se em intensos debates doutrinários com os anarquistas e buscaram conquistar espaço nos sindicatos. (GOMES, 2005, p. 138-139, 154-157). Nos anos 30, foram alvo principal da repressão do Estado Novo, especialmente após a Intentona Comunista de 1935. (GOMES, 2005, p. 189-190). Com a redemocratização, o PCB foi legalizado e participou das eleições de 1945. (GOMES, 2005, p. 309, 314).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_representantes_policiais_sulamericanos_generico_acg_it",
+      "name": "Representantes Policiais Sul-Americanos (Genérico)",
+      "description_short": "Delegados de polícias de diversos países da América do Sul que participaram da Conferência de Buenos Aires em 1920, com o objetivo de coordenar a repressão a movimentos sociais.",
+      "article_full": {
+        "current": "A Conferência Policial de Buenos Aires em 1920 reuniu representantes das polícias da Argentina, Bolívia, Brasil, Chile, Paraguai e Uruguai. O objetivo principal era a 'defesa social', com foco no combate ao anarquismo e outras ideologias consideradas subversivas, vistas como ameaças à propriedade e à ordem. (GOMES, 2005, p. 117).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_almir_de_andrade_acg_it",
+      "name": "Almir de Andrade",
+      "description_short": "Intelectual e diretor da revista 'Cultura Política' durante o Estado Novo, importante na formulação e divulgação da ideologia do regime.",
+      "article_full": {
+        "current": "Almir de Andrade foi o diretor da revista 'Cultura Política', publicação oficial do Estado Novo. Em seus escritos, como no artigo 'Política e Cultura' (1941), expunha os objetivos da revista e defendia a concepção de uma 'democracia social' e de um Estado humanizado, voltado para o bem-estar do povo trabalhador. (GOMES, 2005, p. 204-205, 214, 216-217).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_azevedo_amaral_acg_it",
+      "name": "Azevedo Amaral",
+      "description_short": "Intelectual e um dos principais formuladores da ideologia do Estado Novo, colaborador da revista 'Cultura Política'.",
+      "article_full": {
+        "current": "Azevedo Amaral foi um dos intelectuais que contribuíram significativamente para a construção do discurso do Estado Novo, publicando artigos na revista 'Cultura Política'. Ele interpretava a Revolução de 1930 como um marco restaurador e construtivo, que resgatava a 'personalidade nacional' e enfrentava a 'questão social', em oposição ao liberalismo da Primeira República. (GOMES, 2005, p. 205-208). Defendia a ideia de um Estado forte e de uma 'democracia nova' que comportaria um único partido: o partido do Estado. (GOMES, 2005, p. 221-222).",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_intelectuais_estado_novo_generico_acg_it",
+      "name": "Intelectuais do Estado Novo (Genérico)",
+      "description_short": "Grupo de pensadores, escritores e formuladores de políticas que colaboraram com o regime do Estado Novo na construção de sua base ideológica e na justificação de suas ações.",
+      "article_full": {
+        "current": "O Estado Novo contou com a colaboração de diversos intelectuais para formular e disseminar sua ideologia. Através de publicações como a revista 'Cultura Política' e de órgãos como o DIP, esses intelectuais (incluindo nomes como Almir de Andrade, Azevedo Amaral, Oliveira Vianna, entre outros mencionados por Gomes) trabalharam na reinterpretação da história brasileira, na crítica ao liberalismo, na conceituação de uma 'democracia social' e na valorização do trabalho e do trabalhador como eixos da nova ordem. (GOMES, 2005, p. 13, 203-225).",
+        "previous": null
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "plc_rio_de_janeiro_acg_it",
+      "name": "Rio de Janeiro",
+      "description_short": "Capital federal do Brasil durante o período estudado, palco central dos movimentos operários iniciais, da administração do Estado Novo e da articulação do trabalhismo.",
+      "article_full": {
+        "current": "O Rio de Janeiro, como capital federal, é o cenário principal de grande parte dos eventos descritos em 'A Invenção do Trabalhismo'. Foi o local de surgimento dos primeiros partidos operários e jornais socialistas na virada do século XIX-XX (GOMES, 2005, p. 36). Durante o Estado Novo, sediou o Ministério do Trabalho, Indústria e Comércio e o Departamento de Imprensa e Propaganda (DIP), órgãos centrais na construção e difusão da ideologia trabalhista. (GOMES, 2005, p. 13, 203). As comemorações do 1º de Maio, importantes rituais do trabalhismo, ocorriam predominantemente no Rio de Janeiro, no estádio de São Januário. (GOMES, 2005, p. 234). Foi também um centro nevrálgico das disputas entre anarquistas, comunistas e outras correntes nos anos 20. (GOMES, 2005, p. 138-175).",
+        "previous": null
+      },
+      "longitude": -43.172896,
+      "latitude": -22.906847
+    },
+    {
+      "id": "plc_brasil_geral_acg_it",
+      "name": "Brasil (Geral)",
+      "description_short": "Território nacional onde as políticas trabalhistas e o discurso do Estado Novo foram implementados e difundidos.",
+      "article_full": {
+        "current": "A obra aborda a 'invenção do trabalhismo' como um fenômeno de alcance nacional, embora com foco em sua formulação e irradiação a partir do poder central no Rio de Janeiro. As políticas de sindicalização, a legislação social (CLT), e a propaganda estatal visavam todo o território brasileiro. (GOMES, 2005, passim).",
+        "previous": null
+      },
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "id": "plc_ministerio_trabalho_acg_it",
+      "name": "Ministério do Trabalho, Indústria e Comércio",
+      "description_short": "Órgão governamental central na formulação e implementação da legislação social e da política trabalhista, especialmente sob a gestão de Alexandre Marcondes Filho.",
+      "article_full": {
+        "current": "O Ministério do Trabalho, Indústria e Comércio, criado em 1930, foi o principal instrumento estatal para a 'invenção do trabalhismo'. Sob Lindolfo Collor, iniciou-se a estruturação da legislação trabalhista. (GOMES, 2005, p. 176-177). Durante a gestão de Alexandre Marcondes Filho (1941-1945), o ministério intensificou a propaganda trabalhista, promoveu a campanha de sindicalização e foi crucial na articulação do PTB. (GOMES, 2005, p. 198, 228, 268). O novo edifício do Ministério do Trabalho foi inaugurado em 10 de novembro de 1938, data do primeiro aniversário do Estado Novo. (GOMES, 2005, p. 234).",
+        "previous": null
+      },
+      "longitude": -43.172777,
+      "latitude": -22.906944
+    },
+    {
+      "id": "plc_sao_paulo_acg_it",
+      "name": "São Paulo",
+      "description_short": "Importante centro do movimento operário brasileiro, especialmente anarquista, e local de greves significativas como a de 1917.",
+      "article_full": {
+        "current": "São Paulo é frequentemente mencionada como um polo dinâmico do movimento operário, rivalizando com o Rio de Janeiro em importância, especialmente para o anarquismo. (GOMES, 2005, p. 81). A greve de 1917 em São Paulo é citada como um evento de grande repercussão. (GOMES, 2005, p. 88). Nos anos 20, o debate entre anarquistas e comunistas também ocorreu intensamente em São Paulo, com publicações como A Plebe (anarquista) e Movimento Comunista. (GOMES, 2005, p. 154-155).",
+        "previous": null
+      },
+      "longitude": -46.6333,
+      "latitude": -23.5505
+    },
+    {
+      "id": "plc_buenos_aires_ar_acg_it",
+      "name": "Buenos Aires, Argentina",
+      "description_short": "Local da Conferência Policial Sul-Americana em fevereiro de 1920, que visava coordenar a repressão aos movimentos sociais, especialmente o anarquismo.",
+      "article_full": {
+        "current": "Em fevereiro de 1920, Buenos Aires sediou uma Conferência Policial Sul-Americana com representantes da Argentina, Bolívia, Brasil, Chile, Paraguai e Uruguai. O principal tema foi a 'defesa social' contra o anarquismo e outras 'ideologias exóticas'. (GOMES, 2005, p. 117).",
+        "previous": null
+      },
+      "longitude": -58.381592,
+      "latitude": -34.603722
+    },
+    {
+      "id": "plc_niteroi_rj_acg_it",
+      "name": "Niterói, Rio de Janeiro",
+      "description_short": "Local de fundação do Partido Comunista do Brasil (PCB) em março de 1922.",
+      "article_full": {
+        "current": "Niterói, no estado do Rio de Janeiro, foi o local onde ocorreu o congresso de fundação do Partido Comunista do Brasil, em março de 1922. [Informação de conhecimento geral, complementando o texto de Gomes que foca mais no impacto da fundação do que no local exato]. (GOMES, 2005, p. 138-139, menciona a fundação e o debate subsequente).",
+        "previous": null
+      },
+      "longitude": -43.1048,
+      "latitude": -22.8833
+    },
+    {
+      "id": "plc_palacio_guanabara_rj_acg_it",
+      "name": "Palácio Guanabara, Rio de Janeiro",
+      "description_short": "Local da primeira comemoração do Dia do Trabalho pelo Estado Novo em 1938, com discurso de Getúlio Vargas.",
+      "article_full": {
+        "current": "O primeiro Dia do Trabalho comemorado pelo Estado Novo foi o do ano de 1938, quando o presidente Vargas discursou e caracterizou o teor desta festividade. A data não devia passar em branco e não podia se limitar a palavras. O presidente anunciou na ocasião o regulamento da lei do salário mínimo [...]. Esta primeira festa foi restrita, já que realizada no Palácio Guanabara. (GOMES, 2005, p. 234).",
+        "previous": null
+      },
+      "longitude": -43.1890,
+      "latitude": -22.9134
+    },
+    {
+      "id": "plc_estadio_sao_januario_rj_acg_it",
+      "name": "Estádio de São Januário, Rio de Janeiro",
+      "description_short": "Local das comemorações em massa do 1º de Maio durante o Estado Novo, a partir de 1939.",
+      "article_full": {
+        "current": "A partir de 1939 a comemoração do 1º de maio foi feita com grande público de trabalhadores, pois foi deslocada para o estádio de São Januário – o campo do Vasco da Gama –, na época o maior estádio da cidade do Rio de Janeiro. Desta data em diante ela seria realizada sempre no mesmo local, exceto em 1944, quando foi transferida para o Pacaembu, em São Paulo. (GOMES, 2005, p. 234).",
+        "previous": null
+      },
+      "longitude": -43.2298,
+      "latitude": -22.8910
+    }
+  ],
+  "themes": [
+    {
+      "id": "thm_trabalhismo_acg_it",
+      "name": "Trabalhismo",
+      "color": "#FFD700",
+      "description_short": "Ideologia e prática política centrada na valorização do trabalhador, na legislação social e na figura de Getúlio Vargas, construída e difundida durante o Estado Novo.",
+      "article_full": {
+        "current": "O 'trabalhismo' é o conceito central da obra de Angela de Castro Gomes. Trata-se de uma ideologia política cuidadosamente estruturada pelo Estado Novo, que tinha fortes apoios nas políticas públicas desenvolvidas por vários ministérios de Vargas. Envolvia a criação de um tempo festivo (como o 1º de Maio), a exaltação da figura do presidente como protetor dos trabalhadores, e uma lógica de 'dar, receber, retribuir' que ia além do mero cálculo utilitário. (GOMES, 2005, p. 13, 133-149). O trabalhismo buscou ressignificar elementos da 'palavra operária' da Primeira República, apagando a memória de suas lutas e apresentando os benefícios sociais como outorgas estatais. (GOMES, 2005, p. 25, 28).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_sindicalismo_corporativista_acg_it",
+      "name": "Sindicalismo Corporativista",
+      "color": "#8B0000",
+      "description_short": "Modelo de organização sindical implementado no Brasil, especialmente a partir da Constituição de 1937 e da Lei de Sindicalização de 1939, caracterizado pela unicidade sindical, atrelamento ao Estado e papel de colaboração com o poder público.",
+      "article_full": {
+        "current": "O sindicalismo corporativista foi um dos pilares do projeto trabalhista. A Lei de Sindicalização de 1939 e a CLT (1943) consolidaram este modelo, que previa o sindicato único por categoria profissional, reconhecido pelo Estado e com funções de colaboração. (GOMES, 2005, p. 13, 265). A campanha de sindicalização pós-1942, liderada por Marcondes Filho, visava fortalecer essa estrutura, tornando-a mais representativa e controlada, como base para a transição política do Estado Novo. (GOMES, 2005, p. 268-276). O debate sobre a natureza do corporativismo brasileiro e sua distinção de modelos europeus também é abordado. (GOMES, 2005, p. 274-283).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_estado_novo_acg_it",
+      "name": "Estado Novo (1937-1945)",
+      "color": "#4682B4",
+      "description_short": "Período ditatorial liderado por Getúlio Vargas, durante o qual o trabalhismo foi 'inventado' e implementado como principal ideologia de sustentação do regime e de controle social.",
+      "article_full": {
+        "current": "O Estado Novo (1937-1945) é o período crucial analisado no livro para a consolidação do trabalhismo. Caracterizou-se pela centralização do poder, repressão política e, paradoxalmente, pela expansão da legislação social e pela incorporação simbólica e controlada dos trabalhadores à esfera política. (GOMES, 2005, p. 6, 24). O Departamento de Imprensa e Propaganda (DIP) foi um órgão fundamental na difusão da ideologia do regime e na construção da imagem de Vargas. (GOMES, 2005, p. 13, 203-204). A autora divide o Estado Novo em 'primeiro movimento' (até 1942, mais repressivo e de formulação) e 'segundo movimento' (pós-1942, de implementação efetiva do projeto trabalhista e preparação para a transição). (GOMES, 2005, p. 190, 195-196).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_movimento_operario_primordios_acg_it",
+      "name": "Movimento Operário (Primórdios - Primeira República)",
+      "color": "#2E8B57",
+      "description_short": "Lutas e tentativas de organização dos trabalhadores brasileiros durante a Primeira República, incluindo influências socialistas e anarquistas, e a construção de uma 'palavra operária'.",
+      "article_full": {
+        "current": "A primeira parte do livro de Angela de Castro Gomes é dedicada à 'hora e a vez dos trabalhadores', analisando as lutas e propostas políticas da classe trabalhadora durante a Primeira República. Destacam-se as influências do socialismo na virada do século, com a tentativa de formação de partidos operários (GOMES, 2005, p. 35-79), e o papel do anarquismo, especialmente no sindicalismo e na educação operária (GOMES, 2005, p. 81-127). Este período foi marcado pela construção de uma identidade social e de uma 'palavra operária' que, segundo a autora, foi posteriormente ressignificada pelo trabalhismo estatal. (GOMES, 2005, p. 18, 25).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_legislacao_social_acg_it",
+      "name": "Legislação Social e Trabalhista",
+      "color": "#FFA500",
+      "description_short": "Conjunto de leis e direitos sociais (salário mínimo, férias, Justiça do Trabalho, previdência) implementados principalmente durante o Estado Novo e centrais para o pacto trabalhista.",
+      "article_full": {
+        "current": "A legislação social, com destaque para a trabalhista, é um elemento chave na análise do trabalhismo. O Estado Novo foi pródigo na criação e consolidação dessas leis, como o salário mínimo (1938-1940), a Justiça do Trabalho (1939-1941) e a Consolidação das Leis do Trabalho - CLT (1943). (GOMES, 2005, p. 234-235, 266, 273). Esses benefícios eram apresentados como 'outorgas' do Estado e de Vargas, e o acesso a eles frequentemente condicionado à sindicalização. (GOMES, 2005, p. 9, 191-192). A autora discute a lógica do 'quem tem ofício, tem benefício'. (GOMES, 2005, p. 191).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_trabalhismo_propaganda_acg_it",
+      "name": "Trabalhismo e Propaganda Estatal",
+      "color": "#6A5ACD",
+      "description_short": "Uso intensivo de meios de comunicação, como o rádio (programa 'Hora do Brasil') e publicações oficiais (revista 'Cultura Política'), para difundir a ideologia trabalhista e a imagem de Vargas.",
+      "article_full": {
+        "current": "A propaganda foi uma ferramenta essencial na 'invenção do trabalhismo'. O Departamento de Imprensa e Propaganda (DIP) orquestrava a difusão da imagem do regime e de Getúlio Vargas. (GOMES, 2005, p. 203-204). O programa de rádio 'Falando aos Trabalhadores Brasileiros', com o ministro Alexandre Marcondes Filho, e a revista 'Cultura Política' são exemplos destacados desse esforço de doutrinação e comunicação com as massas trabalhadoras. (GOMES, 2005, p. 228-233, 204-205). A criação de um 'tempo festivo', com comemorações como o 1º de Maio oficial, também integrava essa estratégia. (GOMES, 2005, p. 234-236).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_trabalhismo_partidarismo_acg_it",
+      "name": "Trabalhismo e Partidarismo (PTB)",
+      "color": "#FF69B4",
+      "description_short": "A expressão político-partidária do trabalhismo, materializada na criação do Partido Trabalhista Brasileiro (PTB) em 1945, como herdeiro do legado varguista e da estrutura sindical.",
+      "article_full": {
+        "current": "O Partido Trabalhista Brasileiro (PTB) foi fundado em 15 de maio de 1945, no contexto da redemocratização, como uma tentativa de dar continuidade política ao projeto trabalhista e à influência de Getúlio Vargas sobre as massas trabalhadoras. Suas bases foram montadas a partir da estrutura do Ministério do Trabalho e das lideranças sindicais fomentadas durante o Estado Novo. (GOMES, 2005, p. 307-308). A relação do PTB com o movimento queremista ('Queremos Getúlio') e com a figura de Vargas foi central em sua consolidação inicial. (GOMES, 2005, p. 308-313).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_redemocratizacao_1945_acg_it",
+      "name": "Redemocratização de 1945",
+      "color": "#00CED1",
+      "description_short": "Processo de transição do Estado Novo para um regime democrático, marcado pelas eleições de 1945, a formação de novos partidos (UDN, PSD, PTB, PCB) e a deposição de Vargas.",
+      "article_full": {
+        "current": "O período final do Estado Novo, a partir de 1944-1945, foi caracterizado por intensas articulações políticas visando a redemocratização. Discutiu-se a reforma constitucional, a lei eleitoral e a formação de partidos. A candidatura de Eurico Gaspar Dutra (apoiado pelo PSD e, posteriormente, pelo PTB) e de Eduardo Gomes (UDN) polarizaram a disputa presidencial de 1945, que também contou com a participação do PCB. (GOMES, 2005, p. 287-319). A deposição de Vargas em 29 de outubro de 1945 reconfigurou o cenário político para as eleições. (GOMES, 2005, p. 313-314).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_anarquismo_brasil_acg_it",
+      "name": "Anarquismo no Brasil (Primeira República)",
+      "color": "#FF4500",
+      "description_short": "Doutrina e movimento político com forte influência no sindicalismo e cultura operária brasileira (1906-1920), defendendo ação direta e uma sociedade sem Estado.",
+      "article_full": {
+        "current": "O anarquismo foi uma força significativa no movimento operário da Primeira República, especialmente entre 1906 e 1919/20. Sua proposta incluía o sindicalismo de resistência, a ação direta contra patrões e o Estado, a rejeição da política parlamentar e uma ênfase na educação e transformação cultural do trabalhador como via para uma nova sociedade sem classes e sem Estado. (GOMES, 2005, p. 81-134). Os anarquistas criticavam as formas mutualistas de associação e os partidos políticos socialistas. (GOMES, 2005, p. 90, 95-96).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_repressao_mov_operario_acg_it",
+      "name": "Repressão ao Movimento Operário",
+      "color": "#DC143C",
+      "description_short": "Ações estatais e patronais para coibir a organização e manifestações dos trabalhadores, incluindo violência, prisões, deportações e leis restritivas.",
+      "article_full": {
+        "current": "A repressão ao movimento operário foi uma constante. Na Primeira República, anarquistas e socialistas enfrentaram perseguições, prisões e a Lei de Expulsão de Estrangeiros. (GOMES, 2005, p. 59-60, 88-89, 112). Nos anos 20, a repressão se intensificou, com a polícia atuando em conjunto com o patronato, e a articulação de uma 'defesa social' em nível sul-americano contra o anarquismo. (GOMES, 2005, p. 117, 139-140). Durante o Estado Novo, a repressão foi direcionada principalmente aos comunistas e a qualquer tentativa de sindicalismo independente. (GOMES, 2005, p. 188-190).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_debate_doutrinario_acg_it",
+      "name": "Debate Doutrinário no Movimento Operário",
+      "color": "#8A2BE2",
+      "description_short": "Disputas ideológicas e táticas entre socialistas, anarquistas e, posteriormente, comunistas e cooperativistas pela hegemonia no movimento operário.",
+      "article_full": {
+        "current": "A história do movimento operário brasileiro é marcada por intensos debates doutrinários. Na virada do século, socialistas propunham partidos operários. (GOMES, 2005, p. 35-79). Os anarquistas, a partir de 1906, defenderam o sindicalismo revolucionário e a ação direta, criticando os socialistas. (GOMES, 2005, p. 81-96). Nos anos 20, o surgimento do PCB (GOMES, 2005, p. 138) e do sindicalismo cooperativista de Sarandy Raposo (GOMES, 2005, p. 157) acirrou as disputas, com anarquistas e comunistas polemizando sobre táticas, a Revolução Russa e a organização sindical. (GOMES, 2005, p. 148-168).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_sindicalismo_cooperativista_acg_it",
+      "name": "Sindicalismo Cooperativista (Anos 20)",
+      "color": "#3CB371",
+      "description_short": "Proposta liderada por Sarandy Raposo, defendendo sindicatos profissionais voltados para a cooperação entre capital e trabalho, com apoio estatal, e a formação da CSCB.",
+      "article_full": {
+        "current": "Nos anos 20, surgiu a proposta do sindicalismo cooperativista, liderada por Custódio Alfredo de Sarandy Raposo. Este modelo defendia sindicatos profissionais que realizariam acordos com o patronato, operando por meio de cooperativas. (GOMES, 2005, p. 31, 124). Em março de 1921, foi fundada a Confederação Sindicalista Cooperativista Brasileira (CSCB). (GOMES, 2005, p. 160). Esta corrente buscou se apresentar como uma alternativa ao sindicalismo revolucionário anarquista e às propostas comunistas, defendendo uma transformação social evolutiva e a colaboração de classes. (GOMES, 2005, p. 161-162).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_comunismo_brasil_acg_it",
+      "name": "Comunismo no Brasil (Anos 20)",
+      "color": "#FF0000",
+      "description_short": "Surgimento do Partido Comunista do Brasil (PCB) em 1922 e sua atuação inicial na disputa pela hegemonia do movimento operário e sindical.",
+      "article_full": {
+        "current": "O Partido Comunista do Brasil (PCB) foi fundado em março de 1922, a partir de dissidências do anarquismo e outras vertentes. (GOMES, 2005, p. 138-139). Desde o início, os comunistas buscaram influenciar o movimento sindical, entrando em debate e confronto com os anarquistas. A revista Movimento Comunista foi um dos primeiros veículos de suas ideias. (GOMES, 2005, p. 154-155). A tática de 'frente única' e a relação com a Internacional Comunista foram temas centrais em sua atuação nos anos 20. (GOMES, 2005, p. 158, 165).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_primeira_republica_acg_it",
+      "name": "Primeira República (1889-1930)",
+      "color": "#DEB887",
+      "description_short": "Período da história brasileira caracterizado pela exclusão política dos trabalhadores e pelo desenvolvimento inicial do movimento operário e suas diversas correntes ideológicas.",
+      "article_full": {
+        "current": "A Primeira República é o pano de fundo para a primeira parte da análise de Gomes, focada na 'palavra operária'. Foi um período de intensas lutas sociais, tentativas de organização dos trabalhadores (socialistas, anarquistas), e de construção de uma identidade operária frente a um Estado liberal excludente. (GOMES, 2005, p. 17-18, 35-134). A repressão estatal e patronal foi uma constante nesse período. (GOMES, 2005, p. 59-60, 88-89).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_movimento_operario_anos20_acg_it",
+      "name": "Movimento Operário nos Anos 20",
+      "color": "#DAA520",
+      "description_short": "Período de reconfiguração do movimento operário, com o declínio relativo do anarquismo, a ascensão do comunismo, a emergência do cooperativismo e a intensificação da repressão.",
+      "article_full": {
+        "current": "Os anos 20 foram um período de transição e debate intenso no movimento operário. O anarquismo, embora ainda presente, enfrentou o surgimento do Partido Comunista (1922) e do sindicalismo cooperativista (CSCB, 1921). (GOMES, 2005, p. 137-175). A repressão estatal se intensificou, com a Lei de Expulsão de Estrangeiros e a articulação de uma 'defesa social' em nível continental. (GOMES, 2005, p. 117, 145-146). O debate sobre táticas sindicais, a influência da Revolução Russa e a relação com o Estado marcaram a década. (GOMES, 2005, p. 148-154).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_nacionalismo_xenofobia_anos20_acg_it",
+      "name": "Nacionalismo e Xenofobia (Anos 20)",
+      "color": "#B22222",
+      "description_short": "Crescimento de um discurso nacionalista e xenófobo nos anos 20, que identificava o anarquismo e outras ideologias operárias como 'estrangeiras' e ameaçadoras à ordem nacional, servindo de justificativa para a repressão.",
+      "article_full": {
+        "current": "Nos anos 20, o combate ao anarquismo e a outros movimentos operários foi frequentemente justificado por um discurso nacionalista que os associava a 'elementos estrangeiros' e 'ideologias exóticas'. (GOMES, 2005, p. 112, 117-118). A Conferência Policial de Buenos Aires (1920) reflete essa preocupação em nível continental. (GOMES, 2005, p. 117). A Ação Social Nacionalista, no Rio, elegia os anarquistas como inimigos, ao lado dos 'galegos'. (GOMES, 2005, p. 146-147).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_estado_novo_fim_acg_it",
+      "name": "Fim do Estado Novo",
+      "color": "#778899",
+      "description_short": "Processo de desagregação do regime ditatorial de Vargas, culminando com sua deposição em outubro de 1945 e a transição para um sistema democrático.",
+      "article_full": {
+        "current": "O ano de 1945 marcou o fim do Estado Novo. A pressão por redemocratização, a formação de partidos políticos como UDN, PSD e PTB, e a legalização do PCB foram eventos cruciais. (GOMES, 2005, p. 287-319). O movimento queremista, que pedia a permanência de Vargas, agitou o cenário político, mas não impediu sua deposição em 29 de outubro de 1945. (GOMES, 2005, p. 308-314).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_trabalhismo_ideologia_outorga_acg_it",
+      "name": "Trabalhismo e a Ideologia da Outorga",
+      "color": "#800080",
+      "description_short": "A estratégia discursiva do Estado Novo de apresentar os direitos e benefícios trabalhistas como concessões ('outorgas') do Estado e de Vargas, e não como resultado das lutas operárias.",
+      "article_full": {
+        "current": "A 'ideologia da outorga' foi um componente crucial da invenção do trabalhismo. Consistia em apresentar a legislação social não como uma conquista dos trabalhadores, mas como uma dádiva do Estado, personificado em Getúlio Vargas. Essa narrativa buscava apagar a memória das lutas operárias da Primeira República e construir uma relação de gratidão e lealdade dos trabalhadores para com o líder e o regime. (GOMES, 2005, p. 9, 25, 194-195, 240). A lógica era a de 'dar, receber, retribuir', estabelecendo um pacto que ia além do material, envolvendo dimensões simbólicas e afetivas. (GOMES, 2005, p. 245-250).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_ideologia_estado_novo_acg_it",
+      "name": "Ideologia do Estado Novo",
+      "color": "#008080",
+      "description_short": "Conjunto de ideias e discursos que fundamentaram o regime do Estado Novo, incluindo a crítica ao liberalismo, a valorização de um Estado forte e interventor, a busca por uma 'democracia social' e a construção de uma identidade nacional.",
+      "article_full": {
+        "current": "O Estado Novo desenvolveu uma sofisticada ideologia para se legitimar. Essa ideologia, disseminada por intelectuais e órgãos como o DIP e a revista 'Cultura Política', criticava o 'formalismo' da democracia liberal e dos partidos políticos, propondo em seu lugar uma 'democracia social' e 'econômica', centrada na figura do presidente e na organização corporativa da sociedade. (GOMES, 2005, p. 203-225). Havia uma ênfase na unidade nacional, no trabalho como valor cívico e na superação dos conflitos de classe através da harmonia social promovida pelo Estado. (GOMES, 2005, p. 205-211, 216-217, 221-224).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_queremismo_acg_it",
+      "name": "Movimento Queremista",
+      "color": "#FF6347",
+      "description_short": "Movimento popular de 1945 que defendia a permanência de Getúlio Vargas na presidência e a convocação de uma Assembleia Constituinte sob sua liderança.",
+      "article_full": {
+        "current": "O queremismo ('Queremos Getúlio') foi um movimento de massas que surgiu em 1945, no contexto da crise do Estado Novo e da preparação para as eleições. Defendia a continuidade de Vargas no poder e a convocação de uma Constituinte com sua participação. (GOMES, 2005, p. 308-309). O movimento teve grande apelo popular, realizou comícios e manifestações, e contou com o apoio tácito ou explícito de setores do trabalhismo e do Partido Comunista. A relação entre o PTB e o queremismo foi complexa, mas ambos se alimentavam da popularidade de Vargas e da ideologia trabalhista. (GOMES, 2005, p. 309-313).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_critica_liberalismo_acg_it",
+      "name": "Crítica ao Liberalismo (Estado Novo)",
+      "color": "#4169E1",
+      "description_short": "Argumentação do Estado Novo contra os princípios e práticas da democracia liberal, como o individualismo, o formalismo político, os partidos e a não intervenção estatal na economia e sociedade.",
+      "article_full": {
+        "current": "A ideologia do Estado Novo construiu-se em grande parte sobre uma crítica contundente ao liberalismo. O liberalismo era acusado de ser uma doutrina 'individualista', 'formalista' e 'caduco', incapaz de resolver os problemas sociais e de promover a verdadeira democracia. (GOMES, 2005, p. 205-206, 214-215). Os partidos políticos eram vistos como instrumentos de oligarquias e de desagregação nacional, e a não intervenção estatal como uma omissão que permitia a exploração dos trabalhadores e a desordem social. (GOMES, 2005, p. 215-216, 219-220, 221-222).",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_socialismo_brasil_acg_it",
+      "name": "Socialismo no Brasil (Primeira República)",
+      "color": "#C71585",
+      "description_short": "Presença e atuação de correntes socialistas no início do movimento operário brasileiro, com propostas de organização partidária e luta por direitos.",
+      "article_full": {
+        "current": "Na virada do século XIX para o XX, surgiram no Rio de Janeiro as primeiras tentativas de organização de partidos operários com inspiração socialista. Lideranças como o Tenente Vinhaes e o grupo de França e Silva/Gustavo de Lacerda buscavam dar voz política aos trabalhadores, defendendo a valorização do trabalho e a conquista da cidadania no contexto da recém-proclamada República. (GOMES, 2005, p. 35-53). Esses socialistas enfrentaram a concorrência dos anarquistas e as dificuldades de mobilização em um sistema político excludente. (GOMES, 2005, p. 67-68, 81).",
+        "previous": null
+      }
+    }
+  ]
+}
