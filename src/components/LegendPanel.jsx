@@ -58,7 +58,7 @@ const LegendPanel = ({ legendSections }) => {
     border: '1px solid #ccc',
     borderRadius: '5px',
     marginTop: '10px',
-    maxHeight: '250px', // Adjust as needed, can be dynamic based on content or props
+    maxHeight: '340px', // Increased again
     overflowY: 'auto',
   };
 

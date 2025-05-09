@@ -45,8 +45,8 @@ const EntityListView = ({ characters, places, themes, sources, onEntityClick }) 
   };
 
   return (
-    <div className="entity-list-view" style={{ marginTop: '15px' }}>
-      <h4>Explorar Entidades</h4>
+    <div className="entity-list-view"> {/* Removed marginTop: '15px' */}
+      <h4 style={{ marginTop: '5px', marginBottom: '5px' }}>Explorar Entidades</h4>
       <div className="tabs" style={{ marginBottom: '10px' }}>
         <button onClick={() => handleTabClick('characters')} >
           {activeTab === 'characters' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Personagens

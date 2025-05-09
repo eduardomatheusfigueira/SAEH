@@ -320,7 +320,7 @@ function App() {
           zIndex: 105, 
           display: 'flex',
           flexDirection: 'column',
-          gap: '10px', 
+          gap: '0px', // Further reduced gap
           maxWidth: '320px',
         }}
       >
@@ -337,13 +337,13 @@ function App() {
         <div 
           id="right-side-lists-container"
           style={{
-            width: '100%', 
-            // Adjusted maxHeight to account for typical DateControls height (e.g. ~150px) + timeline (200px) + margins
-            maxHeight: 'calc(100vh - 150px - 200px - 40px)', 
+            width: '100%',
+            // Adjusted maxHeight to account for typical DateControls height (e.g. ~150px) + timeline (200px) + reduced margins
+            maxHeight: 'calc(100vh - 150px - 200px - 30px)', // Adjusted for reduced gap and potentially more legend height
             overflowY: 'auto',
             display: 'flex',
             flexDirection: 'column',
-            gap: '15px' 
+            gap: '0px' // Further reduced gap
           }}
         >
           <EntityListView
