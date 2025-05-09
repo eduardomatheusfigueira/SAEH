@@ -120,6 +120,24 @@
       }
     },
     {
+      "id": "evt_gomes_7",
+      "title": "Criação do Banco dos Operários",
+      "date_type": "single",
+      "start_date": "1890-01-01", 
+      "end_date": null,
+      "characters_ids": ["char_gomes_vinhaes"],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": ["thm_mutualismo_cooperativismo_gomes", "thm_organizacoes_financeiras_gomes"],
+      "description_short": "Grupo de Vinhaes forma o Banco dos Operários no Rio de Janeiro, visando tornar o trabalhador proprietário.",
+      "article_full": { 
+        "current": "Em 1890, por iniciativa do grupo liderado por Vinhaes no Rio de Janeiro, foi formado o Banco dos Operários. Esta instituição tinha como objetivo principal promover a autonomia econômica dos trabalhadores, incentivando a poupança e o acesso à propriedade. A criação de bancos e cooperativas operárias era uma estratégia comum no movimento operário da época para fortalecer a classe trabalhadora e oferecer alternativas ao sistema financeiro tradicional.",
+        "previous": null 
+      }
+    },
+    {
       "id": "evt_gomes_periodo_formacao_trabalhismo",
       "title": "Período de Formação do Trabalhismo (1890-1930)",
       "date_type": "period",
@@ -259,6 +277,20 @@
       "color": "#8E44AD",
       "description_short": "Formação e atuação de partidos políticos ligados ao movimento operário e socialista.",
       "article_full": { "current": "A formação de partidos políticos com base operária ou de orientação socialista foi uma característica importante do início do século XX no Brasil. Essas agremiações buscavam representar os interesses dos trabalhadores no sistema político formal, participando de eleições e defendendo pautas como direitos trabalhistas, sufrágio universal e reformas sociais.", "previous": null }
+    },
+    {
+      "id": "thm_mutualismo_cooperativismo_gomes",
+      "name": "Mutualismo e Cooperativismo Operário",
+      "color": "#16A085",
+      "description_short": "Associações de auxílio mútuo e cooperativas formadas por trabalhadores.",
+      "article_full": { "current": "O mutualismo e o cooperativismo foram formas importantes de organização dos trabalhadores no final do século XIX e início do XX. As sociedades de socorro mútuo ofereciam assistência em casos de doença, desemprego ou morte, enquanto as cooperativas buscavam alternativas econômicas para produção, consumo ou crédito, fortalecendo a solidariedade e a autonomia da classe trabalhadora.", "previous": null }
+    },
+    {
+      "id": "thm_organizacoes_financeiras_gomes",
+      "name": "Organizações Financeiras Operárias",
+      "color": "#27AE60",
+      "description_short": "Criação de bancos, caixas econômicas ou fundos por trabalhadores para fins de poupança, crédito ou investimento.",
+      "article_full": { "current": "Iniciativas de criação de organizações financeiras próprias, como bancos operários ou caixas de auxílio, representavam um esforço dos trabalhadores para obter maior controle sobre seus recursos, facilitar o acesso ao crédito e promover a independência econômica em relação às instituições financeiras tradicionais.", "previous": null }
     }
   ]
 }
