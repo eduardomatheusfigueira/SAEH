@@ -138,6 +138,366 @@
       }
     },
     {
+      "id": "evt_gomes_8",
+      "title": "Participação do CPO nas Eleições Municipais de 1892",
+      "date_type": "single",
+      "start_date": "1892-01-01",
+      "end_date": null,
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_historia_politica_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes", "thm_partidos_politicos_gomes"],
+      "description_short": "Candidatos do Centro do Partido Operário (CPO) participam das eleições municipais no Rio de Janeiro em 1892.",
+      "article_full": { 
+        "current": "Em 1892, o Centro do Partido Operário (CPO) participou das eleições municipais no Rio de Janeiro, então Distrito Federal. Esta participação representou um esforço do emergente movimento operário para ganhar representação política e influenciar as decisões municipais. Embora os resultados específicos e os nomes de todos os candidatos do CPO nesta eleição não sejam amplamente detalhados em fontes gerais, a iniciativa demonstra a crescente politização da classe trabalhadora e sua busca por canais institucionais para defender seus interesses no início da República.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_9",
+      "title": "Disputas Políticas na Primeira República (1892-1904)",
+      "date_type": "period",
+      "start_date": "1892-01-01",
+      "end_date": "1904-12-31",
+      "characters_ids": ["char_gomes_alcindo_guanabara", "char_gomes_barbosa_lima", "char_gomes_lauro_sodre"],
+      "place_id": "plc_gomes_brasil",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_historia_politica_gomes",
+      "secondary_tags_ids": ["thm_positivismo_gomes", "thm_jacobinismo_gomes"],
+      "description_short": "Período de intensas disputas políticas entre defensores de um republicanismo centralizador (jacobinos, positivistas) e outras correntes federalistas.",
+      "article_full": { 
+        "current": "Entre 1892 e 1904, a recém-proclamada República Brasileira foi palco de acirradas disputas políticas. De um lado, correntes centralizadoras, muitas vezes inspiradas pelo positivismo e por um fervoroso republicanismo radical conhecido como 'jacobinismo', defendiam um Estado forte e interventor. Figuras como Lauro Sodré, Alcindo Guanabara e Barbosa Lima foram proeminentes nesse período, participando ativamente dos debates sobre os rumos do novo regime. Do outro lado, propostas federalistas e mais liberais também se manifestavam, gerando um complexo cenário de tensões e alianças políticas que moldaram os primeiros anos da república.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_10",
+      "title": "Articulação Patronal no Rio de Janeiro (1892-1904)",
+      "date_type": "period",
+      "start_date": "1892-01-01",
+      "end_date": "1904-12-31",
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_relacoes_trabalho_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes", "thm_historia_economica_gomes"],
+      "description_short": "Comerciantes e industriais do Rio de Janeiro articulam-se em associações para defender seus interesses frente às mobilizações operárias.",
+      "article_full": { 
+        "current": "Durante o período de 1892 a 1904, em resposta à crescente organização e mobilização dos trabalhadores no Rio de Janeiro, comerciantes e industriais começaram a formar suas próprias associações. O objetivo principal dessas entidades patronais era proteger seus interesses econômicos e coordenar estratégias para lidar com as demandas operárias, greves e a busca por melhores condições de trabalho. Essa articulação representou um contraponto importante ao movimento operário, configurando o cenário dos conflitos sociais e das relações de trabalho na capital federal durante a Primeira República.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_11",
+      "title": "Reforma Policial e Criação da Força Policial no Rio de Janeiro (1892-1905)",
+      "date_type": "period",
+      "start_date": "1892-01-01",
+      "end_date": "1905-12-31",
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_repressao_estatal_gomes",
+      "secondary_tags_ids": ["thm_historia_politica_gomes", "thm_movimento_operario_gomes"],
+      "description_short": "Período de reforma e modernização da polícia no Rio de Janeiro, culminando na Força Policial (1905) e aumento da repressão.",
+      "article_full": { 
+        "current": "Entre 1892 e 1905, a organização policial do Rio de Janeiro, então Distrito Federal, passou por um processo de reforma e modernização. Este esforço culminou na criação da Força Policial do Distrito Federal em 1905. Essas mudanças ocorreram em um contexto de crescente agitação social e organização do movimento operário, e a reestruturação policial frequentemente esteve associada a um aumento na capacidade e na intensidade da repressão estatal aos movimentos sociais e manifestações populares.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_12",
+      "title": "Denúncias de Ação Conjunta Polícia-Patronato (1892-1904)",
+      "date_type": "period",
+      "start_date": "1892-01-01",
+      "end_date": "1904-12-31",
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_repressao_estatal_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes", "thm_relacoes_trabalho_gomes"],
+      "description_short": "Crescimento das denúncias de ação conjunta entre polícia e patronato contra trabalhadores no Rio de Janeiro.",
+      "article_full": { 
+        "current": "Durante o período de 1892 a 1904, no Rio de Janeiro, intensificaram-se as denúncias por parte de trabalhadores e setores do movimento operário sobre uma suposta ação conjunta entre forças policiais e o patronato (empregadores e industriais). Essas alegações apontavam para o uso da repressão policial para coibir greves, desmobilizar organizações de trabalhadores e proteger os interesses dos proprietários, exacerbando os conflitos sociais e as tensões nas relações de trabalho na capital da República.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_13",
+      "title": "Criação do Jornal Gazeta Operária",
+      "date_type": "single",
+      "start_date": "1903-01-01",
+      "end_date": null,
+      "characters_ids": ["char_gomes_mariano_garcia", "char_gomes_vicente_de_souza"],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_imprensa_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes", "thm_socialismo_gomes"],
+      "description_short": "Criação do jornal Gazeta Operária, ligado a correntes socialistas que defendem a organização partidária dos trabalhadores.",
+      "article_full": { 
+        "current": "Em 1903, foi criado o jornal Gazeta Operária, um importante veículo da imprensa trabalhadora no Brasil, provavelmente no Rio de Janeiro. Ligado a correntes socialistas, o jornal defendia a necessidade da organização partidária dos trabalhadores como forma de lutar por seus direitos e promover transformações sociais. Figuras como Mariano Garcia e Vicente de Souza estiveram associadas à sua fundação e circulação, contribuindo para o debate de ideias e a mobilização operária no período.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_14",
+      "title": "Greve na Fábrica de Tecidos Corcovado (1903)",
+      "date_type": "single",
+      "start_date": "1903-01-01",
+      "end_date": null,
+      "characters_ids": [],
+      "place_id": "plc_gomes_fabrica_corcovado_rj",
+      "longitude": -43.2200, 
+      "latitude": -22.9650,  
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": ["thm_repressao_estatal_gomes", "thm_industria_textil_gomes"],
+      "description_short": "Greve dos operários da fábrica de tecidos Corcovado no Rio de Janeiro, com forte repressão policial.",
+      "article_full": { 
+        "current": "Em 1903, operários da Fábrica de Tecidos Corcovado, localizada na região do Jardim Botânico, Rio de Janeiro, realizaram uma greve reivindicando melhores condições de trabalho e salários. O movimento paredista enfrentou forte repressão policial, um padrão comum na época em que as autoridades frequentemente intervinham em favor dos interesses patronais para conter as mobilizações da classe trabalhadora. Esta greve é um exemplo das lutas enfrentadas pelos trabalhadores da crescente indústria têxtil brasileira no início do século XX.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_15",
+      "title": "Criação do Centro dos Industriais de Calçado",
+      "date_type": "single",
+      "start_date": "1903-01-01",
+      "end_date": null,
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_relacoes_trabalho_gomes",
+      "secondary_tags_ids": ["thm_historia_economica_gomes", "thm_movimento_operario_gomes"],
+      "description_short": "Criação do Centro dos Industriais de Calçado no Rio de Janeiro, visando controle sobre os operários.",
+      "article_full": { 
+        "current": "Em 1903, foi estabelecido no Rio de Janeiro o Centro dos Industriais de Calçado. Esta organização patronal surgiu como uma resposta à crescente organização e reivindicações dos trabalhadores do setor calçadista. O objetivo principal do centro era unificar os industriais para defender seus interesses, padronizar práticas e, conforme indicado na fonte original, exercer maior controle sobre a mão de obra e as condições de trabalho, em um período de efervescência do movimento operário.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_16",
+      "title": "Ascensão da Organização Sindical e Debates Estratégicos (1906-1916)",
+      "date_type": "period",
+      "start_date": "1906-01-01",
+      "end_date": "1916-12-31",
+      "characters_ids": [],
+      "place_id": "plc_gomes_brasil",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": ["thm_sindicalismo_gomes", "thm_historia_politica_gomes"],
+      "description_short": "Período de crescimento da organização sindical no Brasil, com debates internos sobre a primazia da ação sindical direta versus a organização em partidos políticos.",
+      "article_full": { 
+        "current": "Entre 1906 e 1916, o movimento operário brasileiro experimentou uma significativa ascensão em termos de organização sindical. Diversas categorias de trabalhadores formaram ou fortaleceram seus sindicatos, buscando melhores condições de trabalho e maior poder de barganha. Internamente, este período foi marcado por intensos debates sobre as melhores estratégias de luta: enquanto correntes como o anarcossindicalismo defendiam a ação direta e a autonomia dos sindicatos, outras vertentes, incluindo socialistas, propunham a importância da organização em partidos políticos para disputar o poder institucional e promover reformas através da legislação.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_17",
+      "title": "Debate Anarquista sobre Estratégias Sindicais (1906-1916)",
+      "date_type": "period",
+      "start_date": "1906-01-01",
+      "end_date": "1916-12-31",
+      "characters_ids": ["char_gomes_neno_vasco", "char_gomes_carlos_dias", "char_gomes_manuel_moscoso", "char_gomes_joao_arzua"],
+      "place_id": "plc_gomes_brasil",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_anarquismo_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes", "thm_sindicalismo_gomes"],
+      "description_short": "Anarquistas questionam a priorização da ação sindical como principal instrumento de transformação social, defendendo outras formas de luta e organização.",
+      "article_full": { 
+        "current": "No período de 1906 a 1916, em meio à ascensão do sindicalismo no Brasil, militantes anarquistas como Neno Vasco, Carlos Dias, Manuel Moscoso e João Arzua levantaram questionamentos sobre a centralidade da ação sindical como único ou principal instrumento para a transformação social. Embora muitos anarquistas atuassem dentro dos sindicatos (anarcossindicalismo), havia um debate sobre a necessidade de não se restringir à luta puramente sindical, defendendo também a propaganda de ideias libertárias, a ação direta em outras esferas e a crítica às tendências reformistas ou burocráticas que poderiam surgir no movimento sindical.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_18",
+      "title": "Greves Portuárias e Acordos no Rio de Janeiro (1906-1908)",
+      "date_type": "period",
+      "start_date": "1906-01-01",
+      "end_date": "1908-12-31",
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": ["thm_sindicalismo_gomes", "thm_relacoes_trabalho_gomes"],
+      "description_short": "Greves no porto do Rio de Janeiro resultam em acordos entre trabalhadores e patronato.",
+      "article_full": { 
+        "current": "Entre 1906 e 1908, o porto do Rio de Janeiro foi palco de significativas greves de trabalhadores portuários, que buscavam melhores salários e condições de trabalho. Essas mobilizações refletiam a crescente organização sindical da categoria e sua capacidade de pressionar os empregadores e as companhias de navegação. As paralisações levaram a processos de negociação e, em alguns casos, à celebração de acordos entre as associações de trabalhadores e o patronato, demonstrando a complexidade das relações de trabalho e a emergência de novas formas de mediação de conflitos no período.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_19",
+      "title": "Publicação dos Jornais Operários 'O Operário' e 'Tribuna do Povo'",
+      "date_type": "single",
+      "start_date": "1909-01-01",
+      "end_date": null,
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro", 
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_imprensa_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes"],
+      "description_short": "Publicação dos jornais O Operário e Tribuna do Povo, ligados a diferentes tendências do movimento operário.",
+      "article_full": { 
+        "current": "Em 1909, surgiram os jornais 'O Operário' e 'Tribuna do Povo', importantes adições à crescente imprensa operária e socialista no Brasil. Esses periódicos, provavelmente baseados no Rio de Janeiro, refletiam e alimentavam as diversas tendências ideológicas e estratégicas dentro do movimento operário da época, servindo como plataformas para debate, organização e divulgação das lutas e aspirações dos trabalhadores.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_20",
+      "title": "Início da Campanha Nacionalista de Olavo Bilac",
+      "date_type": "single",
+      "start_date": "1915-01-01",
+      "end_date": null,
+      "characters_ids": ["char_gomes_olavo_bilac"],
+      "place_id": "plc_gomes_brasil",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_nacionalismo_gomes",
+      "secondary_tags_ids": ["thm_historia_politica_gomes", "thm_militarismo_gomes"],
+      "description_short": "Olavo Bilac inicia campanha nacionalista, que resultaria na Liga da Defesa Nacional (1916) e Liga Nacionalista (1917).",
+      "article_full": { 
+        "current": "Em 1915, o poeta Olavo Bilac deu início a uma proeminente campanha nacionalista no Brasil. Através de discursos e escritos, Bilac conclamava a população, especialmente a juventude, a um maior engajamento cívico e patriotismo, defendendo a obrigatoriedade do serviço militar como forma de fortalecer a nação e a identidade brasileira. Esta campanha teve desdobramentos importantes, influenciando a criação da Liga da Defesa Nacional em 1916 e da Liga Nacionalista em 1917, ambas organizações que buscavam promover o sentimento nacional e, frequentemente, vinculavam o nacionalismo a ideais militaristas.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_21",
+      "title": "Posicionamento Anarquista contra Patriotismo e Militarismo (1915)",
+      "date_type": "single",
+      "start_date": "1915-01-01",
+      "end_date": null,
+      "characters_ids": ["char_gomes_neno_vasco"],
+      "place_id": "plc_gomes_brasil",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_anarquismo_gomes",
+      "secondary_tags_ids": ["thm_nacionalismo_gomes", "thm_militarismo_gomes", "thm_movimento_operario_gomes"],
+      "description_short": "Anarquistas brasileiros se posicionam contra o patriotismo e o militarismo exacerbados, defendendo uma visão de pátria como comunidade humana universal.",
+      "article_full": { 
+        "current": "Em 1915, em um contexto de crescente exaltação nacionalista e militarista, inclusive impulsionada pela campanha de Olavo Bilac e pela iminência da Primeira Guerra Mundial, correntes anarquistas no Brasil se posicionaram criticamente. Rejeitando o patriotismo estatal e o militarismo, os anarquistas defendiam ideais internacionalistas e uma concepção de 'pátria' baseada na solidariedade universal da classe trabalhadora e em valores éticos humanistas, em oposição às fronteiras e aos conflitos entre nações.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_22",
+      "title": "Criação da Associação Gráfica do Rio de Janeiro",
+      "date_type": "single",
+      "start_date": "1915-01-01",
+      "end_date": null,
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_sindicalismo_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes", "thm_anarquismo_gomes", "thm_imprensa_gomes"],
+      "description_short": "Criação da Associação Gráfica do Rio de Janeiro, sindicato com forte presença anarquista, mas sem definição doutrinária oficial.",
+      "article_full": { 
+        "current": "Em 1915, foi fundada a Associação Gráfica do Rio de Janeiro, uma importante organização sindical dos trabalhadores da indústria gráfica na então capital federal. O sindicato destacou-se pela forte presença de militantes anarquistas entre seus membros e lideranças, refletindo a influência do anarcossindicalismo no movimento operário carioca. Apesar dessa influência, a associação não possuía uma definição doutrinária oficial, congregando trabalhadores gráficos com diversas perspectivas ideológicas em torno da luta por melhores condições de trabalho e direitos para a categoria.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_23",
+      "title": "Fundação da Federação Marítima Brasileira (FMB)",
+      "date_type": "single",
+      "start_date": "1916-01-01",
+      "end_date": null,
+      "characters_ids": ["char_gomes_muller_dos_reis"],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_sindicalismo_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes"],
+      "description_short": "Fundação da Federação Marítima Brasileira no Rio, unindo trabalhadores portuários com postura política distinta.",
+      "article_full": { 
+        "current": "Em 1916, foi fundada no Rio de Janeiro a Federação Marítima Brasileira (FMB). Esta organização congregava diversas associações de trabalhadores do setor portuário, como estivadores, conferentes e outros. A FMB destacou-se por adotar um comportamento político e estratégias sindicais que, segundo a fonte, diferenciavam-se tanto do sindicalismo de orientação mais cooperativista quanto das associações de operários de estatais, marcando uma importante vertente no diversificado movimento operário da época. Müller dos Reis foi uma figura associada a esta federação.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_24",
+      "title": "Greve Geral no Rio de Janeiro (Junho 1917)",
+      "date_type": "period",
+      "start_date": "1917-06-01",
+      "end_date": "1917-06-30",
+      "characters_ids": ["char_gomes_muller_dos_reis", "char_gomes_saddock_de_sa"],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": ["thm_repressao_estatal_gomes", "thm_sindicalismo_gomes", "thm_greves_gomes"],
+      "description_short": "Grande greve geral no Rio de Janeiro em junho de 1917, com repressão policial e condenação por setores do próprio movimento operário.",
+      "article_full": { 
+        "current": "Em junho de 1917, o Rio de Janeiro foi palco de uma grande greve geral que mobilizou diversas categorias de trabalhadores. O movimento enfrentou forte repressão policial. Notavelmente, a greve também gerou divisões dentro do próprio movimento operário, sendo condenada por algumas organizações como a Federação Marítima Brasileira, liderada por Müller dos Reis, e por setores cooperativistas, possivelmente representados por figuras como Saddock de Sá. Este episódio evidencia as complexas dinâmicas internas e as diferentes táticas e alinhamentos políticos presentes no sindicalismo carioca da época.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_25",
+      "title": "Novo Surto de Greves Portuárias e Reação Patronal no Rio (1917-1920)",
+      "date_type": "period",
+      "start_date": "1917-01-01",
+      "end_date": "1920-12-31",
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": ["thm_sindicalismo_gomes", "thm_relacoes_trabalho_gomes", "thm_greves_gomes"],
+      "description_short": "Novo surto grevista no porto do Rio de Janeiro, com reação organizada do patronato.",
+      "article_full": { 
+        "current": "Entre 1917 e 1920, o porto do Rio de Janeiro vivenciou um novo ciclo de greves dos trabalhadores portuários. Essas mobilizações, que se seguiram a importantes greves em anos anteriores, foram recebidas com uma reação mais organizada por parte do patronato (empregadores e companhias). Este período reflete a contínua luta por melhores condições e direitos no setor portuário e a crescente articulação de ambas as partes nos conflitos trabalhistas da época.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_26",
+      "title": "Chegada de Otávio Brandão ao Rio e Adesão ao Anarquismo",
+      "date_type": "single",
+      "start_date": "1919-01-01",
+      "end_date": null,
+      "characters_ids": ["char_gomes_otavio_brandao"],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_anarquismo_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes", "thm_intelectuais_politica_gomes"],
+      "description_short": "Otávio Brandão chega ao Rio de Janeiro e adere ao anarquismo, tornando-se uma figura importante no movimento.",
+      "article_full": { 
+        "current": "Em 1919, Otávio Brandão, que se tornaria uma figura proeminente no movimento comunista brasileiro posteriormente, chegou ao Rio de Janeiro. Neste período inicial de sua militância, Brandão aderiu às ideias anarquistas, que possuíam forte influência no movimento operário e intelectual da capital. Sua participação enriqueceu os debates e as atividades do campo libertário na cidade.",
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_27",
+      "title": "Aprovação da Lei de Acidentes de Trabalho (Decreto nº 3.724)",
+      "date_type": "single",
+      "start_date": "1919-01-15",
+      "end_date": null,
+      "characters_ids": ["char_gomes_delfim_moreira"],
+      "place_id": "plc_gomes_brasil",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_legislacao_trabalhista_gomes",
+      "secondary_tags_ids": ["thm_direitos_sociais_gomes", "thm_movimento_operario_gomes"],
+      "description_short": "Aprovado o Decreto Legislativo nº 3.724, a primeira lei federal sobre acidentes de trabalho no Brasil.",
+      "article_full": { 
+        "current": "Em 15 de janeiro de 1919, durante o governo do presidente Delfim Moreira, foi aprovado o Decreto Legislativo nº 3.724, que instituiu a primeira lei federal sobre acidentes de trabalho no Brasil. Esta legislação pioneira estabeleceu a responsabilidade patronal em casos de acidentes ocorridos durante a atividade laboral, prevendo indenizações aos trabalhadores ou suas famílias. Embora com limitações e dificuldades na sua aplicação inicial, a lei representou um marco importante na luta por direitos sociais e na conformação da legislação trabalhista brasileira, sendo resultado de pressões do crescente movimento operário e de debates sobre a questão social.",
+        "previous": null 
+      }
+    },
+    {
       "id": "evt_gomes_periodo_formacao_trabalhismo",
       "title": "Período de Formação do Trabalhismo (1890-1930)",
       "date_type": "period",
@@ -192,6 +552,90 @@
       "name": "Getúlio Vargas",
       "description_short": "Presidente do Brasil, figura central na Era Vargas e na consolidação do trabalhismo.",
       "article_full": { "current": "Getúlio Dornelles Vargas (1882-1954) foi um advogado e político brasileiro, líder civil da Revolução de 1930, que pôs fim à República Velha. Governou o Brasil por dois períodos: de 1930 a 1945 (Governo Provisório, Constitucional e Estado Novo) e de 1951 a 1954 (eleito democraticamente). Sua longa permanência no poder foi marcada por profundas transformações sociais, econômicas e políticas, incluindo a centralização do poder, a industrialização por substituição de importações e a promulgação de uma extensa legislação trabalhista, base do trabalhismo brasileiro.", "previous": null }
+    },
+    {
+      "id": "char_gomes_alcindo_guanabara",
+      "name": "Alcindo Guanabara",
+      "description_short": "Político e jornalista brasileiro atuante na Primeira República.",
+      "article_full": { "current": "Alcindo Guanabara (1865-1918) foi um jornalista e político brasileiro, conhecido por sua atuação durante a Primeira República. Envolveu-se nas disputas políticas da época, sendo uma figura relevante nos debates sobre os rumos do republicanismo no Brasil.", "previous": null }
+    },
+    {
+      "id": "char_gomes_barbosa_lima",
+      "name": "Barbosa Lima Sobrinho",
+      "description_short": "Político, jornalista e historiador brasileiro, com longa atuação na política nacional.",
+      "article_full": { "current": "Alexandre José Barbosa Lima Sobrinho (1897-2000) foi um advogado, jornalista, historiador e político brasileiro. Teve uma longa e influente carreira, participando ativamente dos debates políticos e intelectuais do país ao longo do século XX, incluindo o período da Primeira República e suas complexas disputas.", "previous": null }
+    },
+    {
+      "id": "char_gomes_lauro_sodre",
+      "name": "Lauro Sodré",
+      "description_short": "Militar e político brasileiro, governador do Pará e figura proeminente do jacobinismo.",
+      "article_full": { "current": "Lauro Nina Sodré e Silva (1858-1944) foi um militar e político brasileiro. Foi governador do Pará e uma das mais destacadas lideranças do chamado 'jacobinismo' florianista durante a Primeira República, defendendo um republicanismo mais radical e centralizador.", "previous": null }
+    },
+    {
+      "id": "char_gomes_mariano_garcia",
+      "name": "Mariano Garcia",
+      "description_short": "Figura associada à imprensa operária e socialista no início do século XX.",
+      "article_full": { "current": "Mariano Garcia foi uma figura ligada ao movimento operário e às correntes socialistas no Brasil no início do século XX, associado à fundação e circulação de jornais como a Gazeta Operária em 1903.", "previous": null }
+    },
+    {
+      "id": "char_gomes_vicente_de_souza",
+      "name": "Vicente de Souza",
+      "description_short": "Figura associada à imprensa operária e socialista no início do século XX.",
+      "article_full": { "current": "Vicente de Souza foi uma figura ligada ao movimento operário e às correntes socialistas no Brasil no início do século XX, associado à fundação e circulação de jornais como a Gazeta Operária em 1903.", "previous": null }
+    },
+    {
+      "id": "char_gomes_neno_vasco",
+      "name": "Neno Vasco",
+      "description_short": "Pseudônimo de Gregório Nazianzeno Moreira de Queiroz Vasco, importante intelectual e militante anarquista em Portugal e no Brasil.",
+      "article_full": { "current": "Neno Vasco (1878-1920), pseudônimo de Gregório Nazianzeno Moreira de Queiroz Vasco, foi um influente poeta, jornalista, advogado, e um dos mais importantes teóricos e militantes do anarquismo em Portugal e no Brasil no início do século XX. Contribuiu ativamente para a imprensa operária e anarquista e participou dos debates sobre as estratégias do movimento libertário.", "previous": null }
+    },
+    {
+      "id": "char_gomes_carlos_dias",
+      "name": "Carlos Dias",
+      "description_short": "Militante anarquista e sindicalista atuante no Brasil no início do século XX.",
+      "article_full": { "current": "Carlos Dias foi um militante anarquista e sindicalista de destaque no Brasil durante as primeiras décadas do século XX. Esteve envolvido na organização de trabalhadores e na difusão das ideias anarquistas, participando dos debates sobre as táticas e a direção do movimento operário.", "previous": null }
+    },
+    {
+      "id": "char_gomes_manuel_moscoso",
+      "name": "Manuel Moscoso",
+      "description_short": "Militante anarquista no Brasil no início do século XX.",
+      "article_full": { "current": "Manuel Moscoso foi um militante anarquista ativo no Brasil no início do século XX, contribuindo para as discussões e atividades do movimento libertário e operário da época.", "previous": null }
+    },
+    {
+      "id": "char_gomes_joao_arzua",
+      "name": "João Arzua",
+      "description_short": "Militante anarquista no Brasil no início do século XX.",
+      "article_full": { "current": "João Arzua (ou Arsua) foi um militante anarquista que participou do movimento operário e libertário no Brasil nas primeiras décadas do século XX, envolvendo-se em debates sobre a ação sindical e a organização dos trabalhadores.", "previous": null }
+    },
+    {
+      "id": "char_gomes_olavo_bilac",
+      "name": "Olavo Bilac",
+      "description_short": "Poeta parnasiano, jornalista e figura central da campanha nacionalista e pelo serviço militar obrigatório.",
+      "article_full": { "current": "Olavo Brás Martins dos Guimarães Bilac (1865-1918) foi um jornalista, contista, cronista e poeta brasileiro, considerado o principal representante do parnasianismo no país. Foi membro fundador da Academia Brasileira de Letras. Além de sua vasta obra literária, Bilac notabilizou-se por sua intensa campanha cívica e nacionalista a partir de 1915, defendendo o serviço militar obrigatório como instrumento de formação do cidadão e fortalecimento da nação. Sua atuação influenciou a criação da Liga da Defesa Nacional.", "previous": null }
+    },
+    {
+      "id": "char_gomes_muller_dos_reis",
+      "name": "Müller dos Reis",
+      "description_short": "Liderança associada à Federação Marítima Brasileira no Rio de Janeiro.",
+      "article_full": { "current": "Müller dos Reis foi uma figura de liderança no movimento dos trabalhadores marítimos do Rio de Janeiro, associado à fundação e atuação da Federação Marítima Brasileira (FMB) em 1916. A FMB representava uma importante força sindical no porto, com posições políticas e estratégias que por vezes divergiam de outras correntes do movimento operário.", "previous": null }
+    },
+    {
+      "id": "char_gomes_saddock_de_sa",
+      "name": "Saddock de Sá",
+      "description_short": "Figura do movimento operário/cooperativista no Rio de Janeiro, início do séc. XX.",
+      "article_full": { "current": "Saddock de Sá foi uma personalidade envolvida com o movimento operário e cooperativista no Rio de Janeiro nas primeiras décadas do século XX. Sua atuação é mencionada em contextos de debates e posicionamentos sobre as estratégias e táticas do movimento trabalhista, por vezes em contraste com alas mais combativas ou grevistas.", "previous": null }
+    },
+    {
+      "id": "char_gomes_otavio_brandao",
+      "name": "Otávio Brandão",
+      "description_short": "Intelectual e militante político, inicialmente anarquista, depois uma das principais figuras do PCB.",
+      "article_full": { "current": "Otávio Brandão (1896-1980) foi um jornalista, escritor e militante político brasileiro. Iniciou sua trajetória política ligado ao anarquismo, chegando ao Rio de Janeiro em 1919 e participando ativamente do movimento. Posteriormente, tornou-se uma das figuras fundadoras e mais importantes do Partido Comunista do Brasil (PCB), tendo um papel crucial na introdução e difusão do marxismo no país.", "previous": null }
+    },
+    {
+      "id": "char_gomes_delfim_moreira",
+      "name": "Delfim Moreira",
+      "description_short": "Presidente do Brasil (1918-1919), em cujo governo foi sancionada a Lei de Acidentes de Trabalho.",
+      "article_full": { "current": "Delfim Moreira da Costa Ribeiro (1868-1920) foi um advogado e político brasileiro. Foi vice-presidente eleito de Rodrigues Alves em 1918, assumindo a presidência com a morte deste antes da posse. Durante seu breve mandato (1918-1919), foi sancionada a primeira lei federal de acidentes de trabalho no Brasil, o Decreto Legislativo nº 3.724 de 15 de janeiro de 1919.", "previous": null }
     }
   ],
   "places": [
@@ -212,6 +656,12 @@
         "name": "Brasil (Contexto Nacional)",
         "description_short": "Contexto nacional para eventos e períodos de abrangência mais ampla.",
         "article_full": {"current": "Refere-se ao Brasil como um todo, especialmente para eventos ou períodos que tiveram impacto ou relevância em escala nacional, como a Era Vargas ou a implementação de legislações federais.", "previous": null}
+    },
+    {
+        "id": "plc_gomes_fabrica_corcovado_rj",
+        "name": "Fábrica de Tecidos Corcovado, Rio de Janeiro, RJ",
+        "description_short": "Antiga fábrica têxtil no Rio de Janeiro, palco de greves operárias no início do século XX.",
+        "article_full": {"current": "A Fábrica de Tecidos Corcovado, localizada na região do Jardim Botânico no Rio de Janeiro, foi uma importante unidade industrial têxtil no final do século XIX e início do XX. Como outras fábricas da época, foi cenário de mobilizações operárias e greves por melhores condições de trabalho e salários.", "previous": null}
     }
   ],
   "themes": [
@@ -291,6 +741,90 @@
       "color": "#27AE60",
       "description_short": "Criação de bancos, caixas econômicas ou fundos por trabalhadores para fins de poupança, crédito ou investimento.",
       "article_full": { "current": "Iniciativas de criação de organizações financeiras próprias, como bancos operários ou caixas de auxílio, representavam um esforço dos trabalhadores para obter maior controle sobre seus recursos, facilitar o acesso ao crédito e promover a independência econômica em relação às instituições financeiras tradicionais.", "previous": null }
+    },
+    {
+      "id": "thm_jacobinismo_gomes",
+      "name": "Jacobinismo Brasileiro",
+      "color": "#C0392B",
+      "description_short": "Corrente política radical na Primeira República, defensora de um republicanismo centralizador e por vezes autoritário.",
+      "article_full": { "current": "O jacobinismo brasileiro foi uma corrente política proeminente durante os primeiros anos da República Velha, especialmente durante o governo de Floriano Peixoto. Inspirados pela Revolução Francesa, os jacobinos brasileiros defendiam um republicanismo fervoroso, muitas vezes com traços autoritários e centralizadores, e uma forte intervenção estatal. Eram nacionalistas e frequentemente se opunham às oligarquias estaduais e a influências estrangeiras percebidas.", "previous": null }
+    },
+    {
+      "id": "thm_relacoes_trabalho_gomes",
+      "name": "Relações Capital-Trabalho",
+      "color": "#2C3E50",
+      "description_short": "Dinâmicas, conflitos e negociações entre empregadores e empregados.",
+      "article_full": { "current": "Este tema abrange as complexas interações entre o capital (empregadores, industriais, comerciantes) e o trabalho (operários, empregados). Inclui as formas de contratação, condições de trabalho, disputas salariais, greves, lockouts, a formação de associações patronais e sindicatos, e a mediação (ou ausência dela) do Estado nesses conflitos.", "previous": null }
+    },
+    {
+      "id": "thm_historia_economica_gomes",
+      "name": "História Econômica (Brasil República Velha)",
+      "color": "#7F8C8D",
+      "description_short": "Aspectos econômicos do Brasil durante a Primeira República, como industrialização, agricultura e comércio.",
+      "article_full": { "current": "A Primeira República (1889-1930) foi um período de significativas transformações econômicas no Brasil, incluindo a expansão da cafeicultura, o início da industrialização em alguns centros urbanos, o desenvolvimento de infraestrutura (ferrovias, portos) e a inserção do país na economia global como exportador de produtos primários. Este tema explora essas dinâmicas e seus impactos sociais.", "previous": null }
+    },
+    {
+      "id": "thm_repressao_estatal_gomes",
+      "name": "Repressão Estatal / Policial",
+      "color": "#BF360C", 
+      "description_short": "Ações do Estado e de suas forças policiais para controlar, reprimir ou desmobilizar movimentos sociais, greves e organizações de trabalhadores.",
+      "article_full": { "current": "A repressão estatal e policial foi uma característica marcante das relações entre o Estado e os movimentos sociais, incluindo o movimento operário, durante a Primeira República e a Era Vargas. Isso envolvia desde a vigilância e intimidação até a violência física, prisões, fechamento de sindicatos e jornais, e a aplicação de leis restritivas para conter greves e manifestações consideradas ameaçadoras à ordem estabelecida.", "previous": null }
+    },
+    {
+      "id": "thm_socialismo_gomes",
+      "name": "Socialismo no Brasil (Início Século XX)",
+      "color": "#9B59B6",
+      "description_short": "Introdução e desenvolvimento das ideias e movimentos socialistas no Brasil.",
+      "article_full": { "current": "No início do século XX, as ideias socialistas começaram a se difundir no Brasil, trazidas por imigrantes europeus e adaptadas ao contexto nacional. Diversas correntes do socialismo encontraram eco entre intelectuais e setores do movimento operário, levando à formação de grupos, publicações e partidos que defendiam a transformação social, a luta de classes e a construção de uma sociedade mais igualitária.", "previous": null }
+    },
+    {
+      "id": "thm_industria_textil_gomes",
+      "name": "Indústria Têxtil (Brasil)",
+      "color": "#3498DB",
+      "description_short": "Desenvolvimento da indústria têxtil no Brasil e suas implicações sociais e trabalhistas.",
+      "article_full": { "current": "A indústria têxtil foi um dos primeiros e mais importantes setores a se desenvolver no Brasil, especialmente a partir do final do século XIX e início do XX. Concentrada inicialmente em regiões como Rio de Janeiro e São Paulo, empregava grande número de operários, incluindo mulheres e crianças, e foi palco de intensas lutas por melhores condições de trabalho, salários e pela formação de sindicatos.", "previous": null }
+    },
+    {
+      "id": "thm_sindicalismo_gomes",
+      "name": "Sindicalismo",
+      "color": "#F1C40F",
+      "description_short": "Organização dos trabalhadores em sindicatos para defesa de seus interesses.",
+      "article_full": { "current": "O sindicalismo refere-se à organização dos trabalhadores em sindicatos com o objetivo de defender seus interesses, negociar coletivamente melhores condições de trabalho e salários, e atuar como força social e política. No Brasil, o sindicalismo teve diversas fases e influências ideológicas, desde o mutualismo e anarcossindicalismo até formas mais corporativistas ou classistas.", "previous": null }
+    },
+    {
+      "id": "thm_anarquismo_gomes",
+      "name": "Anarquismo no Brasil",
+      "color": "#E74C3C",
+      "description_short": "Ideias e movimentos anarquistas e anarcossindicalistas no Brasil.",
+      "article_full": { "current": "O anarquismo teve uma presença significativa no Brasil, especialmente entre o final do século XIX e as primeiras décadas do século XX, influenciando fortemente o movimento operário e sindical. Trazido em grande parte por imigrantes europeus, o anarquismo brasileiro se manifestou em diversas correntes, incluindo o anarcossindicalismo, que defendia a ação direta dos trabalhadores e a organização sindical como principal ferramenta para a transformação social e a abolição do Estado e do capitalismo.", "previous": null }
+    },
+    {
+      "id": "thm_nacionalismo_gomes",
+      "name": "Nacionalismo Brasileiro",
+      "color": "#2ECC71",
+      "description_short": "Manifestações e ideologias nacionalistas no Brasil.",
+      "article_full": { "current": "O nacionalismo brasileiro manifestou-se de diversas formas ao longo da história, desde o nativismo colonial, passando pelo nacionalismo romântico do século XIX, até as vertentes desenvolvimentistas e por vezes autoritárias do século XX. Envolve a valorização da identidade, cultura, território e interesses nacionais, frequentemente em contraponto a influências estrangeiras ou em busca de um projeto de nação coeso.", "previous": null }
+    },
+    {
+      "id": "thm_militarismo_gomes",
+      "name": "Militarismo no Brasil",
+      "color": "#E74C3C", 
+      "description_short": "Influência e participação das forças armadas na política e sociedade brasileira.",
+      "article_full": { "current": "O militarismo no Brasil refere-se à influência e participação ativa das Forças Armadas na vida política e social do país. Historicamente, os militares desempenharam papéis importantes em momentos cruciais, desde a Proclamação da República, passando por intervenções políticas, até períodos de regime militar. Este tema explora as ideologias, as ações e o impacto do militarismo na trajetória brasileira.", "previous": null }
+    },
+    {
+      "id": "thm_greves_gomes",
+      "name": "Greves e Paralisações",
+      "color": "#E67E22", 
+      "description_short": "Movimentos grevistas e paralisações de trabalhadores como forma de reivindicação e luta social.",
+      "article_full": { "current": "As greves e paralisações são instrumentos históricos de luta dos trabalhadores por melhores salários, condições de trabalho e direitos. No Brasil, o movimento grevista acompanhou o desenvolvimento industrial e a formação da classe operária, sendo um elemento central nas disputas entre capital e trabalho e na conquista de avanços sociais.", "previous": null }
+    },
+    {
+      "id": "thm_intelectuais_politica_gomes",
+      "name": "Intelectuais e Política",
+      "color": "#95A5A6",
+      "description_short": "Participação e influência de intelectuais nos debates e movimentos políticos.",
+      "article_full": { "current": "A participação de intelectuais na vida política brasileira é uma constante histórica. Seja através da formulação de ideologias, da atuação na imprensa, da participação em partidos ou movimentos sociais, ou como conselheiros de governantes, os intelectuais frequentemente desempenharam papéis importantes na definição dos rumos políticos e sociais do país.", "previous": null }
     }
   ]
 }

@@ -1,0 +1,352 @@
+{
+  "source_info": {
+    "id": "fausto_hist_concisa_2001",
+    "name": "História Concisa do Brasil por Boris Fausto (2001)",
+    "color": "#FF8C00",
+    "description_short": "Eventos da História do Brasil baseados na obra 'História Concisa do Brasil' de Boris Fausto, edição de 2001.",
+    "article_full": {
+      "current": "Esta fonte de dados compila eventos chave da História do Brasil, conforme interpretados e apresentados na obra 'História Concisa do Brasil' do historiador Boris Fausto (São Paulo: Editora da Universidade de São Paulo, 2001). A obra é uma referência concisa para os estudos brasileiros, abordando os principais processos sociais, econômicos e políticos que moldaram o país.\n\nReferência Principal:\nFAUSTO, Boris. *História Concisa do Brasil*. São Paulo: Editora da Universidade de São Paulo, 2001.",
+      "previous": null
+    }
+  },
+  "events": [
+    {
+      "id": "evt_rev_1383_port_bf_hc",
+      "title": "Revolução de 1383-1385 em Portugal",
+      "date_type": "period",
+      "start_date": "1383-01-01",
+      "end_date": "1385-12-31",
+      "characters_ids": ["char_dom_joao_i_bf_hc"],
+      "place_id": "plc_lisboa_pt_bf_hc",
+      "longitude": -9.142685,
+      "latitude": 38.736946,
+      "main_theme_id": "thm_consolidacao_monarquia_pt_bf_hc",
+      "secondary_tags_ids": [],
+      "description_short": "Revolta da burguesia comercial de Lisboa e sublevação popular que resultou na ascensão de Dom João, Mestre de Avis, e na consolidação do poder monárquico em Portugal.",
+      "article_full": {
+        "current": "A partir de uma disputa em torno da sucessão ao trono português, a burguesia comercial de Lisboa se revoltou, seguida por uma grande sublevação popular, a 'revolta do povo miúdo'. O problema da sucessão dinástica confundiu-se com uma guerra de independência quando o rei de Castela, apoiado pela grande nobreza lusa, entrou em Portugal para assumir a regência do trono. No confronto, firmaram-se, ao mesmo tempo, a independência portuguesa e a ascensão ao poder da figura central da revolução, Dom João, Mestre de Avis, filho bastardo do rei Pedro I. Embora alguns historiadores considerem a revolução de 1383 como uma revolução burguesa, ela resultou na realidade, a partir da política posta em prática pelo Mestre de Avis, em um reforço e centralização do poder monárquico. Em torno dele foram-se reagrupando os vários setores sociais influentes da sociedade portuguesa: a nobreza, os comerciantes, a burocracia nascente. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_exp_mar_port_inicio_bf_hc",
+      "title": "Início da Expansão Marítima Portuguesa (Séc. XV)",
+      "date_type": "period",
+      "start_date": "1401-01-01",
+      "end_date": "1430-12-31",
+      "characters_ids": ["char_dom_joao_i_bf_hc"],
+      "place_id": "plc_lisboa_pt_bf_hc",
+      "longitude": -9.142685,
+      "latitude": 38.736946,
+      "main_theme_id": "thm_exp_mar_port_bf_hc",
+      "secondary_tags_ids": ["thm_motivacoes_exp_bf_hc", "thm_consolidacao_monarquia_pt_bf_hc"],
+      "description_short": "Portugal lança pioneiramente sua expansão marítima em princípios do século XV, impulsionada por fatores como autonomia política, experiência comercial, posição geográfica e interesses convergentes de diversos setores sociais.",
+      "article_full": {
+        "current": "Portugal lançou pioneiramente a expansão marítima no começo do século XV. Portugal se afirmava no conjunto da Europa como um país autônomo, com tendência a voltar-se para fora. Os portugueses tinham já experiência acumulada ao longo dos séculos XIII e XIV no comércio de longa distância. A experiência comercial foi facilitada também pelo envolvimento econômico de Portugal com o mundo islâmico do Mediterrâneo. A atração para o mar foi incentivada pela posição geográfica do país, próximo às ilhas do Atlântico e à costa da África, contando com correntes marítimas favoráveis. (FAUSTO, 2001)\nA expansão correspondia aos interesses das classes, grupos sociais e instituições que compunham a sociedade portuguesa. Para os comerciantes, era a perspectiva de um bom negócio; para o rei, a oportunidade de criar novas fontes de receita e motivo de prestígio, além de ser uma boa forma de ocupar os nobres; para os nobres e os membros da Igreja, servir ao rei ou a Deus resultava em recompensas e cargos; para o povo, lançar-se ao mar significava sobretudo emigrar, a tentativa de uma vida melhor. Daí a expansão ter-se convertido em uma espécie de grande projeto nacional. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_foco_ouro_especiarias_bf_hc",
+      "title": "Foco em Ouro e Especiarias na Expansão Portuguesa",
+      "date_type": "period",
+      "start_date": "1401-01-01",
+      "end_date": "1599-12-31",
+      "characters_ids": [],
+      "place_id": null,
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_busca_ouro_especiarias_bf_hc",
+      "secondary_tags_ids": ["thm_exp_mar_port_bf_hc"],
+      "description_short": "A busca por ouro e especiarias foi um dos principais motores da expansão marítima portuguesa nos séculos XV e XVI.",
+      "article_full": {
+        "current": "A dupla formada pelo ouro e pelas especiarias constituiu os bens mais buscados na expansão portuguesa. O ouro era utilizado como moeda confiável e empregado na decoração. As especiarias (condimentos) eram valorizadas devido às limitadas técnicas de conservação de alimentos da época e aos hábitos alimentares, servindo para disfarçar o sabor de carnes e peixes precariamente conservados, além de representarem um gosto alimentar da época. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_conquista_ceuta_bf_hc",
+      "title": "Conquista de Ceuta pelos Portugueses",
+      "date_type": "single",
+      "start_date": "1415-08-21",
+      "end_date": "1415-08-21",
+      "characters_ids": ["char_dom_joao_i_bf_hc", "char_infante_d_henrique_bf_hc"],
+      "place_id": "plc_ceuta_af_bf_hc",
+      "longitude": -5.3198,
+      "latitude": 35.8893,
+      "main_theme_id": "thm_conquistas_feitorias_pt_af_bf_hc",
+      "secondary_tags_ids": ["thm_exp_mar_port_bf_hc"],
+      "description_short": "A conquista de Ceuta, no norte da África, em 1415, é considerada o ponto de partida da expansão ultramarina portuguesa.",
+      "article_full": {
+        "current": "Costuma-se considerar a conquista de Ceuta, no norte da África, em 1415, como o ponto de partida da expansão ultramarina portuguesa. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_ocup_ilhas_atlantico_bf_hc",
+      "title": "Ocupação Portuguesa das Ilhas do Atlântico",
+      "date_type": "period",
+      "start_date": "1420-01-01",
+      "end_date": "1471-12-31",
+      "characters_ids": [],
+      "place_id": null, 
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_ocup_ilhas_atlantico_acucar_bf_hc",
+      "secondary_tags_ids": ["thm_exp_mar_port_bf_hc"],
+      "description_short": "Portugal ocupa e inicia a colonização de ilhas no Atlântico (Madeira, Açores, Cabo Verde, São Tomé), com experiências de plantio em grande escala, incluindo cana-de-açúcar com trabalho escravo.",
+      "article_full": {
+        "current": "Os portugueses realizaram experiências significativas de plantio em grande escala nas ilhas do Atlântico, empregando trabalho escravo. Conseguiram se implantar na Madeira por volta de 1420, nos Açores em torno de 1427, nas ilhas de Cabo Verde (1460) e na de São Tomé (1471). Na ilha da Madeira, competiram o cultivo de trigo e as plantações de cana-de-açúcar, esta última incentivada por mercadores e baseada em trabalho escravo, acabando por triunfar. Em São Tomé, implantaram um sistema de grande lavoura da cana-de-açúcar com uso de escravos. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_gama_chegada_india_bf_hc",
+      "title": "Chegada da Frota de Vasco da Gama da Índia",
+      "date_type": "single",
+      "start_date": "1499-07-01", 
+      "end_date": "1499-07-31", 
+      "characters_ids": ["char_vasco_da_gama_bf_hc"],
+      "place_id": "plc_lisboa_pt_bf_hc",
+      "longitude": -9.142685,
+      "latitude": 38.736946,
+      "main_theme_id": "thm_viagens_india_bf_hc",
+      "secondary_tags_ids": ["thm_exp_mar_port_bf_hc"],
+      "description_short": "A primeira nau de regresso da viagem de Vasco da Gama à Índia chega a Portugal em julho de 1499, gerando grande entusiasmo.",
+      "article_full": {
+        "current": "A primeira nau de regresso da viagem de Vasco da Gama chegou a Portugal, produzindo grande entusiasmo, em julho de 1499. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_cabral_partida_frota_bf_hc",
+      "title": "Partida da Frota de Pedro Álvares Cabral",
+      "date_type": "single",
+      "start_date": "1500-03-09",
+      "end_date": "1500-03-09",
+      "characters_ids": ["char_pedro_alvares_cabral_bf_hc"],
+      "place_id": "plc_lisboa_pt_bf_hc",
+      "longitude": -9.142685,
+      "latitude": 38.736946,
+      "main_theme_id": "thm_viagens_india_bf_hc",
+      "secondary_tags_ids": ["thm_exp_mar_port_bf_hc", "thm_chegada_europeus_brasil_bf_hc"],
+      "description_short": "Uma frota de treze navios, comandada por Pedro Álvares Cabral, parte de Lisboa em 9 de março de 1500, aparentemente com destino às Índias.",
+      "article_full": {
+        "current": "Meses depois da chegada de Vasco da Gama, a 9 de março de 1500, partia do rio Tejo em Lisboa uma frota de treze navios, a mais aparatosa que até então tinha deixado o Reino, aparentemente com destino às índias, sob o comando de um fidalgo de pouco mais de trinta anos, Pedro Álvares Cabral. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_cabral_chegada_brasil_bf_hc",
+      "title": "Chegada de Pedro Álvares Cabral ao Brasil",
+      "date_type": "single",
+      "start_date": "1500-04-22",
+      "end_date": "1500-04-22", 
+      "characters_ids": ["char_pedro_alvares_cabral_bf_hc"],
+      "place_id": "plc_porto_seguro_ba_br_bf_hc",
+      "longitude": -39.0647,
+      "latitude": -16.4497,
+      "main_theme_id": "thm_chegada_europeus_brasil_bf_hc",
+      "secondary_tags_ids": ["thm_exp_mar_port_bf_hc"],
+      "description_short": "A frota de Pedro Álvares Cabral avista terra brasileira em 21 de abril e ancora em Porto Seguro, Bahia, no dia 22 de abril de 1500.",
+      "article_full": {
+        "current": "A frota de Pedro Álvares Cabral, após passar as ilhas de Cabo Verde, tomou rumo oeste, afastando-se da costa africana até avistar o que seria terra brasileira a 21 de abril. Nessa data houve apenas uma breve descida à terra e só no dia seguinte a frota ancoraria no litoral da Bahia, em Porto Seguro. (FAUSTO, 2001)",
+        "previous": null
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "char_dom_joao_i_bf_hc",
+      "name": "Dom João I de Portugal (Mestre de Avis)",
+      "description_short": "Rei de Portugal (filho bastardo de Dom Pedro I) que ascendeu ao poder após a Revolução de 1383-1385, centralizando o poder monárquico e criando condições para a expansão marítima. Liderou a conquista de Ceuta.",
+      "article_full": {
+        "current": "Dom João, Mestre de Avis, filho bastardo do rei Pedro I, foi a figura central da revolução de 1383-1385. Sua ascensão ao poder firmou a independência portuguesa. A política posta em prática pelo Mestre de Avis resultou em um reforço e centralização do poder monárquico. Em torno dele foram-se reagrupando os vários setores sociais influentes da sociedade portuguesa: a nobreza, os comerciantes, a burocracia nascente. Este é um ponto fundamental na discussão sobre as razões da expansão portuguesa, porque nas condições da época era o Estado, ou mais propriamente a Coroa, quem podia se transformar em um grande empreendedor, se alcançasse as condições de força e estabilidade para tanto. (FAUSTO, 2001) Liderou a conquista de Ceuta em 1415. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_infante_d_henrique_bf_hc",
+      "name": "Infante D. Henrique, o Navegador",
+      "description_short": "Infante português (1394-1460), figura central no início da expansão marítima portuguesa, conhecido por patrocinar viagens de exploração.",
+      "article_full": {
+        "current": "O Infante Dom Henrique de Avis (Porto, 4 de março de 1394 – Sagres, 13 de novembro de 1460), foi um infante português e a mais importante figura do início da era das descobertas, popularmente conhecido como Infante de Sagres ou O Navegador. Teve um relevante papel na expansão marítima portuguesa e ajudou a capturar a cidade norte-africana de Ceuta. (WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Infante Dom Henrique*. Disponível em: https://pt.wikipedia.org/wiki/Infante_Dom_Henrique. Acesso em: 9 maio 2025.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_vasco_da_gama_bf_hc",
+      "name": "Vasco da Gama",
+      "description_short": "Navegador português (c. 1469-1524) que comandou a expedição que abriu o caminho marítimo para a Índia.",
+      "article_full": {
+        "current": "Vasco da Gama (c. 1469-1524) foi um navegador e explorador português. Comandou a expedição que partiu de Lisboa e abriu o novo caminho marítimo para as Índias, contornando a África. (WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Vasco da Gama*. Disponível em: https://pt.wikipedia.org/wiki/Vasco_da_Gama. Acesso em: 9 maio 2025.",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_pedro_alvares_cabral_bf_hc",
+      "name": "Pedro Álvares Cabral",
+      "description_short": "Navegador e explorador português (c. 1467-1520), capitão-mor da frota que chegou ao Brasil em 1500.",
+      "article_full": {
+        "current": "Pedro Álvares Cabral (c. 1467 – c. 1520) foi um fidalgo, comandante militar, navegador e explorador português, considerado o descobridor do Brasil. Comandou a segunda expedição portuguesa à Índia, durante a qual sua frota avistou o Brasil em 22 de abril de 1500. (WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Pedro Álvares Cabral*. Disponível em: https://pt.wikipedia.org/wiki/Pedro_%C3%81lvares_Cabral. Acesso em: 9 maio 2025.",
+        "previous": null
+      }
+    }
+  ],
+  "places": [
+    {
+      "id": "plc_lisboa_pt_bf_hc",
+      "name": "Lisboa, Portugal",
+      "description_short": "Capital de Portugal, centro da Revolução de 1383-1385 e epicentro da expansão marítima portuguesa, com experiência comercial prévia.",
+      "article_full": {
+        "current": "Antes de os portugueses assumirem o controle de seu comércio internacional, os genoveses investiram na sua expansão, transformando Lisboa em um grande centro do comércio genovês. (FAUSTO, 2001)\nA burguesia comercial de Lisboa revoltou-se durante a crise de sucessão de 1383-1385. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 38.736946, Longitude -9.142685 (Fonte: Latlong.net)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_ceuta_af_bf_hc",
+      "name": "Ceuta, Norte da África",
+      "description_short": "Cidade no norte da África conquistada por Portugal em 1415, marcando o início da expansão ultramarina portuguesa.",
+      "article_full": {
+        "current": "Ceuta, localizada no norte da África, foi conquistada por Portugal em 1415. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 35.8893, Longitude -5.3198 (Fonte: Latitude.to)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_ilha_madeira_pt_bf_hc",
+      "name": "Ilha da Madeira, Portugal",
+      "description_short": "Ilha atlântica ocupada por Portugal por volta de 1420, onde se desenvolveu a cultura da cana-de-açúcar.",
+      "article_full": {
+        "current": "Portugal conseguiu se implantar na Madeira por volta de 1420. Na ilha da Madeira, competiram o cultivo de trigo e as plantações de cana-de-açúcar, esta última incentivada por mercadores e baseada em trabalho escravo, acabando por triunfar. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 32.371666, Longitude -16.274998 (Fonte: Latlong.net)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_acores_pt_bf_hc",
+      "name": "Açores, Portugal",
+      "description_short": "Arquipélago atlântico ocupado por Portugal por volta de 1427.",
+      "article_full": {
+        "current": "Portugal conseguiu se implantar nos Açores em torno de 1427. (FAUSTO, 2001)\nCoordenadas Geográficas (ponto central aproximado): Latitude 38.305542, Longitude -30.384108 (Fonte: Latlong.net)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_cabo_verde_bf_hc",
+      "name": "Ilhas de Cabo Verde",
+      "description_short": "Arquipélago atlântico ocupado por Portugal em 1460.",
+      "article_full": {
+        "current": "Portugal conseguiu se implantar nas ilhas de Cabo Verde em 1460. A frota de Cabral passou pelas ilhas de Cabo Verde antes de tomar rumo oeste em 1500. (FAUSTO, 2001)\nCoordenadas Geográficas (ponto central aproximado): Latitude 16.5388, Longitude -23.0418 (Fonte: Capeverdeislands.org)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_sao_tome_st_bf_hc",
+      "name": "Ilha de São Tomé",
+      "description_short": "Ilha atlântica ocupada por Portugal em 1471, onde se implantou a lavoura de cana-de-açúcar com escravos e serviu de entreposto de escravos.",
+      "article_full": {
+        "current": "Portugal conseguiu se implantar na ilha de São Tomé em 1471. Nessa ilha, situada no golfo da Guiné, os portugueses implantaram um sistema de grande lavoura da cana-de-açúcar, com muitas semelhanças ao criado no Brasil, contando com abundante suprimento de escravos. São Tomé foi sempre um entreposto de escravos vindos do continente. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 0.255436, Longitude 6.602781 (Fonte: Latlong.net)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_calicute_in_bf_hc",
+      "name": "Calicute (Kozhikode), Índia",
+      "description_short": "Cidade na Índia, destino da expedição de Vasco da Gama que abriu o caminho marítimo para as Índias.",
+      "article_full": {
+        "current": "A primeira nau de regresso da viagem de Vasco da Gama à Índia chegou a Portugal em julho de 1499. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 11.258753, Longitude 75.780411 (Fonte: Latlong.net)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_porto_seguro_ba_br_bf_hc",
+      "name": "Porto Seguro, Bahia, Brasil",
+      "description_short": "Local no litoral da Bahia onde a frota de Pedro Álvares Cabral ancorou em 22 de abril de 1500.",
+      "article_full": {
+        "current": "A frota de Pedro Álvares Cabral ancoraria no litoral da Bahia, em Porto Seguro, no dia 22 de abril de 1500. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude -16.4497, Longitude -39.0647 (Fonte: Latitude.to)",
+        "previous": null
+      }
+    }
+  ],
+  "themes": [
+    {
+      "id": "thm_exp_mar_port_bf_hc",
+      "name": "Expansão Marítima Portuguesa (Séc. XV - Início)",
+      "color": "#005c99",
+      "description_short": "Processo de exploração oceânica iniciado por Portugal em princípios do século XV.",
+      "article_full": {
+        "current": "A expansão marítima portuguesa foi iniciada em princípios do século XV. Portugal lançou pioneiramente a expansão, quase cem anos antes de Colombo chegar às terras da América. Diversos fatores contribuíram para este pioneirismo, incluindo a autonomia política de Portugal, a experiência comercial acumulada, a posição geográfica favorável e a convergência de interesses de várias camadas da sociedade. (FAUSTO, 2001)\nOs impulsos para a aventura marítima não eram apenas comerciais; o imaginário europeu sobre regiões desconhecidas também desempenhou um papel. A expansão representou uma importante renovação das técnicas de marear, com o aperfeiçoamento de instrumentos e da arquitetura naval, como a caravela. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_consolidacao_monarquia_pt_bf_hc",
+      "name": "Consolidação da Monarquia Portuguesa (Séc. XIV-XV)",
+      "color": "#D2691E",
+      "description_short": "Processo de centralização do poder real em Portugal, culminando com a Revolução de 1383-1385 e a ascensão da Dinastia de Avis, fundamental para a expansão marítima.",
+      "article_full": {
+        "current": "Durante todo o século XV, Portugal foi um reino unificado e menos sujeito a convulsões e disputas em comparação com outros reinos europeus. A monarquia portuguesa consolidou-se através de uma história que teve um dos seus pontos mais significativos na revolução de 1383-1385. Esta revolução resultou em um reforço e centralização do poder monárquico sob Dom João, Mestre de Avis. A Coroa, fortalecida e estável, pôde então se transformar em um grande empreendedor, viabilizando a expansão marítima. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_motivacoes_exp_bf_hc",
+      "name": "Motivações da Expansão Marítima Portuguesa",
+      "color": "#FFD700",
+      "description_short": "Convergência de interesses comerciais, reais (receita e prestígio), nobres e eclesiásticos (recompensas e cristianização) e populares (emigração e vida melhor) que impulsionaram a expansão.",
+      "article_full": {
+        "current": "No início do século XV, a expansão correspondia aos interesses das classes, grupos sociais e instituições que compunham a sociedade portuguesa. Para os comerciantes, era a perspectiva de um bom negócio; para o rei, a oportunidade de criar novas fontes de receita, ocupar os nobres e ganhar prestígio; para os nobres e membros da Igreja, servir ao rei ou a Deus resultava em recompensas e cargos; para o povo, lançar-se ao mar significava a tentativa de uma vida melhor e a fuga de um sistema social opressivo. Os impulsos não eram apenas comerciais, incluindo também a busca por reinos fantásticos e o desejo de aventura. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_busca_ouro_especiarias_bf_hc",
+      "name": "Busca por Ouro e Especiarias",
+      "color": "#B8860B",
+      "description_short": "Principal motivação econômica da expansão portuguesa, visando o ouro como moeda e decoração, e especiarias para conservação e paladar.",
+      "article_full": {
+        "current": "O ouro e as especiarias foram os bens mais buscados na expansão portuguesa. O ouro era usado como moeda e para decoração. As especiarias (condimentos) eram valorizadas pelas limitadas técnicas de conservação de alimentos e pelos hábitos alimentares da época. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_conquistas_feitorias_pt_af_bf_hc",
+      "name": "Conquistas e Feitorias Portuguesas na África",
+      "color": "#8B4513",
+      "description_short": "Estabelecimento de postos comerciais fortificados e conquistas territoriais na costa africana como parte da expansão marítima portuguesa.",
+      "article_full": {
+        "current": "A conquista de Ceuta em 1415 marcou o início da expansão ultramarina portuguesa. A expansão metódica desenvolveu-se ao longo da costa ocidental africana, onde os portugueses estabeleceram feitorias (postos de comércio fortificados) sem penetrar profundamente no território. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_ocup_ilhas_atlantico_acucar_bf_hc",
+      "name": "Ocupação das Ilhas Atlânticas e Cultivo de Açúcar",
+      "color": "#228B22",
+      "description_short": "Colonização portuguesa das ilhas da Madeira, Açores, Cabo Verde e São Tomé, com desenvolvimento da agricultura, incluindo a cana-de-açúcar com trabalho escravo.",
+      "article_full": {
+        "current": "Os portugueses ocuparam e colonizaram diversas ilhas no Atlântico, como Madeira (c. 1420), Açores (c. 1427), Cabo Verde (1460) e São Tomé (1471). Nestas ilhas, realizaram experiências de plantio em grande escala, notadamente da cana-de-açúcar, utilizando trabalho escravo. A economia açucareira prosperou inicialmente na Madeira e em São Tomé, esta última também servindo como entreposto de escravos. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_viagens_india_bf_hc",
+      "name": "Viagens à Índia",
+      "color": "#4682B4",
+      "description_short": "Expedições marítimas portuguesas com destino à Índia em busca de especiarias e estabelecimento de rotas comerciais.",
+      "article_full": {
+        "current": "Após a chegada de Vasco da Gama à Índia, a Coroa Portuguesa organizou novas frotas para as Índias, como a comandada por Pedro Álvares Cabral em 1500, que resultou na chegada ao Brasil. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_chegada_europeus_brasil_bf_hc",
+      "name": "Chegada dos Europeus ao Brasil",
+      "color": "#32CD32",
+      "description_short": "A chegada da frota de Pedro Álvares Cabral ao litoral brasileiro em abril de 1500, marcando o início do contato europeu com a terra.",
+      "article_full": {
+        "current": "Em 22 de abril de 1500, a frota portuguesa comandada por Pedro Álvares Cabral, que se destinava às Índias, ancorou no litoral da Bahia, em Porto Seguro. Este evento é considerado o descobrimento oficial do Brasil por Portugal. (FAUSTO, 2001)",
+        "previous": null
+      }
+    }
+  ]
+}
