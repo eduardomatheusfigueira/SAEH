@@ -13,14 +13,16 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick }
 
     d3.select(xAxisRef.current).call(d3.axisBottom(currentXScale));
 
-    d3.select(mainGroupRef.current).selectAll(".event-lane-group").each(function() {
+    const mainGroupSelection = d3.select(mainGroupRef.current);
+
+    mainGroupSelection.selectAll(".event-lane-group").each(function() {
         const laneGroup = d3.select(this);
         // Update rects (periods)
         laneGroup.selectAll(".event-rect")
             .attr("x", d => currentXScale(new Date(d.start_date)))
             .attr("width", d => {
                 const startDate = new Date(d.start_date);
-                const endDate = (d.date_type === "period" && d.end_date) ? new Date(d.end_date) : new Date(startDate.getTime() + (24 * 60 * 60 * 1000)); // 1 day for periods if end_date missing, or for single events if they were rects
+                const endDate = (d.date_type === "period" && d.end_date) ? new Date(d.end_date) : new Date(startDate.getTime() + (24 * 60 * 60 * 1000));
                 const xStart = currentXScale(startDate);
                 const xEnd = currentXScale(endDate);
                 return Math.max(1, xEnd - xStart);
@@ -31,10 +33,10 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick }
     });
     
     const refDateObject = new Date(currentRefDateStr);
-    d3.select(mainGroupRef.current).selectAll(".reference-line")
+    mainGroupSelection.selectAll(".reference-line")
         .attr("x1", currentXScale(refDateObject))
         .attr("x2", currentXScale(refDateObject));
-    d3.select(mainGroupRef.current).selectAll(".reference-line-label")
+    mainGroupSelection.selectAll(".reference-line-label")
         .attr("x", currentXScale(refDateObject) + 4)
         .text(`Ref: ${refDateObject.toLocaleDateString()}`);
   };
@@ -61,14 +63,8 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick }
       const svgNode = svgRef.current;
       if (svgNode && svgNode.__zoom) {
         xScaleRef.current.domain(initialDomainRef.current);
-        // svgNode.__zoom.transform(d3.select(svgNode).transition().duration(750), d3.zoomIdentity); // This might be better
         d3.select(svgNode).transition().duration(750).call(svgNode.__zoom.transform, d3.zoomIdentity);
-
-        // After resetting zoom transform, ensure the scale and elements are redrawn to the initial domain
-        // The zoom event itself should trigger redrawElements, but if not, call manually.
-        // It might be better to let the zoom event handle the redraw after transform.
-        // For now, let's ensure it by calling after setting domain.
-         redrawElements(xScaleRef.current, referenceDate);
+        redrawElements(xScaleRef.current, referenceDate);
       }
     },
     jumpToPeriod: (startDate, endDate) => {
@@ -80,7 +76,7 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick }
       const newDomainEnd = new Date(newMiddle.getTime() + viewDuration / 2);
       xScaleRef.current.domain([newDomainStart, newDomainEnd]);
       redrawElements(xScaleRef.current, referenceDate);
-      // TODO: Update D3 zoom transform to match this new domain
+      // TODO: Update D3 zoom transform to match this new domain for smoother subsequent user zooms
     },
     centerOnDate: (dateToCenter) => {
       if (!xScaleRef.current || !svgRef.current) return;
@@ -180,16 +176,16 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick }
     const laneHeight = yScale.bandwidth();
     const eventPadding = 2;
     const eventBarHeight = Math.max(5, laneHeight - 2 * eventPadding);
-    const circleRadius = Math.min(4, eventBarHeight / 2 - 1);
-
+    const circleRadius = Math.min(4, eventBarHeight / 2); 
+    const circleStrokeWidth = 1.5;
 
     const eventsByTheme = d3.group(events, d => d.main_theme_id);
 
     mainGroup.selectAll(".event-lane-group").remove();
 
     themes.forEach(theme => {
-      const themeEvents = eventsByTheme.get(theme.id) || [];
-      if (themeEvents.length === 0) return;
+      const allThemeEvents = eventsByTheme.get(theme.id) || [];
+      if (allThemeEvents.length === 0) return;
 
       const laneYPosition = yScale(theme.name);
       if (laneYPosition === undefined) return;
@@ -198,60 +194,46 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick }
         .attr("class", "event-lane-group")
         .attr("transform", `translate(0, ${laneYPosition})`);
 
-      themeEvents.sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
+      allThemeEvents.sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
       
-      laneGroup.selectAll(".timeline-event-item")
-        .data(themeEvents)
-        .join(
-          enter => {
-            const enterSelection = enter.append("g").attr("class", "timeline-event-item");
+      const periodEvents = allThemeEvents.filter(d => d.date_type === "period" && d.end_date);
+      const singleEvents = allThemeEvents.filter(d => d.date_type === "single" || !d.end_date);
 
-            // Periods as rects
-            enterSelection.filter(d => d.date_type === "period" && d.end_date)
-              .append("rect")
-                .attr("class", "event-rect")
-                .attr("y", eventPadding)
-                .attr("height", eventBarHeight)
-                .attr("x", d => xScale(new Date(d.start_date)))
-                .attr("width", d => {
-                  const startDate = new Date(d.start_date);
-                  const endDate = new Date(d.end_date);
-                  return Math.max(1, xScale(endDate) - xScale(startDate));
-                });
+      // 1. Draw Period Rectangles (background)
+      laneGroup.selectAll(".event-rect")
+        .data(periodEvents)
+        .join("rect")
+          .attr("class", "event-rect timeline-event-item")
+          .attr("y", eventPadding)
+          .attr("height", eventBarHeight)
+          .attr("x", d => xScale(new Date(d.start_date)))
+          .attr("width", d => {
+            const startDate = new Date(d.start_date);
+            const endDate = new Date(d.end_date);
+            return Math.max(1, xScale(endDate) - xScale(startDate));
+          })
+          .attr("fill", theme.color || "#808080")
+          .style("opacity", 0.7) 
+          .style("cursor", "pointer")
+          .on("click", (event, d) => { if (onEventClick) onEventClick(d.globalId); })
+          .append("title")
+            .text(d => `${d.title}\n${new Date(d.start_date).toLocaleDateString()} - ${new Date(d.end_date).toLocaleDateString()}`);
 
-            // Single events as circles
-            enterSelection.filter(d => d.date_type === "single" || !d.end_date)
-              .append("circle")
-                .attr("class", "event-circle")
-                .attr("cy", laneHeight / 2)
-                .attr("r", circleRadius)
-                .attr("cx", d => xScale(new Date(d.start_date)));
-            
-            // Common attributes for all
-            enterSelection
-              .attr("fill", theme.color || "#808080")
-              .style("cursor", "pointer")
-              .on("click", (event, d) => {
-                if (onEventClick) onEventClick(d.globalId);
-              })
-              .append("title")
-                .text(d => `${d.title}\n${new Date(d.start_date).toLocaleDateString()}${d.end_date ? ' - ' + new Date(d.end_date).toLocaleDateString() : ''}`);
-            
-            return enterSelection; // Return the group for update/exit
-          },
-          update => { // Handle updates if data changes and elements are reused
-            update.select(".event-rect")
-              .attr("x", d => xScale(new Date(d.start_date)))
-              .attr("width", d => {
-                  const startDate = new Date(d.start_date);
-                  const endDate = new Date(d.end_date);
-                  return Math.max(1, xScale(endDate) - xScale(startDate));
-                });
-            update.select(".event-circle")
-              .attr("cx", d => xScale(new Date(d.start_date)));
-            return update;
-          }
-        );
+      // 2. Draw Single Event Circles (foreground)
+      laneGroup.selectAll(".event-circle")
+        .data(singleEvents)
+        .join("circle")
+          .attr("class", "event-circle timeline-event-item")
+          .attr("cy", laneHeight / 2)
+          .attr("r", circleRadius)
+          .attr("cx", d => xScale(new Date(d.start_date)))
+          .attr("fill", "white") 
+          .attr("stroke", theme.color || "#808080") 
+          .attr("stroke-width", circleStrokeWidth)
+          .style("cursor", "pointer")
+          .on("click", (event, d) => { if (onEventClick) onEventClick(d.globalId); })
+          .append("title")
+            .text(d => `${d.title}\n${new Date(d.start_date).toLocaleDateString()}`);
     });
     
     mainGroup.selectAll(".reference-line").remove();
@@ -295,14 +277,14 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick }
       console.error("TimelineView: svgNode (svgRef.current) is not valid for attaching zoom behavior.");
     }
     
-    console.log("D3 TimelineView: Initial render complete.");
+    console.log("D3 TimelineView: Initial render complete with differentiated event types.");
 
     return () => {
       if (svgNode) {
         d3.select(svgNode).on(".zoom", null);
       }
     };
-  }, [events, themes, referenceDate, onEventClick]);
+  }, [events, themes, referenceDate, onEventClick, redrawElements]); // Added redrawElements to dependency array
 
   return <svg ref={svgRef} style={{ width: '100%', height: '100%' }}></svg>;
 });
