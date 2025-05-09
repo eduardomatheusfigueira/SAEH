@@ -87,39 +87,7 @@ const UIControls = ({
         </div>
         <button onClick={onSaveProfile} style={{ marginTop: '5px' }}>Save Profile</button>
       </div>
-      <div>
-        <label htmlFor="reference-date">Reference Date: </label>
-        <input
-          type="date"
-          id="reference-date"
-          name="reference-date"
-          value={referenceDate}
-          onChange={(e) => onReferenceDateChange(e.target.value)}
-          style={{ marginBottom: '5px' }}
-        />
-        <input
-          type="range"
-          id="reference-date-slider"
-          min={minEventYear || 1400} // Fallback if props not ready
-          max={maxEventYear || new Date().getFullYear()} // Fallback
-          value={currentReferenceYear}
-          onChange={handleReferenceDateSliderChange}
-          style={{ width: '100%', marginTop: '5px' }}
-          title={`Year: ${currentReferenceYear}`}
-        />
-        <span style={{ fontSize: '0.9em', display: 'block', textAlign: 'center' }}>Year: {currentReferenceYear}</span>
-      </div>
-      <div style={{ marginTop: '10px' }}>
-        <label htmlFor="time-window">Time Window (+/- years): </label>
-        <input
-          type="number"
-          id="time-window"
-          name="time-window"
-          value={timeWindowYears}
-          onChange={(e) => onTimeWindowYearsChange(parseInt(e.target.value, 10))}
-          min="0"
-        />
-      </div>
+      {/* Date and Time Window controls have been moved to DateControls.jsx */}
       <div style={{ marginTop: '15px' }}>
         <h4>Source Filters</h4>
         {sources && sources.length > 0 ? (

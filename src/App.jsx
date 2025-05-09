@@ -4,7 +4,8 @@ import TimelineView from './components/TimelineView';
 import UIControls from './components/UIControls';
 import DetailModal from './components/DetailModal';
 import EntityListView from './components/EntityListView';
-import TimelineLegend from './components/TimelineLegend'; // Import TimelineLegend
+import TimelineLegend from './components/TimelineLegend';
+import DateControls from './components/DateControls'; // Import DateControls
 import * as DataManager from './dataManager';
 import { MAPBOX_ACCESS_TOKEN } from './config';
 
@@ -285,6 +286,14 @@ function App() {
           Loading data...
         </div>
       )}
+      <DateControls
+        referenceDate={referenceDate}
+        onReferenceDateChange={handleReferenceDateChangeAndUpdateTimeline} // Use the existing handler that also considers timeline lock
+        timeWindowYears={timeWindowYears}
+        onTimeWindowYearsChange={setTimeWindowYears}
+        minEventYear={minEventYear}
+        maxEventYear={maxEventYear}
+      />
       <div id="map-container">
         <MapView
           events={filteredEvents}
