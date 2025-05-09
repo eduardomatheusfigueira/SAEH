@@ -18,7 +18,33 @@ const UIControls = ({
   onTimelinePanRight,
   onTimelineResetZoom,
   onTimelinePeriodJump,
+  // Date slider props
+  minEventYear,
+  maxEventYear,
 }) => {
+
+  const currentReferenceYear = referenceDate ? new Date(referenceDate).getFullYear() : new Date().getFullYear();
+
+  const handleReferenceDateSliderChange = (event) => {
+    const year = parseInt(event.target.value, 10);
+    // Keep current month and day, or default to Jan 1 if not available
+    // Ensure month is 1-based for Date constructor if day is also provided
+    const currentMonthDate = referenceDate ? new Date(referenceDate) : new Date(year, 0, 1);
+    const currentMonth = currentMonthDate.getMonth(); // 0-based
+    const currentDay = currentMonthDate.getDate();
+    
+    // Check for valid date, especially for Feb 29
+    const tempDate = new Date(year, currentMonth, currentDay);
+    let dayToSet = currentDay;
+    if (tempDate.getMonth() !== currentMonth) { // Month rolled over, day was invalid
+        dayToSet = new Date(year, currentMonth + 1, 0).getDate(); // Last day of previous month (which is currentMonth)
+    }
+
+
+    const newDate = `${year}-${String(currentMonth + 1).padStart(2, '0')}-${String(dayToSet).padStart(2, '0')}`;
+    onReferenceDateChange(newDate);
+  };
+
   const handleSourceDataFileChange = (event) => {
     if (event.target.files && event.target.files.length > 0) {
       onLoadSourceDataFiles(Array.from(event.target.files));
@@ -67,7 +93,19 @@ const UIControls = ({
           name="reference-date"
           value={referenceDate}
           onChange={(e) => onReferenceDateChange(e.target.value)}
+          style={{ marginBottom: '5px' }}
         />
+        <input
+          type="range"
+          id="reference-date-slider"
+          min={minEventYear || 1400} // Fallback if props not ready
+          max={maxEventYear || new Date().getFullYear()} // Fallback
+          value={currentReferenceYear}
+          onChange={handleReferenceDateSliderChange}
+          style={{ width: '100%', marginTop: '5px' }}
+          title={`Year: ${currentReferenceYear}`}
+        />
+        <span style={{ fontSize: '0.9em', display: 'block', textAlign: 'center' }}>Year: {currentReferenceYear}</span>
       </div>
       <div style={{ marginTop: '10px' }}>
         <label htmlFor="time-window">Time Window (+/- years): </label>
