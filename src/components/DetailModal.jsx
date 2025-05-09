@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const DetailModal = ({ entityData, entityType, onClose }) => {
   if (!entityData) {
@@ -57,9 +59,19 @@ const DetailModal = ({ entityData, entityType, onClose }) => {
         <div>
           {details}
           <h4 style={{ marginTop: '15px' }}>Artigo Completo:</h4>
-          <div style={{ border: '1px solid #eee', padding: '10px', maxHeight: '200px', overflowY: 'auto' }}>
-            {/* Markdown rendering will go here */}
-            <pre>{entityData.article_full.current}</pre>
+          <div
+            className="markdown-article-container"
+            style={{
+              border: '1px solid #eee',
+              padding: '10px 15px',
+              maxHeight: '300px',
+              overflowY: 'auto',
+              lineHeight: '1.6',
+            }}
+          >
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {entityData.article_full.current}
+            </ReactMarkdown>
           </div>
         </div>
       );
