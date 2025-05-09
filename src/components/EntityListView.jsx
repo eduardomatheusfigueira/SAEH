@@ -2,6 +2,16 @@ import React, { useState } from 'react';
 
 const EntityListView = ({ characters, places, themes, sources, onEntityClick }) => {
   const [activeTab, setActiveTab] = useState('characters'); // 'characters', 'places', 'themes', 'sources'
+  const [isContentVisible, setIsContentVisible] = useState(true); // Content of active tab is visible by default
+
+  const handleTabClick = (tabName) => {
+    if (activeTab === tabName) {
+      setIsContentVisible(!isContentVisible);
+    } else {
+      setActiveTab(tabName);
+      setIsContentVisible(true);
+    }
+  };
 
   const renderList = (items, entityType) => {
     if (!items || items.length === 0) {
@@ -38,16 +48,28 @@ const EntityListView = ({ characters, places, themes, sources, onEntityClick }) 
     <div className="entity-list-view" style={{ marginTop: '15px' }}>
       <h4>Explorar Entidades</h4>
       <div className="tabs" style={{ marginBottom: '10px' }}>
-        <button onClick={() => setActiveTab('characters')} disabled={activeTab === 'characters'}>Personagens</button>
-        <button onClick={() => setActiveTab('places')} disabled={activeTab === 'places'} style={{ marginLeft: '5px' }}>Lugares</button>
-        <button onClick={() => setActiveTab('themes')} disabled={activeTab === 'themes'} style={{ marginLeft: '5px' }}>Temas</button>
-        <button onClick={() => setActiveTab('sources')} disabled={activeTab === 'sources'} style={{ marginLeft: '5px' }}>Fontes (Info)</button>
+        <button onClick={() => handleTabClick('characters')} >
+          {activeTab === 'characters' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Personagens
+        </button>
+        <button onClick={() => handleTabClick('places')} style={{ marginLeft: '5px' }}>
+          {activeTab === 'places' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Lugares
+        </button>
+        <button onClick={() => handleTabClick('themes')} style={{ marginLeft: '5px' }}>
+          {activeTab === 'themes' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Temas
+        </button>
+        <button onClick={() => handleTabClick('sources')} style={{ marginLeft: '5px' }}>
+          {activeTab === 'sources' ? (isContentVisible ? '▾ ' : '▸ ') : '▸ '}Fontes (Info)
+        </button>
       </div>
 
-      {activeTab === 'characters' && renderList(characters, 'character')}
-      {activeTab === 'places' && renderList(places, 'place')}
-      {activeTab === 'themes' && renderList(themes, 'theme')}
-      {activeTab === 'sources' && renderList(sources, 'source')}
+      {isContentVisible && (
+        <>
+          {activeTab === 'characters' && renderList(characters, 'character')}
+          {activeTab === 'places' && renderList(places, 'place')}
+          {activeTab === 'themes' && renderList(themes, 'theme')}
+          {activeTab === 'sources' && renderList(sources, 'source')}
+        </>
+      )}
     </div>
   );
 };
