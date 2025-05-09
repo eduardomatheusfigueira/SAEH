@@ -8,7 +8,7 @@ import EntityListView from './components/EntityListView';
 import LegendPanel from './components/LegendPanel'; // Import new component
 import DateControls from './components/DateControls';
 import * as DataManager from './dataManager';
-import { MAPBOX_ACCESS_TOKEN, DEFAULT_MAP_STYLE, AVAILABLE_MAP_STYLES } from './config'; // Added imports
+import { MAPBOX_ACCESS_TOKEN, DEFAULT_MAP_STYLE, AVAILABLE_MAP_STYLES, DATA_SOURCES } from './config'; // Added DATA_SOURCES
 
 function App() {
   const [currentMapStyleUrl, setCurrentMapStyleUrl] = useState(DEFAULT_MAP_STYLE); // New state
@@ -30,6 +30,7 @@ function App() {
   const [isTimelineLockedToCenter, setIsTimelineLockedToCenter] = useState(false);
   const [isControlsPanelVisible, setIsControlsPanelVisible] = useState(false); // Changed default to false
   const [isTimelineExpanded, setIsTimelineExpanded] = useState(false);
+  const [currentDataSourceId, setCurrentDataSourceId] = useState(null);
 
   const toggleControlsPanel = () => setIsControlsPanelVisible(!isControlsPanelVisible);
 
@@ -52,14 +53,33 @@ function App() {
     }
   }, [currentMapStyleUrl]);
 
+  // Effect to load the first data source on initial mount
   useEffect(() => {
-    async function loadInitialData() {
+    if (DATA_SOURCES && DATA_SOURCES.length > 0 && !currentDataSourceId) {
+      setCurrentDataSourceId(DATA_SOURCES[0].id); // Load the first data source by default
+    }
+  }, []); // Empty dependency array means this runs once on mount
+
+  // Effect to load data when currentDataSourceId changes
+  useEffect(() => {
+    async function loadPredefinedSource() {
+      if (!currentDataSourceId) return;
+
+      const sourceToLoad = DATA_SOURCES.find(ds => ds.id === currentDataSourceId);
+      if (!sourceToLoad) {
+        console.error(`Data source with ID ${currentDataSourceId} not found in DATA_SOURCES.`);
+        return;
+      }
+
       setIsLoading(true);
       try {
-        const response = await fetch('/data/example_source_data.json');
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        console.log(`Fetching data for: ${sourceToLoad.name} from ${sourceToLoad.path}`);
+        const response = await fetch(sourceToLoad.path);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status} for ${sourceToLoad.path}`);
         const jsonData = await response.json();
-        if (DataManager.loadSourceDataFromString(JSON.stringify(jsonData), 'example_source_data.json')) {
+        
+        // Using sourceToLoad.id as the unique identifier for DataManager
+        if (DataManager.loadSourceDataFromString(JSON.stringify(jsonData), sourceToLoad.id)) {
           const sources = DataManager.getSourcesInfo();
           const events = DataManager.getAllEvents();
           setAllLoadedEvents(events);
@@ -67,13 +87,22 @@ function App() {
           setAllSources(sources);
           setAllCharacters(DataManager.getAllCharacters());
           setAllPlaces(DataManager.getAllPlaces());
-          setActiveSourceIds(new Set(sources.map(s => s.id)));
+          setActiveSourceIds(prev => new Set(prev).add(sourceToLoad.id));
+        } else {
+          console.error(`Failed to process data from predefined source: ${sourceToLoad.name}`);
         }
-      } catch (error) { console.error("Could not load initial example data:", error); }
-      finally { setIsLoading(false); }
+      } catch (error) {
+        console.error(`Could not load predefined data source ${sourceToLoad.name}:`, error);
+        alert(`Erro ao carregar a fonte de dados: ${sourceToLoad.name}. Detalhes: ${error.message}`);
+      } finally {
+        setIsLoading(false);
+      }
     }
-    // loadInitialData();
-  }, []);
+
+    if (currentDataSourceId) {
+      loadPredefinedSource();
+    }
+  }, [currentDataSourceId]); // Re-run when currentDataSourceId changes
 
   const handleSourceFilterChange = (sourceId, isActive) => {
     setActiveSourceIds(prev => {
@@ -392,6 +421,9 @@ function App() {
             availableMapStyles={AVAILABLE_MAP_STYLES} // Pass new prop
             currentMapStyleUrl={currentMapStyleUrl} // Pass new prop
             onMapStyleChange={setCurrentMapStyleUrl} // Pass new prop
+            dataSources={DATA_SOURCES} // Pass DATA_SOURCES
+            selectedDataSourceId={currentDataSourceId} // Pass current selection
+            onDataSourceChange={setCurrentDataSourceId} // Handler to change data source
           />
           <button
             className="log-button-custom" // Changed to class

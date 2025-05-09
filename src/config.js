@@ -68,10 +68,44 @@ const AVAILABLE_MAP_STYLES = [
   }
 ];
 
+const DATA_SOURCES = [
+  {
+    name: "A Viagem do Descobrimento (Bueno)",
+    path: "/data/viagem_descobrimento_bueno_SAEH_data.json",
+    id: "viagem_descobrimento_bueno"
+  },
+  {
+    name: "História do Brasil (Boris Fausto)",
+    path: "/data/boris_fausto_SAEH_data.json",
+    id: "boris_fausto"
+  },
+  {
+    name: "Exemplo de Fonte de Dados",
+    path: "/data/example_source_data.json",
+    id: "example_source"
+  },
+  {
+    name: "História Concisa do Brasil (Boris Fausto)",
+    path: "/data/fausto_boris_historia_concisa_SAEH_data.json",
+    id: "fausto_boris_concisa"
+  },
+  {
+    name: "A Invenção do Trabalhismo (Complementado)",
+    path: "/data/invencao_trabalhismo_SAEH_data_complementado.json",
+    id: "invencao_trabalhismo_comp"
+  },
+  {
+    name: "A Invenção do Trabalhismo",
+    path: "/data/invencao_trabalhismo_SAEH_data.json",
+    id: "invencao_trabalhismo"
+  }
+];
+
 export {
   MAPBOX_ACCESS_TOKEN,
   DEFAULT_MAP_STYLE,
   INITIAL_MAP_CENTER,
   INITIAL_MAP_ZOOM,
   AVAILABLE_MAP_STYLES,
+  DATA_SOURCES,
 };

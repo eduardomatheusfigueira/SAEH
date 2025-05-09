@@ -1,0 +1,293 @@
+{
+  "source_info": {
+    "id": "viagem_descobrimento_bueno",
+    "name": "A Viagem do Descobrimento",
+    "author": "Eduardo Bueno",
+    "color": "#D2691E",
+    "description_short": "Um outro olhar sobre a expedição de Cabral e o descobrimento do Brasil.",
+    "article_full": {
+      "current": "Este conjunto de dados é baseado na obra 'A Viagem do Descobrimento' de Eduardo Bueno (2016), que narra a expedição de Pedro Álvares Cabral, o contexto das grandes navegações portuguesas e os eventos que levaram ao descobrimento do Brasil em 1500.",
+      "previous": null
+    }
+  },
+  "events": [
+    {
+      "id": "evt_bueno_1",
+      "title": "Partida da Frota de Cabral de Lisboa",
+      "date_type": "period",
+      "start_date": "1500-03-08",
+      "end_date": "1500-03-09",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_dom_manoel_i", "char_bueno_vasco_da_gama", "char_bueno_frei_henrique_coimbra"],
+      "place_id": "plc_bueno_lisboa_restelo",
+      "longitude": -9.21198568,
+      "latitude": 38.70945558,
+      "main_theme_id": "thm_grandes_navegacoes_bueno",
+      "secondary_tags_ids": ["thm_expedicoes_maritimas_bueno", "thm_rota_india_bueno"],
+      "description_short": "Cerimônias e partida da maior frota portuguesa rumo à Índia, sob o comando de Pedro Álvares Cabral.",
+      "article_full": {
+        "current": "No dia 8 de março de 1500, um domingo, Lisboa celebrou a partida da nova missão comercial e guerreira ao reino das especiarias. Na ermida de São Jerônimo, decorada suntuosamente, o rei D. Manoel I e sua corte assistiram à missa celebrada pelo bispo D. Diogo Ortiz. Após o sermão, D. Manoel entregou a Pedro Álvares Cabral, chefe da missão, uma bandeira da Ordem de Cristo e um barrete bento pelo Papa. A população de Lisboa compareceu em peso à praia do Restelo para presenciar o evento, descrito por João de Barros como um 'campo de flores' devido às librés e bandeiras coloridas. A frota, composta por 10 naus e três caravelas, era a maior e mais poderosa que Portugal já enviara ao Atlântico. A partida efetiva ocorreu na manhã de segunda-feira, 9 de março de 1500. A missão principal era instalar um entreposto português em Calicute, na Índia, seguindo instruções de Vasco da Gama para realizar a 'volta do mar'. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_2",
+      "title": "Avistamento de Terra (Monte Pascoal) e Primeira Ancoragem",
+      "date_type": "single",
+      "start_date": "1500-04-22",
+      "end_date": null,
+      "characters_ids": ["char_bueno_pedro_alvares_cabral"],
+      "place_id": "plc_bueno_monte_pascoal_costa_brasil",
+      "longitude": -39.533333,
+      "latitude": -16.75,
+      "main_theme_id": "thm_descobrimento_brasil_bueno",
+      "secondary_tags_ids": ["thm_grandes_navegacoes_bueno", "thm_exploracao_bueno"],
+      "description_short": "Após 44 dias de viagem, a frota de Cabral avista um monte alto e redondo, batizado de Monte Pascoal, e ancora próximo à costa brasileira.",
+      "article_full": {
+        "current": "Na terça-feira, 21 de abril de 1500, após a celebração da Páscoa, a frota de Cabral encontrou sinais de proximidade de terra, como algas (botelhos e rabos-de-asno) e aves marinhas (fura-buxos). Na manhã seguinte, quarta-feira, 22 de abril, 'nas horas de véspera', a cerca de 70 quilômetros da costa, os tripulantes avistaram 'um grande monte mui alto e redondo'. Ao entardecer, após avançar mais 40 quilômetros, a frota deparou com outras serras mais baixas ao sul do monte principal, cobertas por denso arvoredo. A armada lançou âncoras a seis léguas (cerca de 40 quilômetros) da costa, em mar de 34 metros de profundidade. O monte avistado foi posteriormente nomeado Monte Pascoal. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_3",
+      "title": "Primeiro Contato com Indígenas e Ancoragem em Porto Seguro",
+      "date_type": "period",
+      "start_date": "1500-04-23",
+      "end_date": "1500-04-24",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_nicolau_coelho", "char_bueno_gaspar_da_gama_interprete", "char_bueno_afonso_lopes_piloto", "char_bueno_tupiniquins"],
+      "place_id": "plc_bueno_porto_seguro_coroa_vermelha",
+      "longitude": -39.0647,
+      "latitude": -16.4497,
+      "main_theme_id": "thm_primeiros_contatos_bueno",
+      "secondary_tags_ids": ["thm_descobrimento_brasil_bueno", "thm_povos_indigenas_bueno"],
+      "description_short": "Nicolau Coelho estabelece o primeiro contato com os Tupiniquins, trocando presentes. A frota busca e encontra um ancoradouro seguro em Porto Seguro (Baía Cabrália).",
+      "article_full": {
+        "current": "Na manhã de quinta-feira, 23 de abril de 1500, a frota aproximou-se da costa, ancorando a 3 quilômetros da praia, em frente à foz de um pequeno rio. Nicolau Coelho foi enviado à terra e encontrou cerca de 18 a 20 indígenas, descritos como 'pardos, todos nus'. Houve uma troca de presentes: Coelho ofereceu um gorro vermelho, um sombreiro preto e uma carapuça de linho, recebendo em troca um cocar de penas e um colar de contas. Na sexta-feira, 24 de abril, a frota navegou para o norte em busca de um porto seguro, avistando as falésias de Trancoso. Ao final da tarde, encontraram 'um arrecife com um porto dentro, muito bom e muito seguro', na foz do rio Mutari, próximo ao recife da Coroa Vermelha (atual Baía Cabrália). O piloto Afonso Lopes sondou o porto e capturou dois jovens indígenas que pescavam em uma canoa (almadia), levando-os à nau capitânia onde foram recebidos por Cabral. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_4",
+      "title": "Primeira Missa e Interações em Terra",
+      "date_type": "single",
+      "start_date": "1500-04-26",
+      "end_date": null,
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_frei_henrique_coimbra", "char_bueno_pero_vaz_caminha", "char_bueno_diogo_dias_dancarino", "char_bueno_tupiniquins"],
+      "place_id": "plc_bueno_ilheu_coroa_vermelha",
+      "longitude": -39.0647,
+      "latitude": -16.4497,
+      "main_theme_id": "thm_religiao_colonizacao_bueno",
+      "secondary_tags_ids": ["thm_descobrimento_brasil_bueno", "thm_primeiros_contatos_bueno"],
+      "description_short": "Frei Henrique de Coimbra celebra a primeira missa no ilhéu da Coroa Vermelha, com a presença de Cabral e tripulantes, observados pelos indígenas. Interações pacíficas na praia.",
+      "article_full": {
+        "current": "No domingo de Pascoela, 26 de abril de 1500, Pedro Álvares Cabral ordenou que um altar fosse erguido no ilhéu da Coroa Vermelha. Ali, Frei Henrique de Coimbra celebrou a primeira missa em solo brasileiro, com a presença da tripulação e a bandeira da Ordem de Cristo. Os indígenas observaram a cerimônia da praia e, ao final, sopraram conchas e dançaram. Após a missa e o almoço, os portugueses, incluindo Diogo Dias (homônimo do irmão de Bartolomeu Dias) que dançou com os nativos ao som de uma gaita, foram à praia para interagir com os indígenas. Pero Vaz de Caminha registrou suas impressões sobre os nativos, descrevendo-os como 'muito bem cuidados e muito limpos', comparando sua inocência à de 'aves e animais monteses'. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_5",
+      "title": "Ereção da Cruz, Segunda Missa e Partida do Brasil",
+      "date_type": "period",
+      "start_date": "1500-05-01",
+      "end_date": "1500-05-02",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_frei_henrique_coimbra", "char_bueno_pero_vaz_caminha", "char_bueno_gaspar_de_lemos", "char_bueno_afonso_ribeiro_degredado", "char_bueno_tupiniquins"],
+      "place_id": "plc_bueno_porto_seguro_cruz",
+      "longitude": -39.0647,
+      "latitude": -16.4497,
+      "main_theme_id": "thm_simbolismo_posse_bueno",
+      "secondary_tags_ids": ["thm_descobrimento_brasil_bueno", "thm_comunicacao_coroa_bueno"],
+      "description_short": "Uma grande cruz é erguida na praia, seguida por uma segunda missa. A frota de Cabral parte para a Índia, enquanto Gaspar de Lemos retorna a Portugal com a carta de Caminha e a notícia da descoberta. Dois degredados são deixados no Brasil.",
+      "article_full": {
+        "current": "Na sexta-feira, 1º de maio de 1500, os portugueses, com a ajuda de cerca de 150 indígenas, ergueram uma grande cruz de madeira na praia, com as armas reais de D. Manoel. Frei Henrique de Coimbra celebrou a segunda missa, e os nativos imitaram os gestos dos portugueses. A cruz simbolizava a posse da terra, chamada Ilha de Vera Cruz, e marcava o local para futuros navegantes. No sábado, 2 de maio, a frota se preparou para partir. A naveta de mantimentos, comandada por Gaspar de Lemos, foi designada para retornar a Portugal levando a carta de Pero Vaz de Caminha, amostras da nova terra (pau-brasil, araras) e um indígena. O restante da esquadra de Cabral seguiu viagem rumo à Índia. Dois degredados, incluindo Afonso Ribeiro, foram deixados em terra para aprender sobre os costumes locais. (BUENO, 2016)",
+        "previous": null
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "char_bueno_pedro_alvares_cabral",
+      "name": "Pedro Álvares Cabral",
+      "description_short": "Nobre e militar português, comandante da frota que descobriu o Brasil em 1500.",
+      "article_full": { "current": "Pedro Álvares Cabral (Belmonte, c. 1467/1468 – Santarém, c. 1520) foi um fidalgo, comandante militar, navegador e explorador português, creditado como o descobridor do Brasil. Liderou a segunda expedição portuguesa à Índia, durante a qual ocorreu o achamento oficial do Brasil em abril de 1500. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_dom_manoel_i",
+      "name": "D. Manoel I, o Venturoso",
+      "description_short": "Rei de Portugal durante o período do descobrimento do Brasil e da chegada à Índia.",
+      "article_full": { "current": "D. Manoel I (Alcochete, 1469 – Lisboa, 1521), cognominado 'O Venturoso' ou 'O Afortunado', foi Rei de Portugal e dos Algarves. Seu reinado coincidiu com um período de grande expansão marítima portuguesa, incluindo a viagem de Vasco da Gama à Índia e a chegada de Cabral ao Brasil. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_vasco_da_gama",
+      "name": "Vasco da Gama",
+      "description_short": "Navegador português, descobridor do caminho marítimo para a Índia.",
+      "article_full": { "current": "Vasco da Gama (Sines, c. 1460/1469 – Cochim, 1524) foi um navegador e explorador português. Notabilizou-se por ter sido o comandante dos primeiros navios a navegar da Europa para a Índia, na mais longa viagem oceânica até então realizada. Suas instruções de navegação foram seguidas por Cabral. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_frei_henrique_coimbra",
+      "name": "Frei Henrique de Coimbra",
+      "description_short": "Franciscano que celebrou as primeiras missas no Brasil.",
+      "article_full": { "current": "Frei Henrique Soares de Coimbra foi um frade franciscano português que integrou a expedição de Pedro Álvares Cabral. É conhecido por ter celebrado a primeira missa no Brasil, em 26 de abril de 1500, e uma segunda em 1º de maio de 1500. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_nicolau_coelho",
+      "name": "Nicolau Coelho",
+      "description_short": "Navegador experiente, participou das expedições de Vasco da Gama e Cabral. Realizou o primeiro contato com os indígenas no Brasil.",
+      "article_full": { "current": "Nicolau Coelho (Felgueiras, c. 1460 – ao largo de Moçambique, 1504) foi um navegador português. Participou da descoberta do caminho marítimo para a Índia com Vasco da Gama e integrou a frota de Cabral, sendo o primeiro a estabelecer contato com os indígenas brasileiros. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_gaspar_da_gama_interprete",
+      "name": "Gaspar da Gama (Intérprete)",
+      "description_short": "Judeu polonês convertido, intérprete na frota de Cabral, com conhecimento de línguas orientais.",
+      "article_full": { "current": "Gaspar da Gama, também conhecido como Gaspar da Índia, era um judeu polonês que viveu na Índia e foi capturado por Vasco da Gama. Convertido ao cristianismo, serviu como intérprete na frota de Cabral devido ao seu conhecimento de línguas orientais. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_afonso_lopes_piloto",
+      "name": "Afonso Lopes (Piloto)",
+      "description_short": "Piloto da nau capitânia de Cabral, realizou a sondagem do porto em Porto Seguro.",
+      "article_full": { "current": "Afonso Lopes foi o piloto da nau capitânia na expedição de Pedro Álvares Cabral. Descrito como 'homem vivo e destro', foi responsável por sondar o ancoradouro de Porto Seguro e capturar os primeiros indígenas levados a bordo. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_tupiniquins",
+      "name": "Povos Tupiniquins",
+      "description_short": "Grupo indígena que habitava o litoral da Bahia e teve os primeiros contatos com a frota de Cabral.",
+      "article_full": { "current": "Os Tupiniquins eram um grupo indígena do tronco Tupi que habitava a região litorânea do atual estado da Bahia na época da chegada de Cabral. Foram os primeiros povos nativos a interagir com os portugueses em 1500. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_pero_vaz_caminha",
+      "name": "Pero Vaz de Caminha",
+      "description_short": "Escrivão da frota de Cabral, autor da carta que relatou o descobrimento do Brasil ao rei D. Manoel I.",
+      "article_full": { "current": "Pero Vaz de Caminha (Porto, c. 1450 – Calicute, 1500) foi um escrivão português. Acompanhou a expedição de Pedro Álvares Cabral como escrivão da feitoria a ser instalada em Calicute. É célebre por sua carta a D. Manoel I, detalhando o 'achamento' do Brasil e os primeiros contatos com os indígenas. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_diogo_dias_dancarino",
+      "name": "Diogo Dias (Dançarino)",
+      "description_short": "Membro da tripulação de Cabral, conhecido por sua interação alegre com os indígenas, dançando com eles.",
+      "article_full": { "current": "Diogo Dias, descrito como 'homem gracioso e de prazer', era um dos membros da frota de Cabral. Notabilizou-se por sua interação amigável com os indígenas na praia de Porto Seguro, onde dançou com eles ao som de uma gaita, quebrando o gelo inicial. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_gaspar_de_lemos",
+      "name": "Gaspar de Lemos",
+      "description_short": "Capitão da naveta de mantimentos, encarregado de levar a notícia do descobrimento do Brasil a Portugal.",
+      "article_full": { "current": "Gaspar de Lemos foi o comandante da naveta de mantimentos da frota de Pedro Álvares Cabral. Coube a ele a importante missão de retornar a Portugal levando a carta de Pero Vaz de Caminha e as primeiras amostras da nova terra, anunciando o descobrimento ao rei D. Manoel I. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "char_bueno_afonso_ribeiro_degredado",
+      "name": "Afonso Ribeiro (Degredado)",
+      "description_short": "Um dos degredados deixados no Brasil pela expedição de Cabral para colher informações sobre a terra e seus habitantes.",
+      "article_full": { "current": "Afonso Ribeiro foi um dos degredados (condenados ao exílio) que integravam a frota de Cabral. Juntamente com outro companheiro, foi deixado no Brasil em maio de 1500 com a tarefa de 'andar lá com eles [os nativos] e saber de seu viver e maneiras'. (BUENO, 2016)", "previous": null }
+    }
+  ],
+  "places": [
+    {
+      "id": "plc_bueno_lisboa_restelo",
+      "name": "Lisboa (Praia do Restelo), Portugal",
+      "description_short": "Ponto de partida da expedição de Pedro Álvares Cabral em março de 1500.",
+      "longitude": -9.21198568,
+      "latitude": 38.70945558,
+      "article_full": { "current": "A Praia do Restelo, em Lisboa, às margens do rio Tejo, foi o local histórico de partida de muitas expedições marítimas portuguesas, incluindo a de Vasco da Gama para a Índia e a de Pedro Álvares Cabral em 1500, que resultou no descobrimento do Brasil. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "plc_bueno_monte_pascoal_costa_brasil",
+      "name": "Monte Pascoal e Costa Adjacente, Bahia, Brasil",
+      "description_short": "Local do primeiro avistamento de terra pela frota de Cabral em 22 de abril de 1500.",
+      "longitude": -39.533333,
+      "latitude": -16.75,
+      "article_full": { "current": "O Monte Pascoal, um monte elevado e arredondado no litoral sul da Bahia, foi a primeira porção de terra avistada pela esquadra de Pedro Álvares Cabral em 22 de abril de 1500. A região circundante marcou o primeiro ponto de ancoragem da frota. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "plc_bueno_porto_seguro_coroa_vermelha",
+      "name": "Porto Seguro (Baía Cabrália) e Ilhéu da Coroa Vermelha, Bahia, Brasil",
+      "description_short": "Local de ancoragem segura da frota, primeiros contatos intensos com indígenas e celebração da primeira missa.",
+      "longitude": -39.0647,
+      "latitude": -16.4497,
+      "article_full": { "current": "Porto Seguro, mais especificamente a Baía Cabrália e o ilhéu da Coroa Vermelha, foi o local onde a frota de Cabral encontrou um ancoradouro seguro. Ali ocorreram os contatos mais significativos com os indígenas Tupiniquim, a coleta de água e lenha, e a celebração da primeira missa em 26 de abril de 1500. (BUENO, 2016)", "previous": null }
+    },
+     {
+      "id": "plc_bueno_ilheu_coroa_vermelha",
+      "name": "Ilhéu da Coroa Vermelha, Santa Cruz Cabrália, Bahia, Brasil",
+      "description_short": "Local onde foi celebrada a primeira missa no Brasil em 26 de abril de 1500.",
+      "longitude": -39.0647,
+      "latitude": -16.4497,
+      "article_full": { "current": "O Ilhéu da Coroa Vermelha, situado na Baía Cabrália, município de Santa Cruz Cabrália (Bahia), é historicamente reconhecido como o local da primeira missa rezada no Brasil pela expedição de Pedro Álvares Cabral, em 26 de abril de 1500. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "plc_bueno_porto_seguro_cruz",
+      "name": "Porto Seguro (Local da Cruz), Bahia, Brasil",
+      "description_short": "Local onde foi erguida a primeira cruz e celebrada a segunda missa, antes da partida da frota.",
+      "longitude": -39.0647,
+      "latitude": -16.4497,
+      "article_full": { "current": "Em Porto Seguro, em 1º de maio de 1500, a expedição de Cabral ergueu uma grande cruz de madeira, marcando simbolicamente a posse da terra para a Coroa Portuguesa. No mesmo local, foi celebrada a segunda missa. (BUENO, 2016)", "previous": null }
+    }
+  ],
+  "themes": [
+    {
+      "id": "thm_grandes_navegacoes_bueno",
+      "name": "Grandes Navegações Portuguesas",
+      "color": "#000080",
+      "description_short": "Explorações marítimas portuguesas nos séculos XV e XVI.",
+      "article_full": { "current": "Período de intensa exploração marítima por Portugal, visando novas rotas comerciais, territórios e a expansão da fé cristã, culminando em descobertas como o caminho marítimo para a Índia e a chegada à América. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_expedicoes_maritimas_bueno",
+      "name": "Expedições Marítimas",
+      "color": "#4682B4",
+      "description_short": "Viagens organizadas por mar para exploração, comércio ou conquista.",
+      "article_full": { "current": "As expedições marítimas dos séculos XV e XVI, como a de Cabral, eram empreendimentos complexos que envolviam planejamento, financiamento, tecnologia naval avançada para a época e tripulações numerosas, enfrentando grandes perigos e desafios. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_rota_india_bueno",
+      "name": "Rota Marítima para a Índia",
+      "color": "#FF8C00",
+      "description_short": "Busca e estabelecimento do caminho marítimo entre a Europa e a Índia.",
+      "article_full": { "current": "A descoberta e consolidação da rota marítima para a Índia, contornando a África, foi um dos principais objetivos das navegações portuguesas, visando o lucrativo comércio de especiarias e quebrando o monopólio veneziano e árabe. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_descobrimento_brasil_bueno",
+      "name": "Descobrimento do Brasil",
+      "color": "#228B22",
+      "description_short": "Chegada da frota de Cabral ao Brasil em 1500.",
+      "article_full": { "current": "Refere-se aos eventos da expedição de Pedro Álvares Cabral que resultaram na chegada dos portugueses à terra que viria a ser o Brasil, em abril de 1500, e os primeiros contatos com os povos indígenas. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_exploracao_bueno",
+      "name": "Exploração Geográfica",
+      "color": "#8B4513",
+      "description_short": "Atividade de descobrir e mapear novas regiões.",
+      "article_full": { "current": "A exploração geográfica foi um motor das Grandes Navegações, impulsionada pela curiosidade, pela busca de recursos e pela expansão de impérios, levando ao conhecimento de novas terras, povos e rotas. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_primeiros_contatos_bueno",
+      "name": "Primeiros Contatos Luso-Indígenas",
+      "color": "#FFD700",
+      "description_short": "Interações iniciais entre portugueses e povos nativos do Brasil.",
+      "article_full": { "current": "Descreve as primeiras interações, trocas culturais e impressões mútuas entre os navegadores portugueses da frota de Cabral e os povos Tupiniquim no litoral da Bahia em 1500. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_povos_indigenas_bueno",
+      "name": "Povos Indígenas do Brasil",
+      "color": "#A52A2A",
+      "description_short": "Habitantes originários do território brasileiro.",
+      "article_full": { "current": "Os povos indígenas do Brasil, como os Tupiniquim encontrados por Cabral, possuíam ricas e diversas culturas, modos de vida e organização social, que foram profundamente impactados pela chegada dos europeus. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_religiao_colonizacao_bueno",
+      "name": "Religião e Colonização",
+      "color": "#800080",
+      "description_short": "Papel da religião, especialmente o catolicismo, no processo de colonização.",
+      "article_full": { "current": "A dimensão religiosa, particularmente a intenção de expandir a fé cristã, foi um componente importante das navegações e da colonização portuguesa, manifestada em atos como a celebração de missas em novas terras. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_simbolismo_posse_bueno",
+      "name": "Simbolismo e Tomada de Posse",
+      "color": "#6A5ACD",
+      "description_short": "Atos simbólicos para demarcar a posse de novos territórios.",
+      "article_full": { "current": "A ereção de cruzes, a celebração de missas e a redação de documentos como a carta de Caminha eram atos simbólicos e jurídicos importantes para afirmar a posse de novos territórios em nome da Coroa Portuguesa. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_comunicacao_coroa_bueno",
+      "name": "Comunicação com a Coroa",
+      "color": "#708090",
+      "description_short": "Relatos e cartas enviados pelos exploradores aos monarcas.",
+      "article_full": { "current": "A comunicação oficial com a Coroa, através de cartas e relatórios detalhados como o de Pero Vaz de Caminha, era essencial para informar o rei sobre as descobertas, as características das novas terras e os povos encontrados, subsidiando decisões políticas e econômicas. (BUENO, 2016)", "previous": null }
+    }
+  ]
+}

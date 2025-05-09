@@ -20,6 +20,9 @@ const UIControls = ({
   availableMapStyles,
   currentMapStyleUrl,
   onMapStyleChange,
+  dataSources, // New prop for predefined data sources
+  selectedDataSourceId, // New prop for the currently selected data source ID
+  onDataSourceChange, // New prop for handling data source change
 }) => {
 
   // Placeholder for jump to year input
@@ -65,6 +68,25 @@ const UIControls = ({
         </div>
         <button onClick={onSaveProfile}>Salvar Perfil</button> {/* Removed inline style */}
       </div>
+
+      {dataSources && dataSources.length > 0 && (
+        <div style={{ marginTop: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
+          <h4>Selecionar Fonte de Dados Principal</h4>
+          <label htmlFor="data-source-select">Escolha uma fonte de dados: </label>
+          <select
+            id="data-source-select"
+            value={selectedDataSourceId || ''}
+            onChange={(e) => onDataSourceChange(e.target.value)}
+            style={{ width: '100%', padding: '5px', marginBottom: '10px', border: '1px solid var(--border-color)', borderRadius: '4px' }}
+          >
+            {dataSources.map(source => (
+              <option key={source.id} value={source.id}>
+                {source.name}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       <div style={{ marginTop: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
         <h4>Estilo do Mapa</h4>
