@@ -1,230 +1,310 @@
 import React, { useRef, useEffect, useImperativeHandle, forwardRef } from 'react';
-import Chart from 'chart.js/auto'; // Import Chart.js
-import 'chartjs-adapter-date-fns'; // Import the date adapter
-import zoomPlugin from 'chartjs-plugin-zoom'; // Import the zoom plugin
-
-Chart.register(zoomPlugin); // Register the zoom plugin
+import * as d3 from 'd3';
 
 const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick }, ref) => {
-  const chartRef = useRef(null); // For the canvas element
-  const chartInstanceRef = useRef(null); // To store the chart instance
+  const svgRef = useRef(null);
+  const xAxisRef = useRef(null);
+  const xScaleRef = useRef(null);
+  const mainGroupRef = useRef(null);
+  const initialDomainRef = useRef(null);
 
-  // Expose control methods via ref
+  const redrawElements = (currentXScale, currentRefDateStr) => {
+    if (!xAxisRef.current || !mainGroupRef.current || !currentXScale) return;
+
+    d3.select(xAxisRef.current).call(d3.axisBottom(currentXScale));
+
+    d3.select(mainGroupRef.current).selectAll(".event-lane-group").each(function() {
+        const laneGroup = d3.select(this);
+        // Update rects (periods)
+        laneGroup.selectAll(".event-rect")
+            .attr("x", d => currentXScale(new Date(d.start_date)))
+            .attr("width", d => {
+                const startDate = new Date(d.start_date);
+                const endDate = (d.date_type === "period" && d.end_date) ? new Date(d.end_date) : new Date(startDate.getTime() + (24 * 60 * 60 * 1000)); // 1 day for periods if end_date missing, or for single events if they were rects
+                const xStart = currentXScale(startDate);
+                const xEnd = currentXScale(endDate);
+                return Math.max(1, xEnd - xStart);
+            });
+        // Update circles (single events)
+        laneGroup.selectAll(".event-circle")
+            .attr("cx", d => currentXScale(new Date(d.start_date)));
+    });
+    
+    const refDateObject = new Date(currentRefDateStr);
+    d3.select(mainGroupRef.current).selectAll(".reference-line")
+        .attr("x1", currentXScale(refDateObject))
+        .attr("x2", currentXScale(refDateObject));
+    d3.select(mainGroupRef.current).selectAll(".reference-line-label")
+        .attr("x", currentXScale(refDateObject) + 4)
+        .text(`Ref: ${refDateObject.toLocaleDateString()}`);
+  };
+
   useImperativeHandle(ref, () => ({
     zoomIn: () => {
-      chartInstanceRef.current?.zoom(1.1); // Zoom in by 10%
+      const svgNode = svgRef.current;
+      if (svgNode && svgNode.__zoom) svgNode.__zoom.scaleBy(d3.select(svgNode).transition().duration(250), 1.2);
     },
     zoomOut: () => {
-      chartInstanceRef.current?.zoom(0.9); // Zoom out by 10%
+      const svgNode = svgRef.current;
+      if (svgNode && svgNode.__zoom) svgNode.__zoom.scaleBy(d3.select(svgNode).transition().duration(250), 0.8);
     },
     panLeft: () => {
-      chartInstanceRef.current?.pan({ x: 100 }, undefined, 'default'); // Pan 100px left
+      const svgNode = svgRef.current;
+      if (svgNode && svgNode.__zoom) svgNode.__zoom.translateBy(d3.select(svgNode).transition().duration(250), 50, 0);
     },
     panRight: () => {
-      chartInstanceRef.current?.pan({ x: -100 }, undefined, 'default'); // Pan 100px right
+      const svgNode = svgRef.current;
+      if (svgNode && svgNode.__zoom) svgNode.__zoom.translateBy(d3.select(svgNode).transition().duration(250), -50, 0);
     },
     resetZoom: () => {
-      chartInstanceRef.current?.resetZoom('none');
-      // After resetting zoom, we might want to set the scale to fit all current data
-      if (chartInstanceRef.current && events.length > 0) {
-        const minDate = new Date(Math.min(...events.map(e => new Date(e.start_date).getTime())));
-        const maxDate = new Date(Math.max(...events.map(e => new Date(e.end_date || e.start_date).getTime())));
-        chartInstanceRef.current.options.scales.x.min = minDate.getFullYear() -1;
-        chartInstanceRef.current.options.scales.x.max = maxDate.getFullYear() +1;
-        chartInstanceRef.current.update('none');
+      if (!xScaleRef.current || !svgRef.current || !initialDomainRef.current) return;
+      const svgNode = svgRef.current;
+      if (svgNode && svgNode.__zoom) {
+        xScaleRef.current.domain(initialDomainRef.current);
+        // svgNode.__zoom.transform(d3.select(svgNode).transition().duration(750), d3.zoomIdentity); // This might be better
+        d3.select(svgNode).transition().duration(750).call(svgNode.__zoom.transform, d3.zoomIdentity);
+
+        // After resetting zoom transform, ensure the scale and elements are redrawn to the initial domain
+        // The zoom event itself should trigger redrawElements, but if not, call manually.
+        // It might be better to let the zoom event handle the redraw after transform.
+        // For now, let's ensure it by calling after setting domain.
+         redrawElements(xScaleRef.current, referenceDate);
       }
     },
     jumpToPeriod: (startDate, endDate) => {
-      if (chartInstanceRef.current) {
-        chartInstanceRef.current.options.scales.x.min = startDate.getTime();
-        chartInstanceRef.current.options.scales.x.max = endDate.getTime();
-        chartInstanceRef.current.update('none');
-      }
+      if (!xScaleRef.current || !svgRef.current) return;
+      const currentDomain = xScaleRef.current.domain();
+      const viewDuration = currentDomain[1].getTime() - currentDomain[0].getTime();
+      const newMiddle = new Date((startDate.getTime() + endDate.getTime()) / 2);
+      const newDomainStart = new Date(newMiddle.getTime() - viewDuration / 2);
+      const newDomainEnd = new Date(newMiddle.getTime() + viewDuration / 2);
+      xScaleRef.current.domain([newDomainStart, newDomainEnd]);
+      redrawElements(xScaleRef.current, referenceDate);
+      // TODO: Update D3 zoom transform to match this new domain
+    },
+    centerOnDate: (dateToCenter) => {
+      if (!xScaleRef.current || !svgRef.current) return;
+      const currentDomain = xScaleRef.current.domain();
+      const viewDuration = currentDomain[1].getTime() - currentDomain[0].getTime();
+      const newMin = new Date(dateToCenter.getTime() - viewDuration / 2);
+      const newMax = new Date(dateToCenter.getTime() + viewDuration / 2);
+      xScaleRef.current.domain([newMin, newMax]);
+      redrawElements(xScaleRef.current, referenceDate);
+      // TODO: Update D3 zoom transform to match this new domain
     }
   }));
 
   useEffect(() => {
-    if (!chartRef.current || !events || !themes) {
-      if (chartInstanceRef.current) {
-        chartInstanceRef.current.destroy();
-        chartInstanceRef.current = null;
-      }
+    if (!svgRef.current || !events || !themes) {
+      d3.select(svgRef.current).selectAll("*").remove();
       return;
     }
 
-    if (chartInstanceRef.current) {
-      chartInstanceRef.current.destroy();
+    const margin = { top: 20, right: 30, bottom: 30, left: 150 };
+    const { width, height } = svgRef.current.getBoundingClientRect();
+    const innerWidth = width - margin.left - margin.right;
+    const innerHeight = height - margin.top - margin.bottom;
+
+    const svgNode = svgRef.current;
+    const svgSelection = d3.select(svgNode)
+      .attr('width', width)
+      .attr('height', height);
+    
+    svgSelection.selectAll("*").remove();
+
+    const mainGroup = svgSelection.append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+    mainGroupRef.current = mainGroup.node();
+
+    const xScale = d3.scaleTime().range([0, innerWidth]);
+    xScaleRef.current = xScale;
+
+    let minDataYear = 1400;
+    let maxDataYear = new Date().getFullYear();
+
+    if (events.length > 0) {
+      const eventDates = events.flatMap(e => [new Date(e.start_date).getTime(), e.end_date ? new Date(e.end_date).getTime() : new Date(e.start_date).getTime()]);
+      minDataYear = new Date(d3.min(eventDates)).getFullYear();
+      maxDataYear = new Date(d3.max(eventDates)).getFullYear();
+    }
+    
+    const refDateObj = new Date(referenceDate);
+    const defaultTimespanYears = 50;
+    
+    let initialDomainStart = new Date(refDateObj.getFullYear() - defaultTimespanYears / 2, 0, 1);
+    let initialDomainEnd = new Date(refDateObj.getFullYear() + defaultTimespanYears / 2, 11, 31);
+
+    if (initialDomainStart.getFullYear() < minDataYear) {
+        initialDomainStart = new Date(minDataYear, 0, 1);
+        initialDomainEnd = new Date(Math.min(minDataYear + defaultTimespanYears, maxDataYear), 11, 31);
+    }
+    if (initialDomainEnd.getFullYear() > maxDataYear) {
+        initialDomainEnd = new Date(maxDataYear, 11, 31);
+        initialDomainStart = new Date(Math.max(maxDataYear - defaultTimespanYears, minDataYear), 0, 1);
+    }
+    if (initialDomainStart > initialDomainEnd) {
+        initialDomainStart = new Date(minDataYear, 0, 1);
+        initialDomainEnd = new Date(maxDataYear, 11, 31);
     }
 
-    const ctx = chartRef.current.getContext('2d');
+    xScale.domain([initialDomainStart, initialDomainEnd]);
+    initialDomainRef.current = [initialDomainStart, initialDomainEnd];
 
-    // Create a sorted list of unique theme names for the Y-axis categories (lanes)
-    const sortedThemeNames = [...new Set(themes.map(t => t.name))].sort();
+    const xAxisGroup = mainGroup.append("g")
+      .attr("class", "x-axis")
+      .attr("transform", `translate(0,${innerHeight})`);
+    xAxisRef.current = xAxisGroup.node();
     
-    // Prepare datasets, one for each theme to act as a lane
-    const datasets = themes.map(theme => {
-      const themeEvents = events.filter(event => event.main_theme_id === theme.id);
-      return {
-        label: theme.name,
-        data: themeEvents.map(event => {
-          const startDate = new Date(event.start_date).getTime();
-          let endDate;
-          if (event.date_type === "period" && event.end_date) {
-            endDate = new Date(event.end_date).getTime();
-          } else {
-            // For single events, create a very short duration bar (e.g., 1 day, or a visual minimum)
-            // For simplicity, let's make it a small fixed duration on the timeline for visibility
-            // This might need adjustment based on zoom level for better visuals.
-            // A common approach is to make it a fixed pixel width, but Chart.js bars are data-driven.
-            // Let's represent it as a bar from start_date to start_date + small_interval.
-            // For a time scale, a small interval like an hour or a day.
-            const approxOneDay = 24 * 60 * 60 * 1000; // Milliseconds in a day
-            endDate = startDate + approxOneDay / 24; // Approx 1 hour bar for single events
-          }
-          return {
-            x: [startDate, endDate], // Data for horizontal bar: [start, end]
-            y: theme.name,          // Y-value is the theme name (lane)
-            rawEvent: event,
-            title: event.title,
-          };
-        }),
-        backgroundColor: theme.color || '#808080',
-        borderColor: theme.color || '#808080',
-        borderWidth: 1,
-        barPercentage: 0.5, // Adjust for thickness of bars within a category
-        categoryPercentage: 0.8, // Adjust for spacing between categories (lanes)
-      };
-    }).filter(dataset => dataset.data.length > 0); // Only include datasets with events
-
-    const config = {
-      type: 'bar',
-      data: {
-        // labels: sortedThemeNames, // Y-axis labels (lanes)
-        datasets: datasets,
-      },
-      options: {
-        indexAxis: 'y', // Makes the bar chart horizontal
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          x: {
-            type: 'time',
-            time: {
-              unit: 'year',
-              tooltipFormat: 'DD MMM YYYY',
-            },
-            title: {
-              display: true,
-              text: 'Date',
-            },
-            min: events.length > 0 ? new Date(Math.min(...events.map(e => new Date(e.start_date).getTime()))).getFullYear() -1 : new Date().getFullYear() -10,
-            max: events.length > 0 ? new Date(Math.max(...events.map(e => new Date(e.end_date || e.start_date).getTime()))).getFullYear() +1 : new Date().getFullYear() +10,
-          },
-          y: {
-            type: 'category',
-            labels: sortedThemeNames, // Use sorted theme names for Y-axis labels
-            title: {
-              display: true,
-              text: 'Themes',
-            },
-            offset: true, // Adds padding to the start/end of the axis
-          },
-        },
-        plugins: {
-          zoom: { // Configuration for chartjs-plugin-zoom
-            pan: {
-              enabled: true,
-              mode: 'x', // Allow panning only on the x-axis (time)
-              threshold: 5, // Pixels to drag before panning starts
-            },
-            zoom: {
-              wheel: {
-                enabled: true, // Enable zooming with mouse wheel
-              },
-              pinch: {
-                enabled: true, // Enable zooming with pinch gesture
-              },
-              mode: 'x', // Allow zooming only on the x-axis
-            }
-          },
-          tooltip: {
-            callbacks: {
-              title: function(tooltipItems) {
-                // Display event title in tooltip title
-                const firstItem = tooltipItems[0];
-                if (firstItem && firstItem.raw && firstItem.raw.rawEvent) {
-                  return firstItem.raw.rawEvent.title;
-                }
-                return '';
-              },
-              label: function(context) {
-                // Display date range or single date
-                const raw = context.raw;
-                if (raw && raw.x) {
-                  const startDate = new Date(raw.x[0]).toLocaleDateString();
-                  if (raw.rawEvent.date_type === "period" && raw.rawEvent.end_date) {
-                    const endDate = new Date(raw.x[1]).toLocaleDateString();
-                    return `Period: ${startDate} - ${endDate}`;
-                  }
-                  return `Date: ${startDate}`;
-                }
-                return context.dataset.label || '';
-              },
-              afterLabel: function(context) {
-                if (context.raw && context.raw.rawEvent && context.raw.rawEvent.description_short) {
-                  return context.raw.rawEvent.description_short;
-                }
-                return '';
-              }
-            }
-          },
-          onClick: (event, elements) => {
-            if (elements.length > 0) {
-              const firstElement = elements[0];
-              const rawEventData = datasets[firstElement.datasetIndex].data[firstElement.index]?.rawEvent;
-              if (rawEventData && onEventClick) {
-                onEventClick(rawEventData.globalId);
-              }
-            }
-          },
-          annotation: {
-            annotations: {
-              referenceLine: {
-                type: 'line',
-                scaleID: 'x', // Apply to x-axis
-                value: new Date(referenceDate).getTime(),
-                borderColor: 'rgba(255, 99, 132, 0.8)',
-                borderWidth: 2,
-                borderDash: [6, 6],
-                label: {
-                  content: 'Ref: ' + new Date(referenceDate).toLocaleDateString(),
-                  display: true,
-                  position: 'start',
-                  backgroundColor: 'rgba(255, 99, 132, 0.8)',
-                  color: 'white',
-                  font: {
-                    weight: 'bold',
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
+    const drawXAxis = (scale) => {
+        xAxisGroup.call(d3.axisBottom(scale));
     };
+    drawXAxis(xScale);
 
-    chartInstanceRef.current = new Chart(ctx, config);
-    console.log("TimelineView: Horizontal Bar Chart initialized/updated. Datasets:", datasets.length);
+    const themeNames = themes.map(t => t.name).sort();
+    const yScale = d3.scaleBand()
+      .domain(themeNames)
+      .range([0, innerHeight])
+      .paddingInner(0.1)
+      .paddingOuter(0.05);
 
-    return () => {
-      if (chartInstanceRef.current) {
-        chartInstanceRef.current.destroy();
-        chartInstanceRef.current = null;
+    const yAxisGroup = mainGroup.append("g")
+      .attr("class", "y-axis")
+      .call(d3.axisLeft(yScale).tickSize(0))
+      .select(".domain").remove();
+
+    yAxisGroup.selectAll("text")
+        .attr("x", -5)
+        .style("text-anchor", "end")
+        .style("font-size", "10px");
+
+    const laneHeight = yScale.bandwidth();
+    const eventPadding = 2;
+    const eventBarHeight = Math.max(5, laneHeight - 2 * eventPadding);
+    const circleRadius = Math.min(4, eventBarHeight / 2 - 1);
+
+
+    const eventsByTheme = d3.group(events, d => d.main_theme_id);
+
+    mainGroup.selectAll(".event-lane-group").remove();
+
+    themes.forEach(theme => {
+      const themeEvents = eventsByTheme.get(theme.id) || [];
+      if (themeEvents.length === 0) return;
+
+      const laneYPosition = yScale(theme.name);
+      if (laneYPosition === undefined) return;
+
+      const laneGroup = mainGroup.append("g")
+        .attr("class", "event-lane-group")
+        .attr("transform", `translate(0, ${laneYPosition})`);
+
+      themeEvents.sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
+      
+      laneGroup.selectAll(".timeline-event-item")
+        .data(themeEvents)
+        .join(
+          enter => {
+            const enterSelection = enter.append("g").attr("class", "timeline-event-item");
+
+            // Periods as rects
+            enterSelection.filter(d => d.date_type === "period" && d.end_date)
+              .append("rect")
+                .attr("class", "event-rect")
+                .attr("y", eventPadding)
+                .attr("height", eventBarHeight)
+                .attr("x", d => xScale(new Date(d.start_date)))
+                .attr("width", d => {
+                  const startDate = new Date(d.start_date);
+                  const endDate = new Date(d.end_date);
+                  return Math.max(1, xScale(endDate) - xScale(startDate));
+                });
+
+            // Single events as circles
+            enterSelection.filter(d => d.date_type === "single" || !d.end_date)
+              .append("circle")
+                .attr("class", "event-circle")
+                .attr("cy", laneHeight / 2)
+                .attr("r", circleRadius)
+                .attr("cx", d => xScale(new Date(d.start_date)));
+            
+            // Common attributes for all
+            enterSelection
+              .attr("fill", theme.color || "#808080")
+              .style("cursor", "pointer")
+              .on("click", (event, d) => {
+                if (onEventClick) onEventClick(d.globalId);
+              })
+              .append("title")
+                .text(d => `${d.title}\n${new Date(d.start_date).toLocaleDateString()}${d.end_date ? ' - ' + new Date(d.end_date).toLocaleDateString() : ''}`);
+            
+            return enterSelection; // Return the group for update/exit
+          },
+          update => { // Handle updates if data changes and elements are reused
+            update.select(".event-rect")
+              .attr("x", d => xScale(new Date(d.start_date)))
+              .attr("width", d => {
+                  const startDate = new Date(d.start_date);
+                  const endDate = new Date(d.end_date);
+                  return Math.max(1, xScale(endDate) - xScale(startDate));
+                });
+            update.select(".event-circle")
+              .attr("cx", d => xScale(new Date(d.start_date)));
+            return update;
+          }
+        );
+    });
+    
+    mainGroup.selectAll(".reference-line").remove();
+    mainGroup.append("line")
+      .attr("class", "reference-line")
+      .attr("x1", xScale(refDateObj))
+      .attr("x2", xScale(refDateObj))
+      .attr("y1", 0)
+      .attr("y2", innerHeight)
+      .attr("stroke", "red")
+      .attr("stroke-width", 1.5)
+      .attr("stroke-dasharray", "4,4");
+
+    mainGroup.append("text")
+        .attr("class", "reference-line-label")
+        .attr("x", xScale(refDateObj) + 4)
+        .attr("y", -5)
+        .attr("fill", "red")
+        .style("font-size", "10px")
+        .text(`Ref: ${refDateObj.toLocaleDateString()}`);
+
+    const zoomed = (event) => {
+      const newTransform = event.transform;
+      if (initialDomainRef.current && xScaleRef.current) {
+        const baseScale = d3.scaleTime().domain(initialDomainRef.current).range(xScaleRef.current.range());
+        const transformedScale = newTransform.rescaleX(baseScale);
+        xScaleRef.current.domain(transformedScale.domain());
+        redrawElements(xScaleRef.current, referenceDate);
       }
     };
-  }, [events, themes, referenceDate, onEventClick]); // Added onEventClick to dependency array for completeness
 
-  return <canvas ref={chartRef} style={{ width: '100%', height: '100%' }}></canvas>;
-}); // Add the closing parenthesis for forwardRef
+    const zoomBehavior = d3.zoom()
+        .scaleExtent([0.05, 50])
+        .extent([[0, 0], [innerWidth, innerHeight]])
+        .on("zoom", zoomed);
+
+    if (svgNode) {
+      svgSelection.call(zoomBehavior);
+      svgNode.__zoom = zoomBehavior;
+    } else {
+      console.error("TimelineView: svgNode (svgRef.current) is not valid for attaching zoom behavior.");
+    }
+    
+    console.log("D3 TimelineView: Initial render complete.");
+
+    return () => {
+      if (svgNode) {
+        d3.select(svgNode).on(".zoom", null);
+      }
+    };
+  }, [events, themes, referenceDate, onEventClick]);
+
+  return <svg ref={svgRef} style={{ width: '100%', height: '100%' }}></svg>;
+});
 
 export default TimelineView;

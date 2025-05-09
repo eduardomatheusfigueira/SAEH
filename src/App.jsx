@@ -29,6 +29,7 @@ function App() {
   const [selectedEntityType, setSelectedEntityType] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const timelineViewRef = useRef(null);
+  const [isTimelineLockedToCenter, setIsTimelineLockedToCenter] = useState(false);
 
   useEffect(() => {
     async function loadInitialData() {
@@ -208,17 +209,34 @@ function App() {
   const handleTimelinePanLeft = () => timelineViewRef.current?.panLeft();
   const handleTimelinePanRight = () => timelineViewRef.current?.panRight();
   const handleTimelineResetZoom = () => timelineViewRef.current?.resetZoom();
+  
+  // This is the new combined handler for reference date changes
+  const handleReferenceDateChangeAndUpdateTimeline = (newDate) => {
+    setReferenceDate(newDate); // Update the referenceDate state
+    if (isTimelineLockedToCenter && timelineViewRef.current) {
+      // If locked, tell the timeline to re-center on this new date
+      timelineViewRef.current.centerOnDate(new Date(newDate));
+    }
+  };
+
   const handleTimelinePeriodJump = (periodValue) => {
     if (!timelineViewRef.current) return;
     if (periodValue === "all") {
-      timelineViewRef.current.resetZoom();
+      timelineViewRef.current.resetZoom(); // This might need to also unlock and re-center if locked
     } else {
       const [startYear, endYear] = periodValue.split('-').map(Number);
       if (!isNaN(startYear) && !isNaN(endYear)) {
-        timelineViewRef.current.jumpToPeriod(new Date(startYear, 0, 1), new Date(endYear, 11, 31));
+        const newStartDate = new Date(startYear, 0, 1);
+        const newEndDate = new Date(endYear, 11, 31);
+        timelineViewRef.current.jumpToPeriod(newStartDate, newEndDate);
+        // If locked, also update reference date to middle of jumped period? Or just jump?
+        // For now, just jump. User can then adjust ref date.
+        // If locked, the jump itself will cause a re-center if ref date is also changed.
+        // Let's simplify: jumpToPeriod will set the view. If locked, subsequent ref date changes will pan.
       }
     }
   };
+
 
   const handleOpenModal = (entityType, entityId) => {
     let data;
@@ -289,7 +307,7 @@ function App() {
       <div id="controls-overlay-panel" style={{ position: 'absolute', top: '10px', left: '10px', background: 'rgba(255,255,255,0.9)', padding: '10px', borderRadius: '5px', zIndex: 10, boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
         <UIControls
           referenceDate={referenceDate}
-          onReferenceDateChange={setReferenceDate}
+          onReferenceDateChange={handleReferenceDateChangeAndUpdateTimeline} // Use the new handler
           timeWindowYears={timeWindowYears}
           onTimeWindowYearsChange={setTimeWindowYears}
           sources={allSources}
@@ -306,6 +324,8 @@ function App() {
           onTimelinePeriodJump={handleTimelinePeriodJump}
           minEventYear={minEventYear}
           maxEventYear={maxEventYear}
+          isTimelineLocked={isTimelineLockedToCenter}
+          onTimelineLockToggle={() => setIsTimelineLockedToCenter(!isTimelineLockedToCenter)}
         />
         <EntityListView
           characters={allCharacters.filter(c => activeSourceIds.has(c.sourceId))}

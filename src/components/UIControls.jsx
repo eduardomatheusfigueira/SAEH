@@ -21,6 +21,8 @@ const UIControls = ({
   // Date slider props
   minEventYear,
   maxEventYear,
+  isTimelineLocked,
+  onTimelineLockToggle,
 }) => {
 
   const currentReferenceYear = referenceDate ? new Date(referenceDate).getFullYear() : new Date().getFullYear();
@@ -152,7 +154,17 @@ const UIControls = ({
           <button onClick={onTimelinePanLeft} title="Pan Timeline Left">&larr; Pan Left</button>
           <button onClick={onTimelinePanRight} title="Pan Timeline Right" style={{ marginLeft: '5px' }}>Pan Right &rarr;</button>
         </div>
-        <div>
+        <div style={{ marginTop: '5px' }}>
+          <input
+            type="checkbox"
+            id="timeline-lock-center"
+            checked={isTimelineLocked}
+            onChange={onTimelineLockToggle}
+            style={{ marginRight: '5px' }}
+          />
+          <label htmlFor="timeline-lock-center">Lock Ref. Date to Timeline Center</label>
+        </div>
+        <div style={{ marginTop: '10px' }}>
           <label htmlFor="timeline-period-jump">Jump to Period: </label>
           <select id="timeline-period-jump" onChange={(e) => onTimelinePeriodJump(e.target.value)}>
             <option value="all">Full Range</option>
