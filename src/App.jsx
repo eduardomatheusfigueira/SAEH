@@ -326,16 +326,8 @@ function App() {
           onLoadSourceDataFiles={handleLoadSourceDataFiles}
           onSaveProfile={handleSaveProfile}
           onLoadProfileFile={handleLoadProfileFile}
-          onTimelineZoomIn={handleTimelineZoomIn}
-          onTimelineZoomOut={handleTimelineZoomOut}
-          onTimelinePanLeft={handleTimelinePanLeft}
-          onTimelinePanRight={handleTimelinePanRight}
-          onTimelineResetZoom={handleTimelineResetZoom}
-          onTimelinePeriodJump={handleTimelinePeriodJump}
-          minEventYear={minEventYear}
-          maxEventYear={maxEventYear}
-          isTimelineLocked={isTimelineLockedToCenter}
-          onTimelineLockToggle={() => setIsTimelineLockedToCenter(!isTimelineLockedToCenter)}
+          // Timeline navigation and lock props are removed from UIControls
+          // minEventYear and maxEventYear are passed to DateControls, not UIControls
         />
         <EntityListView
           characters={allCharacters.filter(c => activeSourceIds.has(c.sourceId))}
