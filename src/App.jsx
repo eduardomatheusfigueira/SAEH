@@ -50,7 +50,7 @@ function App() {
       } catch (error) { console.error("Could not load initial example data:", error); }
       finally { setIsLoading(false); }
     }
-    loadInitialData();
+    // loadInitialData();
   }, []);
 
   const handleSourceFilterChange = (sourceId, isActive) => {
