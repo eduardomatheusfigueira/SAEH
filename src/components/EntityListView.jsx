@@ -5,7 +5,12 @@ const EntityListView = ({ characters, places, themes, sources, onEntityClick }) 
 
   const renderList = (items, entityType) => {
     if (!items || items.length === 0) {
-      return <p><em>No {entityType} loaded.</em></p>;
+      let entityTypePortuguese = entityType;
+      if (entityType === 'character') entityTypePortuguese = 'personagens';
+      if (entityType === 'place') entityTypePortuguese = 'lugares';
+      if (entityType === 'theme') entityTypePortuguese = 'temas';
+      if (entityType === 'source') entityTypePortuguese = 'fontes';
+      return <p><em>Nenhum(a) {entityTypePortuguese} carregado(a).</em></p>;
     }
     return (
       <ul style={{ listStyleType: 'none', paddingLeft: 0, maxHeight: '200px', overflowY: 'auto' }}>
@@ -31,12 +36,12 @@ const EntityListView = ({ characters, places, themes, sources, onEntityClick }) 
 
   return (
     <div className="entity-list-view" style={{ marginTop: '15px' }}>
-      <h4>Browse Entities</h4>
+      <h4>Explorar Entidades</h4>
       <div className="tabs" style={{ marginBottom: '10px' }}>
-        <button onClick={() => setActiveTab('characters')} disabled={activeTab === 'characters'}>Characters</button>
-        <button onClick={() => setActiveTab('places')} disabled={activeTab === 'places'} style={{ marginLeft: '5px' }}>Places</button>
-        <button onClick={() => setActiveTab('themes')} disabled={activeTab === 'themes'} style={{ marginLeft: '5px' }}>Themes</button>
-        <button onClick={() => setActiveTab('sources')} disabled={activeTab === 'sources'} style={{ marginLeft: '5px' }}>Sources (Info)</button>
+        <button onClick={() => setActiveTab('characters')} disabled={activeTab === 'characters'}>Personagens</button>
+        <button onClick={() => setActiveTab('places')} disabled={activeTab === 'places'} style={{ marginLeft: '5px' }}>Lugares</button>
+        <button onClick={() => setActiveTab('themes')} disabled={activeTab === 'themes'} style={{ marginLeft: '5px' }}>Temas</button>
+        <button onClick={() => setActiveTab('sources')} disabled={activeTab === 'sources'} style={{ marginLeft: '5px' }}>Fontes (Info)</button>
       </div>
 
       {activeTab === 'characters' && renderList(characters, 'character')}

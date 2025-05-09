@@ -1,30 +1,24 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import MapView from './components/MapView';
 import TimelineView from './components/TimelineView';
 import UIControls from './components/UIControls';
 import DetailModal from './components/DetailModal';
 import EntityListView from './components/EntityListView';
 import TimelineLegend from './components/TimelineLegend';
-import DateControls from './components/DateControls'; // Import DateControls
+import DateControls from './components/DateControls';
 import * as DataManager from './dataManager';
 import { MAPBOX_ACCESS_TOKEN } from './config';
 
 function App() {
-  // Define minEventYear and maxEventYear at the top
-  const [minEventYear, setMinEventYear] = useState(1400); // Default fallback
-  const [maxEventYear, setMaxEventYear] = useState(new Date().getFullYear()); // Default fallback
-
+  const [minEventYear, setMinEventYear] = useState(1400);
+  const [maxEventYear, setMaxEventYear] = useState(new Date().getFullYear());
   const [allLoadedEvents, setAllLoadedEvents] = useState([]);
   const [themes, setThemes] = useState([]);
   const [allSources, setAllSources] = useState([]);
   const [allCharacters, setAllCharacters] = useState([]);
   const [allPlaces, setAllPlaces] = useState([]);
   const [activeSourceIds, setActiveSourceIds] = useState(new Set());
-
-  const [referenceDate, setReferenceDate] = useState(() => {
-    const today = new Date();
-    return today.toISOString().split('T')[0];
-  });
+  const [referenceDate, setReferenceDate] = useState(() => new Date().toISOString().split('T')[0]);
   const [timeWindowYears, setTimeWindowYears] = useState(10);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEntityData, setSelectedEntityData] = useState(null);
@@ -32,18 +26,18 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const timelineViewRef = useRef(null);
   const [isTimelineLockedToCenter, setIsTimelineLockedToCenter] = useState(false);
+  const [isControlsPanelVisible, setIsControlsPanelVisible] = useState(true);
+
+  const toggleControlsPanel = () => setIsControlsPanelVisible(!isControlsPanelVisible);
 
   useEffect(() => {
     async function loadInitialData() {
       setIsLoading(true);
       try {
         const response = await fetch('/data/example_source_data.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const jsonData = await response.json();
-        const success = DataManager.loadSourceDataFromString(JSON.stringify(jsonData), 'example_source_data.json');
-        if (success) {
+        if (DataManager.loadSourceDataFromString(JSON.stringify(jsonData), 'example_source_data.json')) {
           const sources = DataManager.getSourcesInfo();
           const events = DataManager.getAllEvents();
           setAllLoadedEvents(events);
@@ -52,68 +46,38 @@ function App() {
           setAllCharacters(DataManager.getAllCharacters());
           setAllPlaces(DataManager.getAllPlaces());
           setActiveSourceIds(new Set(sources.map(s => s.id)));
-          
           if (events.length > 0) {
             const years = events.map(e => new Date(e.start_date).getFullYear());
             setMinEventYear(Math.min(...years));
             setMaxEventYear(Math.max(...years));
-          } else {
-            setMinEventYear(1400);
-            setMaxEventYear(new Date().getFullYear());
           }
-
-          console.log(
-            "Example data loaded. Events:", events.length,
-            "Sources:", sources.length,
-            "Characters:", DataManager.getAllCharacters().length,
-            "Places:", DataManager.getAllPlaces().length
-          );
         }
-      } catch (error) {
-        console.error("Could not load initial example data:", error);
-      } finally {
-        setIsLoading(false);
-      }
+      } catch (error) { console.error("Could not load initial example data:", error); }
+      finally { setIsLoading(false); }
     }
     loadInitialData();
   }, []);
 
   const handleSourceFilterChange = (sourceId, isActive) => {
-    setActiveSourceIds(prevActiveSourceIds => {
-      const newActiveSourceIds = new Set(prevActiveSourceIds);
-      if (isActive) {
-        newActiveSourceIds.add(sourceId);
-      } else {
-        newActiveSourceIds.delete(sourceId);
-      }
-      return newActiveSourceIds;
+    setActiveSourceIds(prev => {
+      const newActive = new Set(prev);
+      if (isActive) newActive.add(sourceId); else newActive.delete(sourceId);
+      return newActive;
     });
   };
 
   const handleLoadSourceDataFiles = async (files) => {
     setIsLoading(true);
-    let allFilesProcessedSuccessfully = true;
     for (const file of files) {
       try {
         const jsonString = await file.text();
-        const success = DataManager.loadSourceDataFromString(jsonString, file.name);
-        if (!success) {
-          allFilesProcessedSuccessfully = false;
+        if (!DataManager.loadSourceDataFromString(jsonString, file.name)) {
           console.error(`Failed to process data from file: ${file.name}`);
         }
       } catch (error) {
-        allFilesProcessedSuccessfully = false;
-        console.error(`Error reading file ${file.name}:`, error);
-        alert(`Error: Could not read file ${file.name}. \nDetails: ${error.message}`);
+        alert(`Erro: Não foi possível ler o arquivo ${file.name}. \nDetalhes: ${error.message}`);
       }
     }
-
-    if (allFilesProcessedSuccessfully) {
-      console.log("All selected source data files processed.");
-    } else {
-      console.warn("Some source data files could not be processed completely.");
-    }
-
     const sources = DataManager.getSourcesInfo();
     const currentLoadedEvents = DataManager.getAllEvents();
     setAllLoadedEvents(currentLoadedEvents);
@@ -121,45 +85,35 @@ function App() {
     setAllSources(sources);
     setAllCharacters(DataManager.getAllCharacters());
     setAllPlaces(DataManager.getAllPlaces());
-
     if (currentLoadedEvents.length > 0) {
       const years = currentLoadedEvents.map(e => new Date(e.start_date).getFullYear());
       setMinEventYear(Math.min(...years));
       setMaxEventYear(Math.max(...years));
     } else {
-      setMinEventYear(1400);
-      setMaxEventYear(new Date().getFullYear());
+      setMinEventYear(1400); setMaxEventYear(new Date().getFullYear());
     }
-
-    const currentActiveSources = DataManager.getSourcesInfo().map(s => s.id);
-    setActiveSourceIds(new Set(currentActiveSources));
+    setActiveSourceIds(new Set(sources.map(s => s.id)));
     setIsLoading(false);
   };
 
   const handleSaveProfile = () => {
-    const profileName = prompt("Enter a name for this profile:", "SAEH_Profile");
+    const profileName = prompt("Digite um nome para este perfil:", "SAEH_Perfil");
     if (!profileName) return;
-
     const uiSettings = {
-      referenceDate: referenceDate,
-      timeWindowYears: timeWindowYears,
-      activeSourceIds: Array.from(activeSourceIds),
-      minEventYear: minEventYear,
-      maxEventYear: maxEventYear,
+      referenceDate, timeWindowYears, activeSourceIds: Array.from(activeSourceIds),
+      minEventYear, maxEventYear, isTimelineLockedToCenter
     };
-
     const profileData = DataManager.constructProfileData(profileName, uiSettings);
     const jsonString = JSON.stringify(profileData, null, 2);
     const blob = new Blob([jsonString], { type: 'application/json' });
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = href;
-    link.download = `${profileName.replace(/\s+/g, '_') || 'SAEH_Profile'}.json`;
+    link.download = `${profileName.replace(/\s+/g, '_') || 'SAEH_Perfil'}.json`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(href);
-    console.log("Profile saved:", profileData);
   };
 
   const handleLoadProfileFile = async (profileFile) => {
@@ -168,191 +122,181 @@ function App() {
     try {
       const jsonString = await profileFile.text();
       const profileData = JSON.parse(jsonString);
-      console.log("Profile data loaded:", profileData);
-
       const processedProfile = await DataManager.loadDataFromProfile(profileData);
-
-      if (processedProfile && processedProfile.loaded_source_data_files && processedProfile.loaded_source_data_files.length > 0) {
-        alert(`Profile "${processedProfile.profile_name}" loaded.\n\nPlease now use the "Load Source Data (JSON)" input to select the following required data files one by one (or all at once if your browser supports it for the same input):\n\n${processedProfile.loaded_source_data_files.join('\n')}\n\nData will be cleared first.`);
+      if (processedProfile?.loaded_source_data_files?.length > 0) {
+        alert(`Perfil "${processedProfile.profile_name}" carregado.\n\nPor favor, use agora a opção "Carregar Dados de Fonte (JSON)" para selecionar os seguintes arquivos de dados necessários:\n\n${processedProfile.loaded_source_data_files.join('\n')}\n\nOs dados atuais serão limpos primeiro.`);
       } else {
-         DataManager.clearAllData();
-          setAllLoadedEvents([]);
-          setThemes([]);
-          setAllSources([]);
-          setAllCharacters([]);
-          setAllPlaces([]);
-          setActiveSourceIds(new Set());
-          setMinEventYear(1400);
-          setMaxEventYear(new Date().getFullYear());
+        DataManager.clearAllData();
+        setAllLoadedEvents([]); setThemes([]); setAllSources([]);
+        setAllCharacters([]); setAllPlaces([]); setActiveSourceIds(new Set());
+        setMinEventYear(1400); setMaxEventYear(new Date().getFullYear());
       }
-
-      if (processedProfile && processedProfile.ui_settings) {
-        const { referenceDate: refDate, timeWindowYears: twYears, activeSourceIds: storedActiveIds, minEventYear: profMinYear, maxEventYear: profMaxYear } = processedProfile.ui_settings;
+      if (processedProfile?.ui_settings) {
+        const { referenceDate: refDate, timeWindowYears: twYears, minEventYear: profMin, maxEventYear: profMax, isTimelineLocked: profLocked } = processedProfile.ui_settings;
         if (refDate) setReferenceDate(refDate);
         if (twYears !== undefined) setTimeWindowYears(twYears);
-        // activeSourceIds will be set after user re-loads data files and handleLoadSourceDataFiles runs.
-        if (profMinYear !== undefined) setMinEventYear(profMinYear);
-        if (profMaxYear !== undefined) setMaxEventYear(profMaxYear);
-        console.log("Profile UI settings suggest active sources (user will need to re-select data files and then filters if needed):", storedActiveIds);
+        if (profMin !== undefined) setMinEventYear(profMin);
+        if (profMax !== undefined) setMaxEventYear(profMax);
+        if (profLocked !== undefined) setIsTimelineLockedToCenter(profLocked);
       }
-      console.log("Profile processed. Please re-select source data files as instructed.");
-
     } catch (error) {
-      console.error("Error loading or parsing profile file:", error);
-      alert(`Failed to load or parse the profile file. Please ensure it's a valid SAEH profile JSON. \nDetails: ${error.message}`);
+      alert(`Falha ao carregar ou analisar o arquivo de perfil. \nDetalhes: ${error.message}`);
     } finally {
       setIsLoading(false);
     }
   };
-
-  // Timeline control handlers
-  const handleTimelineZoomIn = () => timelineViewRef.current?.zoomIn();
-  const handleTimelineZoomOut = () => timelineViewRef.current?.zoomOut();
-  const handleTimelinePanLeft = () => timelineViewRef.current?.panLeft();
-  const handleTimelinePanRight = () => timelineViewRef.current?.panRight();
-  const handleTimelineResetZoom = () => timelineViewRef.current?.resetZoom();
   
-  // This is the new combined handler for reference date changes
   const handleReferenceDateChangeAndUpdateTimeline = (newDate) => {
-    setReferenceDate(newDate); // Update the referenceDate state
+    setReferenceDate(newDate);
     if (isTimelineLockedToCenter && timelineViewRef.current) {
-      // If locked, tell the timeline to re-center on this new date
       timelineViewRef.current.centerOnDate(new Date(newDate));
     }
   };
 
-  const handleTimelinePeriodJump = (periodValue) => {
-    if (!timelineViewRef.current) return;
-    if (periodValue === "all") {
-      timelineViewRef.current.resetZoom(); // This might need to also unlock and re-center if locked
-    } else {
-      const [startYear, endYear] = periodValue.split('-').map(Number);
-      if (!isNaN(startYear) && !isNaN(endYear)) {
-        const newStartDate = new Date(startYear, 0, 1);
-        const newEndDate = new Date(endYear, 11, 31);
-        timelineViewRef.current.jumpToPeriod(newStartDate, newEndDate);
-        // If locked, also update reference date to middle of jumped period? Or just jump?
-        // For now, just jump. User can then adjust ref date.
-        // If locked, the jump itself will cause a re-center if ref date is also changed.
-        // Let's simplify: jumpToPeriod will set the view. If locked, subsequent ref date changes will pan.
-      }
-    }
-  };
-
-
   const handleOpenModal = (entityType, entityId) => {
     let data;
     switch (entityType) {
-      case 'event':
-        data = DataManager.getEventById(entityId);
-        break;
-      case 'character':
-        data = DataManager.getCharacterById(entityId);
-        break;
-      case 'place':
-        data = DataManager.getPlaceById(entityId);
-        break;
-      case 'theme':
-        data = DataManager.getThemeById(entityId);
-        break;
-      case 'source':
-        data = DataManager.getSourceInfoById(entityId);
-        break;
-      default:
-        console.error("Unknown entity type for modal:", entityType);
-        return;
+      case 'event': data = DataManager.getEventById(entityId); break;
+      case 'character': data = DataManager.getCharacterById(entityId); break;
+      case 'place': data = DataManager.getPlaceById(entityId); break;
+      case 'theme': data = DataManager.getThemeById(entityId); break;
+      case 'source': data = DataManager.getSourceInfoById(entityId); break;
+      default: console.error("Unknown entity type for modal:", entityType); return;
     }
     if (data) {
-      setSelectedEntityData(data);
-      setSelectedEntityType(entityType);
-      setIsModalOpen(true);
+      setSelectedEntityData(data); setSelectedEntityType(entityType); setIsModalOpen(true);
     } else {
       console.error(`No data found for ${entityType} with ID ${entityId}`);
     }
   };
-
   const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedEntityData(null);
-    setSelectedEntityType('');
+    setIsModalOpen(false); setSelectedEntityData(null); setSelectedEntityType('');
   };
 
-  const filteredEvents = allLoadedEvents.filter(event => activeSourceIds.has(event.sourceId));
+  const eventsInCurrentSourceFilters = useMemo(() => {
+    return allLoadedEvents.filter(event => activeSourceIds.has(event.sourceId));
+  }, [allLoadedEvents, activeSourceIds]);
+
+  const charactersForList = useMemo(() => {
+    return allCharacters.filter(c => activeSourceIds.has(c.sourceId));
+  }, [allCharacters, activeSourceIds]);
+
+  const placesForList = useMemo(() => {
+    return allPlaces.filter(p => activeSourceIds.has(p.sourceId));
+  }, [allPlaces, activeSourceIds]);
 
   return (
     <div id="app-container">
       {isLoading && (
-        <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background: 'rgba(0,0,0,0.7)', color: 'white', padding: '20px', borderRadius: '8px', zIndex: 100 }}>
-          Loading data...
+        <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background: 'rgba(0,0,0,0.7)', color: 'white', padding: '20px', borderRadius: '8px', zIndex: 200 }}>
+          Carregando dados...
         </div>
       )}
+      <button 
+        onClick={toggleControlsPanel}
+        style={{
+          position: 'absolute', top: '10px', left: '10px', zIndex: 110, 
+          background: '#f8f9fa', border: '1px solid #ced4da', borderRadius: '50%',
+          width: '36px', height: '36px', fontSize: '18px', cursor: 'pointer',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.15)', color: '#495057'
+        }}
+        title={isControlsPanelVisible ? "Fechar Painel de Controles" : "Abrir Painel de Controles"}
+      >
+        {isControlsPanelVisible ? '✕' : '☰'}
+      </button>
+
       <DateControls
         referenceDate={referenceDate}
-        onReferenceDateChange={handleReferenceDateChangeAndUpdateTimeline} // Use the existing handler that also considers timeline lock
+        onReferenceDateChange={handleReferenceDateChangeAndUpdateTimeline}
         timeWindowYears={timeWindowYears}
         onTimeWindowYearsChange={setTimeWindowYears}
         minEventYear={minEventYear}
         maxEventYear={maxEventYear}
       />
-      <div id="map-container">
-        <MapView
-          events={filteredEvents}
-          themes={themes}
-          referenceDate={referenceDate}
-          timeWindowYears={timeWindowYears}
-          onEventClick={(eventId) => handleOpenModal('event', eventId)}
-        />
-      </div>
 
-      <div id="timeline-overlay-container" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '200px', background: 'rgba(255,255,255,0.8)', zIndex: 10, borderTop: '1px solid #ccc' }}>
-        <TimelineView
-          ref={timelineViewRef}
-          events={filteredEvents}
-          themes={themes}
-          referenceDate={referenceDate}
-          onEventClick={(eventId) => handleOpenModal('event', eventId)}
-        />
-      </div>
+      {isControlsPanelVisible && (
+        <div 
+          id="controls-overlay-panel" 
+          style={{ 
+            position: 'absolute', top: '55px', left: '10px', 
+            background: 'rgba(255,255,255,0.95)', padding: '15px', borderRadius: '8px', 
+            zIndex: 100, boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+            width: '320px', maxHeight: 'calc(100vh - 70px - 200px - 20px)', 
+            overflowY: 'auto' 
+          }}>
+          <UIControls
+            sources={allSources}
+            activeSourceIds={activeSourceIds}
+            onSourceFilterChange={handleSourceFilterChange}
+            onLoadSourceDataFiles={handleLoadSourceDataFiles}
+            onSaveProfile={handleSaveProfile}
+            onLoadProfileFile={handleLoadProfileFile}
+            isTimelineLocked={isTimelineLockedToCenter}
+            onTimelineLockToggle={() => setIsTimelineLockedToCenter(!isTimelineLockedToCenter)}
+          />
+          <button 
+            style={{ marginTop: '15px', padding: '8px 12px', background: '#6c757d', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }} 
+            onClick={() => console.log("Events in current source filters:", eventsInCurrentSourceFilters)}
+          >
+            Log Eventos (Filtro Fonte)
+          </button>
+        </div>
+      )}
 
-      <div id="controls-overlay-panel" style={{ position: 'absolute', top: '10px', left: '10px', background: 'rgba(255,255,255,0.9)', padding: '10px', borderRadius: '5px', zIndex: 10, boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
-        <UIControls
-          referenceDate={referenceDate}
-          onReferenceDateChange={handleReferenceDateChangeAndUpdateTimeline} // Use the new handler
-          timeWindowYears={timeWindowYears}
-          onTimeWindowYearsChange={setTimeWindowYears}
-          sources={allSources}
-          activeSourceIds={activeSourceIds}
-          onSourceFilterChange={handleSourceFilterChange}
-          onLoadSourceDataFiles={handleLoadSourceDataFiles}
-          onSaveProfile={handleSaveProfile}
-          onLoadProfileFile={handleLoadProfileFile}
-          // Timeline navigation and lock props are removed from UIControls
-          // minEventYear and maxEventYear are passed to DateControls, not UIControls
-        />
+      <div 
+        id="right-side-panel"
+        style={{
+          position: 'absolute',
+          top: '130px', 
+          right: '10px',
+          zIndex: 10, 
+          width: '300px', 
+          maxHeight: 'calc(100vh - 140px - 200px - 20px)', 
+          overflowY: 'auto',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '15px' 
+        }}
+      >
         <EntityListView
-          characters={allCharacters.filter(c => activeSourceIds.has(c.sourceId))}
-          places={allPlaces.filter(p => activeSourceIds.has(p.sourceId))}
+          characters={charactersForList}
+          places={placesForList}
           themes={themes}
           sources={allSources}
           onEntityClick={handleOpenModal}
         />
         <TimelineLegend themes={themes} />
-        <button style={{ marginTop: '10px' }} onClick={() => console.log("Filtered Events:", filteredEvents)}>Log Filtered Events</button>
+      </div>
+
+      <div id="map-container">
+        <MapView
+          events={eventsInCurrentSourceFilters} 
+          themes={themes}
+          referenceDate={referenceDate}
+          timeWindowYears={timeWindowYears}
+          onEventClick={(eventId) => handleOpenModal('event', eventId)}
+        />
+      </div>
+
+      <div id="timeline-overlay-container" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '200px', background: 'rgba(255,255,255,0.85)', zIndex: 5 , borderTop: '1px solid #ccc' }}>
+        <TimelineView
+          ref={timelineViewRef}
+          events={eventsInCurrentSourceFilters} 
+          themes={themes}
+          referenceDate={referenceDate}
+          onEventClick={(eventId) => handleOpenModal('event', eventId)}
+          isTimelineLocked={isTimelineLockedToCenter} 
+        />
       </div>
 
       <div
         id="modal-overlay-container"
         style={{
           display: isModalOpen ? 'flex' : 'none',
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'rgba(0,0,0,0.5)',
-          zIndex: 20,
-          alignItems: 'center',
-          justifyContent: 'center',
+          position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
+          background: 'rgba(0,0,0,0.6)', zIndex: 150,
+          alignItems: 'center', justifyContent: 'center',
         }}
       >
         {isModalOpen && (

@@ -32,7 +32,7 @@ const TimelineLegend = ({ themes }) => {
 
   return (
     <div style={legendStyle}>
-      <h4 style={{ marginTop: 0, marginBottom: '8px' }}>Theme Legend</h4>
+      <h4 style={{ marginTop: 0, marginBottom: '8px' }}>Legenda de Temas</h4>
       {themes.map(theme => (
         <div key={theme.id} style={itemStyle} title={theme.description_short}>
           <span style={colorBoxStyle(theme.color)}></span>

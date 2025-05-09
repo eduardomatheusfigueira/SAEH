@@ -64,7 +64,7 @@ const DateControls = ({
   return (
     <div style={containerStyle}>
       <div style={controlGroupStyle}>
-        <label htmlFor="ref-date-input-top" style={labelStyle}>Reference Date:</label>
+        <label htmlFor="ref-date-input-top" style={labelStyle}>Data de Referência:</label>
         <input
           type="date"
           id="ref-date-input-top"
@@ -80,12 +80,12 @@ const DateControls = ({
           value={currentReferenceYear}
           onChange={handleReferenceDateSliderChange}
           style={{ width: '150px', marginTop: '5px' }} // Adjust width as needed
-          title={`Year: ${currentReferenceYear}`}
+          title={`Ano: ${currentReferenceYear}`}
         />
-        <span style={{ fontSize: '0.8em', textAlign: 'center', color: '#555' }}>Year: {currentReferenceYear}</span>
+        <span style={{ fontSize: '0.8em', textAlign: 'center', color: '#555' }}>Ano: {currentReferenceYear}</span>
       </div>
       <div style={controlGroupStyle}>
-        <label htmlFor="time-window-input-top" style={labelStyle}>Time Window (Years):</label>
+        <label htmlFor="time-window-input-top" style={labelStyle}>Janela de Tempo (Anos):</label>
         <input
           type="number"
           id="time-window-input-top"

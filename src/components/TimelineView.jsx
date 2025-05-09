@@ -37,7 +37,7 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
         .attr("x2", currentXScale(refDateObject));
     mainGroupSelection.selectAll(".reference-line-label")
         .attr("x", currentXScale(refDateObject) + 4)
-        .text(`Ref: ${refDateObject.toLocaleDateString()}`);
+        .text(`Ref.: ${refDateObject.toLocaleDateString()}`);
   }, [referenceDate]); // referenceDate is a dependency for redrawElements
 
   useImperativeHandle(ref, () => ({

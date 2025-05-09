@@ -8,7 +8,7 @@ const DetailModal = ({ entityData, entityType, onClose }) => {
   // Simple rendering of properties for now
   // We'll enhance this to handle article_full (Markdown) and specific fields later
   const renderEntityDetails = () => {
-    if (!entityData) return <p>No data available.</p>;
+    if (!entityData) return <p>Nenhum dado disponível.</p>;
 
     // Common fields
     let details = (
@@ -74,7 +74,7 @@ const DetailModal = ({ entityData, entityType, onClose }) => {
   return (
     <div className="modal-content-placeholder"> {/* Use class from App.css for styling */}
       {renderEntityDetails()}
-      <button onClick={onClose} style={{ marginTop: '20px' }}>Close</button>
+      <button onClick={onClose} style={{ marginTop: '20px' }}>Fechar</button>
     </div>
   );
 };
