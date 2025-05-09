@@ -206,14 +206,50 @@ function App() {
         {isControlsPanelVisible ? '✕' : '☰'}
       </button>
 
-      <DateControls
-        referenceDate={referenceDate}
-        onReferenceDateChange={handleReferenceDateChangeAndUpdateTimeline}
-        timeWindowYears={timeWindowYears}
-        onTimeWindowYearsChange={setTimeWindowYears}
-        minEventYear={minEventYear}
-        maxEventYear={maxEventYear}
-      />
+      {/* Container for all top-right elements */}
+      <div 
+        id="top-right-container"
+        style={{
+          position: 'absolute',
+          top: '10px',
+          right: '10px',
+          zIndex: 105, 
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '10px', 
+          maxWidth: '320px',
+        }}
+      >
+        <DateControls
+          referenceDate={referenceDate}
+          onReferenceDateChange={handleReferenceDateChangeAndUpdateTimeline}
+          timeWindowYears={timeWindowYears}
+          onTimeWindowYearsChange={setTimeWindowYears}
+          minEventYear={minEventYear}
+          maxEventYear={maxEventYear}
+        />
+        {/* Container for EntityListView and TimelineLegend */}
+        <div 
+          id="right-side-lists-container"
+          style={{
+            width: '100%', 
+            maxHeight: 'calc(100vh - 160px - 200px - 20px)', // Adjusted for potential DateControls height
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '15px' 
+          }}
+        >
+          <EntityListView
+            characters={charactersForList}
+            places={placesForList}
+            themes={themes} 
+            sources={allSources} 
+            onEntityClick={handleOpenModal}
+          />
+          <TimelineLegend themes={themes} />
+        </div>
+      </div>
 
       {isControlsPanelVisible && (
         <div 
@@ -243,31 +279,6 @@ function App() {
           </button>
         </div>
       )}
-
-      <div 
-        id="right-side-panel"
-        style={{
-          position: 'absolute',
-          top: '130px', 
-          right: '10px',
-          zIndex: 10, 
-          width: '300px', 
-          maxHeight: 'calc(100vh - 140px - 200px - 20px)', 
-          overflowY: 'auto',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '15px' 
-        }}
-      >
-        <EntityListView
-          characters={charactersForList}
-          places={placesForList}
-          themes={themes}
-          sources={allSources}
-          onEntityClick={handleOpenModal}
-        />
-        <TimelineLegend themes={themes} />
-      </div>
 
       <div id="map-container">
         <MapView

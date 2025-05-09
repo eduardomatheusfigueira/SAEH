@@ -27,18 +27,19 @@ const DateControls = ({
   };
 
   const containerStyle = {
-    position: 'absolute',
-    top: '10px',
-    right: '10px',
-    zIndex: 10, // Ensure it's above map but potentially below modals
-    padding: '10px',
-    // No background color by default, can be added if needed
-    // backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    // borderRadius: '5px',
-    // boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+    // position: 'absolute', // Removed
+    // top: '10px', // Removed
+    // right: '10px', // Removed
+    // zIndex: 10, // Will be controlled by parent
+    padding: '10px', // Keep padding for internal spacing if desired, or remove if parent handles all
+    // No background color by default
     display: 'flex',
     flexDirection: 'column',
     gap: '10px',
+    // Add a border or subtle background if needed for visual separation without a full panel
+    // border: '1px solid #ddd',
+    // borderRadius: '5px',
+    // backgroundColor: 'rgba(255, 255, 255, 0.7)', // Optional subtle background
   };
 
   const controlGroupStyle = {
