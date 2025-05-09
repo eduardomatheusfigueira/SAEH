@@ -18,18 +18,24 @@ const AVAILABLE_MAP_STYLES = [
       '--text-color': '#333333',
       '--border-color': '#cccccc',
       '--button-primary-bg': '#007bff',
-      '--button-primary-text': '#ffffff'
+      '--button-primary-text': '#ffffff',
+      '--date-control-label-color': '#333333', // Default to text-color
+      '--entity-list-title-color': '#333333',  // Default to text-color
+      '--text-shadow-for-satellite': 'none'
     }
   },
   {
     name: 'Streets',
     url: 'mapbox://styles/mapbox/streets-v12',
-    uiTheme: { // Same as Light for now
+    uiTheme: {
       '--panel-background': 'rgba(255, 255, 255, 0.95)',
       '--text-color': '#333333',
       '--border-color': '#cccccc',
       '--button-primary-bg': '#007bff',
-      '--button-primary-text': '#ffffff'
+      '--button-primary-text': '#ffffff',
+      '--date-control-label-color': '#333333',
+      '--entity-list-title-color': '#333333',
+      '--text-shadow-for-satellite': 'none'
     }
   },
   {
@@ -40,7 +46,10 @@ const AVAILABLE_MAP_STYLES = [
       '--text-color': '#f0f0f0',
       '--border-color': '#444444',
       '--button-primary-bg': '#5865f2',
-      '--button-primary-text': '#ffffff'
+      '--button-primary-text': '#ffffff',
+      '--date-control-label-color': '#f0f0f0',
+      '--entity-list-title-color': '#f0f0f0',
+      '--text-shadow-for-satellite': 'none'
     }
   },
   {
@@ -51,7 +60,10 @@ const AVAILABLE_MAP_STYLES = [
       '--text-color': '#222222',
       '--border-color': '#dddddd',
       '--button-primary-bg': '#28a745',
-      '--button-primary-text': '#ffffff'
+      '--button-primary-text': '#ffffff',
+      '--date-control-label-color': '#ffffff', // White text for satellite
+      '--entity-list-title-color': '#ffffff',  // White text for satellite
+      '--text-shadow-for-satellite': '0 0 2px black, 0 0 1px black' // Added subtle shadow
     }
   }
 ];

@@ -5,7 +5,9 @@
   --border-color: #cccccc;
   --button-primary-bg: #007bff;
   --button-primary-text: #ffffff;
-  /* Add other theme-related variables here if needed */
+  --date-control-label-color: var(--text-color); /* Default to general text color */
+  --entity-list-title-color: var(--text-color); /* Default to general text color */
+  --text-shadow-for-satellite: none; /* Default to no shadow */
 }
 
 html, body, #root, #app-container {
@@ -171,7 +173,8 @@ html, body, #root, #app-container {
 }
 
 .entity-list-view h4 {
-  color: var(--text-color); /* Ensure heading uses theme color */
+  color: var(--entity-list-title-color); /* Use specific variable */
+  text-shadow: var(--text-shadow-for-satellite); /* Apply shadow */
 }
 
 .tabs button {
@@ -281,7 +284,8 @@ html, body, #root, #app-container {
   margin-bottom: 3px;
   font-size: 0.9em;
   font-weight: bold;
-  color: var(--text-color); /* Ensure labels also use theme color */
+  color: var(--date-control-label-color); /* Use specific variable */
+  text-shadow: var(--text-shadow-for-satellite); /* Apply shadow */
 }
 
 .themed-input {
