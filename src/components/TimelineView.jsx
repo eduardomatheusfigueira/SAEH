@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useImperativeHandle, forwardRef, useCallback } from 'react';
 import * as d3 from 'd3';
 
-const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, isTimelineLocked }, ref) => {
+const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, isTimelineLocked, isTimelineExpanded }, ref) => {
   const svgRef = useRef(null);
   const xAxisRef = useRef(null);
   const xScaleRef = useRef(null);
@@ -39,6 +39,27 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
         .attr("x", currentXScale(refDateObject) + 4)
         .text(`Ref.: ${refDateObject.toLocaleDateString()}`);
   }, [referenceDate]); // referenceDate is a dependency for redrawElements
+
+  const updateD3ZoomTransform = (newDomain) => {
+    const svgNode = svgRef.current;
+    if (svgNode && svgNode.__zoom && xScaleRef.current && initialDomainRef.current && newDomain && newDomain.length === 2) {
+        const newMinDate = newDomain[0];
+        const newMaxDate = newDomain[1];
+        const innerWidth = xScaleRef.current.range()[1] - xScaleRef.current.range()[0];
+
+        // Calculate the effective scale 'k' relative to the initial domain
+        const k = (initialDomainRef.current[1].getTime() - initialDomainRef.current[0].getTime()) / (newMaxDate.getTime() - newMinDate.getTime());
+
+        // Base scale for transform calculation should be the initial scale
+        const baseScaleForTransform = d3.scaleTime().domain(initialDomainRef.current).range(xScaleRef.current.range());
+        const translateX = -baseScaleForTransform(newMinDate) * k;
+        
+        const newTransform = d3.zoomIdentity.translate(translateX, 0).scale(k);
+        
+        // Prevent re-triggering the 'zoomed' event if possible, or ensure 'zoomed' can handle it
+        d3.select(svgNode).call(svgNode.__zoom.transform, newTransform);
+    }
+  };
 
   useImperativeHandle(ref, () => ({
     zoomIn: () => {
@@ -86,7 +107,45 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
       const newMax = new Date(dateToCenter.getTime() + viewDuration / 2);
       xScaleRef.current.domain([newMin, newMax]);
       redrawElements(xScaleRef.current, referenceDate);
-      // TODO: Update D3 zoom transform
+      updateD3ZoomTransform([newMin, newMax]);
+    },
+    jumpToYear: (year) => {
+      if (!xScaleRef.current || !svgRef.current || !year) return;
+      const targetYear = parseInt(year, 10);
+      if (isNaN(targetYear)) return;
+
+      const currentDomain = xScaleRef.current.domain();
+      const viewDuration = currentDomain[1].getTime() - currentDomain[0].getTime();
+      const targetDate = new Date(targetYear, 0, 1); // Jan 1st of target year
+
+      const newDomainStart = new Date(targetDate.getTime() - viewDuration / 2);
+      const newDomainEnd = new Date(targetDate.getTime() + viewDuration / 2);
+      
+      xScaleRef.current.domain([newDomainStart, newDomainEnd]);
+      redrawElements(xScaleRef.current, referenceDate);
+      updateD3ZoomTransform([newDomainStart, newDomainEnd]);
+    },
+    setZoomLevel: (level) => {
+      if (!xScaleRef.current || !svgRef.current) return;
+      
+      const currentDomain = xScaleRef.current.domain();
+      const currentCenterMs = (currentDomain[0].getTime() + currentDomain[1].getTime()) / 2;
+      let newDurationMs;
+
+      if (level === 'decade') {
+        newDurationMs = 10 * 365.25 * 24 * 60 * 60 * 1000; // Approx 10 years
+      } else if (level === 'century') {
+        newDurationMs = 100 * 365.25 * 24 * 60 * 60 * 1000; // Approx 100 years
+      } else {
+        return; // Unknown level
+      }
+
+      const newDomainStart = new Date(currentCenterMs - newDurationMs / 2);
+      const newDomainEnd = new Date(currentCenterMs + newDurationMs / 2);
+
+      xScaleRef.current.domain([newDomainStart, newDomainEnd]);
+      redrawElements(xScaleRef.current, referenceDate);
+      updateD3ZoomTransform([newDomainStart, newDomainEnd]);
     }
   })); // End of useImperativeHandle
 
@@ -211,29 +270,70 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
             return Math.max(1, xScale(endDate) - xScale(startDate));
           })
           .attr("fill", theme.color || "#808080")
-          .style("opacity", 0.6) 
+          .style("opacity", 0.6)
           .style("cursor", "pointer")
           .on("click", (event, d) => { if (onEventClick) onEventClick(d.globalId); })
-          .append("title")
-            .text(d => `${d.title}\n${new Date(d.start_date).toLocaleDateString()} - ${new Date(d.end_date).toLocaleDateString()}`);
+          .each(function(d) { // Use 'each' to append title and conditionally text
+            const element = d3.select(this);
+            element.select("title").remove(); // Remove old title if any
+            element.append("title")
+                   .text(`${d.title}\n${new Date(d.start_date).toLocaleDateString()} - ${new Date(d.end_date).toLocaleDateString()}`);
+            
+            if (isTimelineExpanded) {
+              // Ensure not to duplicate text if re-rendering
+              laneGroup.selectAll(`.event-text-label[data-id="${d.globalId}"]`).remove();
+              laneGroup.append("text")
+                .attr("class", "timeline-event-item event-text-label")
+                .attr("data-id", d.globalId)
+                .attr("x", xScale(new Date(d.start_date)) + 5)
+                .attr("y", eventPadding + eventBarHeight / 2)
+                .attr("dy", ".35em")
+                .style("font-size", "9px")
+                .style("pointer-events", "none") // So text doesn't block click on rect
+                .text(d.title.length > 20 ? d.title.substring(0, 17) + "..." : d.title);
+            } else {
+              laneGroup.selectAll(`.event-text-label[data-id="${d.globalId}"]`).remove();
+            }
+          });
 
       laneGroup.selectAll(".event-circle.timeline-event-item")
         .data(singleEvents)
         .join("circle")
           .attr("class", "event-circle timeline-event-item")
-          .attr("cy", laneHeight / 2) 
+          .attr("cy", laneHeight / 2)
           .attr("r", circleRadius)
           .attr("cx", d => xScale(new Date(d.start_date)))
-          .attr("fill", "white") 
-          .attr("stroke", theme.color || "#808080") 
+          .attr("fill", "white")
+          .attr("stroke", theme.color || "#808080")
           .attr("stroke-width", circleStrokeWidth)
           .style("cursor", "pointer")
           .on("click", (event, d) => { if (onEventClick) onEventClick(d.globalId); })
-          .append("title")
-            .text(d => `${d.title}\n${new Date(d.start_date).toLocaleDateString()}`);
+          .each(function(d) { // Use 'each' to append title and conditionally text
+            const element = d3.select(this);
+            element.select("title").remove(); // Remove old title if any
+            element.append("title")
+                   .text(`${d.title}\n${new Date(d.start_date).toLocaleDateString()}`);
+
+            if (isTimelineExpanded) {
+              laneGroup.selectAll(`.event-text-label[data-id="${d.globalId}"]`).remove();
+              laneGroup.append("text")
+                .attr("class", "timeline-event-item event-text-label")
+                .attr("data-id", d.globalId)
+                .attr("x", xScale(new Date(d.start_date)) + circleRadius + 3)
+                .attr("y", laneHeight / 2)
+                .attr("dy", ".35em")
+                .style("font-size", "9px")
+                .style("pointer-events", "none")
+                .text(d.title.length > 20 ? d.title.substring(0, 17) + "..." : d.title);
+            } else {
+              laneGroup.selectAll(`.event-text-label[data-id="${d.globalId}"]`).remove();
+            }
+          });
     });
     
+    // Redraw reference line and label (as they might be removed if part of mainGroup)
     mainGroup.selectAll(".reference-line").remove();
+    mainGroup.selectAll(".reference-line-label").remove();
     mainGroup.append("line")
       .attr("class", "reference-line")
       .attr("x1", xScale(refDateObj))
@@ -325,7 +425,7 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
         d3.select(svgNode).on(".zoom", null);
       }
     };
-  }, [events, themes, referenceDate, onEventClick, redrawElements]);
+  }, [events, themes, referenceDate, onEventClick, redrawElements, isTimelineExpanded, isTimelineLocked]);
 
   return <svg ref={svgRef} style={{ width: '100%', height: '100%' }}></svg>;
 }); // Corrected: ensure this is the final closing for forwardRef

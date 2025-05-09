@@ -11,9 +11,16 @@ const UIControls = ({
   onLoadSourceDataFiles,
   onSaveProfile,
   onLoadProfileFile,
-  // filterEntitiesByTimeWindow, // Removed
-  // onToggleFilterEntitiesByTimeWindow, // Removed
+  isTimelineLocked, // This prop was missing in the previous App.jsx diff, but is used
+  onTimelineLockToggle, // This prop was missing in the previous App.jsx diff, but is used
+  isTimelineExpanded,
+  onToggleTimelineExpanded,
+  onJumpToYear,
+  onSetTimelineZoomLevel,
 }) => {
+
+  // Placeholder for jump to year input
+  const [jumpYear, setJumpYear] = React.useState('');
 
   const handleSourceDataFileChange = (event) => {
     if (event.target.files && event.target.files.length > 0) {
@@ -56,6 +63,48 @@ const UIControls = ({
         <button onClick={onSaveProfile} style={{ marginTop: '5px' }}>Salvar Perfil</button>
       </div>
       {/* Date and Time Window controls have been moved to DateControls.jsx */}
+
+      <div style={{ marginTop: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
+        <h4>Controles da Linha do Tempo</h4>
+        <button onClick={onToggleTimelineExpanded} style={{ marginBottom: '10px' }}>
+          {isTimelineExpanded ? 'Recolher Linha do Tempo' : 'Expandir Linha do Tempo'}
+        </button>
+        {isTimelineExpanded && (
+          <div className="expanded-timeline-controls">
+            <div>
+              <label htmlFor="jump-to-year-input">Saltar para Ano: </label>
+              <input
+                type="number"
+                id="jump-to-year-input"
+                value={jumpYear}
+                onChange={(e) => setJumpYear(e.target.value)}
+                placeholder="Ano"
+                style={{width: '70px', marginRight: '5px'}}
+              />
+              <button onClick={() => onJumpToYear(jumpYear)}>Ir</button>
+            </div>
+            <div style={{marginTop: '5px'}}>
+              <button onClick={() => onSetTimelineZoomLevel('decade')} style={{marginRight: '5px'}}>Visão Década</button>
+              <button onClick={() => onSetTimelineZoomLevel('century')}>Visão Século</button>
+            </div>
+          </div>
+        )}
+        {/* Timeline Lock Toggle - Assuming it stays here or is managed alongside expand */}
+        <div style={{ marginTop: '10px', display: 'flex', alignItems: 'center' }}>
+            <input
+                type="checkbox"
+                id="timeline-lock-toggle"
+                checked={isTimelineLocked}
+                onChange={onTimelineLockToggle}
+                disabled={isTimelineExpanded} // Disable lock when timeline is expanded (as it's auto-unlocked)
+                style={{ marginRight: '5px' }}
+            />
+            <label htmlFor="timeline-lock-toggle">
+                Travar Linha do Tempo no Centro (Data de Ref.)
+            </label>
+        </div>
+      </div>
+
       <div style={{ marginTop: '15px' }}>
         <h4>Filtros de Fonte</h4>
         {sources && sources.length > 0 ? (

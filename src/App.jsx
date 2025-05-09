@@ -27,8 +27,19 @@ function App() {
   const timelineViewRef = useRef(null);
   const [isTimelineLockedToCenter, setIsTimelineLockedToCenter] = useState(false);
   const [isControlsPanelVisible, setIsControlsPanelVisible] = useState(true);
+  const [isTimelineExpanded, setIsTimelineExpanded] = useState(false);
 
   const toggleControlsPanel = () => setIsControlsPanelVisible(!isControlsPanelVisible);
+
+  const toggleTimelineExpanded = () => {
+    setIsTimelineExpanded(prev => {
+      const newExpandedState = !prev;
+      if (newExpandedState) {
+        setIsTimelineLockedToCenter(false); // Unlock timeline when expanding
+      }
+      return newExpandedState;
+    });
+  };
 
   useEffect(() => {
     async function loadInitialData() {
@@ -206,6 +217,18 @@ function App() {
     setIsModalOpen(false); setSelectedEntityData(null); setSelectedEntityType('');
   };
 
+  const handleJumpToYear = (year) => {
+    if (timelineViewRef.current && year) {
+      timelineViewRef.current.jumpToYear(year);
+    }
+  };
+
+  const handleSetTimelineZoomLevel = (level) => {
+    if (timelineViewRef.current && level) {
+      timelineViewRef.current.setZoomLevel(level);
+    }
+  };
+
   const eventsInCurrentSourceFilters = useMemo(() => {
     return allLoadedEvents.filter(event => activeSourceIds.has(event.sourceId));
   }, [allLoadedEvents, activeSourceIds]);
@@ -304,8 +327,12 @@ function App() {
             onLoadProfileFile={handleLoadProfileFile}
             isTimelineLocked={isTimelineLockedToCenter}
             onTimelineLockToggle={() => setIsTimelineLockedToCenter(!isTimelineLockedToCenter)}
+            isTimelineExpanded={isTimelineExpanded}
+            onToggleTimelineExpanded={toggleTimelineExpanded}
+            onJumpToYear={handleJumpToYear}
+            onSetTimelineZoomLevel={handleSetTimelineZoomLevel}
           />
-          <button 
+          <button
             style={{ marginTop: '15px', padding: '8px 12px', background: '#6c757d', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }} 
             onClick={() => console.log("Events in current source filters:", eventsInCurrentSourceFilters)}
           >
@@ -314,9 +341,9 @@ function App() {
         </div>
       )}
 
-      <div id="map-container">
+      <div id="map-container" style={{ height: isTimelineExpanded ? '30vh' : 'calc(100vh - 200px)' }}>
         <MapView
-          events={eventsInCurrentSourceFilters} 
+          events={eventsInCurrentSourceFilters}
           themes={themes}
           referenceDate={referenceDate}
           timeWindowYears={timeWindowYears}
@@ -324,14 +351,28 @@ function App() {
         />
       </div>
 
-      <div id="timeline-overlay-container" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '200px', background: 'rgba(255,255,255,0.85)', zIndex: 5 , borderTop: '1px solid #ccc' }}>
+      <div
+        id="timeline-overlay-container"
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: isTimelineExpanded ? '70vh' : '200px',
+          background: 'rgba(255,255,255,0.85)',
+          zIndex: 5 ,
+          borderTop: '1px solid #ccc',
+          transition: 'height 0.3s ease-in-out' // Added transition
+        }}
+      >
         <TimelineView
           ref={timelineViewRef}
-          events={eventsInCurrentSourceFilters} 
+          events={eventsInCurrentSourceFilters}
           themes={themes}
           referenceDate={referenceDate}
           onEventClick={(eventId) => handleOpenModal('event', eventId)}
-          isTimelineLocked={isTimelineLockedToCenter} 
+          isTimelineLocked={isTimelineLockedToCenter}
+          isTimelineExpanded={isTimelineExpanded} // Pass new prop
         />
       </div>
 
