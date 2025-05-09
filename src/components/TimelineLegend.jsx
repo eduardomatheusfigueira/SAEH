@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const TimelineLegend = ({ themes }) => {
+const TimelineLegend = ({ themes, title }) => {
   const [isLegendVisible, setIsLegendVisible] = useState(true);
 
   if (!themes || themes.length === 0) {
@@ -36,7 +36,7 @@ const TimelineLegend = ({ themes }) => {
     <div style={legendStyle}>
       <div onClick={() => setIsLegendVisible(!isLegendVisible)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
         <h4 style={{ marginTop: 0, marginBottom: '8px', marginRight: '5px' }}>
-          {isLegendVisible ? '▾' : '▸'} Legenda de Temas
+          {isLegendVisible ? '▾' : '▸'} {title || 'Legenda'}
         </h4>
       </div>
       {isLegendVisible && (

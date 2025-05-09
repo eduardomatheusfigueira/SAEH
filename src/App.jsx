@@ -4,7 +4,8 @@ import TimelineView from './components/TimelineView';
 import UIControls from './components/UIControls';
 import DetailModal from './components/DetailModal';
 import EntityListView from './components/EntityListView';
-import TimelineLegend from './components/TimelineLegend';
+// import TimelineLegend from './components/TimelineLegend'; // To be replaced
+import LegendPanel from './components/LegendPanel'; // Import new component
 import DateControls from './components/DateControls';
 import * as DataManager from './dataManager';
 import { MAPBOX_ACCESS_TOKEN } from './config';
@@ -241,6 +242,54 @@ function App() {
     return allPlaces.filter(p => activeSourceIds.has(p.sourceId));
   }, [allPlaces, activeSourceIds]);
 
+  const legendConfiguration = useMemo(() => {
+    const themeItems = themes.map(theme => ({
+      color: theme.color || '#808080',
+      label: theme.name,
+      description: theme.description_short
+    }));
+    themeItems.push({ color: '#808080', label: 'Padrão (Tema não definido)' });
+
+    return [
+      {
+        id: 'mapFill',
+        title: 'Mapa: Cor de Preenchimento do Ponto',
+        items: themeItems,
+        initiallyOpen: true
+      },
+      {
+        id: 'mapBorder',
+        title: 'Mapa: Cor da Borda do Ponto',
+        items: [
+          { color: '#FF0000', label: 'Evento Anterior à Data de Referência' },
+          { color: '#0000FF', label: 'Evento Posterior à Data de Referência' },
+          { color: '#FFFFFF', label: 'Evento na Data de Referência', swatchStyle: { backgroundColor: '#FFFFFF', border: '1px solid #ccc' } }
+        ],
+        initiallyOpen: true
+      },
+      {
+        id: 'timelinePointBorder',
+        title: 'Linha do Tempo: Cor da Borda do Ponto (Evento Único)',
+        items: themeItems, // Uses the same theme logic
+        initiallyOpen: false
+      },
+      {
+        id: 'timelinePointFill',
+        title: 'Linha do Tempo: Cor de Preenchimento do Ponto (Evento Único)',
+        items: [
+          { color: 'white', label: 'Preenchimento Padrão', swatchStyle: { backgroundColor: 'white', border: '1px solid #ccc' } }
+        ],
+        initiallyOpen: false
+      },
+      {
+        id: 'timelineBarFill',
+        title: 'Linha do Tempo: Cor da Barra (Período)',
+        items: themeItems, // Uses the same theme logic
+        initiallyOpen: false
+      }
+    ];
+  }, [themes]);
+
   return (
     <div id="app-container">
       {isLoading && (
@@ -301,10 +350,10 @@ function App() {
             characters={charactersForList}
             places={placesForList}
             themes={themes} 
-            sources={allSources} 
+            sources={allSources}
             onEntityClick={handleOpenModal}
           />
-          <TimelineLegend themes={themes} />
+          <LegendPanel legendSections={legendConfiguration} />
         </div>
       </div>
 
