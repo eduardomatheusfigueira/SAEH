@@ -1,16 +1,12 @@
-// src/dataManager.js
-
-let allSourcesInfo = []; // Stores source_info objects
+let allSourcesInfo = [];
 let allEvents = [];
 let allCharacters = [];
 let allPlaces = [];
 let allThemes = [];
-
-let loadedSourceFileNames = []; // To keep track of filenames for profile saving
+let loadedSourceFileNames = []; // Keep track of filenames for profile saving (original method)
 
 /**
  * Clears all loaded data from the DataManager.
- * Resets all internal arrays for sources, events, characters, places, themes, and loaded filenames.
  */
 function clearAllData() {
   allSourcesInfo = [];
@@ -19,17 +15,11 @@ function clearAllData() {
   allPlaces = [];
   allThemes = [];
   loadedSourceFileNames = [];
-  console.log("All data cleared from DataManager.");
+  console.log("DataManager: All data cleared.");
 }
 
 /**
  * Processes a single source-centric data file provided as a JSON string.
- * Parses the JSON, extracts source information, events, characters, places, and themes.
- * Assigns global IDs to sub-entities (events, characters, places) by prefixing with the source ID.
- * Themes are treated as globally unique by their own ID.
- * Handles basic validation for the presence of `source_info` and `source_info.id`.
- * If a source with the same ID is reloaded, its previous data is cleared before adding the new data.
- *
  * @param {string} jsonString - The JSON string content of the source data file.
  * @param {string} filename - The name of the loaded file (used for logging and tracking).
  * @returns {boolean} True if processing was successful, false otherwise.
@@ -40,58 +30,38 @@ function loadSourceDataFromString(jsonString, filename) {
 
     if (!sourceData.source_info || !sourceData.source_info.id) {
       console.error(`File ${filename} is missing source_info or source_info.id. Skipping.`);
-      alert(`Error: File ${filename} is not a valid SAEH source data file (missing source_info or source_info.id).`);
+      alert(`Erro: Arquivo ${filename} não é um arquivo de dados de fonte SAEH válido (faltando source_info ou source_info.id).`);
       return false;
     }
 
     const sourceId = sourceData.source_info.id;
 
-    // Check for duplicate source ID
+    // Check if source already loaded, if so, remove its old data first
     if (allSourcesInfo.some(s => s.id === sourceId)) {
-      console.warn(`Source with ID ${sourceId} from file ${filename} already loaded. Consider implications for data merging or skipping.`);
-      // For now, let's allow overwriting/merging if the same source file is loaded again,
-      // but a more robust strategy might be needed (e.g., skip, or merge carefully).
-      // We'll filter out old data from this source before adding new.
-      allEvents = allEvents.filter(e => !(typeof e.globalId === 'string' && e.globalId.startsWith(`${sourceId}_`)));
-      allCharacters = allCharacters.filter(c => !(typeof c.globalId === 'string' && c.globalId.startsWith(`${sourceId}_`)));
-      allPlaces = allPlaces.filter(p => !(typeof p.globalId === 'string' && p.globalId.startsWith(`${sourceId}_`)));
-      // For themes, we check global uniqueness by theme.id, so specific source filtering here is different.
-      // If a source is reloaded, its themes are re-processed. If a theme.id is already global, it's not re-added.
-      // If you need to remove themes *only* associated with this reloaded source (and not shared), logic would be more complex.
-      // For now, the existing theme logic (add if not globally present) handles this reasonably for shared themes.
+      console.warn(`Source with ID ${sourceId} from file ${filename} already loaded. Replacing its data.`);
+      allEvents = allEvents.filter(e => e.sourceId !== sourceId);
+      allCharacters = allCharacters.filter(c => c.sourceId !== sourceId);
+      allPlaces = allPlaces.filter(p => p.sourceId !== sourceId);
+      // Themes are global, but if a source redefines a theme, we might update or ignore.
+      // For simplicity, themes are additive and unique by their own ID.
       allSourcesInfo = allSourcesInfo.filter(s => s.id !== sourceId);
+      loadedSourceFileNames = loadedSourceFileNames.filter(name => name !== filename); // Remove old filename if replacing
     }
+    
+    allSourcesInfo.push({ ...sourceData.source_info });
 
-    allSourcesInfo.push(sourceData.source_info);
-
-    // Process events
     (sourceData.events || []).forEach(event => {
-      const globalEventId = `${sourceId}_${event.id}`;
-      allEvents.push({ ...event, globalId: globalEventId, sourceId: sourceId });
+      allEvents.push({ ...event, globalId: `${sourceId}_${event.id}`, sourceId: sourceId });
     });
-
-    // Process characters
     (sourceData.characters || []).forEach(character => {
-      const globalCharId = `${sourceId}_${character.id}`;
-      allCharacters.push({ ...character, globalId: globalCharId, sourceId: sourceId });
+      allCharacters.push({ ...character, globalId: `${sourceId}_${character.id}`, sourceId: sourceId });
     });
-
-    // Process places
     (sourceData.places || []).forEach(place => {
-      const globalPlaceId = `${sourceId}_${place.id}`;
-      allPlaces.push({ ...place, globalId: globalPlaceId, sourceId: sourceId });
+      allPlaces.push({ ...place, globalId: `${sourceId}_${place.id}`, sourceId: sourceId });
     });
-
-    // Process themes
     (sourceData.themes || []).forEach(theme => {
-      const globalThemeId = `${sourceId}_${theme.id}`;
-      // Check for duplicate theme IDs across all sources - themes can be shared
-      const existingTheme = allThemes.find(t => t.id === theme.id); // Using original theme.id for global uniqueness
-      if (!existingTheme) {
-        allThemes.push({ ...theme, sourceId: sourceId }); // Store original theme, add sourceId for context
-      } else {
-        // Optionally merge or update theme info if needed, or just acknowledge it's shared
-        // console.log(`Theme ${theme.id} from ${sourceId} already exists globally.`);
+      if (!allThemes.find(t => t.id === theme.id)) {
+        allThemes.push({ ...theme }); // Themes are global by their own ID
       }
     });
 
@@ -103,116 +73,103 @@ function loadSourceDataFromString(jsonString, filename) {
 
   } catch (error) {
     console.error(`Error processing data from file ${filename}:`, error);
-    alert(`Error: Could not parse JSON from file ${filename}. Please ensure it is valid JSON. \nDetails: ${error.message}`);
+    alert(`Erro: Não foi possível analisar o JSON do arquivo ${filename}. Por favor, certifique-se de que é um JSON válido. \nDetalhes: ${error.message}`);
     return false;
   }
 }
 
 // --- Getter functions ---
-
-/**
- * Returns a copy of the array of all loaded source information objects.
- * @returns {Array<Object>} An array of source_info objects.
- */
 const getSourcesInfo = () => [...allSourcesInfo];
-
-/**
- * Returns a copy of the array of all loaded events, augmented with globalId and sourceId.
- * @returns {Array<Object>} An array of event objects.
- */
 const getAllEvents = () => [...allEvents];
-
-/**
- * Returns a copy of the array of all loaded characters, augmented with globalId and sourceId.
- * @returns {Array<Object>} An array of character objects.
- */
 const getAllCharacters = () => [...allCharacters];
-/**
- * Returns a copy of the array of all loaded places, augmented with globalId and sourceId.
- * @returns {Array<Object>} An array of place objects.
- */
 const getAllPlaces = () => [...allPlaces];
-
-/**
- * Returns a copy of the array of all loaded themes. Themes are globally unique by their own ID.
- * @returns {Array<Object>} An array of theme objects.
- */
 const getAllThemes = () => [...allThemes];
-
-/**
- * Retrieves a specific event by its globally unique ID.
- * @param {string} globalId - The global ID of the event (e.g., "sourceId_eventId").
- * @returns {Object|undefined} The event object if found, otherwise undefined.
- */
 const getEventById = (globalId) => allEvents.find(e => e.globalId === globalId);
-
-/**
- * Retrieves a specific character by its globally unique ID.
- * @param {string} globalId - The global ID of the character (e.g., "sourceId_characterId").
- * @returns {Object|undefined} The character object if found, otherwise undefined.
- */
 const getCharacterById = (globalId) => allCharacters.find(c => c.globalId === globalId);
-
-/**
- * Retrieves a specific place by its globally unique ID.
- * @param {string} globalId - The global ID of the place (e.g., "sourceId_placeId").
- * @returns {Object|undefined} The place object if found, otherwise undefined.
- */
 const getPlaceById = (globalId) => allPlaces.find(p => p.globalId === globalId);
-
-/**
- * Retrieves a specific theme by its ID.
- * @param {string} themeId - The ID of the theme.
- * @returns {Object|undefined} The theme object if found, otherwise undefined.
- */
 const getThemeById = (themeId) => allThemes.find(t => t.id === themeId);
-
-/**
- * Retrieves a specific source_info object by its ID.
- * @param {string} sourceId - The ID of the source.
- * @returns {Object|undefined} The source_info object if found, otherwise undefined.
- */
 const getSourceInfoById = (sourceId) => allSourcesInfo.find(s => s.id === sourceId);
 
 /**
- * Returns a copy of the array of filenames of all successfully loaded source data files.
- * @returns {Array<string>} An array of filenames.
+ * Retrieves all loaded data, structured by source, suitable for embedding in a profile.
+ * Each element in the returned array will represent a source file's content.
+ * @returns {Array<Object>} An array of source data objects.
  */
-const getLoadedSourceFileNames = () => [...loadedSourceFileNames];
+function getFullLoadedDataForProfile() {
+  const allData = [];
+  for (const sourceInfo of allSourcesInfo) {
+    const sourceId = sourceInfo.id;
+    const sourceDataObject = {
+      source_info: { ...sourceInfo },
+      events: allEvents
+        .filter(e => e.sourceId === sourceId)
+        .map(e => {
+          const { globalId, sourceId, ...localEvent } = e; // Destructure to remove runtime IDs
+          return localEvent;
+        }),
+      characters: allCharacters
+        .filter(c => c.sourceId === sourceId)
+        .map(c => { 
+          const { globalId, sourceId, ...localChar } = c;
+          return localChar;
+        }),
+      places: allPlaces
+        .filter(p => p.sourceId === sourceId)
+        .map(p => {
+          const { globalId, sourceId, ...localPlace } = p;
+          return localPlace;
+        }),
+      themes: [] // Themes will be stored at the top level of the profile
+    };
+    allData.push(sourceDataObject);
+  }
+  return allData;
+}
 
 // --- Profile Management ---
-
 /**
  * Constructs a profile data object.
  * @param {string} profileName - The name for the profile.
- * @param {Object} uiSettings - An object containing UI settings to be saved (e.g., referenceDate, active filters).
+ * @param {Object} uiSettings - An object containing UI settings.
  * @returns {Object} The profile data object.
  */
 function constructProfileData(profileName, uiSettings) {
   return {
-    profile_name: profileName || "Untitled Profile",
-    loaded_source_data_files: [...loadedSourceFileNames],
-    ui_settings: uiSettings || {},
+    profile_name: profileName || "SAEH_Perfil",
+    schema_version: "1.1.0", // Version indicating embedded data
+    ui_settings: uiSettings,
+    embedded_source_data: getFullLoadedDataForProfile(),
+    themes_global: [...allThemes.map(t => ({...t}))] // Store a copy of all unique themes
   };
 }
 
 /**
- * Processes a loaded profile data object.
- * Currently, this function clears all existing data in DataManager and returns the profile data.
- * The calling function (e.g., in App.jsx) is responsible for guiding the user
- * to re-select the source data files listed in `profileData.loaded_source_data_files`.
- *
+ * Processes a loaded profile data object with embedded source data.
  * @param {Object} profileData - The parsed profile JSON object.
  * @returns {Promise<Object>} A promise that resolves with the processed profile data.
  */
 async function loadDataFromProfile(profileData) {
-  console.warn("loadDataFromProfile: Clearing all current data. User will be prompted to re-select source files listed in the profile.");
-  clearAllData(); // Clear existing data before processing profile file list
-  // The actual re-loading of source files based on profileData.loaded_source_data_files
-  // will be orchestrated by the UI (App.jsx) due to browser security restrictions on local file access.
-  return profileData; // Return profile data for the UI to act upon.
-}
+  clearAllData(); 
 
+  if (profileData.themes_global && Array.isArray(profileData.themes_global)) {
+    allThemes = profileData.themes_global.map(t => ({...t}));
+  }
+
+  if (profileData.embedded_source_data && Array.isArray(profileData.embedded_source_data)) {
+    profileData.embedded_source_data.forEach(sourceDataObject => {
+      // We stringify and parse again to ensure it goes through the same loading logic
+      // which handles ID generation and structuring.
+      const success = loadSourceDataFromString(
+        JSON.stringify(sourceDataObject), 
+        sourceDataObject.source_info.name || 'embedded_source'
+      );
+      if (!success) {
+        console.warn("Failed to load an embedded source from profile:", sourceDataObject.source_info.name);
+      }
+    });
+  }
+  return profileData; // Return profile data for UI settings application in App.jsx
+}
 
 export {
   clearAllData,
@@ -227,7 +184,8 @@ export {
   getPlaceById,
   getThemeById,
   getSourceInfoById,
-  getLoadedSourceFileNames,
+  // getLoadedSourceFileNames, // No longer used for primary profile data
   constructProfileData,
   loadDataFromProfile,
+  getFullLoadedDataForProfile
 };

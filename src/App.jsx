@@ -46,8 +46,6 @@ function App() {
           setAllCharacters(DataManager.getAllCharacters());
           setAllPlaces(DataManager.getAllPlaces());
           setActiveSourceIds(new Set(sources.map(s => s.id)));
-          // No longer automatically setting min/max event year from data here
-          // User will control this via DateControls inputs
         }
       } catch (error) { console.error("Could not load initial example data:", error); }
       finally { setIsLoading(false); }
@@ -76,23 +74,17 @@ function App() {
       }
     }
     const sources = DataManager.getSourcesInfo();
-    const currentLoadedEvents = DataManager.getAllEvents();
-    setAllLoadedEvents(currentLoadedEvents);
+    setAllLoadedEvents(DataManager.getAllEvents());
     setThemes(DataManager.getAllThemes());
     setAllSources(sources);
     setAllCharacters(DataManager.getAllCharacters());
     setAllPlaces(DataManager.getAllPlaces());
-    // No longer automatically setting min/max event year from data here
-    // User will control this via DateControls inputs
-    // We could potentially update a *separate* state here for actual data range
-    // if we want to provide feedback to the user, but the slider itself will use
-    // the user-defined minEventYear/maxEventYear.
     setActiveSourceIds(new Set(sources.map(s => s.id)));
     setIsLoading(false);
   };
 
   const handleSaveProfile = () => {
-    const profileName = prompt("Digite um nome para este perfil:", "SAEH_Perfil");
+    const profileName = prompt("Digite um nome para este perfil:", "SAEH_Perfil_Completo");
     if (!profileName) return;
     const uiSettings = {
       referenceDate, timeWindowYears, activeSourceIds: Array.from(activeSourceIds),
@@ -104,11 +96,12 @@ function App() {
     const href = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = href;
-    link.download = `${profileName.replace(/\s+/g, '_') || 'SAEH_Perfil'}.json`;
+    link.download = `${profileName.replace(/\s+/g, '_') || 'SAEH_Perfil_Completo'}.json`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(href);
+    console.log("Profile with embedded data saved.");
   };
 
   const handleLoadProfileFile = async (profileFile) => {
@@ -117,41 +110,59 @@ function App() {
     try {
       const jsonString = await profileFile.text();
       const profileData = JSON.parse(jsonString);
-      const processedProfile = await DataManager.loadDataFromProfile(profileData);
-      if (processedProfile?.loaded_source_data_files?.length > 0) {
-        alert(`Perfil "${processedProfile.profile_name}" carregado.\n\nPor favor, use agora a opção "Carregar Dados de Fonte (JSON)" para selecionar os seguintes arquivos de dados necessários:\n\n${processedProfile.loaded_source_data_files.join('\n')}\n\nOs dados atuais serão limpos primeiro.`);
+      const processedProfile = await DataManager.loadDataFromProfile(profileData); 
+      const sources = DataManager.getSourcesInfo();
+      const events = DataManager.getAllEvents();
+      setAllLoadedEvents(events);
+      setThemes(DataManager.getAllThemes()); 
+      setAllSources(sources);
+      setAllCharacters(DataManager.getAllCharacters());
+      setAllPlaces(DataManager.getAllPlaces());
+      
+      if (processedProfile?.ui_settings?.activeSourceIds && Array.isArray(processedProfile.ui_settings.activeSourceIds)) {
+        setActiveSourceIds(new Set(processedProfile.ui_settings.activeSourceIds));
       } else {
-        DataManager.clearAllData();
-        setAllLoadedEvents([]); setThemes([]); setAllSources([]);
-        setAllCharacters([]); setAllPlaces([]); setActiveSourceIds(new Set());
-        // When clearing data due to profile load without files, reset slider range to defaults
-        // or to what's in profile if available and makes sense.
-        // For now, let's keep the user-defined or default min/max year.
-        // setMinEventYear(1400); setMaxEventYear(new Date().getFullYear()); // This would override user's slider range settings
+        setActiveSourceIds(new Set(sources.map(s => s.id))); 
       }
+      
       if (processedProfile?.ui_settings) {
-        // When loading a profile, we DO want to load the min/max year for the slider if saved
-        const { referenceDate: refDate, timeWindowYears: twYears, minEventYear: profMin, maxEventYear: profMax, isTimelineLocked: profLocked } = processedProfile.ui_settings;
+        const { 
+          referenceDate: refDate, 
+          timeWindowYears: twYears, 
+          minEventYear: profMin, 
+          maxEventYear: profMax, 
+          isTimelineLocked: profLocked 
+        } = processedProfile.ui_settings;
         if (refDate) setReferenceDate(refDate);
         if (twYears !== undefined) setTimeWindowYears(twYears);
-        if (profMin !== undefined) setMinEventYear(profMin); // Load saved slider range
-        if (profMax !== undefined) setMaxEventYear(profMax); // Load saved slider range
+        if (profMin !== undefined) setMinEventYear(profMin);
+        if (profMax !== undefined) setMaxEventYear(profMax);
         if (profLocked !== undefined) setIsTimelineLockedToCenter(profLocked);
+      } else { 
+        if (events.length > 0) {
+            const years = events.map(e => new Date(e.start_date).getFullYear());
+            setMinEventYear(Math.min(...years));
+            setMaxEventYear(Math.max(...years));
+        } else {
+            setMinEventYear(1400); 
+            setMaxEventYear(new Date().getFullYear());
+        }
       }
+      alert(`Perfil "${processedProfile.profile_name || profileData.profile_name}" carregado com dados embutidos.`);
     } catch (error) {
+      console.error("Error loading or parsing profile file:", error);
       alert(`Falha ao carregar ou analisar o arquivo de perfil. \nDetalhes: ${error.message}`);
     } finally {
       setIsLoading(false);
     }
   };
-
+  
   const handleMinEventYearChange = (year) => {
     const newMinYear = parseInt(year, 10);
     if (!isNaN(newMinYear) && newMinYear <= maxEventYear) {
       setMinEventYear(newMinYear);
       const currentRefYear = new Date(referenceDate).getFullYear();
       if (currentRefYear < newMinYear) {
-        // Adjust referenceDate if it's now below the new min
         handleReferenceDateChangeAndUpdateTimeline(`${newMinYear}-${referenceDate.substring(5)}`);
       }
     }
@@ -163,7 +174,6 @@ function App() {
       setMaxEventYear(newMaxYear);
       const currentRefYear = new Date(referenceDate).getFullYear();
       if (currentRefYear > newMaxYear) {
-        // Adjust referenceDate if it's now above the new max
         handleReferenceDateChangeAndUpdateTimeline(`${newMaxYear}-${referenceDate.substring(5)}`);
       }
     }
@@ -229,7 +239,6 @@ function App() {
         {isControlsPanelVisible ? '✕' : '☰'}
       </button>
 
-      {/* Container for all top-right elements */}
       <div 
         id="top-right-container"
         style={{
@@ -250,13 +259,15 @@ function App() {
           onTimeWindowYearsChange={setTimeWindowYears}
           minEventYear={minEventYear}
           maxEventYear={maxEventYear}
+          onMinEventYearChange={handleMinEventYearChange}
+          onMaxEventYearChange={handleMaxEventYearChange}
         />
-        {/* Container for EntityListView and TimelineLegend */}
         <div 
           id="right-side-lists-container"
           style={{
             width: '100%', 
-            maxHeight: 'calc(100vh - 160px - 200px - 20px)', // Adjusted for potential DateControls height
+            // Adjusted maxHeight to account for typical DateControls height (e.g. ~150px) + timeline (200px) + margins
+            maxHeight: 'calc(100vh - 150px - 200px - 40px)', 
             overflowY: 'auto',
             display: 'flex',
             flexDirection: 'column',
