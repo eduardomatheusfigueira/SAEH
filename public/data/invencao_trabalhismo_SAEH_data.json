@@ -1,0 +1,264 @@
+{
+  "source_info": {
+    "id": "invencao_trabalhismo_gomes",
+    "name": "A Invenção do Trabalhismo",
+    "author": "Angela de Castro Gomes",
+    "color": "#3182CE",
+    "description_short": "Análise da construção da identidade política trabalhista no Brasil (1890-1945).",
+    "article_full": {
+      "current": "Este conjunto de dados é baseado na obra 'A Invenção do Trabalhismo' de Angela de Castro Gomes, que examina a formação e consolidação do trabalhismo como força política e ideológica no Brasil, especialmente durante a Era Vargas e o período subsequente.",
+      "previous": null
+    }
+  },
+  "events": [
+    {
+      "id": "evt_gomes_1",
+      "title": "Início da luta operária",
+      "date_type": "single",
+      "start_date": "1890-01-01",
+      "end_date": null,
+      "characters_ids": [],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": ["thm_direitos_sociais_gomes", "thm_imprensa_gomes"],
+      "description_short": "Publicação de artigo no Echo Popular demarcando o início da luta operária por reconhecimento como cidadãos com direitos.",
+      "article_full": { 
+        "current": "Em 1890, a publicação de um artigo no jornal 'Echo Popular', provavelmente no Rio de Janeiro, é considerada um marco inicial da luta organizada dos trabalhadores brasileiros. Este movimento buscava o reconhecimento da classe operária como cidadãos plenos, com direitos civis e sociais, num contexto de profundas transformações sociais e políticas após a abolição da escravidão e a proclamação da República.", 
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_2",
+      "title": "Apostolado Positivista e Direitos Sociais",
+      "date_type": "single",
+      "start_date": "1890-01-01",
+      "end_date": null,
+      "characters_ids": ["char_gomes_benjamin_constant"],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_historia_politica_gomes",
+      "secondary_tags_ids": ["thm_direitos_sociais_gomes", "thm_positivismo_gomes"],
+      "description_short": "Tentativa do Apostolado Positivista no Rio de Janeiro de apresentar pauta de direitos sociais ao ministro Benjamin Constant.",
+      "article_full": { 
+        "current": "Em 1890, no Rio de Janeiro, o Apostolado Positivista do Brasil, uma influente corrente filosófica e política, buscou apresentar uma pauta de reivindicações sobre direitos sociais ao então ministro Benjamin Constant Botelho de Magalhães. Esta iniciativa refletia os debates da época sobre a extensão da cidadania e o papel do Estado na questão social, embora a visão positivista frequentemente limitasse os direitos dos trabalhadores a uma perspectiva tutelar e focada mais em direitos civis e sociais básicos do que em ampla participação política.", 
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_3",
+      "title": "Fundação do Centro do Partido Operário (CPO)",
+      "date_type": "single",
+      "start_date": "1890-01-01",
+      "end_date": null,
+      "characters_ids": ["char_gomes_vinhaes"],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": ["thm_historia_politica_gomes", "thm_partidos_politicos_gomes"],
+      "description_short": "Fundação do Centro do Partido Operário (CPO) no Rio de Janeiro, com atuação política e sindical.",
+      "article_full": { 
+        "current": "O Centro do Partido Operário (CPO) foi fundado no Rio de Janeiro em 1890, marcando uma das primeiras e significativas tentativas de organização política autônoma da classe trabalhadora na recém-instaurada República Brasileira. Liderado por figuras como Vinhaes, o CPO buscava atuar tanto como um partido político, lançando candidatos a cargos eletivos (incluindo a Assembleia Constituinte), quanto como uma central aglutinadora de diferentes associações e sindicatos operários, defendendo os interesses e direitos dos trabalhadores.", 
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_4",
+      "title": "Facções no movimento operário",
+      "date_type": "single",
+      "start_date": "1890-01-01",
+      "end_date": null,
+      "characters_ids": ["char_gomes_vinhaes", "char_gomes_franca_e_silva"],
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": [],
+      "description_short": "Formação de facções dentro do movimento operário, lideradas por Vinhaes e França e Silva.",
+      "article_full": { 
+        "current": "Ainda em 1890, o incipiente movimento operário no Rio de Janeiro já demonstrava divisões internas, com a formação de facções. Duas das principais eram lideradas por figuras como Vinhaes e França e Silva, que apresentavam diferentes propostas sobre a melhor forma de organização dos trabalhadores e as táticas de atuação política e sindical a serem adotadas.", 
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_5",
+      "title": "Greve em Santos",
+      "date_type": "single",
+      "start_date": "1890-01-01",
+      "end_date": null,
+      "characters_ids": ["char_gomes_vinhaes"],
+      "place_id": "plc_gomes_santos",
+      "longitude": -46.3336,
+      "latitude": -23.9608,
+      "main_theme_id": "thm_movimento_operario_gomes",
+      "secondary_tags_ids": [],
+      "description_short": "Vinhaes se envolve em episódio grevista em Santos, defendendo reivindicações e a ordem.",
+      "article_full": { 
+        "current": "O líder operário Vinhaes envolveu-se em um episódio grevista na cidade de Santos em 1890. Embora defendesse a justiça das reivindicações dos trabalhadores, sua postura também recomendava a manutenção da ordem, refletindo as tensões e estratégias diversas dentro do movimento operário da época.", 
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_6",
+      "title": "Debate sobre Direito de Greve e Código Penal de 1890",
+      "date_type": "single",
+      "start_date": "1890-10-11",
+      "end_date": null,
+      "characters_ids": ["char_gomes_vinhaes"], 
+      "place_id": "plc_gomes_rio_de_janeiro",
+      "longitude": -43.1729,
+      "latitude": -22.9068,
+      "main_theme_id": "thm_legislacao_trabalhista_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes", "thm_direitos_sociais_gomes"],
+      "description_short": "Debates e pressões do movimento operário, incluindo o CPO, em torno da questão do direito de greve durante a formulação do Código Penal de 1890.",
+      "article_full": { 
+        "current": "O Código Penal de 1890 (Decreto nº 847 de 11 de outubro de 1890), promulgado no início da República, embora não tratasse diretamente do 'direito de greve' como uma concessão, continha dispositivos que poderiam ser usados para reprimir coalizões e paralisações operárias, como os artigos sobre vadiagem e desordem. Organizações como o Centro do Partido Operário (CPO) atuavam nesse período buscando maior reconhecimento e direitos para os trabalhadores, e a questão da greve era central. A legislação refletia a tensão entre a necessidade de controle social por parte do novo regime republicano e as crescentes demandas do movimento operário.", 
+        "previous": null 
+      }
+    },
+    {
+      "id": "evt_gomes_periodo_formacao_trabalhismo",
+      "title": "Período de Formação do Trabalhismo (1890-1930)",
+      "date_type": "period",
+      "start_date": "1890-01-01",
+      "end_date": "1930-12-31",
+      "characters_ids": [],
+      "place_id": "plc_gomes_brasil",
+      "longitude": null, 
+      "latitude": null,
+      "main_theme_id": "thm_trabalhismo_gomes",
+      "secondary_tags_ids": ["thm_movimento_operario_gomes", "thm_historia_politica_gomes"],
+      "description_short": "Período inicial de formação do trabalhismo, marcado por lutas operárias e primeiras organizações políticas e sindicais.",
+      "article_full": { "current": "Entre 1890 e 1930, o Brasil vivenciou a emergência e a formação inicial do que viria a ser conhecido como trabalhismo. Este período foi caracterizado por intensas lutas operárias por melhores condições de trabalho e direitos, o surgimento das primeiras organizações sindicais e partidos de trabalhadores, e um debate crescente sobre o papel do Estado na questão social, culminando com a Revolução de 1930.", "previous": null }
+    },
+    {
+      "id": "evt_gomes_periodo_consolidacao_trabalhismo",
+      "title": "Período de Consolidação do Trabalhismo (1930-1945)",
+      "date_type": "period",
+      "start_date": "1930-01-01",
+      "end_date": "1945-12-31",
+      "characters_ids": ["char_gomes_getulio_vargas"],
+      "place_id": "plc_gomes_brasil",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_trabalhismo_gomes",
+      "secondary_tags_ids": ["thm_era_vargas_gomes", "thm_legislacao_trabalhista_gomes"],
+      "description_short": "Consolidação do trabalhismo durante a Era Vargas, com a criação de legislação social e a cooptação de lideranças sindicais.",
+      "article_full": { "current": "A Era Vargas (1930-1945) foi crucial para a consolidação do trabalhismo no Brasil. Getúlio Vargas implementou uma vasta legislação social e trabalhista, incluindo a criação do Ministério do Trabalho, a Justiça do Trabalho e a Consolidação das Leis do Trabalho (CLT). Ao mesmo tempo, o Estado buscou controlar e cooptar o movimento sindical, atrelando benefícios à sindicalização oficial e construindo uma imagem paternalista do presidente como 'pai dos pobres'.", "previous": null }
+    }
+  ],
+  "characters": [
+    {
+      "id": "char_gomes_benjamin_constant",
+      "name": "Benjamin Constant Botelho de Magalhães",
+      "description_short": "Militar, político e pensador positivista brasileiro, figura chave na Proclamação da República.",
+      "article_full": { "current": "Benjamin Constant Botelho de Magalhães (1836-1891) foi um militar, engenheiro, professor e político brasileiro. Fortemente influenciado pelo positivismo de Auguste Comte, foi uma das figuras centrais no movimento republicano e na Proclamação da República do Brasil em 1889, ocupando o cargo de Ministro da Guerra e depois da Instrução Pública no governo provisório.", "previous": null }
+    },
+    {
+      "id": "char_gomes_vinhaes",
+      "name": "Vinhaes (Líder Operário)",
+      "description_short": "Destacado líder operário no Rio de Janeiro no final do século XIX, envolvido na fundação do Centro do Partido Operário.",
+      "article_full": { "current": "Vinhaes foi uma importante liderança do movimento operário no Rio de Janeiro durante a década de 1890. Esteve envolvido na fundação do Centro do Partido Operário (CPO) e foi eleito para a Constituinte, representando uma das primeiras incursões políticas organizadas da classe trabalhadora na República Velha.", "previous": null }
+    },
+    {
+      "id": "char_gomes_franca_e_silva",
+      "name": "França e Silva",
+      "description_short": "Líder operário no Rio de Janeiro no final do século XIX, contemporâneo de Vinhaes.",
+      "article_full": { "current": "França e Silva foi outra figura de destaque no movimento operário do Rio de Janeiro no final do século XIX, liderando uma das facções que disputavam a orientação política e sindical da classe trabalhadora na época, contemporâneo e por vezes rival de Vinhaes.", "previous": null }
+    },
+    {
+      "id": "char_gomes_getulio_vargas",
+      "name": "Getúlio Vargas",
+      "description_short": "Presidente do Brasil, figura central na Era Vargas e na consolidação do trabalhismo.",
+      "article_full": { "current": "Getúlio Dornelles Vargas (1882-1954) foi um advogado e político brasileiro, líder civil da Revolução de 1930, que pôs fim à República Velha. Governou o Brasil por dois períodos: de 1930 a 1945 (Governo Provisório, Constitucional e Estado Novo) e de 1951 a 1954 (eleito democraticamente). Sua longa permanência no poder foi marcada por profundas transformações sociais, econômicas e políticas, incluindo a centralização do poder, a industrialização por substituição de importações e a promulgação de uma extensa legislação trabalhista, base do trabalhismo brasileiro.", "previous": null }
+    }
+  ],
+  "places": [
+    {
+        "id": "plc_gomes_rio_de_janeiro",
+        "name": "Rio de Janeiro, RJ, Brasil",
+        "description_short": "Então capital federal, foi o principal palco das primeiras lutas operárias e da formação do trabalhismo.",
+        "article_full": {"current": "Durante o período abordado por 'A Invenção do Trabalhismo', o Rio de Janeiro era a capital do Brasil e um importante centro industrial, comercial e político. Consequentemente, foi o epicentro de muitas das primeiras greves, da formação de sindicatos e partidos operários, e das articulações políticas que levaram à consolidação da legislação trabalhista.", "previous": null}
+    },
+    {
+        "id": "plc_gomes_santos",
+        "name": "Santos, SP, Brasil",
+        "description_short": "Importante cidade portuária no estado de São Paulo, palco de atividades grevistas no final do século XIX.",
+        "article_full": {"current": "Santos, com seu porto vital para a economia cafeeira e a crescente industrialização de São Paulo, também foi um local de significativa atividade operária e greves no final do século XIX e início do XX, refletindo as tensões sociais da época.", "previous": null}
+    },
+    {
+        "id": "plc_gomes_brasil",
+        "name": "Brasil (Contexto Nacional)",
+        "description_short": "Contexto nacional para eventos e períodos de abrangência mais ampla.",
+        "article_full": {"current": "Refere-se ao Brasil como um todo, especialmente para eventos ou períodos que tiveram impacto ou relevância em escala nacional, como a Era Vargas ou a implementação de legislações federais.", "previous": null}
+    }
+  ],
+  "themes": [
+    {
+      "id": "thm_movimento_operario_gomes",
+      "name": "Movimento Operário (Trabalhismo)",
+      "color": "#D9534F",
+      "description_short": "Organização e lutas dos trabalhadores por direitos e melhores condições.",
+      "article_full": { "current": "Abrange as diversas formas de organização dos trabalhadores (sindicatos, partidos, associações), suas greves, reivindicações por direitos sociais, trabalhistas e políticos, e as diferentes correntes ideológicas que influenciaram o movimento, como o anarquismo, o socialismo e o trabalhismo.", "previous": null }
+    },
+    {
+      "id": "thm_direitos_sociais_gomes",
+      "name": "Direitos Sociais e Cidadania",
+      "color": "#5CB85C",
+      "description_short": "Lutas e debates em torno da conquista de direitos sociais e da concepção de cidadania para os trabalhadores.",
+      "article_full": { "current": "Refere-se ao processo histórico de reivindicação e eventual conquista de direitos sociais pelos trabalhadores, incluindo debates sobre o significado e alcance da cidadania, que inicialmente era restrita para muitos setores da população.", "previous": null }
+    },
+    {
+      "id": "thm_imprensa_gomes",
+      "name": "Imprensa Operária/Social",
+      "color": "#F0AD4E",
+      "description_short": "Papel dos jornais e publicações na divulgação de ideias e organização dos trabalhadores.",
+      "article_full": { "current": "A imprensa operária e social teve um papel fundamental como veículo de divulgação de ideias, organização de movimentos, denúncia de injustiças e formação de uma consciência de classe entre os trabalhadores no final do século XIX e início do XX.", "previous": null }
+    },
+    {
+      "id": "thm_historia_politica_gomes",
+      "name": "História Política (Trabalhismo)",
+      "color": "#5BC0DE",
+      "description_short": "Contexto político, formação de partidos, legislação e ações governamentais relacionadas ao trabalho.",
+      "article_full": { "current": "Envolve as transformações políticas da República Velha, a ascensão de Getúlio Vargas, a criação de partidos políticos com base operária ou trabalhista, a promulgação de leis e as políticas estatais voltadas para a questão do trabalho e dos trabalhadores.", "previous": null }
+    },
+    {
+      "id": "thm_trabalhismo_gomes",
+      "name": "Trabalhismo",
+      "color": "#337AB7",
+      "description_short": "Ideologia e movimento político centrado na valorização do trabalho e nos direitos dos trabalhadores.",
+      "article_full": { "current": "O trabalhismo no Brasil refere-se a uma corrente política e ideológica que emergiu com força a partir da década de 1930, caracterizada pela valorização do trabalho como fundamento da nação, pela concessão de direitos sociais e trabalhistas pelo Estado e pela busca de uma relação harmônica, embora muitas vezes tutelada, entre capital e trabalho. Getúlio Vargas é a figura central associada à sua consolidação.", "previous": null }
+    },
+    {
+      "id": "thm_era_vargas_gomes",
+      "name": "Era Vargas (Impacto Trabalhista)",
+      "color": "#777777",
+      "description_short": "Impacto do governo Vargas na legislação trabalhista e no movimento sindical.",
+      "article_full": { "current": "O período de Getúlio Vargas no poder (1930-1945) foi decisivo para a história do trabalho no Brasil. Caracterizou-se pela intensa produção de legislação social e trabalhista, pela criação de uma estrutura sindical atrelada ao Estado e por uma política de cooptação e controle do movimento operário, moldando profundamente as relações de trabalho no país.", "previous": null }
+    },
+    {
+      "id": "thm_legislacao_trabalhista_gomes",
+      "name": "Legislação Trabalhista",
+      "color": "#A94442",
+      "description_short": "Criação e evolução das leis relacionadas ao trabalho e aos direitos dos trabalhadores.",
+      "article_full": { "current": "Este tema aborda o desenvolvimento histórico da legislação trabalhista no Brasil, desde as primeiras leis pontuais até a consolidação de códigos mais abrangentes como a CLT, refletindo as pressões sociais, as políticas governamentais e as concepções sobre o papel do trabalho na sociedade.", "previous": null }
+    },
+    {
+      "id": "thm_positivismo_gomes",
+      "name": "Positivismo no Brasil",
+      "color": "#E67E22",
+      "description_short": "Influência da filosofia positivista na política e sociedade brasileira, especialmente na República Velha.",
+      "article_full": { "current": "O Positivismo, filosofia criada por Auguste Comte, teve uma influência significativa no Brasil, especialmente entre militares e intelectuais que participaram da Proclamação da República em 1889. Seus ideais de ordem, progresso e uma abordagem científica para a política e a sociedade moldaram aspectos do novo regime, incluindo debates sobre educação, laicização do Estado e a questão social.", "previous": null }
+    },
+    {
+      "id": "thm_partidos_politicos_gomes",
+      "name": "Partidos Políticos Operários/Socialistas",
+      "color": "#8E44AD",
+      "description_short": "Formação e atuação de partidos políticos ligados ao movimento operário e socialista.",
+      "article_full": { "current": "A formação de partidos políticos com base operária ou de orientação socialista foi uma característica importante do início do século XX no Brasil. Essas agremiações buscavam representar os interesses dos trabalhadores no sistema político formal, participando de eleições e defendendo pautas como direitos trabalhistas, sufrágio universal e reformas sociais.", "previous": null }
+    }
+  ]
+}
