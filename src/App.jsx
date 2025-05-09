@@ -248,7 +248,7 @@ function App() {
       label: theme.name,
       description: theme.description_short
     }));
-    themeItems.push({ color: '#808080', label: 'Padrão (Tema não definido)' });
+    // themeItems.push({ color: '#808080', label: 'Padrão (Tema não definido)' }); // Removed as per feedback
 
     return [
       {
