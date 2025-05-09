@@ -4,6 +4,7 @@ import TimelineView from './components/TimelineView';
 import UIControls from './components/UIControls';
 import DetailModal from './components/DetailModal';
 import EntityListView from './components/EntityListView';
+import TimelineLegend from './components/TimelineLegend'; // Import TimelineLegend
 import * as DataManager from './dataManager';
 import { MAPBOX_ACCESS_TOKEN } from './config';
 
@@ -334,6 +335,7 @@ function App() {
           sources={allSources}
           onEntityClick={handleOpenModal}
         />
+        <TimelineLegend themes={themes} />
         <button style={{ marginTop: '10px' }} onClick={() => console.log("Filtered Events:", filteredEvents)}>Log Filtered Events</button>
       </div>
 
