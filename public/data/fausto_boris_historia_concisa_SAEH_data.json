@@ -392,8 +392,8 @@
       "id": "evt_formacao_quilombo_palmares_bf_hc",
       "title": "Formação do Quilombo dos Palmares",
       "date_type": "period",
-      "start_date": "1605-01-01", 
-      "end_date": "1694-12-31", 
+      "start_date": "1605-01-01",
+      "end_date": "1694-12-31",
       "characters_ids": ["char_zumbi_palmares_bf_hc", "char_africanos_escravizados_bf_hc"],
       "place_id": "plc_quilombo_palmares_al_br_bf_hc",
       "longitude": -36.022596,
@@ -820,7 +820,7 @@
       "name": "Guiné e Costa da Mina (África Ocidental)",
       "description_short": "Regiões na África Ocidental que forneceram grande número de escravos para o Brasil no século XVI.",
       "article_full": {
-        "current": "No século XVI, a Guiné (Bissau e Cacheu) e a Costa da Mina (quatro portos ao longo do litoral do Daomé) forneceram o maior número de escravos para o Brasil. (FAUSTO, 2001)",
+        "current": "No século XVI, a Guiné (Bissau e Cacheu) e a Costa da Mina (quatro portos ao longo do litoral do Daomé) forneceram o maior número de escravos para o Brasil. (FAUSTO, 2001)\nCoordenadas de Bissau (referência para Guiné): Latitude 11.86357, Longitude -15.59767 (Fonte: Geodatos.net)\nCoordenadas de Ouidah/Ajudá (referência para Costa da Mina): Latitude 6.371647, Longitude 2.076325 (Fonte: Latlong.net)",
         "previous": null
       }
     },
@@ -829,7 +829,7 @@
       "name": "Congo e Angola (África)",
       "description_short": "Regiões mais ao sul da costa africana que se tornaram os centros exportadores de escravos mais importantes a partir do século XVII.",
       "article_full": {
-        "current": "Do século XVII em diante, as regiões mais ao sul da costa africana - Congo e Angola - tornaram-se os centros exportadores mais importantes, a partir dos portos de Luanda, Benguela e Cabinda. Os angolanos foram trazidos em maior número no século XVIII. (FAUSTO, 2001)",
+        "current": "Do século XVII em diante, as regiões mais ao sul da costa africana - Congo e Angola - tornaram-se os centros exportadores mais importantes, a partir dos portos de Luanda, Benguela e Cabinda. Os angolanos foram trazidos em maior número no século XVIII. (FAUSTO, 2001)\nCoordenadas de Luanda: Latitude -8.838333, Longitude 13.234444 (Fonte: Latlong.net)\nCoordenadas de Benguela: Latitude -12.5763, Longitude 13.4055 (Fonte: Latitude.to)\nCoordenadas de Cabinda: Latitude -5.5500, Longitude 12.2000 (Fonte: Latitude.to)",
         "previous": null
       }
     }
@@ -1151,7 +1151,7 @@
       "color": "#CD853F",
       "description_short": "Proveniência dos africanos escravizados de regiões como Guiné, Costa da Mina, Congo e Angola, pertencentes a diversos grupos étnicos como 'sudaneses' (iorubas, jejes, etc.) e 'bantos' (angolas, etc.).",
       "article_full": {
-        "current": "No século XVI, Guiné e Costa da Mina foram os maiores fornecedores de escravos. A partir do século XVII, Congo e Angola tornaram-se mais importantes. Os africanos provinham de muitos grupos étnicos, como 'sudaneses' (iorubas, jejes, tapas, haussás) e 'bantos' (angolas, bengalas, monjolos, moçambiques). (FAUSTO, 2001)",
+        "current": "No século XVI, a Guiné (Bissau e Cacheu) e a Costa da Mina (quatro portos ao longo do litoral do Daomé) forneceram o maior número de escravos para o Brasil. Do século XVII em diante, as regiões mais ao sul da costa africana - Congo e Angola - tornaram-se os centros exportadores mais importantes, a partir dos portos de Luanda, Benguela e Cabinda. Os angolanos foram trazidos em maior número no século XVIII. Os africanos provinham de muitos grupos étnicos, como 'sudaneses' (iorubas, jejes, tapas, haussás) e 'bantos' (angolas, bengalas, monjolos, moçambiques). (FAUSTO, 2001)",
         "previous": null
       }
     }
