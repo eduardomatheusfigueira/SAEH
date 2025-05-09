@@ -27,7 +27,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const timelineViewRef = useRef(null);
   const [isTimelineLockedToCenter, setIsTimelineLockedToCenter] = useState(false);
-  const [isControlsPanelVisible, setIsControlsPanelVisible] = useState(true);
+  const [isControlsPanelVisible, setIsControlsPanelVisible] = useState(false); // Changed default to false
   const [isTimelineExpanded, setIsTimelineExpanded] = useState(false);
 
   const toggleControlsPanel = () => setIsControlsPanelVisible(!isControlsPanelVisible);
