@@ -280,41 +280,13 @@ function App() {
  
   // useEffect to load the first predefined data source on initial mount, if available
   useEffect(() => {
-    const loadInitialDataSource = async () => {
-      if (DATA_SOURCES && DATA_SOURCES.length > 0) {
-        const firstSource = DATA_SOURCES[0];
-        console.log(`App: Attempting to load initial data source: ${firstSource.name} from ${firstSource.path}`);
-        setIsLoading(true);
-        try {
-          const response = await fetch(firstSource.path);
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status} for ${firstSource.path}`);
-          }
-          const jsonData = await response.json();
-          // Use a unique identifier for the source, e.g., its path or a predefined ID
-          if (DataManager.loadSourceDataFromString(JSON.stringify(jsonData), firstSource.id || firstSource.path)) {
-            console.log(`App: Successfully processed initial data source: ${firstSource.name}`);
-            refreshAllDataFromManager(); // This will set all states including allLoadedEvents
-            console.log('App: Events after initial refresh:', DataManager.getAllEvents()); // DIAGNOSTIC LOG
-             // Activate the loaded source
-            setActiveSourceIds(new Set([firstSource.id || firstSource.path]));
-          } else {
-            console.error(`App: Failed to process data from initial source: ${firstSource.name}`);
-          }
-        } catch (error) {
-          console.error(`App: Could not load initial data source ${firstSource.name}:`, error);
-          // Optionally, alert the user or set an error state
-        } finally {
-          setIsLoading(false);
-        }
-      } else {
-        console.log("App: No predefined DATA_SOURCES to load on initial mount.");
-        // Ensure states are initialized for an empty dataset if no initial source
-        refreshAllDataFromManager();
-      }
-    };
-
-    loadInitialDataSource();
+    // No initial data source will be loaded by default.
+    // Initialize states for an empty dataset.
+    console.log("App: Initializing with no data sources loaded by default.");
+    setIsLoading(true); // Briefly set loading true then false to ensure UI updates if needed
+    refreshAllDataFromManager();
+    setActiveSourceIds(new Set()); // Ensure no sources are active
+    setIsLoading(false);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Empty dependency array ensures this runs only once on mount
 
