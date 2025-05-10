@@ -151,10 +151,6 @@ const DataManagementPage = ({
   });
 
   useEffect(() => {
-    console.log("DataManagementPage.jsx - Received currentUiTheme prop:", currentUiTheme);
-  }, [currentUiTheme]);
-
-  useEffect(() => {
     let currentList = [];
     switch (activeTab) {
       case 'sources': currentList = allSources; break;

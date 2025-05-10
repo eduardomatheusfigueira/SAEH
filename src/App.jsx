@@ -261,27 +261,20 @@ function App() {
   }, [currentMapStyleUrl]);
 
   const currentUiTheme = useMemo(() => {
-    console.log("App.jsx useMemo - currentMapStyleUrl:", currentMapStyleUrl);
     const selectedStyleConfig = AVAILABLE_MAP_STYLES.find(s => s.url === currentMapStyleUrl);
-    console.log("App.jsx useMemo - selectedStyleConfig:", selectedStyleConfig);
     
     const themeFromSelection = selectedStyleConfig?.uiTheme;
     if (themeFromSelection) {
-      console.log("App.jsx useMemo - Found theme from selection:", themeFromSelection);
       return themeFromSelection;
     }
     
-    console.log("App.jsx useMemo - Theme not found from selection, trying DEFAULT_MAP_STYLE:", DEFAULT_MAP_STYLE);
     const defaultStyleConfig = AVAILABLE_MAP_STYLES.find(s => s.url === DEFAULT_MAP_STYLE);
-    console.log("App.jsx useMemo - defaultStyleConfig:", defaultStyleConfig);
     const themeFromDefault = defaultStyleConfig?.uiTheme;
 
     if (themeFromDefault) {
-      console.log("App.jsx useMemo - Found theme from DEFAULT_MAP_STYLE:", themeFromDefault);
       return themeFromDefault;
     }
 
-    console.log("App.jsx useMemo - No theme found, returning empty object");
     return {};
   }, [currentMapStyleUrl]);
  
@@ -589,8 +582,6 @@ function App() {
     setIsTimelineLockedToCenter,
     setTimeWindowYears
   };
-
-  console.log("App.jsx - currentUiTheme to be passed to DataManagementPage:", currentUiTheme); // Log currentUiTheme
 
   return (
     <Router>
