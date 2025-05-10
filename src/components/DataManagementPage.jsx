@@ -606,14 +606,10 @@ const DataManagementPage = ({
         <Link
           to="/"
           style={{
-            ...baseButtonStyle,
-            backgroundColor: currentUiTheme['--button-primary-bg'] || 'var(--button-primary-bg, #007bff)',
-            color: currentUiTheme['--button-primary-text'] || 'var(--button-primary-text, #ffffff)',
             textDecoration: 'none',
-            display: 'inline-flex',
-            alignItems: 'center',
-            padding: '10px 15px', // Ensure adequate padding like a button
-            fontSize: '1em' // Match other primary buttons if needed
+            color: currentUiTheme['--link-color'] || 'var(--link-color, #007bff)',
+            fontWeight: 'bold',
+            fontSize: '1.05em'
           }}
         >
           &larr; Voltar à Visualização Principal
