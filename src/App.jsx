@@ -30,16 +30,34 @@ const MainAppView = ({
           Carregando dados...
         </div>
       )}
-      <button
-        onClick={toggleControlsPanel}
-        className="controls-toggle-button"
-        title={isControlsPanelVisible ? "Fechar Painel de Controles" : "Abrir Painel de Controles"}
-      >
-        {isControlsPanelVisible ? '✕' : '☰'}
-      </button>
-
-      <div style={{ position: 'absolute', top: '10px', left: '50px', zIndex: 1000 }}>
-        <Link to="/manage-data" style={{color: 'var(--text-color)', background: 'var(--panel-bg-color)', padding: '5px 10px', borderRadius: '4px', textDecoration: 'none'}}>Gerenciar Dados</Link>
+      {/* New wrapper for top-left controls */}
+      <div style={{ position: 'absolute', top: '10px', left: '10px', zIndex: 1000, display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <button
+          onClick={toggleControlsPanel}
+          className="controls-toggle-button" // This class in App.css already handles some styling (like no bg/border)
+          title={isControlsPanelVisible ? "Fechar Painel de Controles" : "Abrir Painel de Controles"}
+          // style={{ color: 'var(--icon-button-color)', textShadow: 'var(--text-shadow-for-satellite)' }} // Redundant if App.css handles it
+        >
+          {isControlsPanelVisible ? '✕' : '☰'}
+        </button>
+        <Link
+          to="/manage-data"
+          style={{
+            color: 'var(--management-link-color, var(--text-color))',
+            background: 'var(--management-link-bg, var(--panel-bg-color))',
+            padding: '6px 12px',
+            borderRadius: '4px',
+            textDecoration: 'none',
+            fontWeight: '500',
+            fontSize: '0.9em',
+            boxShadow: 'var(--panel-shadow, 0 2px 4px rgba(0,0,0,0.1))',
+            textShadow: 'var(--text-shadow-for-satellite, none)',
+            display: 'inline-flex', // To align with button if needed
+            alignItems: 'center'    // To align with button if needed
+          }}
+        >
+          Gerenciar Dados
+        </Link>
       </div>
 
       <div
@@ -233,7 +251,7 @@ function App() {
     }
   };
  
-  useEffect(() => { 
+  useEffect(() => {
     const selectedStyleConfig = AVAILABLE_MAP_STYLES.find(s => s.url === currentMapStyleUrl);
     if (selectedStyleConfig && selectedStyleConfig.uiTheme) {
       for (const [key, value] of Object.entries(selectedStyleConfig.uiTheme)) {
@@ -241,14 +259,104 @@ function App() {
       }
     }
   }, [currentMapStyleUrl]);
+
+  const currentUiTheme = useMemo(() => {
+    console.log("App.jsx useMemo - currentMapStyleUrl:", currentMapStyleUrl);
+    const selectedStyleConfig = AVAILABLE_MAP_STYLES.find(s => s.url === currentMapStyleUrl);
+    console.log("App.jsx useMemo - selectedStyleConfig:", selectedStyleConfig);
+    
+    const themeFromSelection = selectedStyleConfig?.uiTheme;
+    if (themeFromSelection) {
+      console.log("App.jsx useMemo - Found theme from selection:", themeFromSelection);
+      return themeFromSelection;
+    }
+    
+    console.log("App.jsx useMemo - Theme not found from selection, trying DEFAULT_MAP_STYLE:", DEFAULT_MAP_STYLE);
+    const defaultStyleConfig = AVAILABLE_MAP_STYLES.find(s => s.url === DEFAULT_MAP_STYLE);
+    console.log("App.jsx useMemo - defaultStyleConfig:", defaultStyleConfig);
+    const themeFromDefault = defaultStyleConfig?.uiTheme;
+
+    if (themeFromDefault) {
+      console.log("App.jsx useMemo - Found theme from DEFAULT_MAP_STYLE:", themeFromDefault);
+      return themeFromDefault;
+    }
+
+    console.log("App.jsx useMemo - No theme found, returning empty object");
+    return {};
+  }, [currentMapStyleUrl]);
  
-  // useEffect for loading predefined data sources is removed.
+  // useEffect to load the first predefined data source on initial mount, if available
+  useEffect(() => {
+    const loadInitialDataSource = async () => {
+      if (DATA_SOURCES && DATA_SOURCES.length > 0) {
+        const firstSource = DATA_SOURCES[0];
+        console.log(`App: Attempting to load initial data source: ${firstSource.name} from ${firstSource.path}`);
+        setIsLoading(true);
+        try {
+          const response = await fetch(firstSource.path);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status} for ${firstSource.path}`);
+          }
+          const jsonData = await response.json();
+          // Use a unique identifier for the source, e.g., its path or a predefined ID
+          if (DataManager.loadSourceDataFromString(JSON.stringify(jsonData), firstSource.id || firstSource.path)) {
+            console.log(`App: Successfully processed initial data source: ${firstSource.name}`);
+            refreshAllDataFromManager(); // This will set all states including allLoadedEvents
+            console.log('App: Events after initial refresh:', DataManager.getAllEvents()); // DIAGNOSTIC LOG
+             // Activate the loaded source
+            setActiveSourceIds(new Set([firstSource.id || firstSource.path]));
+          } else {
+            console.error(`App: Failed to process data from initial source: ${firstSource.name}`);
+          }
+        } catch (error) {
+          console.error(`App: Could not load initial data source ${firstSource.name}:`, error);
+          // Optionally, alert the user or set an error state
+        } finally {
+          setIsLoading(false);
+        }
+      } else {
+        console.log("App: No predefined DATA_SOURCES to load on initial mount.");
+        // Ensure states are initialized for an empty dataset if no initial source
+        refreshAllDataFromManager();
+      }
+    };
+
+    loadInitialDataSource();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   const handleSourceFilterChange = (sourceId, isActive) => {
     setActiveSourceIds(prev => {
       const newActive = new Set(prev);
       if (isActive) newActive.add(sourceId); else newActive.delete(sourceId);
       return newActive;
+    });
+  };
+
+  const refreshAllDataFromManager = () => {
+    console.log("App: Refreshing all data from DataManager");
+    const sources = DataManager.getSourcesInfo();
+    const events = DataManager.getAllEvents();
+    setAllLoadedEvents(events);
+    setThemes(DataManager.getAllThemes());
+    setAllSources(sources);
+    setAllCharacters(DataManager.getAllCharacters());
+    setAllPlaces(DataManager.getAllPlaces());
+    // Recalculate year range based on potentially new events
+    const { min, max } = calculateYearRange(events);
+    setMinEventYear(min);
+    setMaxEventYear(max);
+    // Optionally, re-apply activeSourceIds if sources might have changed
+    // For now, keep existing activeSourceIds unless a source was removed that was active
+    setActiveSourceIds(prevActiveIds => {
+        const currentSourceIds = new Set(sources.map(s => s.id));
+        const newActiveIds = new Set();
+        prevActiveIds.forEach(id => {
+            if (currentSourceIds.has(id)) {
+                newActiveIds.add(id);
+            }
+        });
+        return newActiveIds.size > 0 ? newActiveIds : new Set(sources.map(s => s.id)); // Fallback to all if no active ones remain
     });
   };
 
@@ -264,16 +372,7 @@ function App() {
         alert(`Erro: Não foi possível ler o arquivo ${file.name}. \nDetalhes: ${error.message}`);
       }
     }
-    const sources = DataManager.getSourcesInfo();
-    setAllLoadedEvents(DataManager.getAllEvents());
-    setThemes(DataManager.getAllThemes());
-    setAllSources(sources);
-    setAllCharacters(DataManager.getAllCharacters());
-    setAllPlaces(DataManager.getAllPlaces());
-    setActiveSourceIds(new Set(sources.map(s => s.id)));
-    const { min, max } = calculateYearRange(DataManager.getAllEvents());
-    setMinEventYear(min);
-    setMaxEventYear(max);
+    refreshAllDataFromManager(); // Refresh data after loading files
     setIsLoading(false);
   };
   
@@ -306,18 +405,9 @@ function App() {
       const jsonString = await profileFile.text();
       const profileData = JSON.parse(jsonString);
       const processedProfile = await DataManager.loadDataFromProfile(profileData); 
-      const sources = DataManager.getSourcesInfo();
-      const events = DataManager.getAllEvents();
-      setAllLoadedEvents(events);
-      setThemes(DataManager.getAllThemes()); 
-      setAllSources(sources);
-      setAllCharacters(DataManager.getAllCharacters());
-      setAllPlaces(DataManager.getAllPlaces());
-      if (processedProfile?.ui_settings?.activeSourceIds && Array.isArray(processedProfile.ui_settings.activeSourceIds)) {
-        setActiveSourceIds(new Set(processedProfile.ui_settings.activeSourceIds));
-      } else {
-        setActiveSourceIds(new Set(sources.map(s => s.id))); 
-      }
+      
+      refreshAllDataFromManager(); // Refresh all data from DataManager after profile load
+
       if (processedProfile?.ui_settings) {
         const { 
           referenceDate: refDate, 
@@ -325,27 +415,39 @@ function App() {
           minEventYear: profMin,
           maxEventYear: profMax,
           isTimelineLocked: profLocked,
-          currentMapStyleUrl: loadedMapStyle 
+          currentMapStyleUrl: loadedMapStyle,
+          activeSourceIds: profActiveSourceIds
         } = processedProfile.ui_settings;
         if (refDate) setReferenceDate(refDate);
         if (twYears !== undefined) setTimeWindowYears(twYears);
         if (profLocked !== undefined) setIsTimelineLockedToCenter(profLocked);
         if (loadedMapStyle) setCurrentMapStyleUrl(loadedMapStyle); else setCurrentMapStyleUrl(DEFAULT_MAP_STYLE);
+        
+        // Use year range from profile if available, otherwise calculate
+        const eventsForYearRange = DataManager.getAllEvents(); // Use freshly loaded events
         if (profMin !== undefined && profMax !== undefined) {
           setMinEventYear(profMin);
           setMaxEventYear(profMax);
         } else {
-          const { min, max } = calculateYearRange(events);
+          const { min, max } = calculateYearRange(eventsForYearRange);
           setMinEventYear(min);
           setMaxEventYear(max);
         }
+        if (profActiveSourceIds && Array.isArray(profActiveSourceIds)) {
+            setActiveSourceIds(new Set(profActiveSourceIds));
+        } else {
+            // Fallback if not in profile, set all currently loaded sources as active
+            setActiveSourceIds(new Set(DataManager.getSourcesInfo().map(s => s.id)));
+        }
+
       } else { 
         setCurrentMapStyleUrl(DEFAULT_MAP_STYLE);
-        const { min, max } = calculateYearRange(events); 
+        const { min, max } = calculateYearRange(DataManager.getAllEvents()); 
         setMinEventYear(min);
         setMaxEventYear(max);
+        setActiveSourceIds(new Set(DataManager.getSourcesInfo().map(s => s.id)));
       }
-      alert(`Perfil "${processedProfile.profile_name || profileData.profile_name}" carregado com dados embutidos.`);
+      alert(`Perfil "${processedProfile.profile_name || profileData.profile_name}" carregado.`);
     } catch (error) {
       console.error("Error loading or parsing profile file:", error);
       alert(`Falha ao carregar ou analisar o arquivo de perfil. \nDetalhes: ${error.message}`);
@@ -488,6 +590,8 @@ function App() {
     setTimeWindowYears
   };
 
+  console.log("App.jsx - currentUiTheme to be passed to DataManagementPage:", currentUiTheme); // Log currentUiTheme
+
   return (
     <Router>
       <Routes>
@@ -496,12 +600,15 @@ function App() {
           <DataManagementPage 
             handleSaveProfile={handleSaveProfile}
             handleLoadProfileFile={handleLoadProfileFile} 
+            onDataChange={refreshAllDataFromManager} // Pass the refresh handler
             allSources={allSources}
-            allLoadedEvents={allLoadedEvents} 
+            allEvents={allLoadedEvents} // Corrected prop name
             allCharacters={allCharacters}
             allPlaces={allPlaces}
             allThemes={themes}
-          />} 
+            currentUiTheme={currentUiTheme}
+            currentMapStyleUrl={currentMapStyleUrl}
+          />}
         />
       </Routes>
     </Router>

@@ -40,18 +40,19 @@ html, body, #root, #app-container {
 }
 
 .controls-toggle-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 110;
-  background-color: transparent; /* Removed background circle */
-  border: none; /* Removed border */
-  color: var(--text-color); /* Icon color remains fully opaque */
-  /* border-radius: 50%; /* No longer needed */
-  /* width: 36px; /* No longer needed or adjust with padding */
-  /* height: 36px; /* No longer needed or adjust with padding */
-  padding: 8px; /* Add some padding for clickability if width/height are removed */
-  font-size: 24px; /* Increased icon size for better visibility without background */
+  /* position: absolute; Removed */
+  /* top: 10px; Removed */
+  /* left: 10px; Removed */
+  z-index: 110; /* Kept for now, might be inherited or set on parent */
+  background-color: transparent;
+  border: none;
+  color: var(--icon-button-color, var(--text-color)); /* Use new variable */
+  text-shadow: var(--text-shadow-for-satellite, none); /* Apply text shadow for outline */
+  /* border-radius: 50%; */
+  /* width: 36px; */
+  /* height: 36px; */
+  padding: 8px;
+  font-size: 24px;
   cursor: pointer;
   display: flex;
   align-items: center;
