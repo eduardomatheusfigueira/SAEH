@@ -1,19 +1,188 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import MapView from './components/MapView';
 import TimelineView from './components/TimelineView';
 import UIControls from './components/UIControls';
 import DetailModal from './components/DetailModal';
 import EntityListView from './components/EntityListView';
-// import TimelineLegend from './components/TimelineLegend'; // To be replaced
-import LegendPanel from './components/LegendPanel'; // Import new component
+import LegendPanel from './components/LegendPanel';
 import DateControls from './components/DateControls';
+import DataManagementPage from './components/DataManagementPage';
 import * as DataManager from './dataManager';
-import { MAPBOX_ACCESS_TOKEN, DEFAULT_MAP_STYLE, AVAILABLE_MAP_STYLES, DATA_SOURCES } from './config'; // Added DATA_SOURCES
+import { MAPBOX_ACCESS_TOKEN, DEFAULT_MAP_STYLE, AVAILABLE_MAP_STYLES, DATA_SOURCES } from './config';
+
+const MainAppView = ({
+  currentMapStyleUrl, minEventYear, maxEventYear, allLoadedEvents, themes, allSources,
+  allCharacters, allPlaces, activeSourceIds, referenceDate, timeWindowYears,
+  isModalOpen, selectedEntityData, selectedEntityType, isLoading, timelineViewRef,
+  isTimelineLockedToCenter, isControlsPanelVisible, isTimelineExpanded,
+  toggleControlsPanel, toggleTimelineExpanded, handleSourceFilterChange,
+  handleLoadSourceDataFiles, handleSaveProfile, handleLoadProfileFile,
+  handleMinEventYearChange, handleMaxEventYearChange, handleReferenceDateChangeAndUpdateTimeline,
+  handleOpenModal, handleCloseModal, handleJumpToYear, handleSetTimelineZoomLevel,
+  eventsInCurrentSourceFilters, charactersForList, placesForList, legendConfiguration,
+  setCurrentMapStyleUrl, setIsTimelineLockedToCenter, setTimeWindowYears
+}) => {
+  return (
+    <div id="app-container">
+      {isLoading && (
+        <div className="loading-indicator">
+          Carregando dados...
+        </div>
+      )}
+      <button
+        onClick={toggleControlsPanel}
+        className="controls-toggle-button"
+        title={isControlsPanelVisible ? "Fechar Painel de Controles" : "Abrir Painel de Controles"}
+      >
+        {isControlsPanelVisible ? '✕' : '☰'}
+      </button>
+
+      <div style={{ position: 'absolute', top: '10px', left: '50px', zIndex: 1000 }}>
+        <Link to="/manage-data" style={{color: 'var(--text-color)', background: 'var(--panel-bg-color)', padding: '5px 10px', borderRadius: '4px', textDecoration: 'none'}}>Gerenciar Dados</Link>
+      </div>
+
+      <div
+        id="top-right-container"
+        style={{
+          position: 'absolute',
+          top: '10px',
+          right: '10px',
+          zIndex: 105,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '0px',
+          maxWidth: '320px',
+        }}
+      >
+        <DateControls
+          referenceDate={referenceDate}
+          onReferenceDateChange={handleReferenceDateChangeAndUpdateTimeline}
+          timeWindowYears={timeWindowYears}
+          onTimeWindowYearsChange={setTimeWindowYears}
+          minEventYear={minEventYear}
+          maxEventYear={maxEventYear}
+          onMinEventYearChange={handleMinEventYearChange}
+          onMaxEventYearChange={handleMaxEventYearChange}
+        />
+        <div
+          id="right-side-lists-container"
+          style={{
+            width: '100%',
+            maxHeight: 'calc(100vh - 150px - 200px - 30px)',
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0px'
+          }}
+        >
+          <EntityListView
+            characters={charactersForList}
+            places={placesForList}
+            themes={themes}
+            sources={allSources}
+            onEntityClick={handleOpenModal}
+          />
+          <LegendPanel legendSections={legendConfiguration} />
+        </div>
+      </div>
+
+      {isControlsPanelVisible && (
+        <div
+          id="controls-overlay-panel"
+          style={{
+            position: 'absolute', top: '55px', left: '10px',
+            width: '320px', maxHeight: 'calc(100vh - 70px - 200px - 20px)',
+            overflowY: 'auto',
+            padding: '15px', borderRadius: '8px',
+            zIndex: 100, boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+          }}>
+          <UIControls
+            sources={allSources}
+            activeSourceIds={activeSourceIds}
+            onSourceFilterChange={handleSourceFilterChange}
+            onLoadSourceDataFiles={handleLoadSourceDataFiles}
+            onSaveProfile={handleSaveProfile}
+            onLoadProfileFile={handleLoadProfileFile}
+            isTimelineLocked={isTimelineLockedToCenter}
+            onTimelineLockToggle={() => setIsTimelineLockedToCenter(!isTimelineLockedToCenter)}
+            isTimelineExpanded={isTimelineExpanded}
+            onToggleTimelineExpanded={toggleTimelineExpanded}
+            onJumpToYear={handleJumpToYear}
+            onSetTimelineZoomLevel={handleSetTimelineZoomLevel}
+            availableMapStyles={AVAILABLE_MAP_STYLES}
+            currentMapStyleUrl={currentMapStyleUrl}
+            onMapStyleChange={setCurrentMapStyleUrl}
+            // DATA_SOURCES related props removed
+          />
+          <button
+            className="log-button-custom"
+            onClick={() => console.log("Events in current source filters:", eventsInCurrentSourceFilters)}
+          >
+            Log Eventos (Filtro Fonte)
+          </button>
+        </div>
+      )}
+
+      <div id="map-container" style={{ height: isTimelineExpanded ? '30vh' : 'calc(100vh - 200px)' }}>
+        <MapView
+          events={eventsInCurrentSourceFilters}
+          themes={themes}
+          referenceDate={referenceDate}
+          timeWindowYears={timeWindowYears}
+          onEventClick={(eventId) => handleOpenModal('event', eventId)}
+          mapStyleUrl={currentMapStyleUrl}
+        />
+      </div>
+
+      <div
+        id="timeline-overlay-container"
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: isTimelineExpanded ? '70vh' : '200px',
+          zIndex: 5 ,
+          transition: 'height 0.3s ease-in-out'
+        }}
+      >
+        <TimelineView
+          ref={timelineViewRef}
+          events={eventsInCurrentSourceFilters}
+          themes={themes}
+          referenceDate={referenceDate}
+          onEventClick={(eventId) => handleOpenModal('event', eventId)}
+          isTimelineLocked={isTimelineLockedToCenter}
+          isTimelineExpanded={isTimelineExpanded}
+        />
+      </div>
+
+      <div
+        id="modal-overlay-container"
+        style={{
+          display: isModalOpen ? 'flex' : 'none',
+          position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
+          background: 'rgba(0,0,0,0.6)', zIndex: 150,
+          alignItems: 'center', justifyContent: 'center',
+        }}
+      >
+        {isModalOpen && (
+          <DetailModal
+            entityData={selectedEntityData}
+            entityType={selectedEntityType}
+            onClose={handleCloseModal}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
 
 function App() {
-  const [currentMapStyleUrl, setCurrentMapStyleUrl] = useState(DEFAULT_MAP_STYLE); // New state
-  const [minEventYear, setMinEventYear] = useState(2020); // Default min year
-  const [maxEventYear, setMaxEventYear] = useState(2025); // Default max year
+  const [currentMapStyleUrl, setCurrentMapStyleUrl] = useState(DEFAULT_MAP_STYLE);
+  const [minEventYear, setMinEventYear] = useState(2020);
+  const [maxEventYear, setMaxEventYear] = useState(2025);
   const [allLoadedEvents, setAllLoadedEvents] = useState([]);
   const [themes, setThemes] = useState([]);
   const [allSources, setAllSources] = useState([]);
@@ -28,9 +197,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const timelineViewRef = useRef(null);
   const [isTimelineLockedToCenter, setIsTimelineLockedToCenter] = useState(false);
-  const [isControlsPanelVisible, setIsControlsPanelVisible] = useState(false); // Changed default to false
+  const [isControlsPanelVisible, setIsControlsPanelVisible] = useState(false);
   const [isTimelineExpanded, setIsTimelineExpanded] = useState(false);
-  const [currentDataSourceId, setCurrentDataSourceId] = useState(null);
+  // currentDataSourceId and setCurrentDataSourceId are removed
 
   const toggleControlsPanel = () => setIsControlsPanelVisible(!isControlsPanelVisible);
 
@@ -38,7 +207,7 @@ function App() {
     setIsTimelineExpanded(prev => {
       const newExpandedState = !prev;
       if (newExpandedState) {
-        setIsTimelineLockedToCenter(false); // Unlock timeline when expanding
+        setIsTimelineLockedToCenter(false); 
       }
       return newExpandedState;
     });
@@ -46,21 +215,17 @@ function App() {
 
   const calculateYearRange = (events) => {
     if (!events || events.length === 0) {
-      return { min: 2020, max: 2025 }; // Default if no events
+      return { min: 2020, max: 2025 }; 
     }
-
     const years = events.map(e => {
         const date = new Date(e.start_date);
         return isNaN(date.getFullYear()) ? null : date.getFullYear();
     }).filter(year => year !== null);
-
     if (years.length === 0) {
-        return { min: 2020, max: 2025 }; // Default if no valid years found
+        return { min: 2020, max: 2025 };
     }
-
     const minYearFromEvents = Math.min(...years);
     const maxYearFromEvents = Math.max(...years);
-
     if (minYearFromEvents === maxYearFromEvents) {
       return { min: minYearFromEvents - 10, max: maxYearFromEvents + 10 };
     } else {
@@ -68,7 +233,7 @@ function App() {
     }
   };
  
-  useEffect(() => { // Effect to apply UI theme
+  useEffect(() => { 
     const selectedStyleConfig = AVAILABLE_MAP_STYLES.find(s => s.url === currentMapStyleUrl);
     if (selectedStyleConfig && selectedStyleConfig.uiTheme) {
       for (const [key, value] of Object.entries(selectedStyleConfig.uiTheme)) {
@@ -77,59 +242,7 @@ function App() {
     }
   }, [currentMapStyleUrl]);
  
-  // Effect to load data when currentDataSourceId changes
-  useEffect(() => {
-    async function loadPredefinedSource() {
-      if (!currentDataSourceId) return;
-
-      const sourceToLoad = DATA_SOURCES.find(ds => ds.id === currentDataSourceId);
-      if (!sourceToLoad) {
-        console.error(`Data source with ID ${currentDataSourceId} not found in DATA_SOURCES.`);
-        return;
-      }
-
-      setIsLoading(true);
-      try {
-        console.log(`Fetching data for: ${sourceToLoad.name} from ${sourceToLoad.path}`);
-        const response = await fetch(sourceToLoad.path);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status} for ${sourceToLoad.path}`);
-        const jsonData = await response.json();
-        
-        // Using sourceToLoad.id as the unique identifier for DataManager
-        if (DataManager.loadSourceDataFromString(JSON.stringify(jsonData), sourceToLoad.id)) {
-          const sources = DataManager.getSourcesInfo();
-          const events = DataManager.getAllEvents();
-          setAllLoadedEvents(events);
-          setThemes(DataManager.getAllThemes());
-          setAllSources(sources);
-          setAllCharacters(DataManager.getAllCharacters());
-          setAllPlaces(DataManager.getAllPlaces());
-          setActiveSourceIds(prev => new Set(prev).add(sourceToLoad.id));
-          
-          const { min, max } = calculateYearRange(events);
-          setMinEventYear(min);
-          setMaxEventYear(max);
-        } else {
-          console.error(`Failed to process data from predefined source: ${sourceToLoad.name}`);
-          // If source loading fails, reset to default year range if no other events are loaded
-          if (DataManager.getAllEvents().length === 0) {
-            const { min, max } = calculateYearRange([]);
-            setMinEventYear(min);
-            setMaxEventYear(max);
-          }
-        }
-      } catch (error) {
-        console.error(`Could not load predefined data source ${sourceToLoad.name}:`, error);
-        alert(`Erro ao carregar a fonte de dados: ${sourceToLoad.name}. Detalhes: ${error.message}`);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-
-    if (currentDataSourceId) {
-      loadPredefinedSource();
-    }
-  }, [currentDataSourceId]); // Re-run when currentDataSourceId changes
+  // useEffect for loading predefined data sources is removed.
 
   const handleSourceFilterChange = (sourceId, isActive) => {
     setActiveSourceIds(prev => {
@@ -158,21 +271,19 @@ function App() {
     setAllCharacters(DataManager.getAllCharacters());
     setAllPlaces(DataManager.getAllPlaces());
     setActiveSourceIds(new Set(sources.map(s => s.id)));
-    
     const { min, max } = calculateYearRange(DataManager.getAllEvents());
     setMinEventYear(min);
     setMaxEventYear(max);
-
     setIsLoading(false);
   };
- 
+  
   const handleSaveProfile = () => {
     const profileName = prompt("Digite um nome para este perfil:", "SAEH_Perfil_Completo");
     if (!profileName) return;
     const uiSettings = {
       referenceDate, timeWindowYears, activeSourceIds: Array.from(activeSourceIds),
       minEventYear, maxEventYear, isTimelineLockedToCenter,
-      currentMapStyleUrl // Added to profile
+      currentMapStyleUrl 
     };
     const profileData = DataManager.constructProfileData(profileName, uiSettings);
     const jsonString = JSON.stringify(profileData, null, 2);
@@ -202,13 +313,11 @@ function App() {
       setAllSources(sources);
       setAllCharacters(DataManager.getAllCharacters());
       setAllPlaces(DataManager.getAllPlaces());
-      
       if (processedProfile?.ui_settings?.activeSourceIds && Array.isArray(processedProfile.ui_settings.activeSourceIds)) {
         setActiveSourceIds(new Set(processedProfile.ui_settings.activeSourceIds));
       } else {
         setActiveSourceIds(new Set(sources.map(s => s.id))); 
       }
-      
       if (processedProfile?.ui_settings) {
         const { 
           referenceDate: refDate, 
@@ -216,14 +325,12 @@ function App() {
           minEventYear: profMin,
           maxEventYear: profMax,
           isTimelineLocked: profLocked,
-          currentMapStyleUrl: loadedMapStyle // Added to destructuring
+          currentMapStyleUrl: loadedMapStyle 
         } = processedProfile.ui_settings;
         if (refDate) setReferenceDate(refDate);
         if (twYears !== undefined) setTimeWindowYears(twYears);
         if (profLocked !== undefined) setIsTimelineLockedToCenter(profLocked);
         if (loadedMapStyle) setCurrentMapStyleUrl(loadedMapStyle); else setCurrentMapStyleUrl(DEFAULT_MAP_STYLE);
-
-        // Set min/max year from profile if available, otherwise calculate from loaded events
         if (profMin !== undefined && profMax !== undefined) {
           setMinEventYear(profMin);
           setMaxEventYear(profMax);
@@ -232,9 +339,9 @@ function App() {
           setMinEventYear(min);
           setMaxEventYear(max);
         }
-      } else { // No UI settings in profile, or profile itself is minimal
+      } else { 
         setCurrentMapStyleUrl(DEFAULT_MAP_STYLE);
-        const { min, max } = calculateYearRange(events); // Calculate based on events from profile data
+        const { min, max } = calculateYearRange(events); 
         setMinEventYear(min);
         setMaxEventYear(max);
       }
@@ -326,8 +433,6 @@ function App() {
       label: theme.name,
       description: theme.description_short
     }));
-    // themeItems.push({ color: '#808080', label: 'Padrão (Tema não definido)' }); // Removed as per feedback
-
     return [
       {
         id: 'mapFill',
@@ -348,7 +453,7 @@ function App() {
       {
         id: 'timelinePointBorder',
         title: 'Linha do Tempo: Cor da Borda do Ponto (Evento Único)',
-        items: themeItems, // Uses the same theme logic
+        items: themeItems, 
         initiallyOpen: false
       },
       {
@@ -362,167 +467,44 @@ function App() {
       {
         id: 'timelineBarFill',
         title: 'Linha do Tempo: Cor da Barra (Período)',
-        items: themeItems, // Uses the same theme logic
+        items: themeItems, 
         initiallyOpen: false
       }
     ];
   }, [themes]);
 
+  const mainAppViewProps = {
+    currentMapStyleUrl, minEventYear, maxEventYear, allLoadedEvents, themes, allSources,
+    allCharacters, allPlaces, activeSourceIds, referenceDate, timeWindowYears,
+    isModalOpen, selectedEntityData, selectedEntityType, isLoading, timelineViewRef,
+    isTimelineLockedToCenter, isControlsPanelVisible, isTimelineExpanded,
+    toggleControlsPanel, toggleTimelineExpanded, handleSourceFilterChange,
+    handleLoadSourceDataFiles, handleSaveProfile, handleLoadProfileFile,
+    handleMinEventYearChange, handleMaxEventYearChange, handleReferenceDateChangeAndUpdateTimeline,
+    handleOpenModal, handleCloseModal, handleJumpToYear, handleSetTimelineZoomLevel,
+    eventsInCurrentSourceFilters, charactersForList, placesForList, legendConfiguration,
+    setCurrentMapStyleUrl,
+    setIsTimelineLockedToCenter,
+    setTimeWindowYears
+  };
+
   return (
-    <div id="app-container">
-      {isLoading && (
-        <div className="loading-indicator"> {/* Changed to class */}
-          Carregando dados...
-        </div>
-      )}
-      <button
-        onClick={toggleControlsPanel}
-        className="controls-toggle-button" // Changed to class
-        title={isControlsPanelVisible ? "Fechar Painel de Controles" : "Abrir Painel de Controles"}
-      >
-        {isControlsPanelVisible ? '✕' : '☰'}
-      </button>
-
-      <div
-        id="top-right-container" // Inline styles remain for positioning, gap already adjusted
-        style={{
-          position: 'absolute',
-          top: '10px',
-          right: '10px',
-          zIndex: 105,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0px',
-          maxWidth: '320px',
-        }}
-      >
-        <DateControls
-          referenceDate={referenceDate}
-          onReferenceDateChange={handleReferenceDateChangeAndUpdateTimeline}
-          timeWindowYears={timeWindowYears}
-          onTimeWindowYearsChange={setTimeWindowYears}
-          minEventYear={minEventYear}
-          maxEventYear={maxEventYear}
-          onMinEventYearChange={handleMinEventYearChange}
-          onMaxEventYearChange={handleMaxEventYearChange}
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainAppView {...mainAppViewProps} />} />
+        <Route path="/manage-data" element={
+          <DataManagementPage 
+            handleSaveProfile={handleSaveProfile}
+            handleLoadProfileFile={handleLoadProfileFile} 
+            allSources={allSources}
+            allLoadedEvents={allLoadedEvents} 
+            allCharacters={allCharacters}
+            allPlaces={allPlaces}
+            allThemes={themes}
+          />} 
         />
-        <div
-          id="right-side-lists-container" // Inline styles remain for positioning, gap already adjusted
-          style={{
-            width: '100%',
-            maxHeight: 'calc(100vh - 150px - 200px - 30px)',
-            overflowY: 'auto',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '0px'
-          }}
-        >
-          <EntityListView
-            characters={charactersForList}
-            places={placesForList}
-            themes={themes}
-            sources={allSources}
-            onEntityClick={handleOpenModal}
-          />
-          <LegendPanel legendSections={legendConfiguration} />
-        </div>
-      </div>
-
-      {isControlsPanelVisible && (
-        <div
-          id="controls-overlay-panel" // Will be styled by App.css using variables
-          // Removed inline styles for background, padding, borderRadius, zIndex, boxShadow
-          // Kept positioning and sizing inline styles as they are layout specific
-          style={{
-            position: 'absolute', top: '55px', left: '10px',
-            width: '320px', maxHeight: 'calc(100vh - 70px - 200px - 20px)',
-            overflowY: 'auto',
-            padding: '15px', borderRadius: '8px', // Kept these as they are specific to this panel
-            zIndex: 100, boxShadow: '0 4px 12px rgba(0,0,0,0.2)' // Kept these
-          }}>
-          <UIControls
-            sources={allSources}
-            activeSourceIds={activeSourceIds}
-            onSourceFilterChange={handleSourceFilterChange}
-            onLoadSourceDataFiles={handleLoadSourceDataFiles}
-            onSaveProfile={handleSaveProfile}
-            onLoadProfileFile={handleLoadProfileFile}
-            isTimelineLocked={isTimelineLockedToCenter}
-            onTimelineLockToggle={() => setIsTimelineLockedToCenter(!isTimelineLockedToCenter)}
-            isTimelineExpanded={isTimelineExpanded}
-            onToggleTimelineExpanded={toggleTimelineExpanded}
-            onJumpToYear={handleJumpToYear}
-            onSetTimelineZoomLevel={handleSetTimelineZoomLevel}
-            availableMapStyles={AVAILABLE_MAP_STYLES} // Pass new prop
-            currentMapStyleUrl={currentMapStyleUrl} // Pass new prop
-            onMapStyleChange={setCurrentMapStyleUrl} // Pass new prop
-            dataSources={DATA_SOURCES} // Pass DATA_SOURCES
-            selectedDataSourceId={currentDataSourceId} // Pass current selection
-            onDataSourceChange={setCurrentDataSourceId} // Handler to change data source
-          />
-          <button
-            className="log-button-custom" // Changed to class
-            onClick={() => console.log("Events in current source filters:", eventsInCurrentSourceFilters)}
-          >
-            Log Eventos (Filtro Fonte)
-          </button>
-        </div>
-      )}
-
-      <div id="map-container" style={{ height: isTimelineExpanded ? '30vh' : 'calc(100vh - 200px)' }}>
-        <MapView
-          events={eventsInCurrentSourceFilters}
-          themes={themes}
-          referenceDate={referenceDate}
-          timeWindowYears={timeWindowYears}
-          onEventClick={(eventId) => handleOpenModal('event', eventId)}
-          mapStyleUrl={currentMapStyleUrl} // Pass new prop
-        />
-      </div>
-
-      <div
-        id="timeline-overlay-container" // Will be styled by App.css using variables
-        // Removed inline styles for background, borderTop
-        // Kept positioning and sizing inline styles
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: '100%',
-          height: isTimelineExpanded ? '70vh' : '200px',
-          zIndex: 5 ,
-          transition: 'height 0.3s ease-in-out'
-        }}
-      >
-        <TimelineView
-          ref={timelineViewRef}
-          events={eventsInCurrentSourceFilters}
-          themes={themes}
-          referenceDate={referenceDate}
-          onEventClick={(eventId) => handleOpenModal('event', eventId)}
-          isTimelineLocked={isTimelineLockedToCenter}
-          isTimelineExpanded={isTimelineExpanded}
-        />
-      </div>
-
-      <div // This is the modal backdrop, not the content panel itself
-        id="modal-overlay-container"
-        style={{
-          display: isModalOpen ? 'flex' : 'none',
-          position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
-          background: 'rgba(0,0,0,0.6)', zIndex: 150,
-          alignItems: 'center', justifyContent: 'center',
-        }}
-      >
-        {isModalOpen && (
-          <DetailModal // DetailModal itself will get a class for theming its content box
-            entityData={selectedEntityData}
-            entityType={selectedEntityType}
-            onClose={handleCloseModal}
-          />
-        )}
-      </div>
-    </div>
+      </Routes>
+    </Router>
   );
 }
 
