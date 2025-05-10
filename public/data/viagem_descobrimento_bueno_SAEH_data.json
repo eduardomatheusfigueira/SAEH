@@ -280,6 +280,43 @@
         "current": "Após o massacre na feitoria portuguesa em 16 de dezembro de 1500, Pedro Álvares Cabral ordenou uma violenta retaliação. No dia seguinte, 17 de dezembro, e continuando no dia 18, as naus portuguesas bombardearam a cidade de Calicute por um dia inteiro, causando grande destruição e matando, segundo relatos, cerca de 600 pessoas. Além do bombardeio, Cabral ordenou a captura e o saque de navios árabes que estavam no porto, confiscando suas mercadorias, principalmente especiarias, e aprisionando suas tripulações. Este ato de guerra marcou uma escalada no conflito entre portugueses e os poderes locais e mercadores muçulmanos na Índia. (BUENO, 2016)",
         "previous": null
       }
+    },
+    {
+      "id": "evt_bueno_16",
+      "title": "Partida de Calicute e Aliança com Cochim",
+      "date_type": "period",
+      "start_date": "1500-12-24",
+      "end_date": "1501-01-09",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_rei_cochim"],
+      "place_id": "plc_bueno_cochim_india",
+      "longitude": 76.2673,
+      "latitude": 9.9312,
+      "main_theme_id": "thm_aliancas_estrategicas_bueno",
+      "secondary_tags_ids": ["thm_comercio_especiarias_bueno", "thm_rota_india_bueno", "thm_diplomacia_conflito_bueno"],
+      "description_short": "Após o conflito em Calicute, Cabral navega para Cochim, onde estabelece uma aliança com o rei local, rival do Samorim, e consegue carregar especiarias.",
+      "article_full": {
+        "current": "Após o bombardeio de Calicute, Pedro Álvares Cabral decidiu abandonar a hostil cidade e procurar um porto mais amigável para carregar as naus com especiarias. Em 24 de dezembro de 1500, a frota partiu para o sul, chegando a Cochim (atual Kochi) alguns dias depois. O rei de Cochim, inimigo do Samorim de Calicute, recebeu os portugueses de forma amistosa, vendo neles potenciais aliados. Cabral conseguiu negociar um acordo comercial vantajoso, estabelecendo uma feitoria e carregando suas naus com pimenta e outras especiarias. A estadia em Cochim durou até aproximadamente 9 de janeiro de 1501, quando a frota, agora com uma carga valiosa, preparou-se para iniciar a viagem de retorno a Portugal. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+  },
+    {
+      "id": "evt_bueno_17",
+      "title": "Naufrágio da Nau de Sancho de Tovar e Início da Viagem de Retorno",
+      "date_type": "period",
+      "start_date": "1501-01-16",
+      "end_date": "1501-02-12",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_sancho_de_tovar"],
+      "place_id": "plc_bueno_melinde_quenia",
+      "longitude": 40.1167,
+      "latitude": -3.2167,
+      "main_theme_id": "thm_incidentes_viagem_bueno",
+      "secondary_tags_ids": ["thm_rota_india_bueno", "thm_expedicoes_maritimas_bueno"],
+      "description_short": "A nau El-Rei, comandada por Sancho de Tovar, encalha e é incendiada perto de Melinde. A frota, agora reduzida, inicia a longa viagem de volta a Portugal.",
+      "article_full": {
+        "current": "Após deixar Cochim em 16 de janeiro de 1501, a frota de Cabral iniciou sua viagem de retorno a Portugal. No entanto, mais um revés aguardava a expedição. A nau El-Rei, uma das maiores da frota, comandada pelo vice-comandante Sancho de Tovar, encalhou violentamente nos baixios próximos a Melinde, na costa africana, em 12 de fevereiro de 1501. Apesar dos esforços, a nau não pôde ser salva e, para evitar que sua valiosa carga de especiarias e armamentos caísse em mãos inimigas, Cabral ordenou que fosse incendiada. A tripulação e parte da carga foram resgatadas e redistribuídas entre as naus restantes. Com mais esta perda, a frota, agora significativamente reduzida em relação ao seu tamanho original, prosseguiu a árdua jornada de volta para casa. (BUENO, 2016)",
+        "previous": null
+      }
     }
   ],
   "characters": [
@@ -471,6 +508,15 @@
         "current": "Aires Correia era o feitor-mor da armada de Pedro Álvares Cabral, encarregado dos aspectos comerciais da expedição e da futura feitoria a ser estabelecida na Índia. Desempenhou um papel central nas negociações com o Samorim de Calicute para a instalação do posto comercial português. Após a concessão da permissão, Aires Correia ficou como o principal responsável pela feitoria em Calicute. Foi morto em 16 de dezembro de 1500, durante o ataque de mercadores árabes e hindus à feitoria. (BUENO, 2016)",
         "previous": null
       }
+    },
+    {
+      "id": "char_bueno_rei_cochim",
+      "name": "Rei de Cochim",
+      "description_short": "Governante de Cochim, rival do Samorim de Calicute, que se aliou a Cabral.",
+      "article_full": {
+        "current": "O Rei de Cochim (Trimumpara Raja) era o governante do reino de Cochim, na costa do Malabar, Índia. Sendo um rival tradicional do Samorim de Calicute, viu na chegada dos portugueses liderados por Pedro Álvares Cabral, em dezembro de 1500, uma oportunidade estratégica. Após os conflitos em Calicute, o Rei de Cochim recebeu Cabral de forma amigável, permitindo o estabelecimento de uma feitoria portuguesa e o carregamento de especiarias, iniciando uma importante aliança luso-cochinense. (BUENO, 2016)",
+        "previous": null
+      }
     }
   ],
   "places": [
@@ -581,6 +627,17 @@
       "latitude": 11.2588,
       "article_full": {
         "current": "Calicute (atual Kozhikode), situada na costa do Malabar, no sudoeste da Índia, era um dos mais prósperos e importantes centros de comércio de especiarias do mundo no início do século XVI. Governada pelo Samorim, a cidade atraía mercadores de diversas partes, especialmente árabes, que controlavam grande parte do comércio de pimenta, gengibre, canela e outras valiosas mercadorias. Foi o destino principal da expedição de Pedro Álvares Cabral, que ali chegou em 13 de setembro de 1500 com o objetivo de estabelecer uma feitoria e relações comerciais. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_bueno_cochim_india",
+      "name": "Cochim, Índia",
+      "description_short": "Porto na costa do Malabar onde Cabral estabeleceu uma aliança e carregou especiarias após o conflito em Calicute.",
+      "longitude": 76.2673,
+      "latitude": 9.9312,
+      "article_full": {
+        "current": "Cochim (atual Kochi), localizada ao sul de Calicute na costa do Malabar, Índia, era um importante porto comercial e rival de Calicute. Após o massacre na feitoria de Calicute e o subsequente bombardeio da cidade, Pedro Álvares Cabral navegou para Cochim em dezembro de 1500. Ali, foi bem recebido pelo rei local, que permitiu aos portugueses carregar suas naus com especiarias e estabelecer uma feitoria, formando uma aliança crucial para os interesses portugueses na Índia. (BUENO, 2016)",
         "previous": null
       }
     }
