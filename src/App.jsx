@@ -8,6 +8,7 @@ import EntityListView from './components/EntityListView';
 import LegendPanel from './components/LegendPanel';
 import DateControls from './components/DateControls';
 import DataManagementPage from './components/DataManagementPage';
+import Footer from './components/Footer'; // Import Footer
 import * as DataManager from './dataManager';
 import { MAPBOX_ACCESS_TOKEN, DEFAULT_MAP_STYLE, AVAILABLE_MAP_STYLES, DATA_SOURCES } from './config';
 
@@ -24,13 +25,15 @@ const MainAppView = ({
   setCurrentMapStyleUrl, setIsTimelineLockedToCenter, setTimeWindowYears
 }) => {
   return (
-    <div id="app-container">
+    <div id="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      {/* Header-like elements (top controls, data management link) can stay outside the flex-grow area if they are absolutely positioned or part of a fixed header concept */}
       {isLoading && (
-        <div className="loading-indicator">
+        <div className="loading-indicator" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 2000, background: 'rgba(0,0,0,0.7)', color: 'white', padding: '20px', borderRadius: '8px' }}>
           Carregando dados...
         </div>
       )}
-      {/* New wrapper for top-left controls */}
+      
+      {/* Top-left controls (absolutely positioned, so their placement in JSX order here is less critical for layout flow) */}
       <div style={{ position: 'absolute', top: '10px', left: '10px', zIndex: 1000, display: 'flex', alignItems: 'center', gap: '10px' }}>
         <button
           onClick={toggleControlsPanel}
@@ -142,10 +145,16 @@ const MainAppView = ({
         </div>
       )}
 
-      <div id="map-container" style={{ height: isTimelineExpanded ? '30vh' : 'calc(100vh - 200px)' }}>
-        <MapView
-          events={eventsInCurrentSourceFilters}
-          themes={themes}
+      {/* Main content area that will grow */}
+      <div style={{ flexGrow: 1, position: 'relative', display: 'flex', flexDirection: 'column' }}>
+        <div id="map-container" style={{
+          flexGrow: 1, // Allow map to take available space
+          height: isTimelineExpanded ? '30vh' : 'calc(100% - 200px)', // Adjust height relative to parent
+          minHeight: '200px' // Ensure map has a minimum height
+        }}>
+          <MapView
+            events={eventsInCurrentSourceFilters}
+            themes={themes}
           referenceDate={referenceDate}
           timeWindowYears={timeWindowYears}
           onEventClick={(eventId) => handleOpenModal('event', eventId)}
@@ -175,13 +184,16 @@ const MainAppView = ({
           isTimelineExpanded={isTimelineExpanded}
         />
       </div>
+      {/* End of main growing content area */}
+      </div>
 
+      {/* Modal overlay remains fixed to viewport */}
       <div
         id="modal-overlay-container"
         style={{
           display: isModalOpen ? 'flex' : 'none',
           position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',
-          background: 'rgba(0,0,0,0.6)', zIndex: 150,
+          background: 'rgba(0,0,0,0.6)', zIndex: 1500, // Ensure modal is above other content
           alignItems: 'center', justifyContent: 'center',
         }}
       >
@@ -193,6 +205,7 @@ const MainAppView = ({
           />
         )}
       </div>
+      {/* Footer removed from MainAppView, rendered globally by App component */}
     </div>
   );
 };
@@ -569,11 +582,12 @@ function App() {
             allCharacters={allCharacters}
             allPlaces={allPlaces}
             allThemes={themes}
-            currentUiTheme={currentUiTheme}
+            currentUiTheme={currentUiTheme} // DataManagementPage needs this for its own styles
             currentMapStyleUrl={currentMapStyleUrl}
           />}
         />
       </Routes>
+      <Footer currentUiTheme={currentUiTheme} /> {/* Footer rendered globally by App */}
     </Router>
   );
 }

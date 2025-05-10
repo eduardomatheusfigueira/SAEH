@@ -178,6 +178,7 @@ const DataManagementPage = ({
   }, [activeTab, selectedSourceId]);
 
   useEffect(() => {
+    // console.log('[Effect formData] selectedItem:', selectedItem, 'isCreatingNewItem:', isCreatingNewItem, 'activeTab:', activeTab); // DEBUG
     if (isCreatingNewItem) {
       let defaultData = {};
       const commonNewId = `new_${Date.now()}`; 
@@ -201,33 +202,63 @@ const DataManagementPage = ({
           break;
         default: break;
       }
+      // console.log('[Effect formData] Setting formData for new item:', defaultData); // DEBUG
       setFormData(defaultData);
-      setSelectedItem({ ...defaultData, id: commonNewId }); 
+      // Do NOT set selectedItem here when isCreatingNewItem is true.
+      // selectedItem should remain null to indicate a new item form.
     } else if (selectedItem) {
       const currentFormData = { ...selectedItem };
       if (activeTab === 'events') {
         currentFormData.characters_ids = Array.isArray(selectedItem.characters_ids) ? selectedItem.characters_ids.join(', ') : (selectedItem.characters_ids || '');
         currentFormData.secondary_tags_ids = Array.isArray(selectedItem.secondary_tags_ids) ? selectedItem.secondary_tags_ids.join(', ') : (selectedItem.secondary_tags_ids || '');
       }
+      // console.log('[Effect formData] Setting formData from selectedItem:', currentFormData); // DEBUG
       setFormData(currentFormData);
     } else {
+      // console.log('[Effect formData] Clearing formData'); // DEBUG
       setFormData({});
     }
   }, [selectedItem, isCreatingNewItem, activeTab, selectedSourceId, allSources]);
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
+    // console.log(`[handleFormChange] Name: ${name}, Value: ${value}`); // DEBUG
+    // console.log('[handleFormChange] formData BEFORE update:', formData); // DEBUG
+
+    let newFormData;
     if (name === "article_full_current") {
-      setFormData(prev => ({ ...prev, article_full: { ...prev.article_full, current: value } }));
+      newFormData = prev => {
+        const updated = { ...prev, article_full: { ...prev.article_full, current: value } };
+        // console.log('[handleFormChange] article_full_current - Updated formData:', updated);
+        return updated;
+      };
     } else if (name === "longitude" || name === "latitude") {
+      newFormData = prev => {
+        const updated = { ...prev, [name]: value === '' ? null : parseFloat(value) };
+        // console.log('[handleFormChange] long/lat - Updated formData:', updated);
+        return updated;
+      };
       setFormData(prev => ({ ...prev, [name]: value === '' ? null : parseFloat(value) }));
     } else if (name === "characters_ids" || name === "secondary_tags_ids") {
-      setFormData(prev => ({ ...prev, [name]: value }));
+      newFormData = prev => {
+        const updated = { ...prev, [name]: value };
+        // console.log('[handleFormChange] array ids - Updated formData:', updated);
+        return updated;
+      };
     } else if (name === "date_type") {
-      setFormData(prev => ({ ...prev, [name]: value, end_date: value === "single" ? null : (prev.end_date || prev.start_date || new Date().toISOString().split('T')[0]) }));
+      newFormData = prev => {
+        const updated = { ...prev, [name]: value, end_date: value === "single" ? null : (prev.end_date || prev.start_date || new Date().toISOString().split('T')[0]) };
+        // console.log('[handleFormChange] date_type - Updated formData:', updated);
+        return updated;
+      };
     } else {
-      setFormData(prev => ({ ...prev, [name]: value }));
+      newFormData = prev => {
+        const updated = { ...prev, [name]: value };
+        // console.log('[handleFormChange] general - Updated formData:', updated);
+        return updated;
+      };
     }
+    setFormData(newFormData);
   };
 
   const handleAddNewItem = () => {
@@ -414,8 +445,9 @@ const DataManagementPage = ({
   );
 
   const renderDetailEditPane = () => {
-    const itemForForm = formData; 
-    const currentSelectedItemForContext = selectedItem; 
+    const itemForForm = formData;
+    const currentSelectedItemForContext = selectedItem;
+    // console.log('[renderDetailEditPane] Rendering form with itemForForm (formData):', itemForForm); // DEBUG
 
     if (!currentSelectedItemForContext && !isCreatingNewItem) {
       return <div className="detail-pane" style={{ ...detailPaneStyle, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-color-muted, #6c757d)' }}>Selecione um item da lista ou clique em "Adicionar Novo".</div>;
