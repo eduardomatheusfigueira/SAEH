@@ -12,8 +12,8 @@ import { MAPBOX_ACCESS_TOKEN, DEFAULT_MAP_STYLE, AVAILABLE_MAP_STYLES, DATA_SOUR
 
 function App() {
   const [currentMapStyleUrl, setCurrentMapStyleUrl] = useState(DEFAULT_MAP_STYLE); // New state
-  const [minEventYear, setMinEventYear] = useState(1400);
-  const [maxEventYear, setMaxEventYear] = useState(new Date().getFullYear());
+  const [minEventYear, setMinEventYear] = useState(2020); // Default min year
+  const [maxEventYear, setMaxEventYear] = useState(2025); // Default max year
   const [allLoadedEvents, setAllLoadedEvents] = useState([]);
   const [themes, setThemes] = useState([]);
   const [allSources, setAllSources] = useState([]);
@@ -44,6 +44,30 @@ function App() {
     });
   };
 
+  const calculateYearRange = (events) => {
+    if (!events || events.length === 0) {
+      return { min: 2020, max: 2025 }; // Default if no events
+    }
+
+    const years = events.map(e => {
+        const date = new Date(e.start_date);
+        return isNaN(date.getFullYear()) ? null : date.getFullYear();
+    }).filter(year => year !== null);
+
+    if (years.length === 0) {
+        return { min: 2020, max: 2025 }; // Default if no valid years found
+    }
+
+    const minYearFromEvents = Math.min(...years);
+    const maxYearFromEvents = Math.max(...years);
+
+    if (minYearFromEvents === maxYearFromEvents) {
+      return { min: minYearFromEvents - 10, max: maxYearFromEvents + 10 };
+    } else {
+      return { min: minYearFromEvents, max: maxYearFromEvents };
+    }
+  };
+ 
   useEffect(() => { // Effect to apply UI theme
     const selectedStyleConfig = AVAILABLE_MAP_STYLES.find(s => s.url === currentMapStyleUrl);
     if (selectedStyleConfig && selectedStyleConfig.uiTheme) {
@@ -81,8 +105,18 @@ function App() {
           setAllCharacters(DataManager.getAllCharacters());
           setAllPlaces(DataManager.getAllPlaces());
           setActiveSourceIds(prev => new Set(prev).add(sourceToLoad.id));
+          
+          const { min, max } = calculateYearRange(events);
+          setMinEventYear(min);
+          setMaxEventYear(max);
         } else {
           console.error(`Failed to process data from predefined source: ${sourceToLoad.name}`);
+          // If source loading fails, reset to default year range if no other events are loaded
+          if (DataManager.getAllEvents().length === 0) {
+            const { min, max } = calculateYearRange([]);
+            setMinEventYear(min);
+            setMaxEventYear(max);
+          }
         }
       } catch (error) {
         console.error(`Could not load predefined data source ${sourceToLoad.name}:`, error);
@@ -124,9 +158,14 @@ function App() {
     setAllCharacters(DataManager.getAllCharacters());
     setAllPlaces(DataManager.getAllPlaces());
     setActiveSourceIds(new Set(sources.map(s => s.id)));
+    
+    const { min, max } = calculateYearRange(DataManager.getAllEvents());
+    setMinEventYear(min);
+    setMaxEventYear(max);
+
     setIsLoading(false);
   };
-
+ 
   const handleSaveProfile = () => {
     const profileName = prompt("Digite um nome para este perfil:", "SAEH_Perfil_Completo");
     if (!profileName) return;
@@ -181,20 +220,23 @@ function App() {
         } = processedProfile.ui_settings;
         if (refDate) setReferenceDate(refDate);
         if (twYears !== undefined) setTimeWindowYears(twYears);
-        if (profMin !== undefined) setMinEventYear(profMin);
-        if (profMax !== undefined) setMaxEventYear(profMax);
         if (profLocked !== undefined) setIsTimelineLockedToCenter(profLocked);
         if (loadedMapStyle) setCurrentMapStyleUrl(loadedMapStyle); else setCurrentMapStyleUrl(DEFAULT_MAP_STYLE);
-      } else {
-        setCurrentMapStyleUrl(DEFAULT_MAP_STYLE); // Default if not in profile
-        if (events.length > 0) {
-            const years = events.map(e => new Date(e.start_date).getFullYear());
-            setMinEventYear(Math.min(...years));
-            setMaxEventYear(Math.max(...years));
+
+        // Set min/max year from profile if available, otherwise calculate from loaded events
+        if (profMin !== undefined && profMax !== undefined) {
+          setMinEventYear(profMin);
+          setMaxEventYear(profMax);
         } else {
-            setMinEventYear(1400); 
-            setMaxEventYear(new Date().getFullYear());
+          const { min, max } = calculateYearRange(events);
+          setMinEventYear(min);
+          setMaxEventYear(max);
         }
+      } else { // No UI settings in profile, or profile itself is minimal
+        setCurrentMapStyleUrl(DEFAULT_MAP_STYLE);
+        const { min, max } = calculateYearRange(events); // Calculate based on events from profile data
+        setMinEventYear(min);
+        setMaxEventYear(max);
       }
       alert(`Perfil "${processedProfile.profile_name || profileData.profile_name}" carregado com dados embutidos.`);
     } catch (error) {

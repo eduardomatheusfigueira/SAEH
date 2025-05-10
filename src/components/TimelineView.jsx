@@ -38,6 +38,20 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
     mainGroupSelection.selectAll(".reference-line-label")
         .attr("x", currentXScale(refDateObject) + 4)
         .text(`Ref.: ${refDateObject.toLocaleDateString()}`);
+
+    // Update event text labels if they exist
+    mainGroupSelection.selectAll(".event-text-label.timeline-event-item")
+      .attr("x", function(d) {
+        const textElement = d3.select(this);
+        if (!d || !d.start_date) { // 'd' should be bound via .datum(d) during creation
+          // console.warn("Missing data for text label update:", textElement.node());
+          return textElement.attr("x"); // Keep current position if data is missing
+        }
+        const eventStartDate = new Date(d.start_date);
+        const initialOffset = parseFloat(textElement.attr("data-initial-offset")) || 5; // Fallback to 5 if attr not found
+        return currentXScale(eventStartDate) + initialOffset;
+      });
+
   }, [referenceDate]); // referenceDate is a dependency for redrawElements
 
   const updateD3ZoomTransform = (newDomain) => {
@@ -282,10 +296,13 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
             if (isTimelineExpanded) {
               // Ensure not to duplicate text if re-rendering
               laneGroup.selectAll(`.event-text-label[data-id="${d.globalId}"]`).remove();
+              const periodTextX = xScale(new Date(d.start_date)) + 5;
               laneGroup.append("text")
+                .datum(d) // Ensure data is bound
                 .attr("class", "timeline-event-item event-text-label")
                 .attr("data-id", d.globalId)
-                .attr("x", xScale(new Date(d.start_date)) + 5)
+                .attr("data-initial-offset", 5) // Store initial offset
+                .attr("x", periodTextX)
                 .attr("y", eventPadding + eventBarHeight / 2)
                 .attr("dy", ".35em")
                 .style("font-size", "9px")
@@ -316,10 +333,14 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
 
             if (isTimelineExpanded) {
               laneGroup.selectAll(`.event-text-label[data-id="${d.globalId}"]`).remove();
+              const singleEventTextOffset = circleRadius + 3;
+              const singleTextX = xScale(new Date(d.start_date)) + singleEventTextOffset;
               laneGroup.append("text")
+                .datum(d) // Ensure data is bound
                 .attr("class", "timeline-event-item event-text-label")
                 .attr("data-id", d.globalId)
-                .attr("x", xScale(new Date(d.start_date)) + circleRadius + 3)
+                .attr("data-initial-offset", singleEventTextOffset) // Store initial offset
+                .attr("x", singleTextX)
                 .attr("y", laneHeight / 2)
                 .attr("dy", ".35em")
                 .style("font-size", "9px")
@@ -377,26 +398,22 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
         .extent([[0, 0], [innerWidth, innerHeight]])
         .on("zoom", zoomed)
         // Add a filter to prevent zoom/pan gestures if the timeline is locked.
-        // This is a more D3-idiomatic way to disable gestures.
         .filter(event => {
           if (isTimelineLocked) {
-            // Allow only programmatic zoom/pan (e.g., from buttons) when locked.
-            // D3 distinguishes between user gestures and programmatic calls.
-            // However, a simple way is to check event type. Wheel is a user gesture.
-            // For drag, event.type is "drag", "start", "end".
-            // For wheel, event.type is "wheel".
-            // This filter might need refinement if programmatic button calls also trigger 'zoom' events
-            // that we want to allow. Typically, .call(zoomBehavior.transform, ...) does not pass through this filter.
-            return event.type === "wheel" ? false : !isTimelineLocked; // Disable wheel when locked, allow other types if not locked.
-                                                                      // Or simply: return !isTimelineLocked; to disable all gestures.
+            return false; // Disallow user gestures (wheel, drag) if locked
           }
-          return true; // Allow all gestures if not locked.
+          return true; // Allow gestures if not locked
         });
 
 
     if (svgNode) {
       svgSelection.call(zoomBehavior);
       svgNode.__zoom = zoomBehavior; // Store for imperative calls
+
+      // Initialize D3's internal zoom transform to match the initial domain
+      if (initialDomainRef.current) {
+        updateD3ZoomTransform(initialDomainRef.current);
+      }
 
       // If locked, ensure the view is centered on the referenceDate on initial/locked render
       if (isTimelineLocked) {
