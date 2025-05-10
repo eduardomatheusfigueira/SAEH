@@ -21,6 +21,14 @@ const DataManagementPage = ({
   const [formData, setFormData] = useState({});
   const [isDiagnosticsVisible, setIsDiagnosticsVisible] = useState(false); // New state for diagnostics visibility
 
+  const tabDisplayNames = {
+    sources: 'Fontes',
+    events: 'Eventos',
+    characters: 'Personagens',
+    places: 'Locais',
+    themes: 'Temas',
+  };
+
   const pageStyle = {
     padding: '20px', 
     display: 'flex', 
@@ -340,7 +348,7 @@ const DataManagementPage = ({
     <div className="list-pane" style={listPaneStyle}>
       <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px'}}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <h4 style={{ margin: 0, color: 'var(--text-color)' }}>Lista de {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}</h4>
+          <h4 style={{ margin: 0, color: currentUiTheme['--text-color'] || 'var(--text-color)' }}>Lista de {tabDisplayNames[activeTab] || activeTab}</h4>
           {activeTab === 'events' && (
             <button
               onClick={() => setIsDiagnosticsVisible(!isDiagnosticsVisible)}
@@ -413,9 +421,9 @@ const DataManagementPage = ({
       return <div className="detail-pane" style={{ ...detailPaneStyle, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-color-muted, #6c757d)' }}>Selecione um item da lista ou clique em "Adicionar Novo".</div>;
     }
     
-    const titlePrefix = isCreatingNewItem ? "Criar Novo(a)" : "Detalhes / Editar";
-    const displayName = isCreatingNewItem 
-      ? (itemForForm.name || itemForForm.title || activeTab.slice(0,-1)) 
+    const titlePrefix = isCreatingNewItem ? "Criar Novo(a)" : `Detalhes / Editar ${tabDisplayNames[activeTab]?.slice(0,-1) || activeTab.slice(0,-1)}`;
+    const displayName = isCreatingNewItem
+      ? (itemForForm.name || itemForForm.title || (tabDisplayNames[activeTab]?.slice(0,-1) || activeTab.slice(0,-1)))
       : (currentSelectedItemForContext?.name || currentSelectedItemForContext?.title || currentSelectedItemForContext?.id);
 
     const commonFormFields = (
@@ -595,8 +603,22 @@ const DataManagementPage = ({
   return (
     <div className="data-management-page" style={pageStyle}>
       <header style={headerStyle}>
-        <Link to="/" style={{ textDecoration: 'none', color: 'var(--link-color, var(--button-primary-bg))', fontWeight: 'bold', fontSize: '1.05em' }}>&larr; Voltar à Visualização Principal</Link>
-        <h2 style={{margin: 0, color: 'var(--text-color)', fontSize: '1.4em'}}>Gerenciamento de Dados</h2>
+        <Link
+          to="/"
+          style={{
+            ...baseButtonStyle,
+            backgroundColor: currentUiTheme['--button-primary-bg'] || 'var(--button-primary-bg, #007bff)',
+            color: currentUiTheme['--button-primary-text'] || 'var(--button-primary-text, #ffffff)',
+            textDecoration: 'none',
+            display: 'inline-flex',
+            alignItems: 'center',
+            padding: '10px 15px', // Ensure adequate padding like a button
+            fontSize: '1em' // Match other primary buttons if needed
+          }}
+        >
+          &larr; Voltar à Visualização Principal
+        </Link>
+        <h2 style={{margin: 0, color: currentUiTheme['--text-color'] || 'var(--text-color)', fontSize: '1.4em'}}>Gerenciamento de Dados</h2>
         <div>
           <input
             type="file"
@@ -613,13 +635,13 @@ const DataManagementPage = ({
       </header>
 
       <nav style={navStyle}>
-        {['sources', 'events', 'characters', 'places', 'themes'].map(tabName => (
-          <button 
-            key={tabName}
-            onClick={() => setActiveTab(tabName)} 
-            style={tabButtonStyle(tabName)}
+        {Object.keys(tabDisplayNames).map((tabKey) => (
+          <button
+            key={tabKey}
+            onClick={() => setActiveTab(tabKey)}
+            style={tabButtonStyle(tabKey)}
           >
-            {tabName === 'sources' ? 'Fontes' : tabName.charAt(0).toUpperCase() + tabName.slice(1)}
+            {tabDisplayNames[tabKey]}
           </button>
         ))}
       </nav>
