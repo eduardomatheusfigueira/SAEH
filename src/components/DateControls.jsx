@@ -10,24 +10,40 @@ const DateControls = ({
   onMinEventYearChange, // New prop
   onMaxEventYearChange, // New prop
 }) => {
-  const currentReferenceYear = referenceDate ? new Date(referenceDate).getFullYear() : new Date().getFullYear();
+  const currentReferenceDateObj = new Date(referenceDate);
+  const currentReferenceYear = currentReferenceDateObj.getFullYear();
+  const currentReferenceMonth = currentReferenceDateObj.getMonth(); // 0-indexed
+  const currentReferenceDay = currentReferenceDateObj.getDate();
+
+  // Slider configurations for months
+  const sliderMinMonths = 0; // Represents the first month of minEventYear
+  const sliderMaxMonths = (maxEventYear - minEventYear) * 12 + 11; // Represents the last month of maxEventYear
+  
+  const currentSliderValueInMonths = (currentReferenceYear - minEventYear) * 12 + currentReferenceMonth;
 
   const handleReferenceDateSliderChange = (event) => {
-    const year = parseInt(event.target.value, 10);
-    const currentMonthDate = referenceDate ? new Date(referenceDate) : new Date(year, 0, 1);
-    const currentMonth = currentMonthDate.getMonth(); // 0-based
-    const currentDay = currentMonthDate.getDate();
-    
-    let dayToSet = currentDay;
-    const tempDate = new Date(year, currentMonth, currentDay);
-    if (tempDate.getMonth() !== currentMonth) {
-        dayToSet = new Date(year, currentMonth + 1, 0).getDate();
+    const totalMonthsOffset = parseInt(event.target.value, 10); // Value from slider (0 to sliderMaxMonths)
+
+    const year = minEventYear + Math.floor(totalMonthsOffset / 12);
+    const month = totalMonthsOffset % 12; // 0-indexed month
+
+    let dayToSet = currentReferenceDay;
+    // Check if the current day is valid for the new month and year
+    const tempDate = new Date(year, month, currentReferenceDay);
+    if (tempDate.getMonth() !== month) {
+        // Day is invalid (e.g., trying to set Feb 30), so set to last day of the new month
+        dayToSet = new Date(year, month + 1, 0).getDate();
     }
 
-    const newDate = `${year}-${String(currentMonth + 1).padStart(2, '0')}-${String(dayToSet).padStart(2, '0')}`;
+    const newDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(dayToSet).padStart(2, '0')}`;
     onReferenceDateChange(newDate);
   };
 
+  // For the slider title
+  const yearForSliderTitle = minEventYear + Math.floor(currentSliderValueInMonths / 12);
+  const monthForSliderTitle = (currentSliderValueInMonths % 12) + 1; // 1-indexed for display
+  const sliderTitle = `Data: ${yearForSliderTitle}-${String(monthForSliderTitle).padStart(2, '0')}`;
+ 
   // containerStyle removed, will be handled by CSS class "date-controls-container"
 
   const controlGroupStyle = {
@@ -74,12 +90,12 @@ const DateControls = ({
           <input
             type="range"
             id="ref-date-slider-top"
-            min={minEventYear || 1400}
-            max={maxEventYear || new Date().getFullYear()}
-            value={currentReferenceYear}
+            min={sliderMinMonths}
+            max={sliderMaxMonths}
+            value={currentSliderValueInMonths}
             onChange={handleReferenceDateSliderChange}
             style={{ flexGrow: 1, margin: '0 5px' }} // Range slider might need specific styling
-            title={`Ano: ${currentReferenceYear}`}
+            title={sliderTitle}
           />
           <input
             type="number"

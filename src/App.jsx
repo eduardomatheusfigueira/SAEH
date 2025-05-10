@@ -52,14 +52,7 @@ function App() {
       }
     }
   }, [currentMapStyleUrl]);
-
-  // Effect to load the first data source on initial mount
-  useEffect(() => {
-    if (DATA_SOURCES && DATA_SOURCES.length > 0 && !currentDataSourceId) {
-      setCurrentDataSourceId(DATA_SOURCES[0].id); // Load the first data source by default
-    }
-  }, []); // Empty dependency array means this runs once on mount
-
+ 
   // Effect to load data when currentDataSourceId changes
   useEffect(() => {
     async function loadPredefinedSource() {

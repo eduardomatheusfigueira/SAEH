@@ -298,7 +298,6 @@
         "current": "Após o bombardeio de Calicute, Pedro Álvares Cabral decidiu abandonar a hostil cidade e procurar um porto mais amigável para carregar as naus com especiarias. Em 24 de dezembro de 1500, a frota partiu para o sul, chegando a Cochim (atual Kochi) alguns dias depois. O rei de Cochim, inimigo do Samorim de Calicute, recebeu os portugueses de forma amistosa, vendo neles potenciais aliados. Cabral conseguiu negociar um acordo comercial vantajoso, estabelecendo uma feitoria e carregando suas naus com pimenta e outras especiarias. A estadia em Cochim durou até aproximadamente 9 de janeiro de 1501, quando a frota, agora com uma carga valiosa, preparou-se para iniciar a viagem de retorno a Portugal. (BUENO, 2016)",
         "previous": null
       }
-    },
   },
     {
       "id": "evt_bueno_17",
@@ -315,6 +314,42 @@
       "description_short": "A nau El-Rei, comandada por Sancho de Tovar, encalha e é incendiada perto de Melinde. A frota, agora reduzida, inicia a longa viagem de volta a Portugal.",
       "article_full": {
         "current": "Após deixar Cochim em 16 de janeiro de 1501, a frota de Cabral iniciou sua viagem de retorno a Portugal. No entanto, mais um revés aguardava a expedição. A nau El-Rei, uma das maiores da frota, comandada pelo vice-comandante Sancho de Tovar, encalhou violentamente nos baixios próximos a Melinde, na costa africana, em 12 de fevereiro de 1501. Apesar dos esforços, a nau não pôde ser salva e, para evitar que sua valiosa carga de especiarias e armamentos caísse em mãos inimigas, Cabral ordenou que fosse incendiada. A tripulação e parte da carga foram resgatadas e redistribuídas entre as naus restantes. Com mais esta perda, a frota, agora significativamente reduzida em relação ao seu tamanho original, prosseguiu a árdua jornada de volta para casa. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_18",
+      "title": "Chegada da Nau de Diogo Dias a Portugal (Isolada)",
+      "date_type": "single",
+      "start_date": "1501-04-27",
+      "end_date": null,
+      "characters_ids": ["char_bueno_diogo_dias_dancarino"],
+      "place_id": "plc_bueno_lisboa_restelo",
+      "longitude": -9.21198568,
+      "latitude": 38.70945558,
+      "main_theme_id": "thm_incidentes_viagem_bueno",
+      "secondary_tags_ids": ["thm_rota_india_bueno", "thm_expedicoes_maritimas_bueno"],
+      "description_short": "A nau de Diogo Dias, separada da frota na tempestade do Cabo, após uma longa e penosa viagem, chega a Portugal com apenas sete sobreviventes.",
+      "article_full": {
+        "current": "A nau comandada por Diogo Dias, que se separara da frota de Cabral durante a violenta tempestade no Cabo da Boa Esperança em maio de 1500, teve um destino singular. Após meses perdida e enfrentando inúmeras dificuldades, incluindo a exploração acidental da costa de Madagascar e a passagem pelo Mar Vermelho, a embarcação finalmente conseguiu encontrar o caminho de volta. Com uma tripulação drasticamente reduzida pela fome e doenças (apenas sete homens sobreviveram, incluindo o próprio Diogo Dias), a nau aportou em Lisboa em 27 de abril de 1501, meses antes do retorno do restante da frota principal de Cabral. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_19",
+      "title": "Retorno das Naus de Cabral a Lisboa",
+      "date_type": "period",
+      "start_date": "1501-06-23",
+      "end_date": "1501-07-31",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_dom_manoel_i", "char_bueno_nicolau_coelho", "char_bueno_sancho_de_tovar"],
+      "place_id": "plc_bueno_lisboa_restelo",
+      "longitude": -9.21198568,
+      "latitude": 38.70945558,
+      "main_theme_id": "thm_rota_india_bueno",
+      "secondary_tags_ids": ["thm_expedicoes_maritimas_bueno", "thm_comercio_especiarias_bueno", "thm_incidentes_viagem_bueno"],
+      "description_short": "As naus remanescentes da frota de Cabral, carregadas de especiarias, chegam a Lisboa, concluindo a longa e tumultuada expedição.",
+      "article_full": {
+        "current": "Após uma longa e perigosa viagem de retorno, marcada por mais perdas e dificuldades, as naus remanescentes da frota de Pedro Álvares Cabral começaram a chegar a Lisboa. A nau Anunciada, fretada por mercadores italianos e comandada por Nicolau Coelho, foi a primeira a chegar, em 23 de junho de 1501. A nau capitânia de Cabral e a nau de Sancho de Tovar (que havia sido transferido para outra embarcação após o naufrágio da El-Rei) chegaram em 21 de julho de 1501. Outras duas naus chegaram nos dias subsequentes, totalizando cinco das treze embarcações originais (considerando a naveta de Gaspar de Lemos e a nau de Diogo Dias que retornaram separadamente). Apesar das perdas humanas e materiais, a expedição foi considerada um sucesso comercial devido à valiosa carga de especiarias trazida da Índia e, claro, pela descoberta do Brasil. Cabral foi inicialmente bem recebido por D. Manoel I, mas acabou caindo em desgraça posteriormente. (BUENO, 2016)",
         "previous": null
       }
     }
