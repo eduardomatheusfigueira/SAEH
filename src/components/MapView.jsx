@@ -88,8 +88,16 @@ const MapView = ({ events, themes, referenceDate, timeWindowYears, onEventClick,
       let finalLng, finalLat;
       if (groupedEvents.length === 1) {
         const event = groupedEvents[0];
-        finalLng = event.longitude;
-        finalLat = event.latitude;
+        
+        const parsedLng = parseFloat(event.longitude);
+        const parsedLat = parseFloat(event.latitude);
+
+        if (isNaN(parsedLng) || isNaN(parsedLat) || parsedLat < -90 || parsedLat > 90 || parsedLng < -180 || parsedLng > 180) {
+          console.warn('[MapView] Invalid coordinates for single event:', event.globalId, 'Lng:', event.longitude, 'Lat:', event.latitude);
+          return; // Skip this marker
+        }
+        finalLng = parsedLng;
+        finalLat = parsedLat;
         
         // Create marker for single event
         const theme = themes.find(t => t.id === event.main_theme_id);
@@ -126,11 +134,30 @@ const MapView = ({ events, themes, referenceDate, timeWindowYears, onEventClick,
 
         groupedEvents.forEach((event, index) => {
           const angle = (index / numOverlapping) * 2 * Math.PI; // Distribute in a circle
+          
+          const parsedLngBase = parseFloat(event.longitude);
+          const parsedLatBase = parseFloat(event.latitude);
+
+          if (isNaN(parsedLngBase) || isNaN(parsedLatBase) || parsedLatBase < -90 || parsedLatBase > 90 || parsedLngBase < -180 || parsedLngBase > 180) {
+            console.warn('[MapView] Invalid base coordinates for grouped event:', event.globalId, 'Lng:', event.longitude, 'Lat:', event.latitude);
+            return; // Skip this marker in the group
+          }
+
           const offsetX = Math.cos(angle) * dynamicOffset;
           const offsetY = Math.sin(angle) * dynamicOffset;
           
-          finalLng = event.longitude + offsetX;
-          finalLat = event.latitude + offsetY;
+          finalLng = parsedLngBase + offsetX;
+          finalLat = parsedLatBase + offsetY;
+
+          // Clamp latitude and wrap longitude after offset
+          if (finalLat < -90 || finalLat > 90) {
+            console.warn('[MapView] Latitude out of bounds after offset for grouped event:', event.globalId, 'OriginalLat:', parsedLatBase, 'OffsetY:', offsetY, 'ResultLat:', finalLat);
+            finalLat = Math.max(-90, Math.min(90, finalLat));
+          }
+          if (finalLng < -180 || finalLng > 180) {
+            // console.warn('[MapView] Longitude out of bounds after offset for grouped event:', event.globalId, 'OriginalLng:', parsedLngBase, 'OffsetX:', offsetX, 'ResultLng:', finalLng);
+            finalLng = ((finalLng + 180) % 360 + 360) % 360 - 180; // Ensure positive modulo before subtracting 180
+          }
 
           const theme = themes.find(t => t.id === event.main_theme_id);
           const fillColor = theme ? theme.color : '#808080';
