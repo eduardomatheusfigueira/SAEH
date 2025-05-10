@@ -25,7 +25,25 @@
       "secondary_tags_ids": ["thm_expedicoes_maritimas_bueno", "thm_rota_india_bueno"],
       "description_short": "Cerimônias e partida da maior frota portuguesa rumo à Índia, sob o comando de Pedro Álvares Cabral.",
       "article_full": {
-        "current": "No dia 8 de março de 1500, um domingo, Lisboa celebrou a partida da nova missão comercial e guerreira ao reino das especiarias. Na ermida de São Jerônimo, decorada suntuosamente, o rei D. Manoel I e sua corte assistiram à missa celebrada pelo bispo D. Diogo Ortiz. Após o sermão, D. Manoel entregou a Pedro Álvares Cabral, chefe da missão, uma bandeira da Ordem de Cristo e um barrete bento pelo Papa. A população de Lisboa compareceu em peso à praia do Restelo para presenciar o evento, descrito por João de Barros como um 'campo de flores' devido às librés e bandeiras coloridas. A frota, composta por 10 naus e três caravelas, era a maior e mais poderosa que Portugal já enviara ao Atlântico. A partida efetiva ocorreu na manhã de segunda-feira, 9 de março de 1500. A missão principal era instalar um entreposto português em Calicute, na Índia, seguindo instruções de Vasco da Gama para realizar a 'volta do mar'. (BUENO, 2016)",
+        "current": "No domingo, 8 de março de 1500, Lisboa celebrou a partida da nova missão comercial e guerreira ao reino das especiarias. Desde a tarde anterior, a pequena capela da ermida de São Jerônimo, construída quase um século antes pelo infante D. Henrique às margens do Tejo, fora suntuosamente decorada por artífices e tapeceiros. Um dossel à direita do altar abrigaria o rei D. Manoel I e sua corte. Por volta das 9 horas da manhã, o cortejo real, rutilante de ouro e veludo, chegou à capela, onde já se encontravam os capitães da frota e banqueiros opulentos que financiavam parte da expedição. O bispo de Ceuta, D. Diogo Ortiz, também matemático e cosmógrafo, celebrou a missa. Após o sermão, pronunciado à luz de tochas, D. Diogo benzeu uma bandeira da Ordem de Cristo, que D. Manoel entregou a Pedro Álvares Cabral, chefe da missão. O rei também ofereceu a Cabral um barrete bento pelo Papa. Em seguida, o grupo saiu em lenta procissão, carregando cruzes e relíquias, rumo ao porto. A população de Lisboa, incluindo espiões espanhóis, venezianos e outros estrangeiros, compareceu em peso à praia do Restelo. O cronista João de Barros descreveu a cena como um 'campo de flores', com batéis, librés e bandeiras coloridas, ao som de trombetas, atabaques e outros instrumentos. A frota, composta por 10 naus e três caravelas (a maior e mais poderosa que Portugal já enviara ao Atlântico), não pôde partir no domingo devido a 'ventos sacudidos e finos' do sul. A partida efetiva ocorreu na manhã de segunda-feira, 9 de março de 1500, com brisas do quadrante Norte. A missão principal era instalar um entreposto português em Calicute, na Índia, seguindo instruções de Vasco da Gama para realizar a 'volta do mar'. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_6",
+      "title": "Passagem por Cabo Verde e Desaparecimento da Nau de Vasco de Ataíde",
+      "date_type": "period",
+      "start_date": "1500-03-22",
+      "end_date": "1500-03-24",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_vasco_de_ataide"],
+      "place_id": "plc_bueno_cabo_verde_sao_nicolau",
+      "longitude": -24.2833,
+      "latitude": 16.6167,
+      "main_theme_id": "thm_grandes_navegacoes_bueno",
+      "secondary_tags_ids": ["thm_expedicoes_maritimas_bueno", "thm_rota_india_bueno", "thm_incidentes_viagem_bueno"],
+      "description_short": "A frota de Cabral ancora em São Nicolau, Cabo Verde. Pouco após a partida, a nau de Vasco de Ataíde desaparece misteriosamente.",
+      "article_full": {
+        "current": "No dia 22 de março de 1500, um domingo, 13 dias após zarpar de Lisboa, a frota de Pedro Álvares Cabral alcançou as ilhas de Cabo Verde, ancorando ao anoitecer na ilha de São Nicolau, na aguada de São Brás. A parada era esperada, pois as ilhas serviam como ponto de reabastecimento e encontro. No dia seguinte, 23 de março, a nau comandada por Vasco de Ataíde, um fidalgo de pouca experiência marítima, desapareceu. Segundo Pero Vaz de Caminha, a nau sumiu 'sem que houvesse tempo forte ou contrário para poder ser'. Apesar das buscas realizadas no dia 24 por outras naus da frota, nenhum vestígio de Ataíde ou de sua embarcação foi encontrado. Acredita-se que uma súbita e violenta tempestade, comum na região, possa ter afundado a nau rapidamente. Este foi o primeiro grande revés da expedição. (BUENO, 2016)",
         "previous": null
       }
     },
@@ -43,8 +61,8 @@
       "secondary_tags_ids": ["thm_grandes_navegacoes_bueno", "thm_exploracao_bueno"],
       "description_short": "Após 44 dias de viagem, a frota de Cabral avista um monte alto e redondo, batizado de Monte Pascoal, e ancora próximo à costa brasileira.",
       "article_full": {
-        "current": "Na terça-feira, 21 de abril de 1500, após a celebração da Páscoa, a frota de Cabral encontrou sinais de proximidade de terra, como algas (botelhos e rabos-de-asno) e aves marinhas (fura-buxos). Na manhã seguinte, quarta-feira, 22 de abril, 'nas horas de véspera', a cerca de 70 quilômetros da costa, os tripulantes avistaram 'um grande monte mui alto e redondo'. Ao entardecer, após avançar mais 40 quilômetros, a frota deparou com outras serras mais baixas ao sul do monte principal, cobertas por denso arvoredo. A armada lançou âncoras a seis léguas (cerca de 40 quilômetros) da costa, em mar de 34 metros de profundidade. O monte avistado foi posteriormente nomeado Monte Pascoal. (BUENO, 2016)",
-        "previous": null
+        "current": "Após 42 dias de uma jornada rápida e tranquila desde Lisboa, e dois dias após a celebração da Páscoa a bordo, na terça-feira, 21 de abril de 1500, a frota de Cabral encontrou os primeiros sinais de proximidade de terra. Algas conhecidas como *botelhos* surgiram 'como tapetes flutuantes', 'em muita quantidade', e mais tarde, *rabos-de-asno*, um emaranhado de ervas felpudas. Na manhã seguinte, quarta-feira, 22 de abril, o silêncio foi rompido pelos grasnados de aves marinhas, os *fura-buxos*, que voavam barulhentas entre mastros e velas, consideradas 'aves da anunciação'. Enquanto o alvoroço tomava conta dos embarcadiços, Cabral orava à imagem de Nossa Senhora da Boa Esperança. Então, 'nas horas de véspera' (entre 15h e o pôr do sol), a cerca de 70 quilômetros da costa, os tripulantes, mais com alívio e prazer do que com surpresa, avistaram 'um grande monte mui alto e redondo' erguendo-se no horizonte. Ao entardecer, após avançar cautelosamente por mais 40 quilômetros, a frota deparou com outras serras mais baixas ao sul do monte principal, silhuetadas contra o crepúsculo, cobertas por denso arvoredo que avançava até uma estreita faixa de areia. A armada lançou âncoras a seis léguas (cerca de 40 quilômetros) da costa, em mar esverdeado de 34 metros de profundidade com fundo arenoso. O monte avistado foi posteriormente nomeado Monte Pascoal. Estava descoberto o Brasil. (BUENO, 2016)",
+        "previous": "Na terça-feira, 21 de abril de 1500, após a celebração da Páscoa, a frota de Cabral encontrou sinais de proximidade de terra, como algas (botelhos e rabos-de-asno) e aves marinhas (fura-buxos). Na manhã seguinte, quarta-feira, 22 de abril, 'nas horas de véspera', a cerca de 70 quilômetros da costa, os tripulantes avistaram 'um grande monte mui alto e redondo'. Ao entardecer, após avançar mais 40 quilômetros, a frota deparou com outras serras mais baixas ao sul do monte principal, cobertas por denso arvoredo. A armada lançou âncoras a seis léguas (cerca de 40 quilômetros) da costa, em mar de 34 metros de profundidade. O monte avistado foi posteriormente nomeado Monte Pascoal. (BUENO, 2016)"
       }
     },
     {
@@ -61,8 +79,8 @@
       "secondary_tags_ids": ["thm_descobrimento_brasil_bueno", "thm_povos_indigenas_bueno"],
       "description_short": "Nicolau Coelho estabelece o primeiro contato com os Tupiniquins, trocando presentes. A frota busca e encontra um ancoradouro seguro em Porto Seguro (Baía Cabrália).",
       "article_full": {
-        "current": "Na manhã de quinta-feira, 23 de abril de 1500, a frota aproximou-se da costa, ancorando a 3 quilômetros da praia, em frente à foz de um pequeno rio. Nicolau Coelho foi enviado à terra e encontrou cerca de 18 a 20 indígenas, descritos como 'pardos, todos nus'. Houve uma troca de presentes: Coelho ofereceu um gorro vermelho, um sombreiro preto e uma carapuça de linho, recebendo em troca um cocar de penas e um colar de contas. Na sexta-feira, 24 de abril, a frota navegou para o norte em busca de um porto seguro, avistando as falésias de Trancoso. Ao final da tarde, encontraram 'um arrecife com um porto dentro, muito bom e muito seguro', na foz do rio Mutari, próximo ao recife da Coroa Vermelha (atual Baía Cabrália). O piloto Afonso Lopes sondou o porto e capturou dois jovens indígenas que pescavam em uma canoa (almadia), levando-os à nau capitânia onde foram recebidos por Cabral. (BUENO, 2016)",
-        "previous": null
+        "current": "Na manhã de quinta-feira, 23 de abril de 1500, após o sol nascer na baía em frente ao Monte Pascoal, a frota de Cabral avançou cuidadosamente cerca de 30 quilômetros em três horas. Por volta das 10h, ancorou a 3 quilômetros da praia, em frente à foz de um pequeno rio. Cabral enviou Nicolau Coelho à terra, acompanhado por Gaspar da Gama, um grumete da Guiné e um escravo de Angola, reunindo homens dos três continentes conhecidos e capazes de falar seis ou sete línguas. Ao chegar à foz do rio, encontraram cerca de 18 a 20 indígenas, 'pardos, todos nus, sem nenhuma coisa que lhes cobrisse suas vergonhas', trazendo arcos e setas. O mar encapelado impediu o diálogo, mas Nicolau Coelho sinalizou para que pousassem os arcos, o que fizeram. Sem descer do barco, Coelho jogou à praia um gorro vermelho, um sombreiro preto e uma carapuça de linho. Os nativos, posteriormente identificados como Tupiniquim, retribuíram com um cocar de penas compridas com uma copazinha de penas vermelhas e pardas, e um colar de contas brancas. Naquela noite, choveu e ventou forte de sueste. Na sexta-feira, 24 de abril, a frota ergueu âncoras por volta das 8h e navegou para o norte em busca de um 'bom pouso' para reabastecer. Avançando a cerca de 6 km/h, a frota contemplou as falésias de Trancoso e Porto Seguro. Após percorrer cerca de 65 quilômetros, ao final da tarde, encontraram 'um arrecife com um porto dentro, muito bom e muito seguro', ancorando na foz do rio Mutari, próximo ao recife da Coroa Vermelha (atual Baía Cabrália). As naus fundearam a 2 quilômetros da praia. Com o crepúsculo, Afonso Lopes, piloto da nau capitânia, 'homem vivo e destro', foi sondar o porto e capturou dois jovens indígenas que pescavam em uma *almadia* (canoa). Os dois foram levados à nau capitânia e recebidos por Cabral, que estava assentado em uma cadeira de espaldar alto sobre uma alcatifa, 'bem vestido e com um colar de ouro mui grande ao pescoço', acompanhado por outros capitães. Os jovens guerreiros, um com arco e flechas, não fizeram sinal de cortesia. Caminha descreveu-os como 'pardos, maneira de avermelhados, de bons rostos e bons narizes, bem-feitos', nus e inocentes. Ofereceram-lhes pão, pescado cozido, confeitos, mel, passas e vinho, mas eles quase nada provaram, cuspindo o que experimentaram. (BUENO, 2016)",
+        "previous": "Na manhã de quinta-feira, 23 de abril de 1500, a frota aproximou-se da costa, ancorando a 3 quilômetros da praia, em frente à foz de um pequeno rio. Nicolau Coelho foi enviado à terra e encontrou cerca de 18 a 20 indígenas, descritos como 'pardos, todos nus'. Houve uma troca de presentes: Coelho ofereceu um gorro vermelho, um sombreiro preto e uma carapuça de linho, recebendo em troca um cocar de penas e um colar de contas. Na sexta-feira, 24 de abril, a frota navegou para o norte em busca de um porto seguro, avistando as falésias de Trancoso. Ao final da tarde, encontraram 'um arrecife com um porto dentro, muito bom e muito seguro', na foz do rio Mutari, próximo ao recife da Coroa Vermelha (atual Baía Cabrália). O piloto Afonso Lopes sondou o porto e capturou dois jovens indígenas que pescavam em uma canoa (almadia), levando-os à nau capitânia onde foram recebidos por Cabral. (BUENO, 2016)"
       }
     },
     {
@@ -79,7 +97,43 @@
       "secondary_tags_ids": ["thm_descobrimento_brasil_bueno", "thm_primeiros_contatos_bueno"],
       "description_short": "Frei Henrique de Coimbra celebra a primeira missa no ilhéu da Coroa Vermelha, com a presença de Cabral e tripulantes, observados pelos indígenas. Interações pacíficas na praia.",
       "article_full": {
-        "current": "No domingo de Pascoela, 26 de abril de 1500, Pedro Álvares Cabral ordenou que um altar fosse erguido no ilhéu da Coroa Vermelha. Ali, Frei Henrique de Coimbra celebrou a primeira missa em solo brasileiro, com a presença da tripulação e a bandeira da Ordem de Cristo. Os indígenas observaram a cerimônia da praia e, ao final, sopraram conchas e dançaram. Após a missa e o almoço, os portugueses, incluindo Diogo Dias (homônimo do irmão de Bartolomeu Dias) que dançou com os nativos ao som de uma gaita, foram à praia para interagir com os indígenas. Pero Vaz de Caminha registrou suas impressões sobre os nativos, descrevendo-os como 'muito bem cuidados e muito limpos', comparando sua inocência à de 'aves e animais monteses'. (BUENO, 2016)",
+        "current": "No domingo de Pascoela, 26 de abril de 1500, primeiro domingo após a Páscoa, Pedro Álvares Cabral ordenou que um altar 'mui bem arranjado' fosse erguido na parte emersa do ilhéu da Coroa Vermelha, sob um *esperável* (espécie de tenda cônica). Ali, Frei Henrique de Coimbra, junto com os demais frades e capelães, cantou a missa. Cabral assistia levando consigo 'a bandeira de Cristo, sob cuja obediência viemos, com a qual saíra de Belém, e que manteve sempre alta, durante o Evangelho'. Enquanto os portugueses escutavam a missa 'com muito prazer e devoção', a praia encheu-se de nativos que observavam de longe, surpresos. Ao final da pregação de D. Henrique, os indígenas ergueram-se, sopraram conchas e buzinas, 'saltando e dançando por um bom tempo'. Após o almoço a bordo, Cabral sugeriu que fossem à praia. Com os batéis embandeirados, ancoraram na foz do rio Mutari, à sombra de palmiteiros, bananeiras, jacarandás, perobas, cedros e pau-brasil. Diogo Dias, 'homem gracioso e de prazer', levou um gaiteiro e, percebendo que os nativos dançavam sem se tocar, 'meteu-se com eles a dançar, tomando-os pelas mãos; e eles folgavam, e riam, e andavam com ele muito bem ao som da gaita', além de dar piruetas e saltos mortais, encantando os selvagens. Pero Vaz de Caminha, ao registrar o dia, fixou as primeiras imagens do 'bom selvagem', descrevendo os nativos como 'muito bem cuidados e muito limpos, tão gordos e tão formosos que mais não podem ser', comparando sua inocência à de 'aves e animais monteses'. (BUENO, 2016)",
+        "previous": "No domingo de Pascoela, 26 de abril de 1500, Pedro Álvares Cabral ordenou que um altar fosse erguido no ilhéu da Coroa Vermelha. Ali, Frei Henrique de Coimbra celebrou a primeira missa em solo brasileiro, com a presença da tripulação e a bandeira da Ordem de Cristo. Os indígenas observaram a cerimônia da praia e, ao final, sopraram conchas e dançaram. Após a missa e o almoço, os portugueses, incluindo Diogo Dias (homônimo do irmão de Bartolomeu Dias) que dançou com os nativos ao som de uma gaita, foram à praia para interagir com os indígenas. Pero Vaz de Caminha registrou suas impressões sobre os nativos, descrevendo-os como 'muito bem cuidados e muito limpos', comparando sua inocência à de 'aves e animais monteses'. (BUENO, 2016)"
+      }
+    },
+    {
+      "id": "evt_bueno_7",
+      "title": "Exploração Detalhada da Nova Terra e Interações com Indígenas em Porto Seguro",
+      "date_type": "period",
+      "start_date": "1500-04-25",
+      "end_date": "1500-04-30",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_nicolau_coelho", "char_bueno_bartolomeu_dias", "char_bueno_pero_vaz_caminha", "char_bueno_diogo_dias_dancarino", "char_bueno_afonso_lopes_piloto", "char_bueno_afonso_ribeiro_degredado", "char_bueno_tupiniquins"],
+      "place_id": "plc_bueno_porto_seguro_coroa_vermelha",
+      "longitude": -39.0647,
+      "latitude": -16.4497,
+      "main_theme_id": "thm_primeiros_contatos_bueno",
+      "secondary_tags_ids": ["thm_descobrimento_brasil_bueno", "thm_exploracao_bueno", "thm_povos_indigenas_bueno"],
+      "description_short": "Portugueses exploram a região de Porto Seguro, observam fauna e flora, coletam água e lenha, e mantêm contínuos contatos com os Tupiniquins.",
+      "article_full": {
+        "current": "Entre os dias 25 e 30 de abril de 1500, após a primeira missa, os portugueses intensificaram a exploração da região de Porto Seguro (Baía Cabrália) e as interações com os indígenas Tupiniquim. No dia 25, Nicolau Coelho e Bartolomeu Dias levaram de volta à terra os dois jovens indígenas que haviam sido capturados, agora vestidos com camisas portuguesas, mas eles não quiseram ficar e retornaram à nau capitânia. O degredado Afonso Ribeiro também foi enviado para viver entre os nativos, mas estes não o aceitaram em sua aldeia. Os dias seguintes foram dedicados à coleta de água e lenha, ao corte de madeira (possivelmente pau-brasil) e à observação da rica fauna e flora local, tudo detalhadamente registrado por Pero Vaz de Caminha. Os contatos com os Tupiniquins continuaram, com trocas de objetos, observação mútua de costumes e danças. Caminha descreve os indígenas como pacíficos, curiosos e de 'boa índole', destacando sua nudez, pinturas corporais e adornos de penas. Os portugueses tentaram catequizá-los, mostrando-lhes a cruz e imagens religiosas, mas a comunicação era limitada. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_8",
+      "title": "Conselho dos Capitães, Nomeação da Terra e Decisão de Enviar Notícias",
+      "date_type": "period",
+      "start_date": "1500-04-30",
+      "end_date": "1500-05-01",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_bartolomeu_dias", "char_bueno_nicolau_coelho", "char_bueno_gaspar_de_lemos", "char_bueno_pero_vaz_caminha"],
+      "place_id": "plc_bueno_porto_seguro_cruz",
+      "longitude": -39.0647,
+      "latitude": -16.4497,
+      "main_theme_id": "thm_simbolismo_posse_bueno",
+      "secondary_tags_ids": ["thm_descobrimento_brasil_bueno", "thm_comunicacao_coroa_bueno", "thm_expedicoes_maritimas_bueno"],
+      "description_short": "Cabral reúne seus capitães, nomeia a nova terra como Ilha de Vera Cruz e decide enviar a naveta de mantimentos de volta a Portugal com as notícias da descoberta.",
+      "article_full": {
+        "current": "Entre o final de abril e o dia 1º de maio de 1500, Pedro Álvares Cabral convocou um conselho com seus principais capitães, incluindo Bartolomeu Dias e Nicolau Coelho, para deliberar sobre a recém-descoberta terra. Durante este conselho, foi decidido que a terra seria formalmente nomeada 'Ilha de Vera Cruz'. A principal deliberação foi a de enviar imediatamente uma das naus de volta a Portugal para comunicar ao rei D. Manoel I a notícia do 'achamento'. A naveta de mantimentos, comandada por Gaspar de Lemos, foi a escolhida para esta missão. Pero Vaz de Caminha foi encarregado de redigir a carta oficial relatando os acontecimentos. Esta decisão ressalta a importância atribuída à descoberta e a urgência em informar a Coroa. (BUENO, 2016)",
         "previous": null
       }
     },
@@ -97,7 +151,133 @@
       "secondary_tags_ids": ["thm_descobrimento_brasil_bueno", "thm_comunicacao_coroa_bueno"],
       "description_short": "Uma grande cruz é erguida na praia, seguida por uma segunda missa. A frota de Cabral parte para a Índia, enquanto Gaspar de Lemos retorna a Portugal com a carta de Caminha e a notícia da descoberta. Dois degredados são deixados no Brasil.",
       "article_full": {
-        "current": "Na sexta-feira, 1º de maio de 1500, os portugueses, com a ajuda de cerca de 150 indígenas, ergueram uma grande cruz de madeira na praia, com as armas reais de D. Manoel. Frei Henrique de Coimbra celebrou a segunda missa, e os nativos imitaram os gestos dos portugueses. A cruz simbolizava a posse da terra, chamada Ilha de Vera Cruz, e marcava o local para futuros navegantes. No sábado, 2 de maio, a frota se preparou para partir. A naveta de mantimentos, comandada por Gaspar de Lemos, foi designada para retornar a Portugal levando a carta de Pero Vaz de Caminha, amostras da nova terra (pau-brasil, araras) e um indígena. O restante da esquadra de Cabral seguiu viagem rumo à Índia. Dois degredados, incluindo Afonso Ribeiro, foram deixados em terra para aprender sobre os costumes locais. (BUENO, 2016)",
+        "current": "Na sexta-feira, 1º de maio de 1500, toda a tripulação foi autorizada a desembarcar. 'Cantando em maneira de procissão', com estandartes da Ordem de Cristo, mais de mil homens seguiram pelas margens do rio Mutari até o local escolhido para fincar uma grande cruz de madeira, feita por dois carpinteiros nos dias anteriores. Cerca de 150 indígenas se juntaram à romaria e ajudaram a carregar a cruz, que talvez tivesse uns 7 metros. A cruz foi fincada no meio da baía, com as armas reais de D. Manoel pregadas a ela. Quando os portugueses se ajoelharam à sua sombra, os cerca de 80 nativos presentes fizeram o mesmo. Frei Henrique de Coimbra e seus frades rezaram a segunda missa no Brasil. Os índios acompanharam, imitando os gestos dos portugueses. Após a cerimônia, Frei Henrique pregou o Evangelho. A cruz, além de símbolo da fé e da Ordem de Cristo, assegurava a posse da terra em nome de D. Manoel e assinalava o local para futuros navegantes e onde os degredados seriam deixados. A terra foi então batizada por Cabral como 'Ilha de Vera Cruz'. No sábado, 2 de maio, a armada preparou-se para partir. A naveta de mantimentos, comandada por Gaspar de Lemos, foi designada para retornar a Portugal, levando as cartas de Caminha, Mestre João e outros, amostras da nova terra (pau-brasil, araras, cocares, bodoques, pedras) e um indígena Tupiniquim que embarcou voluntariamente. O restante da esquadra de Cabral seguiu viagem rumo à Índia. Dois degredados, Afonso Ribeiro (assassino confesso) e outro cujo nome se desconhece, foram deixados em terra, chorando, 'para andar lá com eles [os nativos] e saber de seu viver e maneiras'. Na noite anterior, dois grumetes haviam desertado da nau capitânia, fugindo num esquife, possivelmente motivados pelos encantos da terra ou pelas agruras da vida a bordo. (BUENO, 2016)",
+        "previous": "Na sexta-feira, 1º de maio de 1500, os portugueses, com a ajuda de cerca de 150 indígenas, ergueram uma grande cruz de madeira na praia, com as armas reais de D. Manoel. Frei Henrique de Coimbra celebrou a segunda missa, e os nativos imitaram os gestos dos portugueses. A cruz simbolizava a posse da terra, chamada Ilha de Vera Cruz, e marcava o local para futuros navegantes. No sábado, 2 de maio, a frota se preparou para partir. A naveta de mantimentos, comandada por Gaspar de Lemos, foi designada para retornar a Portugal levando a carta de Pero Vaz de Caminha, amostras da nova terra (pau-brasil, araras) e um indígena. O restante da esquadra de Cabral seguiu viagem rumo à Índia. Dois degredados, incluindo Afonso Ribeiro, foram deixados em terra para aprender sobre os costumes locais. (BUENO, 2016)"
+      }
+    },
+    {
+      "id": "evt_bueno_9",
+      "title": "Tempestade no Cabo da Boa Esperança e Perda de Quatro Naus",
+      "date_type": "period",
+      "start_date": "1500-05-23",
+      "end_date": "1500-05-24",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_bartolomeu_dias", "char_bueno_luis_pires", "char_bueno_simao_de_pina", "char_bueno_aires_gomes_da_silva"],
+      "place_id": "plc_bueno_cabo_boa_esperanca",
+      "longitude": 18.4739,
+      "latitude": -34.3580,
+      "main_theme_id": "thm_incidentes_viagem_bueno",
+      "secondary_tags_ids": ["thm_grandes_navegacoes_bueno", "thm_expedicoes_maritimas_bueno", "thm_rota_india_bueno"],
+      "description_short": "Frota de Cabral é atingida por violenta tempestade ao sul do Cabo da Boa Esperança, resultando no naufrágio de quatro naus, incluindo a de Bartolomeu Dias.",
+      "article_full": {
+        "current": "Após deixar o Brasil em 2 de maio, a frota de Cabral navegou para sudeste. Em 23 de maio de 1500, enquanto tentavam contornar o Cabo da Boa Esperança (então conhecido como Cabo das Tormentas), foram surpreendidos por uma tempestade súbita e devastadora. Os ventos uivantes e ondas gigantescas engoliram quatro naus em rápida sucessão. A nau comandada por Bartolomeu Dias, o experiente navegador que havia sido o primeiro a dobrar aquele mesmo cabo, foi uma das perdidas, levando-o à morte junto com toda a sua tripulação. As outras naus que sucumbiram foram as de Luís Pires, Simão de Pina e Aires Gomes da Silva. Mais de 380 homens pereceram neste que foi um dos maiores desastres marítimos da história das navegações portuguesas. A nau de Diogo Dias também se perdeu do comboio durante a tormenta, mas não afundou. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_10",
+      "title": "Reagrupamento da Frota e Chegada a Sofala/Moçambique",
+      "date_type": "period",
+      "start_date": "1500-06-02",
+      "end_date": "1500-07-20",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_diogo_dias_dancarino", "char_bueno_nicolau_coelho", "char_bueno_sancho_de_tovar"],
+      "place_id": "plc_bueno_mocambique_sofal_melinde",
+      "longitude": 39.766667,
+      "latitude": -8.0,
+      "main_theme_id": "thm_rota_india_bueno",
+      "secondary_tags_ids": ["thm_expedicoes_maritimas_bueno", "thm_incidentes_viagem_bueno"],
+      "description_short": "Após a tempestade, a frota reduzida se reagrupa, a nau de Diogo Dias se perde. Chegam a Sofala e depois a Moçambique para reparos e suprimentos.",
+      "article_full": {
+        "current": "Após a devastadora tempestade no Cabo da Boa Esperança, as sete naus restantes da frota de Cabral, incluindo a nau capitânia, a de Nicolau Coelho e a de Sancho de Tovar, conseguiram se reagrupar em 2 de junho de 1500. No entanto, a nau de Diogo Dias havia se desgarrado e tomaria um rumo próprio. A frota, agora com apenas seis navios (considerando a naveta de Gaspar de Lemos que já retornara a Portugal), prosseguiu viagem pela costa africana. Em 16 de julho, avistaram Sofala, mas não puderam ancorar devido aos baixios. Em 20 de julho, chegaram a Moçambique, onde Vasco da Gama havia parado anteriormente. Ali, a frota fez reparos, reabasteceu-se de água e mantimentos, e Cabral trocou presentes com o xeque local, preparando-se para a travessia do Oceano Índico em direção a Melinde e, finalmente, Calicute. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_11",
+      "title": "Estadia em Melinde e Contratação de Piloto Guzerate",
+      "date_type": "period",
+      "start_date": "1500-08-02",
+      "end_date": "1500-08-07",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_gaspar_piloto_guzerate"],
+      "place_id": "plc_bueno_melinde_quenia",
+      "longitude": 40.1167,
+      "latitude": -3.2167,
+      "main_theme_id": "thm_rota_india_bueno",
+      "secondary_tags_ids": ["thm_expedicoes_maritimas_bueno", "thm_aliancas_estrategicas_bueno"],
+      "description_short": "A frota de Cabral chega a Melinde, onde é bem recebida e Cabral contrata um piloto guzerate para guiá-los à Índia.",
+      "article_full": {
+        "current": "Após a parada em Moçambique, a frota de Cabral navegou para o norte ao longo da costa africana, chegando a Melinde (atual Quênia) em 2 de agosto de 1500. Melinde era um sultanato amigo dos portugueses desde a passagem de Vasco da Gama. Cabral foi bem recebido pelo sultão, trocando presentes e reafirmando a aliança. O principal objetivo da parada em Melinde era contratar um piloto experiente que pudesse guiar a frota através do Oceano Índico até Calicute. Cabral conseguiu os serviços de um piloto guzerate chamado Gaspar (ou Guzarate, não confundir com Gaspar da Gama, o intérprete), que já havia guiado Vasco da Gama. Com o piloto a bordo, a frota partiu de Melinde em 7 de agosto, iniciando a travessia final para a Índia. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_12",
+      "title": "Chegada da Frota a Calicute, Índia",
+      "date_type": "single",
+      "start_date": "1500-09-13",
+      "end_date": null,
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_gaspar_piloto_guzerate", "char_bueno_samorim_calicute"],
+      "place_id": "plc_bueno_calicute_india",
+      "longitude": 75.7804,
+      "latitude": 11.2588,
+      "main_theme_id": "thm_rota_india_bueno",
+      "secondary_tags_ids": ["thm_expedicoes_maritimas_bueno", "thm_comercio_especiarias_bueno"],
+      "description_short": "Guiada pelo piloto guzerate, a frota de Cabral finalmente ancora em Calicute, principal entreposto de especiarias da costa do Malabar.",
+      "article_full": {
+        "current": "Após uma travessia de 27 dias desde Melinde, guiada pelo piloto guzerate Gaspar, a frota de Pedro Álvares Cabral, reduzida a seis naus, finalmente avistou a costa do Malabar e ancorou em frente a Calicute em 13 de setembro de 1500. Calicute era o mais importante centro comercial de especiarias da Índia e o destino principal da expedição. A chegada marcou o início de um período complexo de negociações diplomáticas e comerciais com o Samorim, o governante local, visando estabelecer uma feitoria portuguesa e garantir o acesso ao lucrativo comércio de pimenta e outras especiarias. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_13",
+      "title": "Negociações em Calicute e Estabelecimento da Feitoria",
+      "date_type": "period",
+      "start_date": "1500-09-14",
+      "end_date": "1500-12-15",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_samorim_calicute", "char_bueno_aires_correia", "char_bueno_gaspar_da_gama_interprete", "char_bueno_frei_henrique_coimbra"],
+      "place_id": "plc_bueno_calicute_india",
+      "longitude": 75.7804,
+      "latitude": 11.2588,
+      "main_theme_id": "thm_comercio_especiarias_bueno",
+      "secondary_tags_ids": ["thm_diplomacia_conflito_bueno", "thm_expedicoes_maritimas_bueno", "thm_rota_india_bueno"],
+      "description_short": "Cabral inicia negociações com o Samorim de Calicute, enfrenta dificuldades e a oposição de mercadores árabes, mas consegue estabelecer uma feitoria.",
+      "article_full": {
+        "current": "Após a chegada a Calicute em 13 de setembro de 1500, Pedro Álvares Cabral iniciou um longo e árduo processo de negociação com o Samorim local para estabelecer uma feitoria (posto comercial) e obter permissão para carregar especiarias. As negociações foram marcadas por desconfiança mútua, intrigas palacianas e a forte oposição dos mercadores muçulmanos (chamados 'mouros' pelos portugueses), que dominavam o comércio de especiarias e viam os recém-chegados como uma ameaça. Cabral enviou emissários, incluindo Aires Correia (feitor-mor) e Gaspar da Gama (intérprete), para se encontrar com o Samorim, trocando presentes e cartas de D. Manoel I. Após semanas de discussões e atrasos, o Samorim finalmente concedeu permissão para o estabelecimento de uma feitoria e para o carregamento das naus, embora sob condições que os portugueses consideraram desfavoráveis e lentas. A feitoria foi instalada em um edifício cedido, e Aires Correia ficou como seu responsável. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_14",
+      "title": "Ataque à Feitoria em Calicute e Massacre dos Portugueses",
+      "date_type": "period",
+      "start_date": "1500-12-16",
+      "end_date": "1500-12-17",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_aires_correia", "char_bueno_pero_vaz_caminha", "char_bueno_samorim_calicute", "char_bueno_frei_henrique_coimbra"],
+      "place_id": "plc_bueno_calicute_india",
+      "longitude": 75.7804,
+      "latitude": 11.2588,
+      "main_theme_id": "thm_diplomacia_conflito_bueno",
+      "secondary_tags_ids": ["thm_comercio_especiarias_bueno", "thm_incidentes_viagem_bueno", "thm_rota_india_bueno"],
+      "description_short": "A feitoria portuguesa em Calicute é atacada por uma multidão incitada por mercadores árabes, resultando na morte de mais de 50 portugueses, incluindo Aires Correia e Pero Vaz de Caminha.",
+      "article_full": {
+        "current": "Após meses de tensas negociações e dificuldades para carregar as naus com especiarias, a situação em Calicute deteriorou-se. Em 16 de dezembro de 1500, incitados por mercadores árabes que viam seus interesses comerciais ameaçados, uma multidão de cerca de 300 árabes e muitos hindus atacou a feitoria portuguesa. Os aproximadamente 70 portugueses na feitoria, incluindo o feitor Aires Correia, Pero Vaz de Caminha, e alguns frades liderados por Frei Henrique de Coimbra, tentaram resistir, mas foram massacrados. Mais de 50 portugueses morreram no ataque, incluindo Aires Correia e Pero Vaz de Caminha. Os poucos sobreviventes, alguns feridos, conseguiram escapar a nado para os navios. Este evento marcou o fim das tentativas de Cabral de estabelecer relações pacíficas com o Samorim de Calicute. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_bueno_15",
+      "title": "Retaliação Portuguesa: Bombardeio de Calicute",
+      "date_type": "period",
+      "start_date": "1500-12-17",
+      "end_date": "1500-12-18",
+      "characters_ids": ["char_bueno_pedro_alvares_cabral", "char_bueno_samorim_calicute"],
+      "place_id": "plc_bueno_calicute_india",
+      "longitude": 75.7804,
+      "latitude": 11.2588,
+      "main_theme_id": "thm_diplomacia_conflito_bueno",
+      "secondary_tags_ids": ["thm_incidentes_viagem_bueno", "thm_rota_india_bueno", "thm_comercio_especiarias_bueno"],
+      "description_short": "Em retaliação ao ataque à feitoria, Cabral ordena o bombardeio de Calicute e a captura de navios árabes no porto.",
+      "article_full": {
+        "current": "Após o massacre na feitoria portuguesa em 16 de dezembro de 1500, Pedro Álvares Cabral ordenou uma violenta retaliação. No dia seguinte, 17 de dezembro, e continuando no dia 18, as naus portuguesas bombardearam a cidade de Calicute por um dia inteiro, causando grande destruição e matando, segundo relatos, cerca de 600 pessoas. Além do bombardeio, Cabral ordenou a captura e o saque de navios árabes que estavam no porto, confiscando suas mercadorias, principalmente especiarias, e aprisionando suas tripulações. Este ato de guerra marcou uma escalada no conflito entre portugueses e os poderes locais e mercadores muçulmanos na Índia. (BUENO, 2016)",
         "previous": null
       }
     }
@@ -107,73 +287,190 @@
       "id": "char_bueno_pedro_alvares_cabral",
       "name": "Pedro Álvares Cabral",
       "description_short": "Nobre e militar português, comandante da frota que descobriu o Brasil em 1500.",
-      "article_full": { "current": "Pedro Álvares Cabral (Belmonte, c. 1467/1468 – Santarém, c. 1520) foi um fidalgo, comandante militar, navegador e explorador português, creditado como o descobridor do Brasil. Liderou a segunda expedição portuguesa à Índia, durante a qual ocorreu o achamento oficial do Brasil em abril de 1500. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Pedro Álvares Cabral (Belmonte, c. 1467/1468 – Santarém, c. 1520) foi um fidalgo português, segundo filho de Fernão Cabral, o 'Gigante da Beira', e D. Isabel Gouveia. Por não ser primogênito, não tinha direito à herança paterna, mas tornou-se muito rico ao casar-se com D. Isabel de Castro, neta dos reis D. Fernando de Portugal e D. Henrique de Castela, e sobrinha de Afonso de Albuquerque. Membro da Ordem de Cristo, sua nomeação como capitão-mor da armada para a Índia em 15 de fevereiro de 1500, aos 32 anos, deveu-se provavelmente mais aos seus vínculos familiares e casamento do que a proezas náuticas conhecidas, sendo considerado mais um militar do que navegador. Comandou a segunda expedição portuguesa à Índia, durante a qual ocorreu o achamento oficial do Brasil em abril de 1500. Após retornar da Índia em 21 de julho de 1501, foi recebido pelo rei D. Manoel I em Santarém e recebeu uma tença anual de 30 mil reais. Convidado para a 'Esquadra da Vingança' contra Calicute, recusou o cargo de subcomandante, indispondo-se com o rei, possivelmente por disputas de poder com Vicente Sodré ou Vasco da Gama. Retirou-se para Santarém, onde morreu na obscuridade por volta de 1520, vitimado por febres (malária) contraídas na Índia, sem pleno conhecimento da dimensão continental da terra que descobrira. (BUENO, 2016)", 
+        "previous": "Pedro Álvares Cabral (Belmonte, c. 1467/1468 – Santarém, c. 1520) foi um fidalgo, comandante militar, navegador e explorador português, creditado como o descobridor do Brasil. Liderou a segunda expedição portuguesa à Índia, durante a qual ocorreu o achamento oficial do Brasil em abril de 1500. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_dom_manoel_i",
       "name": "D. Manoel I, o Venturoso",
       "description_short": "Rei de Portugal durante o período do descobrimento do Brasil e da chegada à Índia.",
-      "article_full": { "current": "D. Manoel I (Alcochete, 1469 – Lisboa, 1521), cognominado 'O Venturoso' ou 'O Afortunado', foi Rei de Portugal e dos Algarves. Seu reinado coincidiu com um período de grande expansão marítima portuguesa, incluindo a viagem de Vasco da Gama à Índia e a chegada de Cabral ao Brasil. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "D. Manoel I (Alcochete, 1469 – Lisboa, 1521), cognominado 'O Venturoso' ou 'O Afortunado', assumiu o trono de Portugal por vias tortuosas, sendo filho de D. Fernando (irmão do rei Afonso V) e D. Beatriz (neta de D. João I). Sua irmã era casada com D. João II, que não pretendia entregar-lhe o trono, mas a rainha forçou sua ascensão. Apesar de herdar uma Coroa endividada, D. Manoel I herdou também um vasto império ultramarino, que expandiu. No fulgor de seus 30 anos, após o retorno de Vasco da Gama da Índia em 1499, adicionou ao seu título 'Senhor da Conquista, Navegação e Comércio da Etiópia, Arábia, Pérsia e da Índia'. Decidiu reiniciar as viagens oceânicas, apesar da oposição da corte que as considerava dispendiosas. Para a expedição de Cabral, D. Manoel queria impressionar o Samorim de Calicute, enviando uma frota poderosa e presentes caros, investindo pesadamente em ouro amoedado. Já planejava 'alargar, polir e enobrecer' Lisboa, iniciando a construção do Mosteiro dos Jerônimos e da Torre de Belém. Seu reinado coincidiu com um período de grande expansão marítima, incluindo a viagem de Vasco da Gama à Índia e a chegada de Cabral ao Brasil. Casou-se em 1497 com D. Isabel de Aragão, filha dos Reis Católicos, sonhando com uma Península Ibérica unida sob o cetro de um filho seu, D. Miguel, que nasceu em 1498 mas morreu em 1500. (BUENO, 2016)", 
+        "previous": "D. Manoel I (Alcochete, 1469 – Lisboa, 1521), cognominado 'O Venturoso' ou 'O Afortunado', foi Rei de Portugal e dos Algarves. Seu reinado coincidiu com um período de grande expansão marítima portuguesa, incluindo a viagem de Vasco da Gama à Índia e a chegada de Cabral ao Brasil. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_vasco_da_gama",
       "name": "Vasco da Gama",
       "description_short": "Navegador português, descobridor do caminho marítimo para a Índia.",
-      "article_full": { "current": "Vasco da Gama (Sines, c. 1460/1469 – Cochim, 1524) foi um navegador e explorador português. Notabilizou-se por ter sido o comandante dos primeiros navios a navegar da Europa para a Índia, na mais longa viagem oceânica até então realizada. Suas instruções de navegação foram seguidas por Cabral. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Vasco da Gama (Sines, c. 1460/1469 – Cochim, 1524) foi um fidalgo e navegador português, comandante da primeira frota a navegar diretamente da Europa para a Índia (1497-1499), contornando a África, na mais longa viagem oceânica até então realizada. Filho de Estêvão da Gama, governador de Sines, foi escolhido por D. Manoel I para liderar esta crucial expedição, não só por sua experiência marítima, mas também para desempenhar funções diplomáticas e militares. Suas instruções de navegação, incluindo a técnica da 'volta do mar' para evitar as calmarias do Golfo da Guiné (possivelmente aprendida com Bartolomeu Dias), foram cruciais e seguidas por Pedro Álvares Cabral em 1500. Cabral manteve contato constante com Gama antes de sua partida, recebendo um manuscrito com instruções. Durante sua primeira viagem à Índia, Gama enfrentou desconfiança e hostilidade em Calicute, especialmente com o Samorim, devido a presentes considerados simplórios e à rivalidade com mercadores árabes, mas conseguiu retornar a Portugal com a notícia da rota marítima estabelecida. Em 1502, comandou a 'Esquadra da Vingança' para retaliar eventos em Calicute e foi nomeado Almirante das Índias. (BUENO, 2016)", 
+        "previous": "Vasco da Gama (Sines, c. 1460/1469 – Cochim, 1524) foi um navegador e explorador português. Notabilizou-se por ter sido o comandante dos primeiros navios a navegar da Europa para a Índia, na mais longa viagem oceânica até então realizada. Suas instruções de navegação foram seguidas por Cabral. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_frei_henrique_coimbra",
       "name": "Frei Henrique de Coimbra",
       "description_short": "Franciscano que celebrou as primeiras missas no Brasil.",
-      "article_full": { "current": "Frei Henrique Soares de Coimbra foi um frade franciscano português que integrou a expedição de Pedro Álvares Cabral. É conhecido por ter celebrado a primeira missa no Brasil, em 26 de abril de 1500, e uma segunda em 1º de maio de 1500. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Frei Henrique Soares de Coimbra, um franciscano, era o líder dos oito frades e oito capelães na frota de Cabral. Homem de vasto saber teológico e político, largara a toga de desembargador da Casa de Suplicação de Lisboa para entrar como noviço no convento de Alenquer. Durante a Quaresma a bordo, comandou a liturgia. Celebrou a primeira missa no Brasil no ilhéu da Coroa Vermelha em 26 de abril de 1500, e uma segunda em 1º de maio de 1500, no local onde foi erguida a cruz. Após a segunda missa, pregou o Evangelho. Acreditava-se que ia ao Oriente para encontrar cristãos e estabelecer alianças espirituais. Após a viagem, tornou-se bispo de Ceuta, confessor do rei D. Manoel e embaixador em missões junto aos papas Júlio II e Leão X. Há relatos controversos de que, mais tarde, teria sido inquisidor e presidido a primeira queima de um judeu em Portugal. (BUENO, 2016)", 
+        "previous": "Frei Henrique Soares de Coimbra foi um frade franciscano português que integrou a expedição de Pedro Álvares Cabral. É conhecido por ter celebrado a primeira missa no Brasil, em 26 de abril de 1500, e uma segunda em 1º de maio de 1500. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_nicolau_coelho",
       "name": "Nicolau Coelho",
       "description_short": "Navegador experiente, participou das expedições de Vasco da Gama e Cabral. Realizou o primeiro contato com os indígenas no Brasil.",
-      "article_full": { "current": "Nicolau Coelho (Felgueiras, c. 1460 – ao largo de Moçambique, 1504) foi um navegador português. Participou da descoberta do caminho marítimo para a Índia com Vasco da Gama e integrou a frota de Cabral, sendo o primeiro a estabelecer contato com os indígenas brasileiros. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Nicolau Coelho (Felgueiras, c. 1460 – ao largo de Moçambique, 1504) foi um dos maiores navegadores portugueses. Ao contrário de muitos capitães de nobre linhagem, foi alçado ao cargo por sua excelência no mar. Em 1497, como capitão da nau Bérrio, foi um dos descobridores da Índia na frota de Vasco da Gama, e coube a ele antecipar-se a Gama e dar a boa-nova ao rei D. Manoel em 10 de julho de 1499. Por esta façanha, foi feito cavalheiro em 24 de fevereiro de 1500, recebendo uma tença vitalícia e o direito a um brasão. Na expedição de Cabral, comandou uma das naus da primeira divisão. Em 23 de abril de 1500, foi o primeiro a ser enviado à terra no Brasil, estabelecendo o primeiro contato com os indígenas Tupiniquim na foz de um pequeno rio, trocando presentes (gorro vermelho, sombreiro preto, carapuça de linho por um cocar de penas e colar de contas). Acompanhou Cabral no encontro com os dois indígenas capturados na nau capitânia e, em 25 de abril, junto com Bartolomeu Dias e Pero Vaz de Caminha, levou os dois nativos de volta à terra. Retornou à Índia em 1502 na esquadra de Vasco da Gama. Morreu em 1504, quando sua nau Faial afundou ao largo de Moçambique, regressando da Índia. (BUENO, 2016)", 
+        "previous": "Nicolau Coelho (Felgueiras, c. 1460 – ao largo de Moçambique, 1504) foi um navegador português. Participou da descoberta do caminho marítimo para a Índia com Vasco da Gama e integrou a frota de Cabral, sendo o primeiro a estabelecer contato com os indígenas brasileiros. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_gaspar_da_gama_interprete",
       "name": "Gaspar da Gama (Intérprete)",
       "description_short": "Judeu polonês convertido, intérprete na frota de Cabral, com conhecimento de línguas orientais.",
-      "article_full": { "current": "Gaspar da Gama, também conhecido como Gaspar da Índia, era um judeu polonês que viveu na Índia e foi capturado por Vasco da Gama. Convertido ao cristianismo, serviu como intérprete na frota de Cabral devido ao seu conhecimento de línguas orientais. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Gaspar da Gama, também conhecido como Gaspar da Índia, era um judeu nascido na Polônia, de caráter errante, que viveu em Calicute por cerca de 30 anos. Em 1498, foi capturado em Goa por Vasco da Gama, que inicialmente o julgou ser um espião árabe. Gaspar terminou por conquistar a confiança de Vasco da Gama, converteu-se ao cristianismo, adotou o nome de batismo de seu poderoso padrinho e foi levado para Lisboa. Passou a circular pela corte com desenvoltura, tornou-se íntimo de D. Manoel I e embarcou como um dos oito intérpretes na viagem de Cabral, destacando-se por seu conhecimento de árabe e dialetos hindus da costa do Malabar. Acompanhou Nicolau Coelho no primeiro desembarque no Brasil em 23 de abril de 1500, na tentativa de comunicação com os indígenas. (BUENO, 2016)", 
+        "previous": "Gaspar da Gama, também conhecido como Gaspar da Índia, era um judeu polonês que viveu na Índia e foi capturado por Vasco da Gama. Convertido ao cristianismo, serviu como intérprete na frota de Cabral devido ao seu conhecimento de línguas orientais. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_afonso_lopes_piloto",
       "name": "Afonso Lopes (Piloto)",
       "description_short": "Piloto da nau capitânia de Cabral, realizou a sondagem do porto em Porto Seguro.",
-      "article_full": { "current": "Afonso Lopes foi o piloto da nau capitânia na expedição de Pedro Álvares Cabral. Descrito como 'homem vivo e destro', foi responsável por sondar o ancoradouro de Porto Seguro e capturar os primeiros indígenas levados a bordo. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Afonso Lopes era o piloto da nau capitânia de Pedro Álvares Cabral. Descrito por Pero Vaz de Caminha como 'homem vivo e destro', foi enviado na tarde de 24 de abril de 1500 para 'sondar o porto por dentro' na recém-encontrada Baía Cabrália (Porto Seguro). No interior da baía, deparou com dois jovens indígenas pescando em uma *almadia* (canoa) e os capturou de imediato, levando-os à presença de Cabral na nau capitânia. Este foi o primeiro contato mais próximo e a primeira captura de nativos pela expedição. (BUENO, 2016)", 
+        "previous": "Afonso Lopes foi o piloto da nau capitânia na expedição de Pedro Álvares Cabral. Descrito como 'homem vivo e destro', foi responsável por sondar o ancoradouro de Porto Seguro e capturar os primeiros indígenas levados a bordo. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_tupiniquins",
       "name": "Povos Tupiniquins",
       "description_short": "Grupo indígena que habitava o litoral da Bahia e teve os primeiros contatos com a frota de Cabral.",
-      "article_full": { "current": "Os Tupiniquins eram um grupo indígena do tronco Tupi que habitava a região litorânea do atual estado da Bahia na época da chegada de Cabral. Foram os primeiros povos nativos a interagir com os portugueses em 1500. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Os Tupiniquim, pertencentes à grande família Tupi-Guarani, ocupavam o litoral sul da Bahia (de Ilhéus à foz do rio Doce) e uma faixa em São Paulo na época da chegada de Cabral. Eram cerca de 85 mil e haviam chegado à costa por volta do ano 1000 d.C., em uma migração de fundo religioso em busca da 'Terra Sem Males'. Foram os primeiros indígenas a contatar a frota de Cabral. Em 23 de abril de 1500, cerca de 18 a 20 deles, 'pardos, todos nus', com arcos e flechas, encontraram Nicolau Coelho, trocando um cocar de penas e um colar de contas por um gorro vermelho, sombreiro preto e carapuça de linho. Em 24 de abril, dois jovens Tupiniquim pescando em uma *almadia* foram capturados por Afonso Lopes e levados a Cabral. Observaram a primeira missa da praia em 26 de abril, e depois sopraram conchas, saltaram e dançaram. Interagiram pacificamente com os portugueses na praia, com Diogo Dias dançando com eles. Caminha os descreveu como 'muito bem cuidados e muito limpos', 'tão gordos e tão formosos', comparando sua inocência à de 'aves e animais monteses'. Em 1º de maio, cerca de 150 Tupiniquim ajudaram a erguer a grande cruz e imitaram os gestos dos portugueses durante a segunda missa. Um Tupiniquim embarcou voluntariamente na naveta de Gaspar de Lemos para Portugal, causando espanto na corte. Por volta de 1530, aliaram-se aos portugueses contra os Tupinambá-Tamoio, mas por volta de 1570 a tribo estava virtualmente extinta. (BUENO, 2016)", 
+        "previous": "Os Tupiniquins eram um grupo indígena do tronco Tupi que habitava a região litorânea do atual estado da Bahia na época da chegada de Cabral. Foram os primeiros povos nativos a interagir com os portugueses em 1500. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_pero_vaz_caminha",
       "name": "Pero Vaz de Caminha",
       "description_short": "Escrivão da frota de Cabral, autor da carta que relatou o descobrimento do Brasil ao rei D. Manoel I.",
-      "article_full": { "current": "Pero Vaz de Caminha (Porto, c. 1450 – Calicute, 1500) foi um escrivão português. Acompanhou a expedição de Pedro Álvares Cabral como escrivão da feitoria a ser instalada em Calicute. É célebre por sua carta a D. Manoel I, detalhando o 'achamento' do Brasil e os primeiros contatos com os indígenas. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Pero Vaz de Caminha (Porto, c. 1450 – Calicute, 1500) era membro da 'burocracia letrada e média', filho de Vasco Caminha, que ocupara cargos fiscais. Cavaleiro das casas de D. Afonso V, D. João II e D. Manoel, tinha cerca de 50 anos ao embarcar na frota de Cabral. Não era o escrivão oficial da armada (cargo de Gonçalo Gil Barbosa), mas fora escalado como contador da feitoria a ser instalada em Calicute. Sua célebre carta ao rei D. Manoel I, datada de 1º de maio de 1500, é a fonte mais confiável e detalhada sobre os primeiros dias no Brasil, narrando com precisão e fluência o 'achamento' da nova terra e os contatos com os indígenas Tupiniquim. Na carta, intercedeu por seu genro, Jorge Osouro, condenado ao degredo em São Tomé, pedido que o rei atendeu após a morte de Caminha. Pero Vaz de Caminha foi morto em 16 de dezembro de 1500, durante o ataque de árabes e hindus à feitoria portuguesa em Calicute. Sua carta, porém, submergiu na obscuridade por quase três séculos, sendo redescoberta em 1773 e publicada pela primeira vez, de forma incompleta, em 1817. (BUENO, 2016)", 
+        "previous": "Pero Vaz de Caminha (Porto, c. 1450 – Calicute, 1500) foi um escrivão português. Acompanhou a expedição de Pedro Álvares Cabral como escrivão da feitoria a ser instalada em Calicute. É célebre por sua carta a D. Manoel I, detalhando o 'achamento' do Brasil e os primeiros contatos com os indígenas. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_diogo_dias_dancarino",
       "name": "Diogo Dias (Dançarino)",
       "description_short": "Membro da tripulação de Cabral, conhecido por sua interação alegre com os indígenas, dançando com eles.",
-      "article_full": { "current": "Diogo Dias, descrito como 'homem gracioso e de prazer', era um dos membros da frota de Cabral. Notabilizou-se por sua interação amigável com os indígenas na praia de Porto Seguro, onde dançou com eles ao som de uma gaita, quebrando o gelo inicial. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Diogo Dias, irmão de Bartolomeu Dias, era capitão de uma nau d'el-Rei na segunda divisão da frota de Cabral, destinada a Sofala. Descrito por Pero Vaz de Caminha como 'homem gracioso e de prazer', notabilizou-se por sua interação amigável com os indígenas Tupiniquim na praia em Porto Seguro em 26 de abril de 1500. Levou consigo um gaiteiro e, percebendo que os nativos dançavam sem se tocar, 'meteu-se com eles a dançar, tomando-os pelas mãos; e eles folgavam, e riam, e andavam com ele muito bem ao som da gaita'. Também deu piruetas e saltos mortais, encantando os indígenas e quebrando o gelo inicial. Após a tempestade no Cabo da Boa Esperança, onde seu irmão Bartolomeu naufragou, a nau de Diogo Dias desgarrou-se da frota e foi parar em Mogadíscio, na Somália, tornando-se o primeiro navio europeu a singrar o Mar Vermelho. Foi reencontrado por Cabral em Bezeguiche (Dakar) em 2 de junho de 1501, com apenas sete homens a bordo, quase todos doentes e esqueléticos. (BUENO, 2016)", 
+        "previous": "Diogo Dias, descrito como 'homem gracioso e de prazer', era um dos membros da frota de Cabral. Notabilizou-se por sua interação amigável com os indígenas na praia de Porto Seguro, onde dançou com eles ao som de uma gaita, quebrando o gelo inicial. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_gaspar_de_lemos",
       "name": "Gaspar de Lemos",
       "description_short": "Capitão da naveta de mantimentos, encarregado de levar a notícia do descobrimento do Brasil a Portugal.",
-      "article_full": { "current": "Gaspar de Lemos foi o comandante da naveta de mantimentos da frota de Pedro Álvares Cabral. Coube a ele a importante missão de retornar a Portugal levando a carta de Pero Vaz de Caminha e as primeiras amostras da nova terra, anunciando o descobrimento ao rei D. Manoel I. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Gaspar de Lemos era o capitão da naveta de mantimentos da frota de Cabral, uma embarcação com capacidade para 100 tonéis e 80 homens. Após os 10 dias em Porto Seguro, sua naveta foi esvaziada dos mantimentos restantes, que foram distribuídos pelas outras naus. Em 2 de maio de 1500, partiu de volta a Portugal com a importante missão de anunciar o 'achamento' do Brasil ao rei D. Manoel I. Levava consigo as cartas de Pero Vaz de Caminha, Mestre João e outros, além de amostras da nova terra (pau-brasil, araras, cocares, bodoques, pedras) e um indígena Tupiniquim que embarcou voluntariamente. Pouco mais se sabe sobre Gaspar de Lemos. (BUENO, 2016)", 
+        "previous": "Gaspar de Lemos foi o comandante da naveta de mantimentos da frota de Pedro Álvares Cabral. Coube a ele a importante missão de retornar a Portugal levando a carta de Pero Vaz de Caminha e as primeiras amostras da nova terra, anunciando o descobrimento ao rei D. Manoel I. (BUENO, 2016)"
+      }
     },
     {
       "id": "char_bueno_afonso_ribeiro_degredado",
       "name": "Afonso Ribeiro (Degredado)",
       "description_short": "Um dos degredados deixados no Brasil pela expedição de Cabral para colher informações sobre a terra e seus habitantes.",
-      "article_full": { "current": "Afonso Ribeiro foi um dos degredados (condenados ao exílio) que integravam a frota de Cabral. Juntamente com outro companheiro, foi deixado no Brasil em maio de 1500 com a tarefa de 'andar lá com eles [os nativos] e saber de seu viver e maneiras'. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Afonso Ribeiro, um assassino confesso, era um dos 20 degredados que embarcaram na frota de Cabral. Em 25 de abril de 1500, Caminha registra que ele foi enviado a terra com outros para ficar na aldeia indígena, mas os nativos não permitiram. Em 2 de maio de 1500, ao partirem do Brasil, Afonso Ribeiro e outro degredado (cujo nome se desconhece) foram deixados em terra, chorando comoventemente, com a tarefa de 'andar lá com eles [os nativos] e saber de seu viver e maneiras'. Foram resgatados 20 meses depois pela expedição de reconhecimento de 1501-1502, que tinha Américo Vespúcio como piloto. Ao retornarem a Portugal, prestaram depoimento ao tabelião Valentim Fernandes sobre sua permanência na Bahia. Segundo o historiador Jaime Cortesão, o relato de Ribeiro pode ter sido a base para a carta *Mundus Novus* de Vespúcio, que popularizou a ideia de um Novo Continente. (BUENO, 2016)", 
+        "previous": "Afonso Ribeiro foi um dos degredados (condenados ao exílio) que integravam a frota de Cabral. Juntamente com outro companheiro, foi deixado no Brasil em maio de 1500 com a tarefa de 'andar lá com eles [os nativos] e saber de seu viver e maneiras'. (BUENO, 2016)"
+      }
+    },
+    {
+      "id": "char_bueno_vasco_de_ataide",
+      "name": "Vasco de Ataíde",
+      "description_short": "Fidalgo português, comandante de uma das naus da frota de Cabral, que desapareceu misteriosamente próximo a Cabo Verde.",
+      "article_full": {
+        "current": "Vasco de Ataíde era um fidalgo português, descrito como tendo pouca experiência no mar. Comandava uma das naus da frota de Pedro Álvares Cabral. Sua embarcação desapareceu misteriosamente em 23 de março de 1500, um dia após a frota ancorar em São Nicolau, Cabo Verde, e não foi mais avistada, tornando-se a primeira perda da expedição. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_bueno_bartolomeu_dias",
+      "name": "Bartolomeu Dias",
+      "description_short": "Navegador português, o primeiro europeu a dobrar o Cabo da Boa Esperança. Capitaneou uma nau na frota de Cabral.",
+      "article_full": {
+        "current": "Bartolomeu Dias (c. 1450 – 29 de maio de 1500) foi um célebre navegador português, conhecido por ter sido o primeiro europeu a dobrar o Cabo da Boa Esperança em 1488, abrindo o caminho marítimo para a Índia. Na expedição de Pedro Álvares Cabral em 1500, comandava uma das naus. Participou ativamente dos primeiros dias no Brasil, incluindo o desembarque dos dois primeiros indígenas capturados. Tragicamente, sua nau foi uma das quatro que afundaram durante a violenta tempestade que atingiu a frota ao tentar contornar o Cabo da Boa Esperança em maio de 1500, perecendo no mesmo local que o tornara famoso. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_bueno_luis_pires",
+      "name": "Luís Pires",
+      "description_short": "Capitão de uma das naus da frota de Cabral que naufragou na tempestade do Cabo da Boa Esperança.",
+      "article_full": {
+        "current": "Luís Pires era o capitão de uma das naus da frota de Pedro Álvares Cabral. Sua embarcação foi uma das quatro que afundaram durante a violenta tempestade que atingiu a frota ao sul do Cabo da Boa Esperança em 23-24 de maio de 1500, resultando na sua morte e de toda a tripulação. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_bueno_simao_de_pina",
+      "name": "Simão de Pina",
+      "description_short": "Capitão de uma das naus da frota de Cabral que naufragou na tempestade do Cabo da Boa Esperança.",
+      "article_full": {
+        "current": "Simão de Pina comandava uma das naus na expedição de Pedro Álvares Cabral. Sua nau foi uma das quatro que naufragaram na terrível tempestade de maio de 1500, nas proximidades do Cabo da Boa Esperança, onde ele e todos os seus homens pereceram. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_bueno_aires_gomes_da_silva",
+      "name": "Aires Gomes da Silva",
+      "description_short": "Capitão de uma das naus da frota de Cabral que naufragou na tempestade do Cabo da Boa Esperança.",
+      "article_full": {
+        "current": "Aires Gomes da Silva era um dos capitães da frota de Pedro Álvares Cabral. Sua nau foi uma das quatro que se perderam com toda a tripulação durante a tempestade que assolou a armada ao sul do Cabo da Boa Esperança em maio de 1500. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_bueno_sancho_de_tovar",
+      "name": "Sancho de Tovar",
+      "description_short": "Nobre castelhano, vice-comandante da frota de Cabral e capitão da nau El-Rei.",
+      "article_full": {
+        "current": "Sancho de Tovar, um nobre castelhano experiente, era o vice-comandante da frota de Pedro Álvares Cabral e capitão da nau El-Rei. Sua nau foi uma das que sobreviveram à tempestade do Cabo da Boa Esperança. Posteriormente, na viagem de retorno da Índia, sua nau encalhou nos baixios de Melinde e teve que ser incendiada para não cair em mãos inimigas, embora a tripulação e a carga tenham sido salvas. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_bueno_gaspar_piloto_guzerate",
+      "name": "Gaspar (Piloto Guzerate)",
+      "description_short": "Piloto experiente de Guzerate contratado por Cabral em Melinde para guiar a frota à Índia.",
+      "article_full": {
+        "current": "Gaspar, também referido como Guzarate, foi um piloto muçulmano experiente, natural de Guzerate (Índia), contratado por Pedro Álvares Cabral em Melinde, na costa leste da África, em agosto de 1500. Sua principal tarefa era guiar a frota portuguesa através do Oceano Índico até Calicute. Ele já havia prestado o mesmo serviço a Vasco da Gama em sua primeira viagem à Índia. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_bueno_samorim_calicute",
+      "name": "Samorim de Calicute",
+      "description_short": "Título do governante hindu de Calicute, com quem Cabral negociou o estabelecimento de uma feitoria.",
+      "article_full": {
+        "current": "O Samorim (ou Zamorim) era o título hereditário do governante hindu do reino de Calicute, na costa do Malabar, Índia. Na época da chegada de Pedro Álvares Cabral, em setembro de 1500, Calicute era um dos mais importantes entrepostos comerciais do Oceano Índico, especialmente para especiarias como a pimenta. Cabral teve complexas e tensas negociações com o Samorim reinante para tentar estabelecer uma feitoria portuguesa e obter privilégios comerciais, enfrentando a forte oposição dos mercadores árabes que dominavam o comércio local. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_bueno_aires_correia",
+      "name": "Aires Correia",
+      "description_short": "Feitor-mor da armada de Cabral, responsável pela feitoria em Calicute, onde foi morto.",
+      "article_full": {
+        "current": "Aires Correia era o feitor-mor da armada de Pedro Álvares Cabral, encarregado dos aspectos comerciais da expedição e da futura feitoria a ser estabelecida na Índia. Desempenhou um papel central nas negociações com o Samorim de Calicute para a instalação do posto comercial português. Após a concessão da permissão, Aires Correia ficou como o principal responsável pela feitoria em Calicute. Foi morto em 16 de dezembro de 1500, durante o ataque de mercadores árabes e hindus à feitoria. (BUENO, 2016)",
+        "previous": null
+      }
     }
   ],
   "places": [
@@ -183,7 +480,21 @@
       "description_short": "Ponto de partida da expedição de Pedro Álvares Cabral em março de 1500.",
       "longitude": -9.21198568,
       "latitude": 38.70945558,
-      "article_full": { "current": "A Praia do Restelo, em Lisboa, às margens do rio Tejo, foi o local histórico de partida de muitas expedições marítimas portuguesas, incluindo a de Vasco da Gama para a Índia e a de Pedro Álvares Cabral em 1500, que resultou no descobrimento do Brasil. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "A Praia do Restelo, em Lisboa, junto ao rio Tejo, era o porto histórico de partida das grandes expedições portuguesas. Em 8 de março de 1500, a partida da frota de Cabral foi marcada por uma missa solene na ermida de São Jerônimo, construída pelo Infante D. Henrique e decorada suntuosamente para a ocasião. D. Manoel I e sua corte assistiram à cerimônia, onde o rei entregou a Cabral a bandeira da Ordem de Cristo e um barrete bento. A população de Lisboa e observadores estrangeiros lotaram a praia, descrita por João de Barros como um 'campo de flores' pela profusão de cores das librés e bandeiras, ao som de música festiva. A partida efetiva da frota ocorreu na manhã de 9 de março. O local era conhecido como 'praia das lágrimas para os que vão, e terra do prazer para os que vêm', e já testemunhara o retorno de Bartolomeu Dias (1488) e Vasco da Gama (1499). Na época, Lisboa, com cerca de 60 mil habitantes em 18 mil casas, era o principal centro da expansão ultramarina europeia, iniciando transformações urbanas como a construção do Mosteiro dos Jerônimos e da Torre de Belém, esta última para defender a cidade e homenagear o Infante D. Henrique. (BUENO, 2016)", 
+        "previous": "A Praia do Restelo, em Lisboa, às margens do rio Tejo, foi o local histórico de partida de muitas expedições marítimas portuguesas, incluindo a de Vasco da Gama para a Índia e a de Pedro Álvares Cabral em 1500, que resultou no descobrimento do Brasil. (BUENO, 2016)"
+      }
+    },
+    {
+      "id": "plc_bueno_cabo_verde_sao_nicolau",
+      "name": "Ilha de São Nicolau, Cabo Verde",
+      "description_short": "Ilha do arquipélago de Cabo Verde onde a frota de Cabral ancorou em março de 1500 e onde desapareceu a nau de Vasco de Ataíde.",
+      "longitude": -24.2833,
+      "latitude": 16.6167,
+      "article_full": {
+        "current": "A ilha de São Nicolau, no arquipélago de Cabo Verde, foi o ponto onde a frota de Pedro Álvares Cabral ancorou em 22 de março de 1500, na aguada de São Brás, para reabastecimento. No dia seguinte à chegada, a nau de Vasco de Ataíde desapareceu nas proximidades da ilha, marcando a primeira perda da expedição. (BUENO, 2016)",
+        "previous": null
+      }
     },
     {
       "id": "plc_bueno_monte_pascoal_costa_brasil",
@@ -191,7 +502,10 @@
       "description_short": "Local do primeiro avistamento de terra pela frota de Cabral em 22 de abril de 1500.",
       "longitude": -39.533333,
       "latitude": -16.75,
-      "article_full": { "current": "O Monte Pascoal, um monte elevado e arredondado no litoral sul da Bahia, foi a primeira porção de terra avistada pela esquadra de Pedro Álvares Cabral em 22 de abril de 1500. A região circundante marcou o primeiro ponto de ancoragem da frota. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "O Monte Pascoal, 'um grande monte mui alto e redondo', foi a primeira terra avistada pela frota de Cabral em 22 de abril de 1500, 'nas horas de véspera', a cerca de 70 quilômetros da costa. Ao entardecer, após avançar mais 40 quilômetros, a frota deparou com outras serras mais baixas ao sul do monte, cobertas por denso arvoredo. A armada lançou âncoras a seis léguas (cerca de 40 quilômetros) da costa, em mar esverdeado de 34 metros de profundidade com fundo arenoso. Este local, próximo ao Monte Pascoal, no litoral sul da Bahia, marcou o primeiro ponto de ancoragem da frota no Brasil. (BUENO, 2016)", 
+        "previous": "O Monte Pascoal, um monte elevado e arredondado no litoral sul da Bahia, foi a primeira porção de terra avistada pela esquadra de Pedro Álvares Cabral em 22 de abril de 1500. A região circundante marcou o primeiro ponto de ancoragem da frota. (BUENO, 2016)"
+      }
     },
     {
       "id": "plc_bueno_porto_seguro_coroa_vermelha",
@@ -199,7 +513,10 @@
       "description_short": "Local de ancoragem segura da frota, primeiros contatos intensos com indígenas e celebração da primeira missa.",
       "longitude": -39.0647,
       "latitude": -16.4497,
-      "article_full": { "current": "Porto Seguro, mais especificamente a Baía Cabrália e o ilhéu da Coroa Vermelha, foi o local onde a frota de Cabral encontrou um ancoradouro seguro. Ali ocorreram os contatos mais significativos com os indígenas Tupiniquim, a coleta de água e lenha, e a celebração da primeira missa em 26 de abril de 1500. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Após o primeiro contato na foz de um rio ao sul, a frota de Cabral navegou para o norte em 24 de abril de 1500, buscando um ancoradouro mais seguro. Ao final da tarde, após percorrerem cerca de 65 quilômetros avistando as falésias de Trancoso e Porto Seguro, encontraram 'um arrecife com um porto dentro, muito bom e muito seguro'. Ancoraram na foz do rio Mutari, próximo ao recife da Coroa Vermelha. Esta baía, hoje conhecida como Baía Cabrália, foi considerada pelos pilotos um porto 'tão grande, tão formoso e tão seguro' que poderia abrigar mais de duzentos navios. Foi neste local que ocorreram os contatos mais significativos com os indígenas Tupiniquim, a captura dos dois primeiros nativos levados a bordo, a coleta de água e lenha, a interação pacífica na praia com danças, e a celebração da primeira missa no Brasil, no ilhéu da Coroa Vermelha, em 26 de abril de 1500. (BUENO, 2016)", 
+        "previous": "Porto Seguro, mais especificamente a Baía Cabrália e o ilhéu da Coroa Vermelha, foi o local onde a frota de Cabral encontrou um ancoradouro seguro. Ali ocorreram os contatos mais significativos com os indígenas Tupiniquim, a coleta de água e lenha, e a celebração da primeira missa em 26 de abril de 1500. (BUENO, 2016)"
+      }
     },
      {
       "id": "plc_bueno_ilheu_coroa_vermelha",
@@ -207,7 +524,10 @@
       "description_short": "Local onde foi celebrada a primeira missa no Brasil em 26 de abril de 1500.",
       "longitude": -39.0647,
       "latitude": -16.4497,
-      "article_full": { "current": "O Ilhéu da Coroa Vermelha, situado na Baía Cabrália, município de Santa Cruz Cabrália (Bahia), é historicamente reconhecido como o local da primeira missa rezada no Brasil pela expedição de Pedro Álvares Cabral, em 26 de abril de 1500. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "O Ilhéu da Coroa Vermelha, um banco de corais de tons rubros na Baía Cabrália (município de Santa Cruz Cabrália, Bahia), foi o local onde Pedro Álvares Cabral ordenou que um altar 'mui bem arranjado' fosse erguido na sua parte emersa, sob um *esperável* (tenda cônica), no domingo de Pascoela, 26 de abril de 1500. Ali, Frei Henrique de Coimbra celebrou a primeira missa em solo brasileiro, com a presença de Cabral e da tripulação, que assistiam com a bandeira da Ordem de Cristo. Os indígenas observaram da praia e, ao final da cerimônia, sopraram conchas e dançaram. (BUENO, 2016)", 
+        "previous": "O Ilhéu da Coroa Vermelha, situado na Baía Cabrália, município de Santa Cruz Cabrália (Bahia), é historicamente reconhecido como o local da primeira missa rezada no Brasil pela expedição de Pedro Álvares Cabral, em 26 de abril de 1500. (BUENO, 2016)"
+      }
     },
     {
       "id": "plc_bueno_porto_seguro_cruz",
@@ -215,7 +535,54 @@
       "description_short": "Local onde foi erguida a primeira cruz e celebrada a segunda missa, antes da partida da frota.",
       "longitude": -39.0647,
       "latitude": -16.4497,
-      "article_full": { "current": "Em Porto Seguro, em 1º de maio de 1500, a expedição de Cabral ergueu uma grande cruz de madeira, marcando simbolicamente a posse da terra para a Coroa Portuguesa. No mesmo local, foi celebrada a segunda missa. (BUENO, 2016)", "previous": null }
+      "article_full": { 
+        "current": "Na sexta-feira, 1º de maio de 1500, em Porto Seguro (Baía Cabrália), a tripulação da frota de Cabral desembarcou. 'Cantando em maneira de procissão' e com estandartes da Ordem de Cristo, mais de mil homens seguiram pelas margens do rio Mutari até um local julgado adequado. Ali, com a ajuda de cerca de 150 indígenas, ergueram uma grande cruz de madeira (talvez com 7 metros de altura), feita por carpinteiros nos dias anteriores, com as armas reais de D. Manoel pregadas a ela. Quando os portugueses se ajoelharam à sombra da cruz, os cerca de 80 nativos presentes imitaram o gesto. Frei Henrique de Coimbra e seus frades rezaram então a segunda missa no Brasil. A cruz simbolizava a posse da terra, batizada de Ilha de Vera Cruz, e marcava o local para futuros navegantes e para os degredados que seriam ali deixados. (BUENO, 2016)", 
+        "previous": "Em Porto Seguro, em 1º de maio de 1500, a expedição de Cabral ergueu uma grande cruz de madeira, marcando simbolicamente a posse da terra para a Coroa Portuguesa. No mesmo local, foi celebrada a segunda missa. (BUENO, 2016)"
+      }
+    },
+    {
+      "id": "plc_bueno_cabo_boa_esperanca",
+      "name": "Cabo da Boa Esperança, África do Sul",
+      "description_short": "Local da trágica tempestade que atingiu a frota de Cabral em maio de 1500, resultando na perda de quatro naus.",
+      "longitude": 18.4739,
+      "latitude": -34.3580,
+      "article_full": {
+        "current": "O Cabo da Boa Esperança (originalmente Cabo das Tormentas), no extremo sul da África, foi o local onde a frota de Pedro Álvares Cabral foi atingida por uma violenta tempestade em 23-24 de maio de 1500. Quatro naus afundaram, incluindo a de Bartolomeu Dias, que havia sido o primeiro europeu a contornar o cabo. Este evento representou uma perda significativa para a expedição. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_bueno_mocambique_sofal_melinde",
+      "name": "Costa de Moçambique (Sofala, Moçambique, Melinde)",
+      "description_short": "Região da costa sudeste africana onde a frota de Cabral se reagrupou e reabasteceu após a tempestade do Cabo.",
+      "longitude": 39.766667, 
+      "latitude": -8.0,
+      "article_full": {
+        "current": "Após a tempestade no Cabo da Boa Esperança, a frota reduzida de Cabral navegou pela costa sudeste da África. Avistaram Sofala em 16 de julho de 1500, mas não ancoraram. Chegaram a Moçambique em 20 de julho, onde fizeram reparos e se reabasteceram. Posteriormente, seguiram para Melinde (atual Quênia), um importante porto aliado dos portugueses, onde contrataram um piloto para a travessia até a Índia. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_bueno_melinde_quenia",
+      "name": "Melinde, Quênia",
+      "description_short": "Porto na costa leste africana (atual Quênia) onde Cabral foi bem recebido e contratou um piloto para a Índia.",
+      "longitude": 40.1167,
+      "latitude": -3.2167,
+      "article_full": {
+        "current": "Melinde (atual Malindi, no Quênia) era um importante sultanato na costa leste da África no século XVI. Era um porto conhecido dos portugueses e um aliado estratégico. A frota de Pedro Álvares Cabral chegou a Melinde em 2 de agosto de 1500, onde foram bem recebidos pelo sultão. Foi em Melinde que Cabral contratou Gaspar, um piloto guzerate, para conduzir a armada até Calicute, na Índia. A frota partiu de Melinde em 7 de agosto de 1500. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "plc_bueno_calicute_india",
+      "name": "Calicute, Índia",
+      "description_short": "Importante centro comercial de especiarias na costa do Malabar, destino principal da frota de Cabral na Índia.",
+      "longitude": 75.7804,
+      "latitude": 11.2588,
+      "article_full": {
+        "current": "Calicute (atual Kozhikode), situada na costa do Malabar, no sudoeste da Índia, era um dos mais prósperos e importantes centros de comércio de especiarias do mundo no início do século XVI. Governada pelo Samorim, a cidade atraía mercadores de diversas partes, especialmente árabes, que controlavam grande parte do comércio de pimenta, gengibre, canela e outras valiosas mercadorias. Foi o destino principal da expedição de Pedro Álvares Cabral, que ali chegou em 13 de setembro de 1500 com o objetivo de estabelecer uma feitoria e relações comerciais. (BUENO, 2016)",
+        "previous": null
+      }
     }
   ],
   "themes": [
@@ -288,6 +655,46 @@
       "color": "#708090",
       "description_short": "Relatos e cartas enviados pelos exploradores aos monarcas.",
       "article_full": { "current": "A comunicação oficial com a Coroa, através de cartas e relatórios detalhados como o de Pero Vaz de Caminha, era essencial para informar o rei sobre as descobertas, as características das novas terras e os povos encontrados, subsidiando decisões políticas e econômicas. (BUENO, 2016)", "previous": null }
+    },
+    {
+      "id": "thm_incidentes_viagem_bueno",
+      "name": "Incidentes de Viagem e Perdas",
+      "color": "#FFA07A",
+      "description_short": "Eventos inesperados, acidentes, perdas de naus ou vidas durante as expedições.",
+      "article_full": {
+        "current": "Refere-se aos percalços, acidentes, desaparecimentos de embarcações, mortes e outros eventos imprevistos que ocorreram durante as grandes navegações, impactando o curso e o resultado das expedições. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_aliancas_estrategicas_bueno",
+      "name": "Alianças Estratégicas",
+      "color": "#20B2AA",
+      "description_short": "Formação de alianças com reinos ou povos locais para facilitar objetivos comerciais ou militares.",
+      "article_full": {
+        "current": "Durante as Grandes Navegações, a formação de alianças com governantes e povos locais era uma tática crucial para os exploradores europeus. Essas alianças podiam garantir acesso a portos seguros, informações, pilotos, suprimentos e apoio em disputas regionais, facilitando os objetivos comerciais e de expansão. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_comercio_especiarias_bueno",
+      "name": "Comércio de Especiarias",
+      "color": "#DAA520",
+      "description_short": "O lucrativo comércio de especiarias orientais, principal motor econômico das navegações para a Índia.",
+      "article_full": {
+        "current": "O comércio de especiarias (pimenta, cravo, canela, noz-moscada, gengibre, etc.) provenientes do Oriente era extremamente lucrativo na Europa medieval e renascentista. Controlado inicialmente por mercadores árabes e venezianos, a busca por uma rota marítima direta para as fontes dessas especiarias foi um dos principais impulsionadores das Grandes Navegações portuguesas e espanholas, visando quebrar esse monopólio e obter acesso direto a essas valiosas mercadorias. (BUENO, 2016)",
+        "previous": null
+      }
+    },
+    {
+      "id": "thm_diplomacia_conflito_bueno",
+      "name": "Diplomacia e Conflito nas Relações Comerciais",
+      "color": "#B22222",
+      "description_short": "Interações diplomáticas, tensões e conflitos resultantes da tentativa de estabelecer relações comerciais e feitorias.",
+      "article_full": {
+        "current": "A tentativa de estabelecer relações comerciais e feitorias em terras distantes frequentemente envolvia um complexo jogo de diplomacia, mas também tensões e conflitos. Os exploradores europeus precisavam negociar com governantes locais, muitas vezes enfrentando a resistência de grupos comerciais estabelecidos (como os mercadores árabes na Índia) que viam seus interesses ameaçados. Essas interações podiam levar a acordos pacíficos, mas também a desentendimentos, violência e retaliações. (BUENO, 2016)",
+        "previous": null
+      }
     }
   ]
 }

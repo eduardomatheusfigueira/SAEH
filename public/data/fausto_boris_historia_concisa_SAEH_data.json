@@ -405,6 +405,96 @@
         "current": "Os quilombos, estabelecimentos de negros que escapavam à escravidão pela fuga e recompunham formas de organização social semelhantes às africanas, existiram às centenas. Palmares, uma rede de povoados na região do atual estado de Alagoas, foi o mais importante. Formado no início do século XVII, resistiu aos ataques de portugueses e holandeses por quase cem anos, sucumbindo em 1695. Zumbi foi seu líder na última fase. (FAUSTO, 2001)",
         "previous": null
       }
+    },
+    {
+      "id": "evt_justific_escrav_afric_bf_hc",
+      "title": "Justificação e Status Legal da Escravidão Africana",
+      "date_type": "period",
+      "start_date": "1570-01-01",
+      "end_date": "1822-12-31",
+      "characters_ids": ["char_igreja_catolica_colonial_bf_hc", "char_coroa_portuguesa_colonial_bf_hc"],
+      "place_id": "plc_brasil_colonial_geral_bf_hc",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_escravidao_africana_brasil_bf_hc",
+      "secondary_tags_ids": ["thm_ideologia_colonial_bf_hc"],
+      "description_short": "A Igreja e a Coroa não se opuseram à escravidão negra, justificando-a com argumentos religiosos, civilizacionais e de inferioridade racial. Legalmente, o escravo negro era considerado uma 'coisa'.",
+      "article_full": {
+        "current": "Por outro lado, nem a Igreja nem a Coroa se opuseram à escravização do negro. Ordens religiosas como a dos beneditinos estiveram mesmo entre os grandes proprietários de cativos. Vários argumentos foram utilizados para justificar a escravidão africana. Dizia-se que se tratava de uma instituição já existente na África, e assim apenas se transportavam cativos para o mundo cristão onde seriam civilizados e salvos pelo conhecimento da verdadeira religião. Além disso, o negro era considerado um ser racialmente inferior. No decorrer do século XIX, 'teorias científicas' reforçaram o preconceito: o tamanho e a forma do crânio dos negros, o peso de seu cérebro etc. 'demonstravam' que se estava diante de uma raça de baixa inteligência e emocionalmente instável, destinada biologicamente à sujeição. Lembremos também o tratamento dado ao negro na legislação. O contraste com os indígenas é nesse aspecto evidente. Estes contavam com leis protetoras contra a escravidão, ainda que fossem pouco aplicadas e contivessem muitas ressalvas. O negro escravizado não tinha direitos, mesmo porque era considerado juridicamente uma coisa. (FAUSTO, 2001, p. 26)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_demografia_mortalidade_escrav_afric_bf_hc",
+      "title": "Demografia da Escravidão Africana: Alta Mortalidade e Dependência do Tráfico",
+      "date_type": "period",
+      "start_date": "1570-01-01",
+      "end_date": "1822-12-31",
+      "characters_ids": ["char_africanos_escravizados_bf_hc"],
+      "place_id": "plc_brasil_colonial_geral_bf_hc",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_escravidao_africana_brasil_bf_hc",
+      "secondary_tags_ids": ["thm_trafico_negreiro_bf_hc", "thm_condicoes_vida_colonial_bf_hc"],
+      "description_short": "A população escrava africana no Brasil enfrentou altas taxas de mortalidade, especialmente infantil e de recém-chegados, tornando a escravidão dependente da contínua importação de cativos.",
+      "article_full": {
+        "current": "A escravidão africana no Brasil foi marcada por uma alta taxa de mortalidade, especialmente entre crianças e recém-chegados. Observadores do início do século XIX estimavam um declínio anual da população escrava entre 5% e 8%. A expectativa de vida era significativamente menor em comparação com escravos nos EUA. Apesar disso, não se configurou uma catástrofe demográfica como a indígena, em parte devido à menor suscetibilidade de alguns grupos africanos a certas doenças e, crucialmente, à constante renovação do contingente escravo pela importação. A escravidão brasileira tornou-se dependente do tráfico, com poucas tentativas de crescimento vegetativo da população escrava devido à baixa fertilidade e ao alto risco de mortalidade infantil. (FAUSTO, 2001, p. 26)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_mercantilismo_exclusivo_colonial_bf_hc",
+      "title": "Política Mercantilista e o 'Exclusivo' Colonial Português",
+      "date_type": "period",
+      "start_date": "1530-01-01",
+      "end_date": "1808-01-01",
+      "characters_ids": ["char_coroa_portuguesa_colonial_bf_hc"],
+      "place_id": "plc_reino_portugal_e_brasil_bf_hc",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_economia_colonial_estrutura_bf_hc",
+      "secondary_tags_ids": ["thm_admin_colonial_bf_hc", "thm_relacoes_internacionais_comercio_col_bf_hc"],
+      "description_short": "A Coroa Portuguesa implementou políticas mercantilistas, incluindo o 'exclusivo' comercial, para assegurar que a colônia brasileira contribuísse para a auto-suficiência e riqueza da metrópole, embora sua aplicação tenha sido inconsistente.",
+      "article_full": {
+        "current": "A política econômica mercantilista da Coroa Portuguesa visava assegurar os maiores ganhos do empreendimento colonial. As colônias deveriam contribuir para a auto-suficiência da metrópole e servir como áreas reservadas na concorrência internacional. O eixo básico era o 'exclusivo' metropolitano, ou seja, a exclusividade do comércio externo da colônia em favor da metrópole, buscando deprimir preços na colônia e maximizar lucros na metrópole. No caso português, os preceitos mercantilistas não foram aplicados consistentemente, com a aplicação mais consequente ocorrendo apenas em meados do século XVIII sob Pombal. A Coroa abriu brechas devido aos limites de sua capacidade de imposição e à sua posição nas relações europeias, resultando em um 'exclusivo' que oscilou entre relativa liberdade e um sistema centralizado, com concessões a outros países, notadamente Holanda e Inglaterra. Exemplos incluem a fase de relativa liberdade (1530-1571), restrições durante a União Ibérica (1580-1640), a criação da Companhia Geral do Comércio do Brasil (1649) com sistema de frotas, e as companhias pombalinas no século XVIII. (FAUSTO, 2001, pp. 27-28)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_estado_igreja_padroado_bf_hc",
+      "title": "O Estado e a Igreja Católica no Brasil Colonial: O Padroado Real",
+      "date_type": "period",
+      "start_date": "1500-01-01",
+      "end_date": "1822-12-31",
+      "characters_ids": ["char_coroa_portuguesa_colonial_bf_hc", "char_igreja_catolica_colonial_bf_hc"],
+      "place_id": "plc_reino_portugal_e_brasil_bf_hc",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_admin_colonial_bf_hc",
+      "secondary_tags_ids": ["thm_catequese_org_igreja_bf_hc", "thm_poder_politico_colonial_bf_hc"],
+      "description_short": "O Estado português e a Igreja Católica foram as instituições básicas da colonização, ligadas pelo Padroado Real, que subordinava a Igreja ao Estado em troca de promoção e organização eclesiástica nas terras descobertas.",
+      "article_full": {
+        "current": "O Estado e a Igreja Católica foram as duas instituições básicas que organizaram a colonização do Brasil, atuando de forma interligada. O catolicismo era a religião do Estado. Ao Estado cabia garantir a soberania, administrar, povoar e definir a relação metrópole-colônia. A Igreja, através da educação e do 'controle das almas', veiculava a obediência ao Estado e normatizava a vida social (nascimento, casamento, morte). A relação era regida pelo Padroado Real, uma concessão da Igreja de Roma ao Estado português: a Coroa promovia e assegurava os direitos e a organização da Igreja nas colônias, e em troca, recolhia o dízimo, criava dioceses e nomeava bispos. A Coroa também remunerava o clero e cuidava dos edifícios de culto, supervisionando essas tarefas através da Mesa da Consciência e Ordens. O controle da Coroa sobre a Igreja foi limitado pela influência de ordens como a Companhia de Jesus e pela autonomia que estas ordens alcançaram na Colônia, em parte por possuírem terras e empreendimentos. (FAUSTO, 2001, pp. 29-30)",
+        "previous": null
+      }
+    },
+    {
+      "id": "evt_pureza_sangue_colonial_bf_hc",
+      "title": "O Princípio da 'Pureza de Sangue' na Sociedade Colonial Brasileira",
+      "date_type": "period",
+      "start_date": "1500-01-01",
+      "end_date": "1773-12-31",
+      "characters_ids": ["char_cristaos_novos_bf_hc", "char_negros_livres_libertos_bf_hc", "char_indigenas_brasil_bf_hc", "char_mesticos_bf_hc"],
+      "place_id": "plc_brasil_colonial_geral_bf_hc",
+      "longitude": null,
+      "latitude": null,
+      "main_theme_id": "thm_sociedade_colonial_estrutura_bf_hc",
+      "secondary_tags_ids": ["thm_ideologia_colonial_bf_hc", "thm_discriminacao_racial_social_colonial_bf_hc"],
+      "description_short": "A sociedade colonial brasileira era regida pelo princípio da 'pureza de sangue', que excluía cristãos-novos, negros (mesmo livres), indígenas e mestiços de cargos, títulos e irmandades de prestígio.",
+      "article_full": {
+        "current": "Um princípio básico de exclusão na estrutura social da Colônia, pelo menos até a Carta-lei de 1773, era o da 'pureza de sangue'. Considerados 'impuros' eram os cristãos-novos, os negros (mesmo quando livres), em certa medida os índios e as várias espécies de mestiços. Deste princípio racial decorria a impossibilidade de ocupar cargos, receber títulos de nobreza, participar de irmandades de prestígio, etc. A Carta-lei de 1773 acabou com a distinção entre cristãos antigos e novos, mas o preconceito não se extinguiu. Mais profundo que este critério, existia o corte separando pessoas livres de escravos, estes considerados juridicamente como 'coisa', condição ligada à etnia e cor (negros, índios, mestiços). (FAUSTO, 2001, p. 31)",
+        "previous": null
+      }
     }
   ],
   "characters": [
@@ -503,133 +593,178 @@
       "name": "Tremembés",
       "description_short": "Grupo indígena (Tapuia) localizado na faixa entre o Ceará e o Maranhão.",
       "article_full": {
-        "current": "Os tremembés eram um grupo Tapuia localizado na faixa entre o Ceará e o Maranhão. (FAUSTO, 2001)",
+        "current": "Os tremembés eram um grupo Tapuia localizado na faixa entre o Ceará e o Maranhão, interrompendo a presença Tupi-Guarani. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_fernao_loronha_bf_hc",
-      "name": "Fernão de Loronha (Noronha)",
-      "description_short": "Comerciante português de origem judaica (cristão-novo), líder de consórcio que arrendou o Brasil (1503-1505) para exploração do pau-brasil.",
+      "name": "Fernão de Loronha (ou Noronha)",
+      "description_short": "Cristão-novo, líder de um consórcio que arrendou o Brasil (1503-1505) para exploração do pau-brasil. Recebeu a primeira capitania (ilha de São João/Fernando de Noronha).",
       "article_full": {
-        "current": "Fernão de Loronha (ou Noronha) foi um cristão-novo, líder de um consórcio de comerciantes de Lisboa que arrendou o Brasil por três anos (a partir de 1503), recebendo o monopólio comercial em troca da exploração da costa e construção de feitoria. (FAUSTO, 2001)\nEra um proeminente mercador português do século XVI. (WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Fernão de Loronha*. Disponível em: https://en.m.wikipedia.org/wiki/Fern%C3%A3o_de_Loronha. Acesso em: 9 maio 2025.",
+        "current": "Fernão de Loronha (ou Noronha) foi um cristão-novo e comerciante de Lisboa. Liderou um consórcio que, em 1503, arrendou o Brasil por três anos, com o monopólio comercial e a obrigação de explorar a costa e construir uma feitoria. Antes de 1532, recebeu do rei a primeira capitania do Brasil - a ilha de São João, que hoje tem seu nome. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_fernao_magalhaes_bf_hc",
       "name": "Fernão de Magalhães",
-      "description_short": "Navegador português (1480-1521) a serviço da Espanha, liderou a primeira circum-navegação da Terra, chegando às Filipinas em 1521.",
+      "description_short": "Navegador português a serviço da Espanha, realizou a primeira circum-navegação da Terra (1519-1522), descobrindo o estreito que leva seu nome e chegando às Filipinas.",
       "article_full": {
-        "current": "Fernão de Magalhães (c. 1480-1521) foi um navegador português que, a serviço da Espanha, liderou a primeira expedição a circum-navegar a Terra. Atravessou o estreito que leva seu nome e chegou às Filipinas em 1521, onde foi morto. (FAUSTO, 2001; WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Fernão de Magalhães*. Disponível em: https://pt.wikipedia.org/wiki/Fern%C3%A3o_de_Magalh%C3%A3es. Acesso em: 9 maio 2025.",
-        "previous": null
-      }
-    },
-    {
-      "id": "char_martim_afonso_sousa_bf_hc",
-      "name": "Martim Afonso de Sousa",
-      "description_short": "Nobre e explorador português (c. 1500-1564), comandou a primeira expedição colonizadora ao Brasil (1530-1533) e fundou São Vicente.",
-      "article_full": {
-        "current": "Martim Afonso de Sousa (c. 1500 – 21 de julho de 1564) foi um fidalgo, explorador e administrador colonial português. Comandou a primeira expedição colonizadora ao Brasil (1530–33), fundou São Vicente em 1532. (WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Martim Afonso de Sousa*. Disponível em: https://en.wikipedia.org/wiki/Martim_Afonso_de_Sousa. Acesso em: 9 maio 2025.",
-        "previous": null
-      }
-    },
-    {
-      "id": "char_dom_joao_iii_bf_hc",
-      "name": "Dom João III de Portugal",
-      "description_short": "Rei de Portugal e Algarves (1502-1557), apelidado de 'O Piedoso'. Decidiu pela criação das capitanias hereditárias no Brasil e posteriormente pelo Governo-Geral.",
-      "article_full": {
-        "current": "Dom João III (Lisboa, 7 de junho de 1502 – Lisboa, 11 de junho de 1557), apelidado de 'o Piedoso', foi o Rei de Portugal e Algarves de 1521 até sua morte. Decidiu pela criação das capitanias hereditárias no Brasil e, posteriormente, pela instituição do Governo-Geral. (FAUSTO, 2001; WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *João III de Portugal*. Disponível em: https://pt.wikipedia.org/wiki/Jo%C3%A3o_III_de_Portugal. Acesso em: 9 maio 2025.",
+        "current": "Fernão de Magalhães foi um navegador português que, a serviço da Espanha, liderou a expedição que realizou a primeira circum-navegação da Terra. Em 1521, atravessou o estreito que hoje leva seu nome e, navegando pelo oceano Pacífico, chegou às Filipinas. Embora tenha encontrado um caminho para as Índias pelo ocidente, este se mostrou demasiado longo e difícil para ser economicamente vantajoso para os espanhóis. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_franceses_bf_hc",
       "name": "Franceses (Ameaça Colonial)",
-      "description_short": "Nação europeia que contestou a posse portuguesa do Brasil, praticando comércio de pau-brasil e pirataria, e estabelecendo-se temporariamente na Guanabara e Maranhão.",
+      "description_short": "Representa a ameaça francesa à posse portuguesa do Brasil, através do comércio de pau-brasil, pirataria e tentativas de estabelecimento (Guanabara, Maranhão).",
       "article_full": {
-        "current": "A França não reconhecia os tratados de partilha do mundo e sustentava o princípio do uti possidetis. Os franceses entraram no comércio do pau-brasil e praticaram a pirataria ao longo da costa brasileira. Estabeleceram-se na Guanabara (1555-1560) e no Maranhão (1612-1615). (FAUSTO, 2001)",
+        "current": "Os franceses representaram a maior ameaça à posse do Brasil por Portugal no início da colonização. Não reconhecendo os tratados de partilha do mundo, entraram no comércio do pau-brasil e praticaram pirataria ao longo da costa. Posteriormente, tentaram estabelecer-se na Guanabara (1555-1560) e no Maranhão (1612-1615). (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_martim_afonso_sousa_bf_hc",
+      "name": "Martim Afonso de Sousa",
+      "description_short": "Nobre e militar português, comandou a expedição (1530-1533) que iniciou a colonização efetiva do Brasil, fundando São Vicente (1532). Foi também donatário.",
+      "article_full": {
+        "current": "Martim Afonso de Sousa foi um nobre e militar português. Comandou a expedição de 1530-1533, que marcou a transição para a colonização efetiva do Brasil. Seus objetivos incluíam patrulhar a costa, estabelecer uma colônia (fundou São Vicente em 1532 através da concessão não-hereditária de terras) e explorar o território. Foi também um dos capitães-donatários. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_dom_joao_iii_bf_hc",
+      "name": "Dom João III de Portugal",
+      "description_short": "Rei de Portugal (1521-1557) que implementou o sistema de Capitanias Hereditárias e, posteriormente, o Governo-Geral no Brasil.",
+      "article_full": {
+        "current": "Dom João III foi rei de Portugal de 1521 a 1557. Durante seu reinado, decidiu-se pela criação das Capitanias Hereditárias no Brasil (c. 1534) como forma de promover a colonização. Diante do fracasso parcial deste sistema e de outras considerações, instituiu o Governo-Geral em 1549, nomeando Tomé de Sousa como primeiro governador-geral. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_duarte_coelho_bf_hc",
-      "name": "Duarte Coelho",
-      "description_short": "Militar português (c. 1485-1554), donatário da Capitania de Pernambuco, uma das poucas que prosperaram.",
+      "name": "Duarte Coelho Pereira",
+      "description_short": "Militar português, donatário da Capitania de Pernambuco, uma das poucas que prosperaram, principalmente devido à economia açucareira.",
       "article_full": {
-        "current": "Duarte Coelho (c. 1485-1554) foi um fidalgo e militar português, donatário da Capitania de Pernambuco. Sua capitania foi uma das poucas que tiveram êxito. (FAUSTO, 2001; WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Duarte Coelho*. Disponível em: https://en.wikipedia.org/wiki/Duarte_Coelho. Acesso em: 9 maio 2025.",
+        "current": "Duarte Coelho Pereira foi um militar português de destaque no Oriente, com poucos recursos. Recebeu a Capitania de Pernambuco, que sob sua administração se tornou uma das mais prósperas, baseada na economia açucareira e em um relacionamento menos agressivo com os indígenas. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_jorge_figueiredo_correia_bf_hc",
       "name": "Jorge Figueiredo Correia",
-      "description_short": "Escrivão da Fazenda Real e grande negociante, donatário da Capitania de Ilhéus, mas nunca foi à região.",
+      "description_short": "Escrivão da Fazenda Real e grande negociante, foi um dos capitães-donatários, associado a Mem de Sá e Lucas Giraldes.",
       "article_full": {
-        "current": "Jorge Figueiredo Correia foi um fidalgo português, escrivão da Fazenda Real e grande negociante. Recebeu a doação da Capitania de Ilhéus em 1534, mas nunca foi à região. (FAUSTO, 2001; WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Jorge de Figueiredo Correia*. Disponível em: https://pt.wikipedia.org/wiki/Jorge_de_Figueiredo_Correia. Acesso em: 9 maio 2025.",
+        "current": "Jorge Figueiredo Correia era escrivão da Fazenda Real e um grande negociante. Foi um dos capitães-donatários, tendo ligações com a Coroa e estando associado a figuras como Mem de Sá e Lucas Giraldes, da família de negociantes e banqueiros florentinos Giraldi. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_pero_campo_tourinho_bf_hc",
       "name": "Pero do Campo Tourinho",
-      "description_short": "Donatário da Capitania de Porto Seguro, vendeu suas propriedades em Portugal e veio ao Brasil com colonos. Foi denunciado à Inquisição.",
+      "description_short": "Donatário da Capitania de Porto Seguro. Vendeu suas propriedades em Portugal para vir ao Brasil, mas enfrentou problemas com colonos e a Inquisição.",
       "article_full": {
-        "current": "Pero do Campo Tourinho vendeu suas propriedades em Portugal e seguiu para o Brasil com seiscentos colonos para sua Capitania de Porto Seguro. Foi posteriormente denunciado à Inquisição. (FAUSTO, 2001; WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Pero do Campo Tourinho*. Disponível em: https://pt.wikipedia.org/wiki/Pero_do_Campo_Tourinho. Acesso em: 9 maio 2025.",
+        "current": "Pero do Campo Tourinho foi um dos capitães-donatários, recebendo a Capitania de Porto Seguro. Vendeu suas propriedades em Portugal e veio ao Brasil com seiscentos colonos. Enfrentou conflitos com os colonos e foi denunciado à Inquisição, sendo embarcado de volta a Portugal. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_tome_sousa_bf_hc",
       "name": "Tomé de Sousa",
-      "description_short": "Fidalgo e militar português (1503-1579), primeiro governador-geral do Brasil (1549-1553). Fundou Salvador.",
+      "description_short": "Primeiro governador-geral do Brasil (1549-1553). Fundou Salvador, a primeira capital, e implementou medidas para centralizar a administração e organizar a colônia.",
       "article_full": {
-        "current": "Tomé de Sousa (1503-1579) foi um fidalgo português com experiência na África e na Índia. Foi o primeiro governador-geral do Brasil, chegando à Bahia em 1549. Fundou a cidade de Salvador, a primeira capital do Brasil. (FAUSTO, 2001; WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Tomé de Sousa*. Disponível em: https://en.wikipedia.org/wiki/Tom%C3%A9_de_Sousa. Acesso em: 9 maio 2025.",
+        "current": "Tomé de Sousa foi um fidalgo com experiência na África e na Índia, nomeado o primeiro governador-geral do Brasil em 1549. Chegou à Bahia com mais de mil pessoas, incluindo degredados e os primeiros jesuítas. Fundou Salvador, a primeira capital do Brasil, e implementou as instruções da Coroa para garantir a posse territorial, colonizar e organizar as rendas. Criou cargos como ouvidor, capitão-mor e provedor-mor. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_manuel_nobrega_bf_hc",
       "name": "Manuel da Nóbrega",
-      "description_short": "Padre jesuíta português (1517-1570), primeiro Provincial da Companhia de Jesus no Brasil colonial. Chegou com Tomé de Sousa em 1549.",
+      "description_short": "Padre jesuíta português, líder do primeiro grupo de jesuítas que chegou ao Brasil em 1549 com Tomé de Sousa. Teve papel fundamental na catequese e organização da Igreja.",
       "article_full": {
-        "current": "Manuel da Nóbrega (1517-1570) foi um padre jesuíta português e o primeiro Provincial da Companhia de Jesus no Brasil colonial. Chegou ao Brasil com Tomé de Sousa em 1549, com o objetivo de catequizar os índios e disciplinar o clero local. (FAUSTO, 2001; WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Manuel da Nóbrega*. Disponível em: https://en.wikipedia.org/wiki/Manuel_da_N%C3%B3brega. Acesso em: 9 maio 2025.",
+        "current": "Manuel da Nóbrega foi um padre jesuíta português que liderou o primeiro grupo de missionários da Companhia de Jesus a chegar ao Brasil, em 1549, acompanhando o governador-geral Tomé de Sousa. Seu objetivo principal era a catequese dos indígenas e a disciplina do clero local. Teve um papel crucial nos primórdios da organização da Igreja Católica na colônia. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_francisco_pires_bf_hc",
-      "name": "Padre Francisco Pires",
-      "description_short": "Jesuíta que acompanhou Tomé de Sousa e Manuel da Nóbrega ao Brasil em 1549.",
+      "name": "Francisco Pires",
+      "description_short": "Padre jesuíta, um dos cinco companheiros de Manuel da Nóbrega que chegaram ao Brasil em 1549.",
       "article_full": {
-        "current": "O padre Francisco Pires foi um dos jesuítas que acompanharam Tomé de Sousa e Manuel da Nóbrega ao Brasil em 1549. Em 1552, escrevendo da Bahia, queixou-se do isolamento e da dificuldade de comunicação entre as capitanias. (FAUSTO, 2001)",
+        "current": "Francisco Pires foi um dos cinco padres jesuítas que acompanharam Manuel da Nóbrega na primeira missão da Companhia de Jesus ao Brasil, chegando com o governador-geral Tomé de Sousa em 1549. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_indigenas_brasil_bf_hc",
-      "name": "Indígenas do Brasil (Geral)",
-      "description_short": "Populações nativas do Brasil, que sofreram com a escravização, violência cultural e doenças após a chegada dos europeus.",
+      "name": "Populações Indígenas do Brasil (Geral)",
+      "description_short": "Termo genérico para os diversos povos nativos que habitavam o território brasileiro antes e durante a colonização, enfrentando escravidão, violência e doenças.",
       "article_full": {
-        "current": "A população indígena do Brasil foi alvo de tentativas de escravização e sujeição pelos colonizadores portugueses. Sofreram com a violência cultural, epidemias e mortes. A escravização indígena foi gradualmente substituída pela africana, devido a fatores como o lucrativo tráfico negreiro e a resistência indígena. (FAUSTO, 2001)",
+        "current": "As populações indígenas do Brasil, compostas por diversos grupos étnicos e linguísticos como os Tupis-Guaranis e Tapuias, foram as primeiras habitantes do território. Com a chegada dos europeus, enfrentaram a escravidão, a violência cultural, a expropriação de terras e uma catastrófica dizimação populacional devido a doenças e conflitos. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_africanos_escravizados_bf_hc",
-      "name": "Africanos Escravizados",
-      "description_short": "População africana trazida à força para o Brasil para trabalho compulsório, principalmente na lavoura de exportação.",
+      "name": "Africanos Escravizados no Brasil",
+      "description_short": "Indivíduos trazidos da África e seus descendentes, submetidos à escravidão no Brasil colonial, constituindo a principal mão de obra em diversas atividades econômicas.",
       "article_full": {
-        "current": "A escravidão africana tornou-se a forma dominante de trabalho compulsório no Brasil colonial. O tráfico negreiro era um negócio lucrativo. Os africanos escravizados foram utilizados na grande lavoura de exportação, como a cana-de-açúcar. Eram provenientes de diversas regiões da África, como Guiné, Costa da Mina, Congo e Angola, e pertenciam a diferentes grupos étnicos como 'sudaneses' (iorubas, jejes, tapas, haussás) e 'bantos' (angolas, bengalas, monjolos, moçambiques). (FAUSTO, 2001)",
+        "current": "Milhões de africanos de diversas etnias foram trazidos à força para o Brasil e submetidos à escravidão, tornando-se a principal força de trabalho na economia colonial, especialmente na produção de açúcar e na mineração. Enfrentaram condições brutais, alta mortalidade e resistiram de várias formas, incluindo a formação de quilombos. (FAUSTO, 2001)",
         "previous": null
       }
     },
     {
       "id": "char_zumbi_palmares_bf_hc",
       "name": "Zumbi dos Palmares",
-      "description_short": "Líder do Quilombo dos Palmares (c. 1655-1695), símbolo da resistência negra à escravidão no Brasil colonial.",
+      "description_short": "Líder do Quilombo dos Palmares na sua fase final, tornou-se um símbolo da resistência negra à escravidão no Brasil.",
       "article_full": {
-        "current": "Zumbi (c. 1655 – 20 de novembro de 1695) foi o último dos líderes do Quilombo dos Palmares, o maior dos quilombos do período colonial brasileiro, localizado na região do atual estado de Alagoas. Tornou-se um símbolo da resistência dos negros escravizados. (FAUSTO, 2001; WIKIPÉDIA, [s.d.])\n\nReferências:\nWIKIPÉDIA. *Zumbi dos Palmares*. Disponível em: https://pt.wikipedia.org/wiki/Zumbi_dos_Palmares. Acesso em: 9 maio 2025.",
+        "current": "Zumbi foi o último e mais conhecido líder do Quilombo dos Palmares, o maior e mais duradouro refúgio de escravos fugidos no Brasil colonial. Liderou a resistência contra as forças coloniais até a destruição do quilombo em 1695 e sua morte. Tornou-se um ícone da luta contra a opressão e da resistência negra. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_igreja_catolica_colonial_bf_hc",
+      "name": "Igreja Católica (Período Colonial)",
+      "description_short": "Instituição religiosa com papel central na colonização do Brasil, envolvida na catequese, educação, e justificação de aspectos da ordem colonial, incluindo a escravidão africana.",
+      "article_full": {
+        "current": "A Igreja Católica desempenhou um papel fundamental na colonização do Brasil, atuando na catequese dos indígenas, na educação e na moralização da sociedade colonial. No entanto, a instituição, incluindo ordens religiosas, não se opôs à escravidão africana, chegando a possuir escravos e a fornecer justificativas para sua manutenção. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_coroa_portuguesa_colonial_bf_hc",
+      "name": "Coroa Portuguesa (Período Colonial)",
+      "description_short": "O poder monárquico de Portugal que administrou o Brasil como colônia, definindo políticas econômicas, sociais e legais, incluindo a sanção da escravidão africana.",
+      "article_full": {
+        "current": "A Coroa Portuguesa foi a autoridade máxima que governou o Brasil durante o período colonial. Suas políticas visavam a exploração econômica da colônia em benefício da metrópole. A Coroa sancionou e regulamentou a escravidão africana, considerando-a essencial para a economia colonial. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_cristaos_novos_bf_hc",
+      "name": "Cristãos-Novos",
+      "description_short": "Judeus convertidos ao cristianismo e seus descendentes, que enfrentaram discriminação e perseguição na Península Ibérica e nas colônias, incluindo o Brasil, sob o princípio da 'pureza de sangue'.",
+      "article_full": {
+        "current": "Cristãos-novos eram judeus e seus descendentes que se converteram ao Cristianismo, muitas vezes sob coação, a partir do final do século XV na Península Ibérica. No Brasil colonial, foram considerados 'impuros de sangue' e enfrentaram discriminação, restrições sociais e a vigilância da Inquisição, apesar de muitos terem tido papel relevante na economia. A distinção legal entre cristãos-novos e cristãos-velhos foi abolida em 1773. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_negros_livres_libertos_bf_hc",
+      "name": "Negros Livres e Libertos (Forros)",
+      "description_short": "Indivíduos de ascendência africana que não eram escravos no Brasil colonial, seja por nascimento livre ou por alforria. Apesar da liberdade, enfrentavam discriminação racial e social.",
+      "article_full": {
+        "current": "No Brasil colonial, existia uma população de negros livres e libertos (forros). Apesar de não estarem sob o jugo da escravidão, eram considerados 'impuros de sangue' e sofriam diversas restrições sociais e legais, refletindo o forte preconceito racial da época. Sua liberdade podia ser precária, especialmente para os de pele mais escura. (FAUSTO, 2001)",
+        "previous": null
+      }
+    },
+    {
+      "id": "char_mesticos_bf_hc",
+      "name": "Mestiços (Colonial)",
+      "description_short": "População resultante da miscigenação entre brancos, indígenas e negros no Brasil colonial (mulatos, mamelucos/caboclos, cafuzos). Enfrentavam discriminação baseada na 'pureza de sangue'.",
+      "article_full": {
+        "current": "A sociedade colonial brasileira caracterizou-se por uma intensa miscigenação, dando origem a diversos grupos de mestiços, como mulatos (branco e negro), mamelucos ou caboclos (branco e índio), e cafuzos (negro e índio). Estes grupos eram classificados e discriminados segundo o princípio da 'pureza de sangue'. (FAUSTO, 2001)",
         "previous": null
       }
     }
@@ -638,522 +773,520 @@
     {
       "id": "plc_lisboa_pt_bf_hc",
       "name": "Lisboa, Portugal",
-      "description_short": "Capital de Portugal, centro da Revolução de 1383-1385 e epicentro da expansão marítima portuguesa, com experiência comercial prévia.",
+      "description_short": "Capital de Portugal, centro da administração colonial e ponto de partida das expedições marítimas e do comércio com o Brasil.",
       "article_full": {
-        "current": "Antes de os portugueses assumirem o controle de seu comércio internacional, os genoveses investiram na sua expansão, transformando Lisboa em um grande centro do comércio genovês. (FAUSTO, 2001)\nA burguesia comercial de Lisboa revoltou-se durante a crise de sucessão de 1383-1385. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 38.736946, Longitude -9.142685 (Fonte: Latlong.net)",
+        "current": "Lisboa, capital de Portugal, foi o epicentro do império colonial português. De lá partiam as expedições, as ordens administrativas e se controlava o comércio com as colônias, incluindo o Brasil. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": -9.142685,
+      "latitude": 38.736946
     },
     {
       "id": "plc_ceuta_af_bf_hc",
       "name": "Ceuta, Norte da África",
-      "description_short": "Cidade no norte da África conquistada por Portugal em 1415, marcando o início da expansão ultramarina portuguesa.",
+      "description_short": "Cidade no norte da África conquistada por Portugal em 1415, marco inicial da expansão ultramarina portuguesa.",
       "article_full": {
-        "current": "Ceuta, localizada no norte da África, foi conquistada por Portugal em 1415. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 35.8893, Longitude -5.3198 (Fonte: Latitude.to)",
+        "current": "A conquista de Ceuta, cidade estrategicamente localizada no norte da África, em 1415, é tradicionalmente considerada o marco inicial da expansão marítima portuguesa. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": -5.3198,
+      "latitude": 35.8893
     },
     {
-      "id": "plc_ilha_madeira_pt_bf_hc",
-      "name": "Ilha da Madeira, Portugal",
-      "description_short": "Ilha atlântica ocupada por Portugal por volta de 1420, onde se desenvolveu a cultura da cana-de-açúcar.",
+      "id": "plc_ilhas_atlantico_bf_hc",
+      "name": "Ilhas do Atlântico (Madeira, Açores, Cabo Verde, São Tomé)",
+      "description_short": "Arquipélagos ocupados por Portugal no século XV, onde foram implementadas experiências de colonização e produção agrícola, incluindo cana-de-açúcar com trabalho escravo.",
       "article_full": {
-        "current": "Portugal conseguiu se implantar na Madeira por volta de 1420. Na ilha da Madeira, competiram o cultivo de trigo e as plantações de cana-de-açúcar, esta última incentivada por mercadores e baseada em trabalho escravo, acabando por triunfar. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 32.371666, Longitude -16.274998 (Fonte: Latlong.net)",
+        "current": "As ilhas do Atlântico (Madeira, Açores, Cabo Verde, São Tomé) foram ocupadas por Portugal a partir do século XV. Serviram como laboratório para a colonização, com o desenvolvimento de plantações em grande escala, notadamente de cana-de-açúcar, utilizando mão de obra escrava. Essas experiências influenciaram a colonização do Brasil. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": null,
+      "latitude": null
     },
     {
-      "id": "plc_acores_pt_bf_hc",
-      "name": "Açores, Portugal",
-      "description_short": "Arquipélago atlântico ocupado por Portugal por volta de 1427.",
+      "id": "plc_india_geral_bf_hc",
+      "name": "Índia (Geral)",
+      "description_short": "Região da Ásia que era o destino principal das navegações portuguesas em busca de especiarias. A rota marítima para a Índia foi estabelecida por Vasco da Gama.",
       "article_full": {
-        "current": "Portugal conseguiu se implantar nos Açores em torno de 1427. (FAUSTO, 2001)\nCoordenadas Geográficas (ponto central aproximado): Latitude 38.305542, Longitude -30.384108 (Fonte: Latlong.net)",
+        "current": "A Índia era o cobiçado destino das navegações portuguesas, principalmente devido ao lucrativo comércio de especiarias. A descoberta do caminho marítimo para a Índia por Vasco da Gama em 1498 foi um marco na expansão portuguesa. (FAUSTO, 2001)",
         "previous": null
-      }
-    },
-    {
-      "id": "plc_cabo_verde_bf_hc",
-      "name": "Ilhas de Cabo Verde",
-      "description_short": "Arquipélago atlântico ocupado por Portugal em 1460.",
-      "article_full": {
-        "current": "Portugal conseguiu se implantar nas ilhas de Cabo Verde em 1460. A frota de Cabral passou pelas ilhas de Cabo Verde antes de tomar rumo oeste em 1500. (FAUSTO, 2001)\nCoordenadas Geográficas (ponto central aproximado): Latitude 16.5388, Longitude -23.0418 (Fonte: Capeverdeislands.org)",
-        "previous": null
-      }
-    },
-    {
-      "id": "plc_sao_tome_st_bf_hc",
-      "name": "Ilha de São Tomé",
-      "description_short": "Ilha atlântica ocupada por Portugal em 1471, onde se implantou a lavoura de cana-de-açúcar com escravos e serviu de entreposto de escravos.",
-      "article_full": {
-        "current": "Portugal conseguiu se implantar na ilha de São Tomé em 1471. Nessa ilha, situada no golfo da Guiné, os portugueses implantaram um sistema de grande lavoura da cana-de-açúcar, com muitas semelhanças ao criado no Brasil, contando com abundante suprimento de escravos. São Tomé foi sempre um entreposto de escravos vindos do continente. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 0.255436, Longitude 6.602781 (Fonte: Latlong.net)",
-        "previous": null
-      }
-    },
-    {
-      "id": "plc_calicute_in_bf_hc",
-      "name": "Calicute (Kozhikode), Índia",
-      "description_short": "Cidade na Índia, destino da expedição de Vasco da Gama que abriu o caminho marítimo para as Índias.",
-      "article_full": {
-        "current": "A primeira nau de regresso da viagem de Vasco da Gama à Índia chegou a Portugal em julho de 1499. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 11.258753, Longitude 75.780411 (Fonte: Latlong.net)",
-        "previous": null
-      }
+      },
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": "plc_porto_seguro_ba_br_bf_hc",
       "name": "Porto Seguro, Bahia, Brasil",
-      "description_short": "Local no litoral da Bahia onde a frota de Pedro Álvares Cabral ancorou em 22 de abril de 1500.",
+      "description_short": "Local no litoral da Bahia onde a frota de Pedro Álvares Cabral ancorou em 22 de abril de 1500, marcando a chegada oficial dos portugueses ao Brasil.",
       "article_full": {
-        "current": "A frota de Pedro Álvares Cabral ancoraria no litoral da Bahia, em Porto Seguro, no dia 22 de abril de 1500. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude -16.4497, Longitude -39.0647 (Fonte: Latitude.to)",
+        "current": "Porto Seguro, no litoral do atual estado da Bahia, foi o local onde a frota de Pedro Álvares Cabral ancorou em 22 de abril de 1500, após o avistamento de terra no dia anterior. Este evento é considerado a chegada oficial dos portugueses ao Brasil. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": -39.0647,
+      "latitude": -16.4497
     },
     {
       "id": "plc_costa_brasil_geral_bf_hc",
       "name": "Costa Brasileira (Geral)",
-      "description_short": "Extensa faixa litorânea do Brasil habitada por diversas populações indígenas na época da chegada dos europeus.",
+      "description_short": "Extensa faixa litorânea do Brasil, palco dos primeiros contatos entre europeus e indígenas, da exploração do pau-brasil e do início da colonização.",
       "article_full": {
-        "current": "Os tupis-guaranis estendiam-se por quase toda a costa brasileira, desde o Ceará até a lagoa dos Patos. Grupos Tapuias interrompiam essa presença em alguns pontos. (FAUSTO, 2001)",
+        "current": "A vasta costa brasileira foi a primeira área de contato entre os colonizadores portugueses e os povos indígenas. Foi ao longo do litoral que se iniciou a exploração do pau-brasil, se estabeleceram as primeiras feitorias e, posteriormente, as capitanias e vilas. (FAUSTO, 2001)",
         "previous": null
-      }
-    },
-    {
-      "id": "plc_bacia_parana_paraguai_bf_hc",
-      "name": "Bacia Paraná-Paraguai",
-      "description_short": "Região hidrográfica habitada por grupos Guaranis na época da chegada dos europeus.",
-      "article_full": {
-        "current": "Os guaranis localizavam-se na bacia Paraná-Paraguai. (FAUSTO, 2001)",
-        "previous": null
-      }
-    },
-    {
-      "id": "plc_amazonia_br_geral_bf_hc",
-      "name": "Amazônia Brasileira (Geral)",
-      "description_short": "Região mencionada em relação às estimativas populacionais indígenas pré-coloniais.",
-      "article_full": {
-        "current": "Estimativas populacionais indígenas para a Amazônia brasileira na época da chegada dos europeus chegam a cerca de 5 milhões, embora os números sejam incertos. (FAUSTO, 2001)",
-        "previous": null
-      }
+      },
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": "plc_tordesilhas_es_bf_hc",
       "name": "Tordesilhas, Espanha",
-      "description_short": "Cidade na Espanha onde foi assinado o Tratado de Tordesilhas em 1494.",
+      "description_short": "Localidade na Espanha onde foi assinado o Tratado de Tordesilhas em 1494, dividindo as terras descobertas e a descobrir entre Portugal e Espanha.",
       "article_full": {
-        "current": "Local da assinatura do Tratado de Tordesilhas em 1494 entre Portugal e Espanha. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 41.502019, Longitude -5.001461 (Fonte: Latitudelongitude.org)",
+        "current": "Tordesilhas é uma cidade na Espanha onde, em 1494, Portugal e Espanha assinaram o tratado homônimo que dividia o mundo a ser explorado entre as duas coroas, por meio de um meridiano imaginário. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": -5.001461,
+      "latitude": 41.502019
     },
     {
       "id": "plc_filipinas_bf_hc",
       "name": "Filipinas",
-      "description_short": "Arquipélago no Sudeste Asiático onde Fernão de Magalhães chegou em 1521 durante a primeira circum-navegação.",
+      "description_short": "Arquipélago no Sudeste Asiático alcançado por Fernão de Magalhães em 1521, durante a primeira viagem de circum-navegação, a serviço da Espanha.",
       "article_full": {
-        "current": "Fernão de Magalhães, a serviço da Espanha, chegou às Filipinas em 1521. (FAUSTO, 2001)\nCoordenadas Geográficas (aproximadas para o arquipélago): Latitude 12.879721, Longitude 121.774017 (Fonte: Wikipedia)",
+        "current": "As Filipinas, um arquipélago no Sudeste Asiático, foram alcançadas em 1521 pela expedição de Fernão de Magalhães, que navegava a serviço da Espanha. Este foi um ponto crucial da primeira viagem de circum-navegação do globo. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": 121.774017,
+      "latitude": 12.879721
     },
     {
       "id": "plc_sao_vicente_sp_br_bf_hc",
       "name": "São Vicente, São Paulo, Brasil",
-      "description_short": "Primeira vila permanente fundada pelos portugueses no Brasil (1532) por Martim Afonso de Sousa.",
+      "description_short": "Primeira vila e colônia permanente fundada pelos portugueses no Brasil, por Martim Afonso de Sousa em 1532.",
       "article_full": {
-        "current": "Martim Afonso de Sousa fundou a vila de São Vicente em 1532, a primeira colônia permanente portuguesa no Brasil. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude -23.960745, Longitude -46.396136 (Fonte: CountryCoordinate.com)",
+        "current": "São Vicente, localizada no litoral do atual estado de São Paulo, foi a primeira vila fundada por Martim Afonso de Sousa em 1532, representando o início de um estabelecimento colonial mais permanente no Brasil. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": -46.396136,
+      "latitude": -23.960745
     },
     {
       "id": "plc_brasil_colonial_capitanias_bf_hc",
-      "name": "Brasil (Colonial - Capitanias Hereditárias)",
-      "description_short": "Território brasileiro dividido em quinze quinhões (capitanias hereditárias) a partir de 1534.",
+      "name": "Brasil Colonial (Sistema de Capitanias Hereditárias)",
+      "description_short": "Representa o território brasileiro dividido em quinze quinhões (capitanias) entregues a donatários pela Coroa Portuguesa a partir de 1534.",
       "article_full": {
-        "current": "O Brasil foi dividido em quinze quinhões, por uma série de linhas paralelas ao Equador que iam do litoral ao meridiano de Tordesilhas, para a implementação do sistema de Capitanias Hereditárias. (FAUSTO, 2001)",
+        "current": "O sistema de Capitanias Hereditárias, implementado a partir de 1534, dividiu o território brasileiro em quinze grandes lotes de terra, que foram concedidos a capitães-donatários com o objetivo de promover a colonização e a exploração econômica. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": "plc_salvador_ba_br_bf_hc",
       "name": "Salvador, Bahia, Brasil",
-      "description_short": "Primeira capital do Brasil, fundada por Tomé de Sousa em 1549, como sede do Governo-Geral.",
+      "description_short": "Primeira capital do Brasil, fundada por Tomé de Sousa em 1549, quando da instituição do Governo-Geral. Centro administrativo e econômico importante.",
       "article_full": {
-        "current": "Tomé de Sousa, primeiro governador-geral, fundou São Salvador, capital do Brasil até 1763. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude -12.974722, Longitude -38.476665 (Fonte: Latlong.net)",
+        "current": "Salvador, na Bahia, foi fundada em 1549 por Tomé de Sousa para ser a sede do Governo-Geral e a primeira capital do Brasil. Tornou-se um importante centro administrativo, religioso e econômico da colônia. (FAUSTO, 2001)",
         "previous": null
-      }
-    },
-    {
-      "id": "plc_coimbra_pt_bf_hc",
-      "name": "Coimbra, Portugal",
-      "description_short": "Cidade em Portugal, mencionada em conexão com a comunicação dos jesuítas no Brasil.",
-      "article_full": {
-        "current": "Em 1552, o padre Francisco Pires, escrevendo da Bahia, queixou-se da dificuldade de comunicação com os irmãos de Coimbra. (FAUSTO, 2001)\nCoordenadas Geográficas: Latitude 40.203314, Longitude -8.410257 (Fonte: CountryCoordinate.com)",
-        "previous": null
-      }
+      },
+      "longitude": -38.476665,
+      "latitude": -12.974722
     },
     {
       "id": "plc_brasil_colonial_geral_bf_hc",
       "name": "Brasil Colonial (Geral)",
-      "description_short": "O território brasileiro durante o período colonial, abrangendo diversas regiões e atividades econômicas.",
+      "description_short": "Representa o território brasileiro durante o período colonial (1500-1822) sob domínio português, abrangendo diversas regiões e atividades econômicas.",
       "article_full": {
-        "current": "Refere-se ao Brasil como um todo durante o período colonial, onde se desenvolveu uma economia voltada para a exportação, baseada na grande propriedade e no trabalho escravo. (FAUSTO, 2001)",
+        "current": "O Brasil Colonial refere-se ao período da história brasileira entre 1500 e 1822, durante o qual o território esteve sob o domínio de Portugal. Caracterizou-se pela exploração de recursos naturais, uso de mão de obra escrava e uma sociedade hierárquica. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": "plc_nordeste_brasil_bf_hc",
-      "name": "Nordeste do Brasil",
-      "description_short": "Primeiro centro de colonização e urbanização do Brasil, núcleo da economia açucareira.",
+      "name": "Nordeste do Brasil (Colonial)",
+      "description_short": "Região do Brasil que se tornou o principal centro da economia açucareira durante o período colonial, com destaque para Pernambuco e Bahia.",
       "article_full": {
-        "current": "O Nordeste representou o primeiro centro de colonização e de urbanização da nova terra. Até meados do século XVIII, a região nordestina concentrou as atividades econômicas e a vida social mais significativas da Colônia. A empresa açucareira foi o núcleo central da ativação socioeconômica do Nordeste. (FAUSTO, 2001)",
+        "current": "O Nordeste brasileiro, especialmente as capitanias de Pernambuco e Bahia, foi o principal polo da economia açucareira durante grande parte do período colonial. A região concentrou riqueza, população e poder político. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": null,
+      "latitude": null
+    },
+    {
+      "id": "plc_africa_ocidental_trafico_bf_hc",
+      "name": "Costa Ocidental da África (Tráfico Negreiro)",
+      "description_short": "Regiões da costa ocidental africana (Guiné, Costa da Mina, Congo, Angola) de onde milhões de africanos foram traficados como escravos para o Brasil.",
+      "article_full": {
+        "current": "A costa ocidental da África, abrangendo áreas como Guiné, Costa da Mina, Congo e Angola, foi a principal fonte de africanos escravizados e traficados para o Brasil ao longo de séculos. (FAUSTO, 2001)",
+        "previous": null
+      },
+      "longitude": null,
+      "latitude": null
     },
     {
       "id": "plc_quilombo_palmares_al_br_bf_hc",
-      "name": "Quilombo dos Palmares, Alagoas, Brasil",
-      "description_short": "Rede de povoados de negros fugidos, localizada na região do atual estado de Alagoas. Símbolo da resistência à escravidão.",
+      "name": "Quilombo dos Palmares (Alagoas, Brasil)",
+      "description_short": "Localização aproximada do Quilombo dos Palmares, na Serra da Barriga, atual estado de Alagoas. Foi o maior e mais duradouro quilombo do Brasil colonial.",
       "article_full": {
-        "current": "Palmares foi uma rede de povoados situada em uma região que hoje corresponde em parte ao Estado de Alagoas. Formado no início do século XVII, resistiu por quase cem anos. (FAUSTO, 2001)\nCoordenadas Geográficas (aproximadas para União dos Palmares): Latitude -9.159633, Longitude -36.022596 (Fonte: Findlatitudeandlongitude.com)",
+        "current": "O Quilombo dos Palmares localizava-se na Serra da Barriga, em uma região que hoje corresponde ao estado de Alagoas. Era uma rede de povoados fortificados que abrigava milhares de negros fugidos, além de indígenas e brancos marginalizados. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "longitude": -36.022596,
+      "latitude": -9.159633
     },
     {
-      "id": "plc_guine_costa_mina_africa_bf_hc",
-      "name": "Guiné e Costa da Mina (África Ocidental)",
-      "description_short": "Regiões na África Ocidental que forneceram grande número de escravos para o Brasil no século XVI.",
+      "id": "plc_reino_portugal_e_brasil_bf_hc",
+      "name": "Reino de Portugal e Colônia do Brasil (Relação Metrópole-Colônia)",
+      "description_short": "Representa a entidade política e econômica da relação entre Portugal (metrópole) e o Brasil (colônia), no contexto das políticas mercantilistas e do sistema colonial.",
       "article_full": {
-        "current": "No século XVI, a Guiné (Bissau e Cacheu) e a Costa da Mina (quatro portos ao longo do litoral do Daomé) forneceram o maior número de escravos para o Brasil. (FAUSTO, 2001)\nCoordenadas de Bissau (referência para Guiné): Latitude 11.86357, Longitude -15.59767 (Fonte: Geodatos.net)\nCoordenadas de Ouidah/Ajudá (referência para Costa da Mina): Latitude 6.371647, Longitude 2.076325 (Fonte: Latlong.net)",
+        "current": "A relação entre o Reino de Portugal e a colônia do Brasil foi definida pelo sistema colonial mercantilista, onde a metrópole exercia controle político e econômico sobre a colônia, visando a extração de riquezas e o benefício do comércio português. (FAUSTO, 2001)",
         "previous": null
-      }
-    },
-    {
-      "id": "plc_congo_angola_africa_bf_hc",
-      "name": "Congo e Angola (África)",
-      "description_short": "Regiões mais ao sul da costa africana que se tornaram os centros exportadores de escravos mais importantes a partir do século XVII.",
-      "article_full": {
-        "current": "Do século XVII em diante, as regiões mais ao sul da costa africana - Congo e Angola - tornaram-se os centros exportadores mais importantes, a partir dos portos de Luanda, Benguela e Cabinda. Os angolanos foram trazidos em maior número no século XVIII. (FAUSTO, 2001)\nCoordenadas de Luanda: Latitude -8.838333, Longitude 13.234444 (Fonte: Latlong.net)\nCoordenadas de Benguela: Latitude -12.5763, Longitude 13.4055 (Fonte: Latitude.to)\nCoordenadas de Cabinda: Latitude -5.5500, Longitude 12.2000 (Fonte: Latitude.to)",
-        "previous": null
-      }
+      },
+      "longitude": null,
+      "latitude": null
     }
   ],
   "themes": [
     {
-      "id": "thm_exp_mar_port_bf_hc",
-      "name": "Expansão Marítima Portuguesa (Séc. XV - Início)",
-      "color": "#005c99",
-      "description_short": "Processo de exploração oceânica iniciado por Portugal em princípios do século XV.",
+      "id": "thm_consolidacao_monarquia_pt_bf_hc",
+      "name": "Consolidação da Monarquia Portuguesa",
+      "description_short": "Processo de fortalecimento e centralização do poder real em Portugal, crucial para a posterior expansão marítima.",
       "article_full": {
-        "current": "A expansão marítima portuguesa foi iniciada em princípios do século XV. Portugal lançou pioneiramente a expansão, quase cem anos antes de Colombo chegar às terras da América. Diversos fatores contribuíram para este pioneirismo, incluindo a autonomia política de Portugal, a experiência comercial acumulada, a posição geográfica favorável e a convergência de interesses de várias camadas da sociedade. (FAUSTO, 2001)\nOs impulsos para a aventura marítima não eram apenas comerciais; o imaginário europeu sobre regiões desconhecidas também desempenhou um papel. A expansão representou uma importante renovação das técnicas de marear, com o aperfeiçoamento de instrumentos e da arquitetura naval, como a caravela. (FAUSTO, 2001)",
+        "current": "A consolidação da monarquia portuguesa, especialmente após a Revolução de 1383-1385, resultou em um Estado mais centralizado e com capacidade de empreender grandes projetos, como a expansão marítima. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": null
     },
     {
-      "id": "thm_consolidacao_monarquia_pt_bf_hc",
-      "name": "Consolidação da Monarquia Portuguesa (Séc. XIV-XV)",
-      "color": "#D2691E",
-      "description_short": "Processo de centralização do poder real em Portugal, culminando com a Revolução de 1383-1385 e a ascensão da Dinastia de Avis, fundamental para a expansão marítima.",
+      "id": "thm_exp_mar_port_bf_hc",
+      "name": "Expansão Marítima Portuguesa",
+      "description_short": "Processo de exploração e descobrimento de novas rotas e territórios pelos portugueses a partir do século XV.",
       "article_full": {
-        "current": "Durante todo o século XV, Portugal foi um reino unificado e menos sujeito a convulsões e disputas em comparação com outros reinos europeus. A monarquia portuguesa consolidou-se através de uma história que teve um dos seus pontos mais significativos na revolução de 1383-1385. Esta revolução resultou em um reforço e centralização do poder monárquico sob Dom João, Mestre de Avis. A Coroa, fortalecida e estável, pôde então se transformar em um grande empreendedor, viabilizando a expansão marítima. (FAUSTO, 2001)",
+        "current": "A expansão marítima portuguesa, iniciada no século XV, foi um movimento pioneiro que levou à descoberta de novas rotas comerciais, à exploração da costa africana, à chegada à Índia e ao Brasil, e ao estabelecimento de um vasto império colonial. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": null
     },
     {
       "id": "thm_motivacoes_exp_bf_hc",
-      "name": "Motivações da Expansão Marítima Portuguesa",
-      "color": "#FFD700",
-      "description_short": "Convergência de interesses comerciais, reais (receita e prestígio), nobres e eclesiásticos (recompensas e cristianização) e populares (emigração e vida melhor) que impulsionaram a expansão.",
+      "name": "Motivações da Expansão Portuguesa",
+      "description_short": "Conjunto de fatores econômicos, políticos, religiosos e sociais que impulsionaram a expansão marítima de Portugal.",
       "article_full": {
-        "current": "No início do século XV, a expansão correspondia aos interesses das classes, grupos sociais e instituições que compunham a sociedade portuguesa. Para os comerciantes, era a perspectiva de um bom negócio; para o rei, a oportunidade de criar novas fontes de receita, ocupar os nobres e ganhar prestígio; para os nobres e membros da Igreja, servir ao rei ou a Deus resultava em recompensas e cargos; para o povo, lançar-se ao mar significava a tentativa de uma vida melhor e a fuga de um sistema social opressivo. Os impulsos não eram apenas comerciais, incluindo também a busca por reinos fantásticos e o desejo de aventura. (FAUSTO, 2001)",
+        "current": "As motivações para a expansão marítima portuguesa incluíam a busca por novas rotas comerciais e riquezas (ouro, especiarias), o fortalecimento da Coroa, a expansão da fé cristã, e oportunidades de ascensão social e emigração para diversos setores da sociedade. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_exp_mar_port_bf_hc"
     },
     {
       "id": "thm_busca_ouro_especiarias_bf_hc",
       "name": "Busca por Ouro e Especiarias",
-      "color": "#B8860B",
-      "description_short": "Principal motivação econômica da expansão portuguesa, visando o ouro como moeda e decoração, e especiarias para conservação e paladar.",
+      "description_short": "Principal motor econômico da expansão portuguesa, visando o controle do comércio de produtos valiosos como ouro e condimentos orientais.",
       "article_full": {
-        "current": "O ouro e as especiarias foram os bens mais buscados na expansão portuguesa. O ouro era usado como moeda e para decoração. As especiarias (condimentos) eram valorizadas pelas limitadas técnicas de conservação de alimentos e pelos hábitos alimentares da época. (FAUSTO, 2001)",
+        "current": "O ouro, utilizado como moeda e para ostentação, e as especiarias, valorizadas para conservação e tempero de alimentos, foram os bens mais cobiçados pelos portugueses em sua expansão, impulsionando as navegações e o comércio. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_motivacoes_exp_bf_hc"
     },
     {
       "id": "thm_conquistas_feitorias_pt_af_bf_hc",
       "name": "Conquistas e Feitorias Portuguesas na África",
-      "color": "#8B4513",
-      "description_short": "Estabelecimento de postos comerciais fortificados e conquistas territoriais na costa africana como parte da expansão marítima portuguesa.",
+      "description_short": "Estabelecimento de postos comerciais fortificados (feitorias) e conquistas territoriais na costa africana como parte da expansão portuguesa.",
       "article_full": {
-        "current": "A conquista de Ceuta em 1415 marcou o início da expansão ultramarina portuguesa. A expansão metódica desenvolveu-se ao longo da costa ocidental africana, onde os portugueses estabeleceram feitorias (postos de comércio fortificados) sem penetrar profundamente no território. (FAUSTO, 2001)",
+        "current": "Ao longo da costa africana, os portugueses estabeleceram feitorias (postos comerciais fortificados) e realizaram conquistas, como a de Ceuta, para controlar rotas comerciais e ter acesso a produtos como ouro, marfim e escravos. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_exp_mar_port_bf_hc"
     },
     {
       "id": "thm_ocup_ilhas_atlantico_acucar_bf_hc",
-      "name": "Ocupação das Ilhas Atlânticas e Cultivo de Açúcar",
-      "color": "#228B22",
-      "description_short": "Colonização portuguesa das ilhas da Madeira, Açores, Cabo Verde e São Tomé, com desenvolvimento da agricultura, incluindo a cana-de-açúcar com trabalho escravo.",
+      "name": "Ocupação das Ilhas do Atlântico e Economia Açucareira",
+      "description_short": "Colonização portuguesa das ilhas atlânticas (Madeira, Açores, etc.) e desenvolvimento da produção de açúcar com trabalho escravo, precursor do modelo no Brasil.",
       "article_full": {
-        "current": "Os portugueses ocuparam e colonizaram diversas ilhas no Atlântico, como Madeira (c. 1420), Açores (c. 1427), Cabo Verde (1460) e São Tomé (1471). Nestas ilhas, realizaram experiências de plantio em grande escala, notadamente da cana-de-açúcar, utilizando trabalho escravo. A economia açucareira prosperou inicialmente na Madeira e em São Tomé, esta última também servindo como entreposto de escravos. (FAUSTO, 2001)",
+        "current": "A ocupação das ilhas do Atlântico por Portugal no século XV incluiu o desenvolvimento da agricultura em larga escala, com destaque para a cana-de-açúcar na Madeira e em São Tomé, utilizando mão de obra escrava. Este modelo serviu de experiência para a colonização do Brasil. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_exp_mar_port_bf_hc"
     },
     {
       "id": "thm_viagens_india_bf_hc",
-      "name": "Viagens à Índia",
-      "color": "#4682B4",
-      "description_short": "Expedições marítimas portuguesas com destino à Índia em busca de especiarias e estabelecimento de rotas comerciais.",
+      "name": "Viagens Portuguesas à Índia",
+      "description_short": "Expedições marítimas portuguesas que estabeleceram a rota para a Índia contornando a África, visando o comércio de especiarias.",
       "article_full": {
-        "current": "Após a chegada de Vasco da Gama à Índia, a Coroa Portuguesa organizou novas frotas para as Índias, como a comandada por Pedro Álvares Cabral em 1500, que resultou na chegada ao Brasil. (FAUSTO, 2001)",
+        "current": "As viagens portuguesas à Índia, iniciadas com Vasco da Gama, abriram uma rota marítima direta para o Oriente, contornando a África, e permitiram a Portugal controlar parte do lucrativo comércio de especiarias. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_exp_mar_port_bf_hc"
     },
     {
       "id": "thm_chegada_europeus_brasil_bf_hc",
       "name": "Chegada dos Europeus ao Brasil",
-      "color": "#32CD32",
-      "description_short": "A chegada da frota de Pedro Álvares Cabral ao litoral brasileiro em abril de 1500, marcando o início do contato europeu com a terra.",
+      "description_short": "Chegada da frota de Pedro Álvares Cabral ao território que viria a ser o Brasil em 1500, no contexto das navegações portuguesas.",
       "article_full": {
-        "current": "Em 22 de abril de 1500, a frota portuguesa comandada por Pedro Álvares Cabral, que se destinava às Índias, ancorou no litoral da Bahia, em Porto Seguro. Este evento é considerado o descobrimento oficial do Brasil por Portugal. (FAUSTO, 2001)",
+        "current": "A chegada da frota comandada por Pedro Álvares Cabral ao litoral brasileiro em abril de 1500 é o marco oficial do 'descobrimento' do Brasil pelos portugueses, inserido no contexto da expansão marítima e das viagens às Índias. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_exp_mar_port_bf_hc"
     },
     {
       "id": "thm_pop_indigenas_brasil_pre_cabral_bf_hc",
-      "name": "Populações Indígenas do Brasil (Pré-Cabralino)",
-      "color": "#A52A2A",
-      "description_short": "Descrição das populações ameríndias encontradas pelos europeus no Brasil, incluindo Tupis-Guaranis e Tapuias, sua distribuição e características gerais.",
+      "name": "Populações Indígenas do Brasil Pré-Cabralino",
+      "description_short": "Características culturais, sociais e distribuição dos povos indígenas que habitavam o Brasil antes da chegada dos europeus, como Tupis-Guaranis e Tapuias.",
       "article_full": {
-        "current": "Quando os europeus chegaram ao Brasil, encontraram uma população ameríndia relativamente homogênea cultural e linguisticamente, dividida principalmente entre Tupis-Guaranis (costa e bacia Paraná-Paraguai) e Tapuias (outras línguas, interrompendo a presença Tupi-Guarani). Os Tupis-Guaranis incluíam grupos como Tupinambás e Guaranis. Outros grupos como Goitacazes, Aimorés e Tremembés também são mencionados. (FAUSTO, 2001)",
+        "current": "Antes da chegada dos europeus, o território brasileiro era habitado por uma diversidade de povos indígenas, com destaque para os Tupis-Guaranis (costa e bacia Paraná-Paraguai) e os Tapuias (interior e alguns pontos da costa). Possuíam culturas e modos de vida próprios, baseados na caça, pesca, coleta e agricultura de subsistência. (FAUSTO, 2001)",
         "previous": null
-      }
-    },
-    {
-      "id": "thm_cultura_sociedade_tupi_guarani_bf_hc",
-      "name": "Cultura e Sociedade Tupi-Guarani",
-      "color": "#DEB887",
-      "description_short": "Aspectos da economia (caça, pesca, coleta, agricultura de subsistência com queimadas) e organização social (trocas, alianças, guerra, canibalismo ritual) dos Tupis-Guaranis.",
-      "article_full": {
-        "current": "Os grupos tupis praticavam caça, pesca, coleta e agricultura (feijão, milho, abóbora, mandioca), usando a técnica de queimadas. A economia era de subsistência, com poucas trocas de alimentos entre aldeias, mas havia trocas de mulheres e bens de luxo. A guerra e a captura de inimigos para rituais canibalísticos eram integrantes da sociedade. (FAUSTO, 2001)",
-        "previous": null
-      }
+      },
+      "parent_id": null
     },
     {
       "id": "thm_impacto_chegada_europeia_indigenas_bf_hc",
-      "name": "Impacto Inicial da Chegada Europeia sobre os Indígenas",
-      "color": "#DC143C",
-      "description_short": "A chegada dos portugueses foi uma catástrofe para os índios, associada a poderes xamânicos, resultando em violência cultural, epidemias, mortes e mestiçagem.",
+      "name": "Impacto da Chegada Europeia sobre os Indígenas",
+      "description_short": "Consequências da chegada dos portugueses para as populações indígenas, incluindo violência, doenças, escravização, desestruturação social e cultural.",
       "article_full": {
-        "current": "A chegada dos portugueses representou uma verdadeira catástrofe para os índios. Foram associados a grandes xamãs, sendo respeitados, temidos e odiados. O contato resultou em violência cultural, epidemias, mortes e na formação de uma população mestiça. (FAUSTO, 2001)",
+        "current": "A chegada dos europeus representou uma catástrofe para as populações indígenas do Brasil, resultando em violência física e cultural, epidemias que dizimaram grande parte da população, escravização, perda de terras e profunda desestruturação de suas sociedades. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_pop_indigenas_brasil_pre_cabral_bf_hc"
     },
     {
       "id": "thm_resistencia_indigena_bf_hc",
-      "name": "Resistência Indígena",
-      "color": "#FF4500",
-      "description_short": "Formas de resistência dos índios aos colonizadores, incluindo guerra, fuga e isolamento, e alianças portuguesas com grupos indígenas rivais.",
+      "name": "Resistência Indígena à Colonização",
+      "description_short": "Formas de oposição e luta dos povos indígenas contra a dominação, escravização e expropriação impostas pelos colonizadores portugueses.",
       "article_full": {
-        "current": "Por não existir uma nação indígena unificada, os portugueses encontraram aliados indígenas na luta contra grupos resistentes. Os índios resistiram fortemente, especialmente à escravização, através da guerra, fuga e isolamento em regiões mais pobres. (FAUSTO, 2001)",
+        "current": "Apesar da superioridade bélica dos colonizadores e do impacto das doenças, os povos indígenas resistiram de diversas formas à dominação portuguesa, através de guerras, fugas, alianças estratégicas e a manutenção de suas culturas e práticas. (FAUSTO, 2001)",
         "previous": null
-      }
-    },
-    {
-      "id": "thm_percepcao_europeia_relatos_indigenas_bf_hc",
-      "name": "Percepção Europeia e Relatos sobre Indígenas",
-      "color": "#778899",
-      "description_short": "Dificuldades na análise da cultura indígena devido a diferenças culturais e preconceitos nos relatos de cronistas, viajantes e padres, com descrições variando conforme a resistência indígena.",
-      "article_full": {
-        "current": "A análise da sociedade e costumes indígenas é dificultada por diferenças culturais e preconceitos presentes nos relatos de cronistas, viajantes e padres. Há uma diferenciação entre índios com qualidades positivas e negativas, de acordo com o grau de resistência aos portugueses. Os Aimorés, por exemplo, foram sempre apresentados desfavoravelmente. (FAUSTO, 2001)",
-        "previous": null
-      }
+      },
+      "parent_id": "thm_pop_indigenas_brasil_pre_cabral_bf_hc"
     },
     {
       "id": "thm_expl_pau_brasil_bf_hc",
       "name": "Exploração do Pau-Brasil",
-      "color": "#8B4513",
-      "description_short": "Principal atividade econômica nos primeiros anos da colonização do Brasil (1500-1535), baseada na extração e troca com os indígenas.",
+      "description_short": "Principal atividade econômica no Brasil nas primeiras décadas após a chegada dos portugueses, baseada na extração da madeira tintória com mão de obra indígena.",
       "article_full": {
-        "current": "Nos anos iniciais (1500-1535), a principal atividade econômica foi a extração do pau-brasil, usado como corante e para construção. Era obtido principalmente mediante troca com os índios (tecidos, facas, etc.). O Brasil foi arrendado a Fernão de Loronha (1503-1505) para esta exploração. (FAUSTO, 2001)",
+        "current": "Nos primeiros trinta e cinco anos da presença portuguesa, a principal atividade econômica no Brasil foi a extração do pau-brasil, uma madeira valorizada na Europa por suas propriedades tintoriais. A exploração era feita principalmente através do escambo com os indígenas. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_economia_colonial_estrutura_bf_hc"
+    },
+    {
+      "id": "thm_relacoes_luso_indigenas_bf_hc",
+      "name": "Relações Luso-Indígenas Iniciais",
+      "description_short": "Interações iniciais entre portugueses e povos indígenas, marcadas por trocas comerciais (escambo), conflitos, alianças e o início da exploração da mão de obra.",
+      "article_full": {
+        "current": "As relações iniciais entre portugueses e indígenas no Brasil foram complexas, envolvendo desde trocas comerciais (escambo de pau-brasil por manufaturados europeus) até conflitos violentos, alianças pontuais e o início da exploração do trabalho indígena. (FAUSTO, 2001)",
+        "previous": null
+      },
+      "parent_id": "thm_pop_indigenas_brasil_pre_cabral_bf_hc"
     },
     {
       "id": "thm_disputas_coloniais_tratados_bf_hc",
-      "name": "Disputas Coloniais e Tratados (Tordesilhas)",
-      "color": "#B22222",
-      "description_short": "Contestação da posse de novas terras e negociações entre Portugal e Espanha, resultando no Tratado de Tordesilhas (1494) para dividir o mundo em esferas de influência.",
+      "name": "Disputas Coloniais e Tratados de Partilha",
+      "description_short": "Conflitos e acordos diplomáticos entre Portugal e Espanha pela posse e exploração das terras recém-descobertas, como o Tratado de Tordesilhas.",
       "article_full": {
-        "current": "A posse da América por Colombo foi contestada por Portugal, levando ao Tratado de Tordesilhas (1494), que dividiu o mundo entre os dois reinos por uma linha imaginária. (FAUSTO, 2001)",
+        "current": "A expansão marítima gerou disputas entre Portugal e Espanha pelas novas terras. O Tratado de Tordesilhas (1494) foi uma tentativa de dividir o mundo a ser explorado entre as duas potências ibéricas, mas sua imprecisão gerou controvérsias futuras. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": null
+    },
+    {
+      "id": "thm_exp_mar_esp_bf_hc",
+      "name": "Expansão Marítima Espanhola",
+      "description_short": "Processo de exploração e conquista de territórios pela Espanha, contemporâneo à expansão portuguesa, resultando na formação de um vasto império na América.",
+      "article_full": {
+        "current": "A expansão marítima espanhola, impulsionada pela viagem de Colombo em 1492, levou à conquista de vastos territórios na América e à formação de um grande império colonial, rivalizando com Portugal na exploração do Novo Mundo. (FAUSTO, 2001)",
+        "previous": null
+      },
+      "parent_id": null
     },
     {
       "id": "thm_navegacao_expl_esp_bf_hc",
-      "name": "Navegação e Exploração Espanhola",
-      "color": "#FF4500",
-      "description_short": "Explorações marítimas realizadas pela Espanha, incluindo a busca por um caminho ocidental para as Índias.",
+      "name": "Navegação e Exploração Espanhola (América e Pacífico)",
+      "description_short": "Viagens de exploração e navegação realizadas a serviço da Espanha, incluindo a busca por passagens para o Oriente e a exploração do Oceano Pacífico.",
       "article_full": {
-        "current": "Os espanhóis buscavam um caminho para as Índias pelo ocidente. Fernão de Magalhães, a serviço da Espanha, realizou a primeira circum-navegação, chegando às Filipinas em 1521, mas a rota era longa e difícil. (FAUSTO, 2001)",
+        "current": "A Espanha promoveu diversas expedições de navegação e exploração, como a de Fernão de Magalhães, que buscou uma passagem ocidental para as Índias e explorou o Oceano Pacífico, consolidando o conhecimento geográfico da época. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_exp_mar_esp_bf_hc"
     },
     {
       "id": "thm_ameaca_estrangeira_fr_bf_hc",
-      "name": "Ameaça Estrangeira (Francesa)",
-      "color": "#4B0082",
-      "description_short": "Contestação francesa à posse portuguesa do Brasil, com atividades de comércio e pirataria, e tentativas de estabelecimento na colônia.",
+      "name": "Ameaça Estrangeira (Francesa) ao Domínio Português",
+      "description_short": "Contestação do domínio português no Brasil por outras potências europeias, especialmente a França, através de pirataria, comércio ilegal e tentativas de estabelecimento.",
       "article_full": {
-        "current": "A França não reconhecia os tratados de partilha do mundo e praticava o comércio do pau-brasil e pirataria na costa brasileira. A ameaça francesa levou Portugal a tomar medidas para colonizar efetivamente o Brasil. (FAUSTO, 2001)",
+        "current": "A França representou a principal ameaça estrangeira ao domínio português no Brasil durante o século XVI, não reconhecendo o Tratado de Tordesilhas e engajando-se no comércio de pau-brasil, pirataria e tentativas de fundar colônias. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_admin_colonial_bf_hc"
     },
     {
       "id": "thm_inicio_colonizacao_efetiva_br_bf_hc",
       "name": "Início da Colonização Efetiva do Brasil",
-      "color": "#006400",
-      "description_short": "Mudança na política portuguesa de mera exploração para a ocupação e colonização sistemática do Brasil, impulsionada por ameaças estrangeiras e pela necessidade de garantir a posse da terra.",
+      "description_short": "Transição da exploração extrativista para o estabelecimento de colônias permanentes, com a fundação de vilas e a implementação de sistemas administrativos.",
       "article_full": {
-        "current": "Considerações políticas, como a ameaça francesa, levaram a Coroa portuguesa à convicção de que era necessário colonizar a nova terra. A expedição de Martim Afonso de Sousa (1530-1533) e a posterior implementação das Capitanias Hereditárias marcaram a transição para uma ocupação mais efetiva. (FAUSTO, 2001)",
+        "current": "A partir da década de 1530, Portugal iniciou a colonização efetiva do Brasil, motivada pela necessidade de garantir a posse da terra contra ameaças estrangeiras. Isso envolveu a expedição de Martim Afonso de Sousa, a fundação de São Vicente e a posterior criação das Capitanias Hereditárias e do Governo-Geral. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": null
     },
     {
       "id": "thm_sistema_capitanias_hereditarias_bf_hc",
       "name": "Sistema de Capitanias Hereditárias",
-      "color": "#DAA520",
-      "description_short": "Sistema administrativo implementado por D. João III (c. 1534) dividindo o Brasil em faixas de terra concedidas a donatários para promover a colonização, com amplos poderes e responsabilidades.",
+      "description_short": "Modelo administrativo implementado por Portugal no Brasil (c. 1534), dividindo o território em lotes concedidos a donatários para promover a colonização.",
       "article_full": {
-        "current": "Decidido por D. João III, o Brasil foi dividido em quinze quinhões (capitanias) entregues a capitães-donatários (pequena nobreza, burocratas, comerciantes como Jorge Figueiredo Correia, e experientes navegadores como Martim Afonso e Duarte Coelho). Fernão de Noronha recebeu a primeira capitania (ilha de São João) antes de 1532. Pero do Campo Tourinho, outro donatário, vendeu suas propriedades em Portugal para vir ao Brasil. Os donatários receberam a posse, mas não a propriedade da terra, com extensos poderes econômicos, tributários e administrativos, incluindo o direito de doar sesmarias, que originaram latifúndios. (FAUSTO, 2001)",
+        "current": "O sistema de Capitanias Hereditárias foi uma tentativa da Coroa Portuguesa de transferir os custos da colonização para particulares (donatários), concedendo-lhes vastos poderes sobre grandes extensões de terra (capitanias) em troca do compromisso de povoar e explorar. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_admin_colonial_bf_hc"
     },
     {
       "id": "thm_admin_colonial_bf_hc",
-      "name": "Administração Colonial Portuguesa",
-      "color": "#556B2F",
-      "description_short": "Estruturas e políticas administrativas de Portugal no Brasil, incluindo Capitanias Hereditárias e o Governo-Geral.",
+      "name": "Administração Colonial Portuguesa no Brasil",
+      "description_short": "Estruturas e mecanismos de governo implementados por Portugal para administrar a colônia do Brasil, incluindo Capitanias Hereditárias e Governo-Geral.",
       "article_full": {
-        "current": "A administração colonial portuguesa no Brasil evoluiu do sistema de Capitanias Hereditárias para o Governo-Geral, buscando centralizar o controle, garantir a posse territorial, colonizar e organizar as rendas da Coroa. (FAUSTO, 2001)",
+        "current": "A administração colonial portuguesa no Brasil evoluiu de um sistema descentralizado de Capitanias Hereditárias para um modelo mais centralizado com a instituição do Governo-Geral, visando maior controle da Coroa sobre a colônia. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": null
     },
     {
       "id": "thm_catequese_org_igreja_bf_hc",
-      "name": "Catequese Indígena e Organização da Igreja",
-      "color": "#708090",
-      "description_short": "Esforços dos jesuítas para catequizar os índios e disciplinar o clero local, e a organização inicial da Igreja Católica no Brasil.",
+      "name": "Catequese e Organização da Igreja no Brasil Colonial",
+      "description_short": "Atuação das ordens religiosas, especialmente jesuítas, na conversão dos indígenas ao cristianismo e no estabelecimento da estrutura eclesiástica na colônia.",
       "article_full": {
-        "current": "Os primeiros jesuítas, como Manuel da Nóbrega e Francisco Pires, chegaram com Tomé de Sousa em 1549 com o objetivo de catequizar os índios e disciplinar o clero. O bispado de São Salvador foi criado posteriormente (1551, segundo outras fontes, ou 1553 como mencionado por Fausto para a criação do bispado), subordinado a Lisboa, avançando na organização da Igreja na colônia. (FAUSTO, 2001)",
+        "current": "A catequese dos indígenas e a organização da Igreja Católica foram aspectos centrais da colonização. Ordens religiosas, com destaque para os jesuítas, desempenharam papel crucial na conversão dos nativos, na educação e na fundação de missões e colégios. (FAUSTO, 2001)",
         "previous": null
-      }
-    },
-    {
-      "id": "thm_dificuldades_admin_colonial_inicial_bf_hc",
-      "name": "Dificuldades da Administração Colonial Inicial",
-      "color": "#A0522D",
-      "description_short": "Desafios enfrentados pela administração colonial portuguesa no Brasil, como o isolamento entre as capitanias e a dificuldade de comunicação.",
-      "article_full": {
-        "current": "Apesar do esforço de centralização com o Governo-Geral, a administração colonial enfrentava dificuldades, como o isolamento entre as capitanias. A comunicação era precária, sendo às vezes mais fácil receber notícias de Portugal do que de outra capitania. (FAUSTO, 2001)",
-        "previous": null
-      }
+      },
+      "parent_id": null
     },
     {
       "id": "thm_economia_colonial_estrutura_bf_hc",
       "name": "Estrutura da Economia Colonial Brasileira",
-      "color": "#2E8B57",
-      "description_short": "Baseada no fornecimento de produtos para a Europa, grande propriedade, produção em larga escala e trabalho compulsório (escravidão).",
+      "description_short": "Características fundamentais da economia do Brasil Colônia, baseada na grande propriedade, monocultura de exportação e trabalho escravo.",
       "article_full": {
-        "current": "O Brasil colonial foi estruturado para fornecer gêneros alimentícios ou minérios ao comércio europeu. A política metropolitana incentivou a empresa comercial baseada em poucos produtos exportáveis em grande escala, assentada na grande propriedade e no trabalho compulsório, visando a acumulação de riqueza na metrópole. (FAUSTO, 2001)",
+        "current": "A economia do Brasil Colonial foi moldada para atender aos interesses mercantilistas de Portugal, baseando-se na grande propriedade rural (latifúndio), na produção de gêneros tropicais para exportação (como açúcar) e no uso intensivo de mão de obra escrava, inicialmente indígena e depois predominantemente africana. (FAUSTO, 2001)",
         "previous": null
-      }
-    },
-    {
-      "id": "thm_escravidao_indigena_brasil_bf_hc",
-      "name": "Escravidão Indígena no Brasil",
-      "color": "#800000",
-      "description_short": "Utilização do trabalho indígena compulsório na colonização, suas dificuldades, resistência e o impacto demográfico nas populações nativas.",
-      "article_full": {
-        "current": "A escravização do índio enfrentou dificuldades como a incompatibilidade cultural com o trabalho intensivo, a resistência indígena (guerra, fuga) e a catastrófica queda demográfica devido a doenças. Leis foram criadas para limitar a escravidão indígena, mas eram frequentemente burladas. (FAUSTO, 2001)",
-        "previous": null
-      }
+      },
+      "parent_id": null
     },
     {
       "id": "thm_escravidao_africana_brasil_bf_hc",
       "name": "Escravidão Africana no Brasil",
-      "color": "#000000",
-      "description_short": "Importação e utilização de africanos escravizados como principal mão de obra na colônia, impulsionada pelo lucrativo tráfico negreiro e pela maior adaptabilidade percebida ao trabalho intensivo.",
+      "description_short": "Sistema de trabalho compulsório imposto a milhões de africanos e seus descendentes no Brasil, fundamental para a economia colonial.",
       "article_full": {
-        "current": "A preferência pela escravidão africana deveu-se ao lucrativo tráfico negreiro e à maior capacidade produtiva percebida dos africanos, muitos com experiência em trabalhos com ferro e criação de gado. A importação de africanos foi incentivada a partir da década de 1570. (FAUSTO, 2001)",
+        "current": "A escravidão africana foi a principal forma de trabalho no Brasil Colonial, sustentando as principais atividades econômicas como a produção de açúcar e a mineração. Caracterizou-se pela violência, exploração e pela resistência dos escravizados. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_economia_colonial_estrutura_bf_hc"
     },
     {
       "id": "thm_grande_lavoura_exportacao_bf_hc",
       "name": "Grande Lavoura de Exportação",
-      "color": "#556B2F",
-      "description_short": "Modelo de produção agrícola colonial focado em monoculturas (como a cana-de-açúcar) em grandes propriedades para exportação para a Europa.",
+      "description_short": "Modelo de produção agrícola colonial focado em grandes propriedades (latifúndios) e na monocultura de produtos destinados ao mercado europeu.",
       "article_full": {
-        "current": "A economia colonial brasileira foi centrada na grande lavoura de exportação, como a da cana-de-açúcar, utilizando grandes propriedades e trabalho escravo para atender à demanda do mercado europeu. (FAUSTO, 2001)",
+        "current": "A grande lavoura de exportação, como a da cana-de-açúcar, foi um pilar da economia colonial brasileira. Caracterizava-se por vastas propriedades monocultoras que utilizavam intensivamente o trabalho escravo para produzir para o mercado externo. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_economia_colonial_estrutura_bf_hc"
+    },
+    {
+      "id": "thm_escravidao_indigena_brasil_bf_hc",
+      "name": "Escravidão Indígena no Brasil",
+      "description_short": "Utilização do trabalho compulsório dos povos indígenas pelos colonizadores portugueses, especialmente nas fases iniciais da colonização.",
+      "article_full": {
+        "current": "A escravidão indígena foi praticada no Brasil desde o início da colonização, embora tenha sido gradualmente substituída pela escravidão africana devido a fatores como a resistência indígena, a catástrofe demográfica e os lucros do tráfico negreiro. (FAUSTO, 2001)",
+        "previous": null
+      },
+      "parent_id": "thm_economia_colonial_estrutura_bf_hc"
     },
     {
       "id": "thm_economia_acucareira_bf_hc",
-      "name": "Economia Açucareira",
-      "color": "#F5DEB3",
-      "description_short": "Produção de açúcar como principal atividade econômica do Brasil colonial, especialmente no Nordeste, utilizando grandes propriedades e trabalho escravo.",
+      "name": "Economia Açucareira no Brasil Colonial",
+      "description_short": "Ciclo econômico dominante no Brasil entre os séculos XVI e XVII, baseado na produção de açúcar em engenhos com mão de obra escrava, principalmente no Nordeste.",
       "article_full": {
-        "current": "A produção açucareira estabeleceu-se em bases sólidas no Brasil nas décadas de 1530 e 1540, tornando-se o núcleo da ativação socioeconômica do Nordeste, com Pernambuco e Bahia como grandes centros. (FAUSTO, 2001)",
+        "current": "A economia açucareira foi a principal atividade econômica do Brasil Colonial por cerca de dois séculos, concentrada principalmente no Nordeste. Baseava-se em grandes engenhos, monocultura da cana-de-açúcar e uso intensivo de trabalho escravo africano. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_grande_lavoura_exportacao_bf_hc"
     },
     {
       "id": "thm_trafico_negreiro_bf_hc",
-      "name": "Tráfico Negreiro",
-      "color": "#4A4A4A",
-      "description_short": "Comércio internacional de escravos africanos, que se tornou um grande e lucrativo negócio na Colônia, suprindo mão de obra para a lavoura de exportação.",
+      "name": "Tráfico Negreiro para o Brasil",
+      "description_short": "Comércio transatlântico de africanos escravizados, que abasteceu o Brasil com mão de obra compulsória por mais de três séculos.",
       "article_full": {
-        "current": "O comércio internacional de escravos, trazidos da costa africana, era em si mesmo um negócio tentador, que acabou se transformando no grande negócio da Colônia. Portugueses, holandeses e brasileiros disputaram o controle dessa área. O tráfico representava uma fonte potencial de acumulação de riqueza. (FAUSTO, 2001)",
+        "current": "O tráfico negreiro foi uma atividade comercial altamente lucrativa que transportou milhões de africanos para o Brasil para serem escravizados. Foi essencial para a manutenção da economia colonial e da escravidão no país. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_escravidao_africana_brasil_bf_hc"
     },
     {
       "id": "thm_resistencia_escrava_quilombos_bf_hc",
       "name": "Resistência Escrava e Quilombos",
-      "color": "#8B0000",
-      "description_short": "Formas de resistência dos africanos escravizados, incluindo fugas e a formação de quilombos, como o de Palmares.",
+      "description_short": "Formas de oposição dos africanos escravizados à escravidão, incluindo fugas, formação de comunidades autônomas (quilombos) e revoltas.",
       "article_full": {
-        "current": "Fugas individuais ou em massa, agressões contra senhores e resistência cotidiana fizeram parte das relações escravistas. Os quilombos, estabelecimentos de negros fugidos que recompunham formas de organização social africanas, existiram às centenas. Palmares foi o mais importante, resistindo por quase cem anos. (FAUSTO, 2001)",
+        "current": "A resistência à escravidão no Brasil manifestou-se de diversas formas, desde a sabotagem e a fuga individual até a formação de quilombos, como Palmares, que representavam comunidades de escravos fugidos que buscavam autonomia e a reconstrução de suas vidas. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_escravidao_africana_brasil_bf_hc"
     },
     {
-      "id": "thm_justificativas_escravidao_africana_bf_hc",
-      "name": "Justificativas para a Escravidão Africana",
-      "color": "#696969",
-      "description_short": "Argumentos utilizados para justificar a escravidão de africanos, incluindo a preexistência da instituição na África, a 'civilização' e 'salvação' pelo cristianismo, e teorias de inferioridade racial.",
+      "id": "thm_ideologia_colonial_bf_hc",
+      "name": "Ideologia Colonial e Justificativas",
+      "description_short": "Conjunto de ideias, crenças e argumentos utilizados para legitimar o sistema colonial, incluindo a dominação, a exploração e a escravidão.",
       "article_full": {
-        "current": "Argumentos para justificar a escravidão africana incluíam sua preexistência na África, a ideia de que seriam civilizados e salvos pelo cristianismo, e a consideração do negro como ser racialmente inferior, supostamente destinada à sujeição. O negro escravizado não tinha direitos, sendo considerado juridicamente uma coisa. (FAUSTO, 2001)",
+        "current": "A ideologia colonial no Brasil foi sustentada por argumentos religiosos, civilizacionais e raciais para justificar a dominação portuguesa, a exploração dos recursos e o uso do trabalho escravo, tanto indígena quanto africano. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": null
     },
     {
-      "id": "thm_demografia_escravidao_bf_hc",
-      "name": "Demografia da Escravidão no Brasil",
-      "color": "#BDB76B",
-      "description_short": "Alta mortalidade de escravos, especialmente crianças e recém-chegados, e a dependência da importação contínua para renovar a mão de obra.",
+      "id": "thm_condicoes_vida_colonial_bf_hc",
+      "name": "Condições de Vida no Brasil Colonial",
+      "description_short": "Aspectos da vida cotidiana, saúde, mortalidade, alimentação e habitação dos diversos grupos sociais durante o período colonial.",
       "article_full": {
-        "current": "Havia alta taxa de mortalidade dos escravos negros, especialmente crianças e recém-chegados. A população escrava declinava anualmente, e a expectativa de vida era baixa. A escravidão brasileira tornou-se dependente da importação contínua de cativos, com poucas tentativas de crescimento natural da população escrava local. (FAUSTO, 2001)",
+        "current": "As condições de vida no Brasil Colonial variavam enormemente entre os diferentes estratos sociais. Para a população escravizada, eram marcadas pela exploração intensa, má alimentação, violência e altas taxas de mortalidade. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": null
     },
     {
-      "id": "thm_origens_etnias_africanos_escravizados_bf_hc",
-      "name": "Origens e Etnias dos Africanos Escravizados no Brasil",
-      "color": "#CD853F",
-      "description_short": "Proveniência dos africanos escravizados de regiões como Guiné, Costa da Mina, Congo e Angola, pertencentes a diversos grupos étnicos como 'sudaneses' (iorubas, jejes, etc.) e 'bantos' (angolas, etc.).",
+      "id": "thm_relacoes_internacionais_comercio_col_bf_hc",
+      "name": "Relações Internacionais e Comércio Colonial",
+      "description_short": "Interações de Portugal e da colônia brasileira com outras nações europeias no contexto do comércio colonial, incluindo alianças, rivalidades e concessões comerciais.",
       "article_full": {
-        "current": "No século XVI, a Guiné (Bissau e Cacheu) e a Costa da Mina (quatro portos ao longo do litoral do Daomé) forneceram o maior número de escravos para o Brasil. Do século XVII em diante, as regiões mais ao sul da costa africana - Congo e Angola - tornaram-se os centros exportadores mais importantes, a partir dos portos de Luanda, Benguela e Cabinda. Os angolanos foram trazidos em maior número no século XVIII. Os africanos provinham de muitos grupos étnicos, como 'sudaneses' (iorubas, jejes, tapas, haussás) e 'bantos' (angolas, bengalas, monjolos, moçambiques). (FAUSTO, 2001)",
+        "current": "O comércio colonial brasileiro e as políticas mercantilistas portuguesas foram influenciados pelas relações de Portugal com outras potências europeias, como Espanha, Holanda e Inglaterra. Acordos, conflitos e concessões moldaram a dinâmica comercial da colônia. (FAUSTO, 2001)",
         "previous": null
-      }
+      },
+      "parent_id": "thm_economia_colonial_estrutura_bf_hc"
+    },
+    {
+      "id": "thm_poder_politico_colonial_bf_hc",
+      "name": "Estruturas de Poder Político Colonial",
+      "description_short": "Organização e exercício do poder político no Brasil Colonial, envolvendo a Coroa, administradores coloniais, elites locais e instituições como as Câmaras Municipais.",
+      "article_full": {
+        "current": "O poder político no Brasil Colonial emanava da Coroa Portuguesa, um Estado absolutista onde, em teoria, todos os poderes se concentravam no rei por direito divino, e o reino era seu patrimônio (patrimonialismo). Contudo, o rei governava com uma burocracia e devia considerar interesses de diferentes estratos sociais. A montagem da administração colonial enfraqueceu o poder da Coroa, pois administradores no Brasil tinham suas próprias atribuições e mediavam pressões locais e instruções de Lisboa. A relação entre Estado e sociedade era marcada pela indefinição entre o público e o privado, com o Estado penetrado por interesses particulares e a sociedade buscando favores em benefício de redes familiares, resultando em um governo baseado em lealdade mais do que em impessoalidade legal. (FAUSTO, 2001, pp. 30-31)",
+        "previous": null
+      },
+      "parent_id": "thm_admin_colonial_bf_hc"
+    },
+    {
+      "id": "thm_sociedade_colonial_estrutura_bf_hc",
+      "name": "Estrutura Social Colonial Brasileira",
+      "description_short": "Organização da sociedade no Brasil Colonial, marcada pela escravidão, hierarquias baseadas na 'pureza de sangue', cor, etnia, e condição jurídica (livre ou escravo).",
+      "article_full": {
+        "current": "A estrutura social do Brasil Colonial era complexa e hierárquica, fundamentada na escravidão e em critérios de 'pureza de sangue' que discriminavam negros, indígenas e mestiços. A divisão principal era entre homens livres e escravos, mas dentro da população livre havia também distinções baseadas em riqueza, origem e cor. (FAUSTO, 2001)",
+        "previous": null
+      },
+      "parent_id": null
+    },
+    {
+      "id": "thm_discriminacao_racial_social_colonial_bf_hc",
+      "name": "Discriminação Racial e Social no Brasil Colonial",
+      "description_short": "Práticas e ideologias de discriminação baseadas em raça, cor, origem étnica e condição social que permeavam a sociedade colonial brasileira.",
+      "article_full": {
+        "current": "A discriminação racial e social era uma característica central do Brasil Colonial, manifestando-se através do sistema de escravidão, do princípio da 'pureza de sangue', e de restrições impostas a não-brancos e mestiços no acesso a cargos, honrarias e participação social. (FAUSTO, 2001)",
+        "previous": null
+      },
+      "parent_id": "thm_sociedade_colonial_estrutura_bf_hc"
     }
   ]
 }
