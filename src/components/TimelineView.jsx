@@ -246,9 +246,22 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
     yAxisRef.current = mainGroup.append("g").attr("class", "y-axis").node(); 
 
     const laneHeight = yScale.bandwidth();
-    const eventPadding = 2;
-    const eventBarHeight = Math.max(5, laneHeight - 2 * eventPadding);
-    const circleRadius = Math.min(5, eventBarHeight / 2); 
+    const eventPadding = 2; // Padding above and below event shapes within their lane
+    
+    // Default values
+    let currentEventBarHeight = Math.max(5, laneHeight - 2 * eventPadding);
+    let currentCircleRadius = Math.min(5, currentEventBarHeight / 2);
+    let currentFontSize = "9px"; // Default font size for non-expanded
+    let textDy = ".35em";
+
+    if (isTimelineExpanded) {
+      // Adjustments for expanded view
+      currentEventBarHeight = Math.max(10, laneHeight - 2 * eventPadding); // Ensure a minimum height, use more of the lane
+      currentCircleRadius = Math.max(4, Math.min(8, currentEventBarHeight * 0.4)); // Larger radius, but capped
+      currentFontSize = Math.max(9, Math.min(12, laneHeight / 3.5)) + "px"; // Dynamic font size
+      // textDy might need adjustment if font size changes significantly, but .35em is often robust
+    }
+    
     const circleStrokeWidth = 2;
 
     const eventsByTheme = d3.group(events, d => d.main_theme_id);
@@ -276,7 +289,7 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
         .join("rect")
           .attr("class", "event-rect timeline-event-item")
           .attr("y", eventPadding)
-          .attr("height", eventBarHeight)
+          .attr("height", currentEventBarHeight) // Use dynamic height
           .attr("x", d => xScale(new Date(d.start_date)))
           .attr("width", d => {
             const startDate = new Date(d.start_date);
@@ -303,9 +316,9 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
                 .attr("data-id", d.globalId)
                 .attr("data-initial-offset", 5) // Store initial offset
                 .attr("x", periodTextX)
-                .attr("y", eventPadding + eventBarHeight / 2)
-                .attr("dy", ".35em")
-                .style("font-size", "9px")
+                .attr("y", eventPadding + currentEventBarHeight / 2) // Use dynamic height
+                .attr("dy", textDy)
+                .style("font-size", currentFontSize) // Use dynamic font size
                 .style("pointer-events", "none") // So text doesn't block click on rect
                 .text(d.title.length > 20 ? d.title.substring(0, 17) + "..." : d.title);
             } else {
@@ -318,7 +331,7 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
         .join("circle")
           .attr("class", "event-circle timeline-event-item")
           .attr("cy", laneHeight / 2)
-          .attr("r", circleRadius)
+          .attr("r", currentCircleRadius) // Use dynamic radius
           .attr("cx", d => xScale(new Date(d.start_date)))
           .attr("fill", "white")
           .attr("stroke", theme.color || "#808080")
@@ -333,7 +346,7 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
 
             if (isTimelineExpanded) {
               laneGroup.selectAll(`.event-text-label[data-id="${d.globalId}"]`).remove();
-              const singleEventTextOffset = circleRadius + 3;
+              const singleEventTextOffset = currentCircleRadius + 3; // Use dynamic radius
               const singleTextX = xScale(new Date(d.start_date)) + singleEventTextOffset;
               laneGroup.append("text")
                 .datum(d) // Ensure data is bound
@@ -342,8 +355,8 @@ const TimelineView = forwardRef(({ events, themes, referenceDate, onEventClick, 
                 .attr("data-initial-offset", singleEventTextOffset) // Store initial offset
                 .attr("x", singleTextX)
                 .attr("y", laneHeight / 2)
-                .attr("dy", ".35em")
-                .style("font-size", "9px")
+                .attr("dy", textDy)
+                .style("font-size", currentFontSize) // Use dynamic font size
                 .style("pointer-events", "none")
                 .text(d.title.length > 20 ? d.title.substring(0, 17) + "..." : d.title);
             } else {

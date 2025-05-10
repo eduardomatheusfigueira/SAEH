@@ -2,23 +2,27 @@ import React from 'react';
 
 const Footer = ({ currentUiTheme = {} }) => {
   const footerStyle = {
-    padding: '5px 15px', // Adjusted padding for fixed position
-    textAlign: 'right',  // Align text to the right
-    fontSize: '0.85em', // Slightly smaller font
+    padding: '0 15px', // Vertical padding handled by height + alignItems
+    // textAlign: 'right', // Not needed if using flexbox for alignment
+    fontSize: '0.85em',
     backgroundColor: currentUiTheme['--panel-background'] || 'var(--panel-background, #f0f2f5)',
     color: currentUiTheme['--text-color-muted'] || 'var(--text-color-muted, #6c757d)',
-    borderTop: '1px solid #cccccc', // Simplified to avoid parsing error
+    borderTop: '1px solid #cccccc',
     position: 'fixed',
     bottom: 0,
-    right: 0, // Position to the bottom right
-    // width: '100%', // Not needed for right alignment of content
-    // left: 0, // Not needed for right alignment
-    zIndex: 1000, // Ensure it's above most content but below modals
+    left: 0,
+    width: '100%',
+    height: '35px', // Explicit height for the footer bar
+    zIndex: 1000,
+    boxSizing: 'border-box',
+    display: 'flex',
+    alignItems: 'center', // Vertically center the text
+    justifyContent: 'flex-end', // Horizontally align text to the right
   };
 
   return (
     <footer style={footerStyle}>
-      Desenvolvido por Eduardo Matheus Figueira
+      <span>© 2025 Sistema de Auxílio ao Estudo Histórico por Eduardo Matheus Figueira</span>
     </footer>
   );
 };

@@ -90,7 +90,7 @@ const MainAppView = ({
           id="right-side-lists-container"
           style={{
             width: '100%',
-            maxHeight: 'calc(100vh - 150px - 200px - 30px)',
+            maxHeight: 'calc(100vh - 150px - 200px - 30px - 35px)', // Subtract footer height (35px)
             overflowY: 'auto',
             display: 'flex',
             flexDirection: 'column',
@@ -113,7 +113,7 @@ const MainAppView = ({
           id="controls-overlay-panel"
           style={{
             position: 'absolute', top: '55px', left: '10px',
-            width: '320px', maxHeight: 'calc(100vh - 70px - 200px - 20px)',
+            width: '320px', maxHeight: 'calc(100vh - 70px - 200px - 20px - 35px)', // Subtract footer height (35px)
             overflowY: 'auto',
             padding: '15px', borderRadius: '8px',
             zIndex: 100, boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
@@ -166,7 +166,7 @@ const MainAppView = ({
         id="timeline-overlay-container"
         style={{
           position: 'absolute',
-          bottom: 0,
+          bottom: '35px', // Adjust to be above the footer (footer height is 35px)
           left: 0,
           width: '100%',
           height: isTimelineExpanded ? '70vh' : '200px',
@@ -291,6 +291,19 @@ function App() {
     return {};
   }, [currentMapStyleUrl]);
  
+  useEffect(() => {
+    // Apply padding to the body to make space for the fixed footer
+    const footerHeight = '35px'; // Must match Footer.jsx height
+    document.body.style.paddingBottom = footerHeight;
+    // console.log(`App.jsx: Applied padding-bottom: ${footerHeight} to body`);
+
+    // Cleanup function to remove padding when App unmounts
+    return () => {
+      document.body.style.paddingBottom = '0px';
+      // console.log("App.jsx: Removed padding-bottom from body");
+    };
+  }, []); // Runs once on mount and cleanup on unmount
+
   // useEffect to load the first predefined data source on initial mount, if available
   useEffect(() => {
     // No initial data source will be loaded by default.
